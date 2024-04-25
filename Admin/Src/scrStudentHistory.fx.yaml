@@ -1,0 +1,337 @@
+"scrStudentHistory As screen.'autoLayout_HeaderFooter_ver1.0'":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnHidden: =
+    OnVisible: =ClearCollect(colStudentHistory,Filter('PhD Histories',galStudentLlist.Selected.NUID=NUID))
+
+    ScreenContainer2_1 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Min(App.Width,App.DesignWidth)
+        X: =(Parent.Width-Self.Width)/2
+        ZIndex: =1
+
+        HeaderContainer2_1 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =Parent.Width
+            ZIndex: =1
+
+            Header_2 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(71, 158, 245, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =HeaderContainer1.Height
+                Size: =30
+                Text: ="Detail for "&galStudentLlist.Selected.'First Name'&" "&galStudentLlist.Selected.'Last Name'
+                Width: =HeaderContainer2_1.Width
+                ZIndex: =1
+
+        NavContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =10
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =Parent.Width
+            ZIndex: =2
+
+            btnBack_1 As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Secondary
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrStudentList)
+                Text: ="Back to List"
+                Width: =140
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            btnOverview_1 As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Secondary
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrStudentOverview)
+                Text: ="Overview"
+                Width: =140
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+            btnMilestones_1 As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Secondary
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrStudentMilestones)
+                Text: ="Milestones"
+                Width: =140
+                X: =0
+                Y: =0
+                ZIndex: =3
+
+            btnHistory_1 As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Primary
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrStudentHistory)
+                Text: ="Activity History"
+                Width: =140
+                X: =0
+                Y: =0
+                ZIndex: =4
+
+            btnEvaluations_1 As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Secondary
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrStudentEvaluations)
+                Text: ="Evaluations"
+                Width: =140
+                X: =0
+                Y: =0
+                ZIndex: =5
+
+            btnCourses_1 As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Secondary
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrStudentCourses)
+                Text: ="Courses"
+                Width: =140
+                X: =0
+                Y: =0
+                ZIndex: =6
+
+        MainContainer2_1 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =Parent.Width
+            ZIndex: =4
+
+            Container2 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.Start
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(180, 214, 250, 1)
+                FillPortions: =0
+                Height: =40
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =1
+
+                TextCanvas7 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =32
+                    Size: =16
+                    Text: ="Change Type"
+                    Weight: ='TextCanvas.Weight'.Bold
+                    Width: =hType.Width
+                    X: =hType.X
+                    Y: =8
+                    ZIndex: =1
+
+                TextCanvas8 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =32
+                    Size: =16
+                    Text: ="Changed From"
+                    Weight: ='TextCanvas.Weight'.Bold
+                    Width: =hFrom.Width
+                    X: =hFrom.X
+                    Y: =8
+                    ZIndex: =2
+
+                TextCanvas9 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =32
+                    Size: =16
+                    Text: ="Changed To"
+                    Weight: ='TextCanvas.Weight'.Bold
+                    Width: =hTo.Width
+                    X: =hTo.X
+                    Y: =8
+                    ZIndex: =3
+
+                TextCanvas10 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =32
+                    Size: =16
+                    Text: ="Changed Date/Time"
+                    Weight: ='TextCanvas.Weight'.Bold
+                    Width: =hDate.Width
+                    X: =hDate.X
+                    Y: =8
+                    ZIndex: =4
+
+                TextCanvas11 As Text:
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =32
+                    Size: =16
+                    Text: ="Changed By"
+                    Weight: ='TextCanvas.Weight'.Bold
+                    Width: =hBy.Width
+                    X: =hBy.X
+                    Y: =8
+                    ZIndex: =5
+
+            galHistory As gallery.galleryVertical:
+                AlignInContainer: =AlignInContainer.Start
+                BorderColor: =RGBA(245, 245, 245, 1)
+                DelayItemLoading: =true
+                Height: =Parent.Height
+                Items: =Sort(colStudentHistory,'Created On',SortOrder.Descending)
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =40
+                Width: =Parent.Width
+                ZIndex: =2
+
+                hType As Text:
+                    Align: ='TextCanvas.Align'.Start
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =30
+                    Size: =16
+                    Text: =ThisItem.Change
+                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                    Width: =173
+                    X: =5
+                    Y: =10
+                    ZIndex: =2
+
+                hFrom As Text:
+                    Align: ='TextCanvas.Align'.Start
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =30
+                    Size: =16
+                    Text: =ThisItem.From
+                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                    Width: =227
+                    X: =hType.X+hType.Width+5
+                    Y: =10
+                    ZIndex: =3
+
+                hTo As Text:
+                    Align: ='TextCanvas.Align'.Start
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =30
+                    Size: =16
+                    Text: =ThisItem.To
+                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                    Width: =212
+                    X: =hFrom.X+hFrom.Width+5
+                    Y: =10
+                    ZIndex: =4
+
+                hDate As Text:
+                    Align: ='TextCanvas.Align'.Start
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =30
+                    Size: =16
+                    Text: =ThisItem.'Created On'
+                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                    Width: =224
+                    X: =hTo.X+hTo.Width+5
+                    Y: =10
+                    ZIndex: =5
+
+                hBy As Text:
+                    Align: ='TextCanvas.Align'.Start
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =RGBA(0, 0, 0, 1)
+                    Height: =30
+                    Size: =16
+                    Text: =ThisItem.'Created By'.'First Name'&" "&ThisItem.'Created By'.'Last Name'
+                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                    Width: =164
+                    X: =hDate.X+hDate.Width+5
+                    Y: =10
+                    ZIndex: =6
+

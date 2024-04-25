@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr829_phdhistories",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr829_phdhistory",
+    "MaxGetRowsCount": 500,
+    "Name": "PhD Histories",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr829_change": "Change",
+      "cr829_from": "From",
+      "cr829_nuid": "NUID",
+      "cr829_phdhistory_AsyncOperations": "System Jobs",
+      "cr829_phdhistory_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr829_phdhistory_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr829_phdhistory_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr829_phdhistory_ProcessSession": "Process Sessions",
+      "cr829_phdhistory_SyncErrors": "Sync Errors",
+      "cr829_phdhistoryid": "PhD History",
+      "cr829_to": "To",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PhD Histories",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PhD Histories (Views)",
+    "Name": "_cr829_phdhistory_views",
+    "RelatedEntityName": "PhD Histories",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2d683c91-f0ab-4852-90bf-3c41c51ed651": "PhD History Lookup View",
+      "4cbe3f17-8684-423e-bd89-194f2398b45e": "PhD History Associated View",
+      "9747266f-37dd-4d90-a373-d1abc44cb4b8": "Inactive PhD Histories",
+      "c1fe6968-0c0e-47a5-98ef-7b2224e6edc2": "PhD History Advanced Find View",
+      "dbb4d993-a33a-4469-a2e8-a4ebc3bbe429": "Active PhD Histories"
+    }
+  },
+  {
+    "DisplayName": "Status (PhD Histories)",
+    "Name": "cr829_phdhistory_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PhD Histories"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PhD Histories",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PhD Histories)",
+    "Name": "cr829_phdhistory_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PhD Histories"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PhD Histories",
+    "Type": "OptionSetInfo"
+  }
+]

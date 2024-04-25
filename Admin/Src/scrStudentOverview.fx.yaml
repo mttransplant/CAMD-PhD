@@ -1,0 +1,1463 @@
+"scrStudentOverview As screen.'autoLayout_HeaderFooter_ver1.0'":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnHidden: =Select(btn_oCancel)
+    OnVisible: |-
+        =UpdateContext({IsEditing:false})
+
+    ScreenContainer2 As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Min(App.Width,App.DesignWidth)
+        X: =(Parent.Width-Self.Width)/2
+        ZIndex: =1
+
+        HeaderContainer2 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =Parent.Width
+            ZIndex: =1
+
+            Header_1 As label:
+                Align: =Align.Center
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisplayMode: =DisplayMode.View
+                Fill: =RGBA(71, 158, 245, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =HeaderContainer1.Height
+                Size: =30
+                Text: ="Detail for "&galStudentLlist.Selected.'First Name'&" "&galStudentLlist.Selected.'Last Name'
+                Width: =HeaderContainer2.Width
+                ZIndex: =1
+
+        NavContainer As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutAlignItems: =LayoutAlignItems.Center
+            LayoutGap: =10
+            LayoutJustifyContent: =LayoutJustifyContent.Center
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =Parent.Width
+            ZIndex: =2
+
+            btnBack As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Secondary
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =If(EditStudentInfo.Unsaved,Notify("Caution, unsaved changes exist. Please Undo or Save changes before leaving this screen.",NotificationType.Warning),Select(btn_oCancel);Navigate(scrStudentList))
+                Text: ="Back to List"
+                Width: =140
+                X: =0
+                Y: =0
+                ZIndex: =1
+
+            btnOverview As Button:
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrStudentOverview)
+                Text: ="Overview"
+                Width: =140
+                X: =0
+                Y: =0
+                ZIndex: =2
+
+            btnMilestones As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Secondary
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrStudentMilestones)
+                Text: ="Milestones"
+                Width: =140
+                X: =0
+                Y: =0
+                ZIndex: =3
+
+            btnHistory As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Secondary
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrStudentHistory)
+                Text: ="Activity History"
+                Width: =140
+                X: =0
+                Y: =0
+                ZIndex: =4
+
+            btnEvaluations As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Secondary
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrStudentEvaluations)
+                Text: ="Evaluations"
+                Width: =140
+                X: =0
+                Y: =0
+                ZIndex: =5
+
+            btnCourses As Button:
+                Appearance: ='ButtonCanvas.Appearance'.Secondary
+                BasePaletteColor: =
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                Height: =32
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrStudentCourses)
+                Text: ="Courses"
+                Width: =140
+                X: =0
+                Y: =0
+                ZIndex: =6
+
+        MainContainer2 As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =Parent.Width
+            ZIndex: =4
+
+            cntEdit As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.End
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(180, 214, 250, 1)
+                FillPortions: =0
+                Height: =40
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =1
+
+                btn_oEdit As icon.Edit:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(0, 120, 212, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =20
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Edit
+                    OnSelect: |-
+                        =ClearCollect(colStudentUpdates,Filter('PhD Histories',NUID=""));
+                        UpdateContext({IsEditing: true})
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Tooltip: ="Edit Student Info"
+                    Visible: =Not(IsEditing)
+                    Width: =30
+                    X: =1259
+                    Y: =10
+                    ZIndex: =3
+
+                btn_oSave As icon.Save:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(0, 120, 212, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    DisplayMode: =If(EditStudentInfo.Unsaved,DisplayMode.Edit,DisplayMode.Disabled)
+                    FocusedBorderThickness: =4
+                    Height: =20
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Save
+                    OnSelect: |-
+                        =Patch('PhD Students',{StudentID:galStudentLlist.Selected.StudentID},EditStudentInfo.Updates);
+                        Collect('PhD Histories',colStudentUpdates);
+                        Refresh('PhD Students');
+                        Notify("Student Update Successful",NotificationType.Success,5000);
+                        UpdateContext({IsEditing:false})
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Tooltip: ="Save Changes"
+                    Visible: =IsEditing
+                    Width: =30
+                    X: =btn_oEdit.X+btn_oEdit.Width
+                    Y: =10
+                    ZIndex: =4
+
+                btn_oCancel As icon.Cancel:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(0, 120, 212, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =20
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Cancel
+                    OnSelect: |-
+                        =ResetForm(EditStudentInfo);
+                        Clear(colStudentUpdates);
+                        UpdateContext({IsEditing:false})
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Tooltip: ="Discard Changes"
+                    Visible: =IsEditing
+                    Width: =30
+                    X: =btn_oEdit.X
+                    Y: =10
+                    ZIndex: =5
+
+            ReadOnlyStudentInfo As formViewer:
+                BorderColor: =RGBA(245, 245, 245, 1)
+                DataSource: ='PhD Students'
+                FillPortions: =0
+                Height: =125
+                Item: =galStudentLlist.Selected
+                LayoutMinHeight: =250
+                LayoutMinWidth: =400
+                NumberOfColumns: =2
+                ZIndex: =2
+
+                "'First Name_DataCard3' As typedDataCard.textualViewCard":
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_firstname"
+                    Default: =ThisItem.'First Name'
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_firstname)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =667
+                    X: =0
+                    Y: =0
+                    ZIndex: =2
+
+                    DataCardKey35 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (DataCardValue34.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    DataCardValue34 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Default
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey35.X + DataCardKey35.Width
+                        Y: =10
+                        ZIndex: =2
+
+                "'Last Name_DataCard3' As typedDataCard.textualViewCard":
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_lastname"
+                    Default: =ThisItem.'Last Name'
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_lastname)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =667
+                    X: =1
+                    Y: =0
+                    ZIndex: =2
+
+                    DataCardKey36 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (DataCardValue35.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    DataCardValue35 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Default
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey36.X + DataCardKey36.Width
+                        Y: =10
+                        ZIndex: =2
+
+                NUID_DataCard3 As typedDataCard.textualViewCard:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_nuid2"
+                    Default: =ThisItem.NUID
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_nuid2)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =667
+                    X: =0
+                    Y: =1
+                    ZIndex: =2
+
+                    DataCardKey43 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (DataCardValue42.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    DataCardValue42 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Default
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey43.X + DataCardKey43.Width
+                        Y: =10
+                        ZIndex: =2
+
+                Email_DataCard3 As typedDataCard.emailViewCard:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_email"
+                    Default: =ThisItem.Email
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_email)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =667
+                    X: =1
+                    Y: =1
+                    ZIndex: =2
+
+                    DataCardKey40 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (DataCardValue39.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    DataCardValue39 As htmlViewer:
+                        AutoHeight: =true
+                        Color: =RGBA(0, 120, 212, 1)
+                        DisabledBorderColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        Font: =Font.'Segoe UI'
+                        Height: =31
+                        HtmlText: |-
+                            ="<a href='mailto:" & Parent.Default & "'>" & Parent.Default & "</a>"
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey40.X + DataCardKey40.Width
+                        Y: =10
+                        ZIndex: =2
+
+                "'Admit Term_DataCard3' As typedDataCard.textualViewCard":
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_admitterm"
+                    Default: =ThisItem.'Admit Term'
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_admitterm)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =667
+                    X: =0
+                    Y: =2
+                    ZIndex: =2
+
+                    DataCardKey37 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (DataCardValue36.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    DataCardValue36 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Default
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey37.X + DataCardKey37.Width
+                        Y: =10
+                        ZIndex: =2
+
+                "'Expected Grad Date_DataCard3' As typedDataCard.textualViewCard":
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_expectedgraddate"
+                    Default: =ThisItem.'Expected Grad Date'
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_expectedgraddate)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =667
+                    X: =1
+                    Y: =2
+                    ZIndex: =2
+
+                    DataCardKey39 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (DataCardValue38.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    DataCardValue38 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Text(ThisItem.'Expected Grad Date',"m/d/yyyy")
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey39.X + DataCardKey39.Width
+                        Y: =10
+                        ZIndex: =2
+
+            EditStudentInfo As form:
+                BorderColor: =RGBA(245, 245, 245, 1)
+                DataSource: ='PhD Students'
+                DefaultMode: =If(IsEditing,FormMode.Edit,FormMode.View)
+                Item: =galStudentLlist.Selected
+                LayoutMinHeight: =250
+                LayoutMinWidth: =400
+                NumberOfColumns: =2
+                ZIndex: =3
+
+                Advisor_DataCard1 As typedDataCard.comboBoxEditCard:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_Advisor"
+                    Default: =ThisItem.Advisor
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_Advisor)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    Required: =false
+                    Update: =frmAdvisor.Selected
+                    Width: =667
+                    X: =0
+                    Y: =1
+                    ZIndex: =1
+
+                    DataCardKey1 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (frmAdvisor.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    frmAdvisor As combobox:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        ChevronBackground: =RGBA(245, 245, 245, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(50, 49, 48, 1)
+                        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(50, 49, 48, 1)
+                        DefaultSelectedItems: =Parent.Default
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["cr829_advisorname"]
+                        DisplayMode: =Parent.DisplayMode
+                        Fill: =If(IsEditing,RGBA(245, 245, 245, 1),Color.White)
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(245, 245, 245, 1)
+                        Items: =Choices([@'PhD Students'].cr829_Advisor)
+                        OnChange: |-
+                            =If(
+                                frmAdvisor.Selected.'Advisor Name' = galStudentLlist.Selected.Advisor.'Advisor Name',
+                                Remove(
+                                    colStudentUpdates,
+                                    Filter(
+                                        colStudentUpdates,
+                                        Change = "Advisor"
+                                    )
+                                ),
+                                Collect(
+                                    colStudentUpdates,
+                                    {
+                                        NUID: ThisItem.NUID,
+                                        Change: "Advisor",
+                                        From: Text(galStudentLlist.Selected.Advisor.'Advisor Name'),
+                                        To: frmAdvisor.Selected.'Advisor Name'
+                                    }
+                                )
+                            )
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PressedBorderColor: =RGBA(16, 110, 190, 1)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(0, 120, 212, 1)
+                        SearchFields: =["cr829_advisorname"]
+                        SearchItems: =Search(Choices([@'PhD Students'].cr829_Advisor),frmAdvisor.SearchText,cr829_advisorname)
+                        SelectionFill: =RGBA(0, 120, 212, 1)
+                        SelectMultiple: =false
+                        Size: =13
+                        Tooltip: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey1.X + DataCardKey1.Width
+                        Y: =10
+                        ZIndex: =2
+
+                    ErrorMessage1 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(168, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(168, 0, 0, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =frmAdvisor.Y + frmAdvisor.Height
+                        ZIndex: =3
+
+                    StarVisible1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =DataCardKey1.Height
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey1.Y
+                        ZIndex: =4
+
+                "'Co-Advisor_DataCard1' As typedDataCard.comboBoxEditCard":
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_CoAdvisor"
+                    Default: =ThisItem.'Co-Advisor'
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_CoAdvisor)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    Required: =false
+                    Update: =frmCoAdvisor.Selected
+                    Width: =667
+                    X: =1
+                    Y: =1
+                    ZIndex: =1
+
+                    DataCardKey2 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (frmCoAdvisor.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    frmCoAdvisor As combobox:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        ChevronBackground: =RGBA(245, 245, 245, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(50, 49, 48, 1)
+                        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(50, 49, 48, 1)
+                        DefaultSelectedItems: =Parent.Default
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["cr829_advisorname"]
+                        DisplayMode: =Parent.DisplayMode
+                        Fill: =If(IsEditing,RGBA(245, 245, 245, 1),Color.White)
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(245, 245, 245, 1)
+                        Items: =Choices([@'PhD Students'].cr829_CoAdvisor)
+                        OnChange: |-
+                            =If(
+                                frmCoAdvisor.Selected.'Advisor Name' = galStudentLlist.Selected.'Co-Advisor'.'Advisor Name',
+                                Remove(
+                                    colStudentUpdates,
+                                    Filter(
+                                        colStudentUpdates,
+                                        Change = "Co-Advisor"
+                                    )
+                                ),
+                                Collect(
+                                    colStudentUpdates,
+                                    {
+                                        NUID: ThisItem.NUID,
+                                        Change: "Co-Advisor",
+                                        From: Text(galStudentLlist.Selected.'Co-Advisor'.'Advisor Name'),
+                                        To: frmCoAdvisor.Selected.'Advisor Name'
+                                    }
+                                )
+                            )
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PressedBorderColor: =RGBA(16, 110, 190, 1)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(0, 120, 212, 1)
+                        SearchFields: =["cr829_advisorname"]
+                        SearchItems: =Search(Choices([@'PhD Students'].cr829_CoAdvisor),frmCoAdvisor.SearchText,cr829_advisorname)
+                        SelectionFill: =RGBA(0, 120, 212, 1)
+                        SelectMultiple: =false
+                        Size: =13
+                        Tooltip: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey2.X + DataCardKey2.Width
+                        Y: =10
+                        ZIndex: =2
+
+                    ErrorMessage2 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(168, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(168, 0, 0, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =frmCoAdvisor.Y + frmCoAdvisor.Height
+                        ZIndex: =3
+
+                    StarVisible2 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =DataCardKey2.Height
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey2.Y
+                        ZIndex: =4
+
+                Track_DataCard5 As typedDataCard.comboBoxOptionSetSingleEditCard:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_track"
+                    Default: =ThisItem.Track
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_track)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    Required: =false
+                    Update: =frmTrack.Selected.Value
+                    Width: =667
+                    X: =0
+                    Y: =0
+                    ZIndex: =3
+
+                    DataCardKey46 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (frmTrack.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    frmTrack As combobox:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        ChevronBackground: =RGBA(245, 245, 245, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(50, 49, 48, 1)
+                        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(50, 49, 48, 1)
+                        DefaultSelectedItems: =[Parent.Default]
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayMode: =Parent.DisplayMode
+                        Fill: =If(IsEditing,RGBA(245, 245, 245, 1),Color.White)
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(245, 245, 245, 1)
+                        IsSearchable: =false
+                        Items: =Choices('Track (PhD Students)')
+                        OnChange: |-
+                            =If(
+                                Text(frmTrack.Selected.Value) = Text(galStudentLlist.Selected.Track),
+                                Remove(
+                                    colStudentUpdates,
+                                    Filter(
+                                        colStudentUpdates,
+                                        Change = "Track"
+                                    )
+                                ),
+                                Collect(
+                                    colStudentUpdates,
+                                    {
+                                        NUID: ThisItem.NUID,
+                                        Change: "Track",
+                                        From: Text(galStudentLlist.Selected.Track),
+                                        To: Text(frmTrack.Selected.Value)
+                                    }
+                                )
+                            )
+                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                        PressedBorderColor: =RGBA(16, 110, 190, 1)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(0, 120, 212, 1)
+                        SelectionFill: =RGBA(0, 120, 212, 1)
+                        SelectMultiple: =false
+                        Size: =13
+                        Tooltip: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey46.X + DataCardKey46.Width
+                        Y: =10
+                        ZIndex: =2
+
+                    ErrorMessage17 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(168, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(168, 0, 0, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =frmTrack.Y + frmTrack.Height
+                        ZIndex: =3
+
+                    StarVisible17 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =DataCardKey46.Height
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey46.Y
+                        ZIndex: =4
+
+                "'Status (cr829_status)_DataCard4' As typedDataCard.textualEditCard":
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_status"
+                    Default: =ThisItem.'Status (cr829_status)'
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_status)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    MaxLength: =DataSourceInfo([@'PhD Students'], DataSourceInfo.MaxLength, cr829_status)
+                    Required: =false
+                    Update: =frmStatus.Text
+                    Width: =667
+                    X: =1
+                    Y: =0
+                    ZIndex: =3
+
+                    DataCardKey50 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (frmStatus.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    frmStatus As text:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        MaxLength: =Parent.MaxLength
+                        OnChange: |-
+                            =If(
+                                frmStatus.Text = galStudentLlist.Selected.Status.Text,
+                                Remove(
+                                    colStudentUpdates,
+                                    Filter(
+                                        colStudentUpdates,
+                                        Change = "Status"
+                                    )
+                                ),
+                                Collect(
+                                    colStudentUpdates,
+                                    {
+                                        NUID: ThisItem.NUID,
+                                        Change: "Status",
+                                        From: If(IsBlank(galStudentLlist.Selected.Status.Text),"",galStudentLlist.Selected.Status.Text),
+                                        To: frmStatus.Text
+                                    }
+                                )
+                            )
+                        PaddingLeft: =5
+                        PressedBorderColor: =RGBA(0, 120, 212, 1)
+                        PressedColor: =RGBA(50, 49, 48, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13
+                        Tooltip: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey50.X + DataCardKey50.Width
+                        Y: =10
+                        ZIndex: =2
+
+                    ErrorMessage21 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(168, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(168, 0, 0, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =frmStatus.Y + frmStatus.Height
+                        ZIndex: =3
+
+                    StarVisible21 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =DataCardKey50.Height
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey50.Y
+                        ZIndex: =4
+
+                "'Individual Path_DataCard5' As typedDataCard.textualEditCard":
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_individualpath"
+                    Default: =ThisItem.'Individual Path'
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_individualpath)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    MaxLength: =DataSourceInfo([@'PhD Students'], DataSourceInfo.MaxLength, cr829_individualpath)
+                    Required: =false
+                    Update: =frmPath.Text
+                    Width: =667
+                    X: =0
+                    Y: =2
+                    ZIndex: =3
+
+                    DataCardKey53 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (frmPath.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    frmPath As text:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        MaxLength: =Parent.MaxLength
+                        OnChange: |-
+                            =If(
+                                frmPath.Text = galStudentLlist.Selected.'Individual Path',
+                                Remove(
+                                    colStudentUpdates,
+                                    Filter(
+                                        colStudentUpdates,
+                                        Change = "Path"
+                                    )
+                                ),
+                                Collect(
+                                    colStudentUpdates,
+                                    {
+                                        NUID: ThisItem.NUID,
+                                        Change: "Path",
+                                        From: If(IsBlank(galStudentLlist.Selected.'Individual Path'),"",galStudentLlist.Selected.'Individual Path'),
+                                        To: frmPath.Text
+                                    }
+                                )
+                            )
+                        PaddingLeft: =5
+                        PressedBorderColor: =RGBA(0, 120, 212, 1)
+                        PressedColor: =RGBA(50, 49, 48, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13
+                        Tooltip: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey53.X + DataCardKey53.Width
+                        Y: =10
+                        ZIndex: =2
+
+                    ErrorMessage24 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(168, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(168, 0, 0, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =frmPath.Y + frmPath.Height
+                        ZIndex: =3
+
+                    StarVisible24 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =DataCardKey53.Height
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey53.Y
+                        ZIndex: =4
+
+                "'Dissertation Committee_DataCard5' As typedDataCard.textualEditCard":
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_dissertationcommittee"
+                    Default: =ThisItem.'Dissertation Committee'
+                    DisplayMode: =Parent.DisplayMode
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_dissertationcommittee)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =50
+                    MaxLength: =DataSourceInfo([@'PhD Students'], DataSourceInfo.MaxLength, cr829_dissertationcommittee)
+                    Required: =false
+                    Update: =frmCommittee.Text
+                    Width: =667
+                    X: =1
+                    Y: =2
+                    ZIndex: =3
+
+                    DataCardKey54 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (frmCommittee.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    frmCommittee As text:
+                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        Default: =Parent.Default
+                        DelayOutput: =true
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        MaxLength: =Parent.MaxLength
+                        OnChange: |-
+                            =If(
+                                frmCommittee.Text = galStudentLlist.Selected.'Dissertation Committee',
+                                Remove(
+                                    colStudentUpdates,
+                                    Filter(
+                                        colStudentUpdates,
+                                        Change = "Committee"
+                                    )
+                                ),
+                                Collect(
+                                    colStudentUpdates,
+                                    {
+                                        NUID: ThisItem.NUID,
+                                        Change: "Committee",
+                                        From: If(IsBlank(galStudentLlist.Selected.'Dissertation Committee'),"",galStudentLlist.Selected.'Dissertation Committee'),
+                                        To: frmCommittee.Text
+                                    }
+                                )
+                            )
+                        PaddingLeft: =5
+                        PressedBorderColor: =RGBA(0, 120, 212, 1)
+                        PressedColor: =RGBA(50, 49, 48, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13
+                        Tooltip: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey54.X + DataCardKey54.Width
+                        Y: =10
+                        ZIndex: =2
+
+                    ErrorMessage25 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(168, 0, 0, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(168, 0, 0, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =10
+                        Live: =Live.Assertive
+                        PaddingBottom: =0
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Error
+                        Visible: =Parent.DisplayMode=DisplayMode.Edit
+                        Width: =Parent.Width - 60
+                        X: =30
+                        Y: =frmCommittee.Y + frmCommittee.Height
+                        ZIndex: =3
+
+                    StarVisible25 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =DataCardKey54.Height
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: ="*"
+                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                        Width: =30
+                        Wrap: =false
+                        Y: =DataCardKey54.Y
+                        ZIndex: =4
+

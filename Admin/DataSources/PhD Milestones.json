@@ -1,0 +1,149 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr829_phdmilestones",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr829_phdmilestone",
+    "MaxGetRowsCount": 500,
+    "Name": "PhD Milestones",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr829_milestone": "Milestone",
+      "cr829_milestonedate": "Date",
+      "cr829_notes": "Notes",
+      "cr829_nuid": "NUID",
+      "cr829_phdmilestone_AsyncOperations": "System Jobs",
+      "cr829_phdmilestone_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr829_phdmilestone_DuplicateBaseRecord": "Duplicate Records (cr829_phdmilestone_DuplicateBaseRecord)",
+      "cr829_phdmilestone_DuplicateMatchingRecord": "Duplicate Records (cr829_phdmilestone_DuplicateMatchingRecord)",
+      "cr829_phdmilestone_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr829_phdmilestone_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr829_phdmilestone_ProcessSession": "Process Sessions",
+      "cr829_phdmilestone_SyncErrors": "Sync Errors",
+      "cr829_phdmilestoneid": "MilestoneID",
+      "cr829_status": "Milestone Status",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PhD Milestones",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PhD Milestones (Views)",
+    "Name": "_cr829_phdmilestone_views",
+    "RelatedEntityName": "PhD Milestones",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "305f8a7a-0fc4-4914-bc59-05fc2268f4e7": "Active PhD Milestones",
+      "3fe72180-0a10-4e89-b832-f7f563d56eec": "Inactive PhD Milestones",
+      "550b73ae-4e78-46d3-b507-7a0f90842b00": "PhD Milestone Lookup View",
+      "71e77ec9-ed4f-40ce-af04-04468693760a": "PhD Milestone Associated View",
+      "f93db7ae-2e90-4612-8ec5-5bd137a3b4d6": "PhD Milestone Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Milestone (PhD Milestones)",
+    "Name": "cr829_phdmilestone_cr829_milestone",
+    "OptionSetInfoNameMapping": {
+      "0": "Select Milestone…",
+      "1": "Annual Review",
+      "2": "Course Requirement",
+      "3": "Paper Requirement",
+      "4": "Teaching Requirement",
+      "5": "Qualifying Examination",
+      "6": "Dissertation Proposal",
+      "7": "Dissertation Defense"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr829_milestone",
+        "OptionSetReferenceEntityName": "PhD Milestones"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr829_milestone",
+    "RelatedEntityName": "PhD Milestones",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Milestone Status (PhD Milestones)",
+    "Name": "cr829_phdmilestone_cr829_status",
+    "OptionSetInfoNameMapping": {
+      "0": "Select Status…",
+      "1": "Yes",
+      "2": "No",
+      "3": "Waived"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr829_status",
+        "OptionSetReferenceEntityName": "PhD Milestones"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr829_status",
+    "RelatedEntityName": "PhD Milestones",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (PhD Milestones)",
+    "Name": "cr829_phdmilestone_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PhD Milestones"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PhD Milestones",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PhD Milestones)",
+    "Name": "cr829_phdmilestone_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PhD Milestones"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PhD Milestones",
+    "Type": "OptionSetInfo"
+  }
+]
