@@ -1,6 +1,11 @@
 StudentNavigation As CanvasComponent:
+    CoursesScreenNav: =App.ActiveScreen
+    EvaluationsScreenNav: =App.ActiveScreen
     Fill: =RGBA(0, 0, 0, 0)
     Height: =75
+    HistoryScreenNav: =App.ActiveScreen
+    ListSceenNav: =App.ActiveScreen
+    MilestonesScreenNav: =App.ActiveScreen
     OverviewScreenNav: =App.ActiveScreen
     Width: =1100
     X: =0
