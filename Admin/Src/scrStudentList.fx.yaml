@@ -581,7 +581,7 @@
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(16, 110, 190, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =Icon.CancelBadge
+                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,Icon.CheckBadge,Icon.CancelBadge)
                     OnSelect: =Select(Parent)
                     PaddingBottom: =5
                     PaddingLeft: =5
