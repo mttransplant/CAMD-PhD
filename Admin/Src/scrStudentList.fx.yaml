@@ -582,7 +582,7 @@
                     Font: =Font.'Segoe UI'
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Text(Milestone)="Course Requirement"))>0,"✅","ⓧ")
+                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,"✅","ⓧ")
                     Width: =70
                     X: =GradDate.X+GradDate.Width+5
                     Y: =5
@@ -600,7 +600,7 @@
                     Font: =Font.'Segoe UI'
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Text(Milestone)="Paper Requirement"))>0,"✅","ⓧ")
+                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,"✅","ⓧ")
                     Width: =70
                     X: =CourseInd.X+CourseInd.Width+5
                     Y: =5
@@ -618,7 +618,7 @@
                     Font: =Font.'Segoe UI'
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Text(Milestone)="Qualifying Examination"))>0,"✅","ⓧ")
+                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,"✅","ⓧ")
                     Width: =70
                     X: =PaperInd.X+PaperInd.Width+5
                     Y: =5
@@ -636,7 +636,7 @@
                     Font: =Font.'Segoe UI'
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Text(Milestone)="Dissertation Proposal"))>0,"✅","ⓧ")
+                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,"✅","ⓧ")
                     Width: =80
                     X: =QualInd.X+QualInd.Width+5
                     Y: =5
@@ -674,7 +674,7 @@
                     Font: =Font.'Segoe UI'
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Text(Milestone)="Dissertation Defense"))>0,"✅","ⓧ")
+                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,"✅","ⓧ")
                     Width: =80
                     X: =TA_Ind.X+TA_Ind.Width+5
                     Y: =5
