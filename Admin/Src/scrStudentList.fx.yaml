@@ -1,11 +1,6 @@
 "scrStudentList As screen.'autoLayout_HeaderFooter_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: |-
-        =ClearCollect(colCompletedMilestones,Filter('PhD Milestones','Milestone Status' in ['Milestone Status (PhD Milestones)'.Yes,'Milestone Status (PhD Milestones)'.Waived]));
-        //ClearCollect(colAllMilestones,'PhD Milestones');
-        //ClearCollect(colCompletedMilestones,Filter(colAllMilestones,Text('Milestone Status') in ["Yes","Waived"]));
-        //ClearCollect(colCompletedMilestones,Filter(colAllMilestones,Text('Milestone Status') in ["Yes","Waived"]));
-        //Clear(colAllMilestones)
+    OnVisible: =ClearCollect(colCompletedMilestones,Filter('PhD Milestones','Milestone Status' in ['Milestone Status (PhD Milestones)'.Yes,'Milestone Status (PhD Milestones)'.Waived]));
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
