@@ -654,9 +654,7 @@
                     Font: =Font.'Segoe UI'
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: |-
-                        =//If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Text(Milestone)="Dissertation Proposal"))>0,"✅","ⓧ")
-                        "TBD"
+                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,"✅","ⓧ")
                     Width: =70
                     X: =ProposalInd.X+ProposalInd.Width+5
                     Y: =5
