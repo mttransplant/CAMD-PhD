@@ -572,7 +572,7 @@
 
                 CourseInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,Color.Green,Color.Red)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,Color.ForestGreen,Color.IndianRed)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
@@ -597,7 +597,7 @@
 
                 PaperInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,Color.Green,Color.Red)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,Color.ForestGreen,Color.IndianRed)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
@@ -622,7 +622,7 @@
 
                 QualInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,Color.Green,Color.Red)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,Color.ForestGreen,Color.IndianRed)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
@@ -647,7 +647,7 @@
 
                 ProposalInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,Color.Green,Color.Red)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,Color.ForestGreen,Color.IndianRed)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
@@ -672,7 +672,7 @@
 
                 TA_Ind As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,Color.Green,Color.Red)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,Color.ForestGreen,Color.IndianRed)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
@@ -697,7 +697,7 @@
 
                 DefenseInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,Color.Green,Color.Red)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,Color.ForestGreen,Color.IndianRed)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
