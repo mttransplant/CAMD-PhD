@@ -570,111 +570,153 @@
                     Y: =5
                     ZIndex: =12
 
-                CourseInd As label:
-                    Align: =Align.Center
+                CourseInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =Color.Red
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,Color.Green,Color.Red)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
                     FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.CancelBadge
                     OnSelect: =Select(Parent)
-                    Size: =13
-                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,"✅","ⓧ")
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
                     Width: =70
                     X: =GradDate.X+GradDate.Width+5
-                    Y: =5
-                    ZIndex: =13
+                    Y: =10
+                    ZIndex: =19
 
-                PaperInd As label:
-                    Align: =Align.Center
+                PaperInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =Color.Red
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,Color.Green,Color.Red)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
                     FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,Icon.CheckBadge,Icon.CancelBadge)
                     OnSelect: =Select(Parent)
-                    Size: =13
-                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,"✅","ⓧ")
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
                     Width: =70
                     X: =CourseInd.X+CourseInd.Width+5
-                    Y: =5
-                    ZIndex: =14
+                    Y: =10
+                    ZIndex: =20
 
-                QualInd As label:
-                    Align: =Align.Center
+                QualInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =Color.Red
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,Color.Green,Color.Red)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
                     FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,Icon.CheckBadge,Icon.CancelBadge)
                     OnSelect: =Select(Parent)
-                    Size: =13
-                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,"✅","ⓧ")
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
                     Width: =70
                     X: =PaperInd.X+PaperInd.Width+5
-                    Y: =5
-                    ZIndex: =15
+                    Y: =10
+                    ZIndex: =21
 
-                ProposalInd As label:
-                    Align: =Align.Center
+                ProposalInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =Color.Red
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,Color.Green,Color.Red)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
                     FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,Icon.CheckBadge,Icon.CancelBadge)
                     OnSelect: =Select(Parent)
-                    Size: =13
-                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,"✅","ⓧ")
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
                     Width: =80
                     X: =QualInd.X+QualInd.Width+5
-                    Y: =5
-                    ZIndex: =16
+                    Y: =10
+                    ZIndex: =22
 
-                TA_Ind As label:
-                    Align: =Align.Center
+                TA_Ind As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(0, 0, 0, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,Color.Green,Color.Red)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
                     FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,Icon.CheckBadge,Icon.CancelBadge)
                     OnSelect: =Select(Parent)
-                    Size: =13
-                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,"✅","ⓧ")
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
                     Width: =70
                     X: =ProposalInd.X+ProposalInd.Width+5
-                    Y: =5
-                    ZIndex: =17
+                    Y: =10
+                    ZIndex: =23
 
-                DefenseInd As label:
-                    Align: =Align.Center
+                DefenseInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =Color.Red
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,Color.Green,Color.Red)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
                     FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,Icon.CheckBadge,Icon.CancelBadge)
                     OnSelect: =Select(Parent)
-                    Size: =13
-                    Text: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,"✅","ⓧ")
+                    PaddingBottom: =5
+                    PaddingLeft: =5
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
                     Width: =80
                     X: =TA_Ind.X+TA_Ind.Width+5
-                    Y: =5
-                    ZIndex: =18
+                    Y: =10
+                    ZIndex: =24
 
