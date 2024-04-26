@@ -3,7 +3,7 @@
     OnHidden: =Select(btn_mCancel)
     OnVisible: |-
         =Select(btnLoadMilestones);
-        UpdateContext({isEditing:false})
+        UpdateContext({IsEditing:false})
 
     ScreenContainer2_2 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -81,7 +81,7 @@
             btnBack_2 As Button:
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
-                DisplayMode: =DisplayMode.Edit
+                DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
                 Height: =32
                 LayoutMinHeight: =32
@@ -326,13 +326,13 @@
                         =Patch('PhD Milestones',ShowColumns(colUpdateMilestones,NUID,Milestone,'Milestone Status',Notes, Date, MilestoneID));
                         If(CountRows(colDeleteMilestones)>0,Remove('PhD Milestones',colDeleteMilestones));
                         Notify("Edits successfully saved",NotificationType.Success,5000);
-                        UpdateContext({isEditing:false});
+                        UpdateContext({IsEditing:false});
                         Select(btnLoadMilestones)
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="Save Changes"
-                    Visible: =isEditing And (CountRows(colUpdateMilestones)+CountRows(colDeleteMilestones)>0)
+                    Visible: =IsEditing And (CountRows(colUpdateMilestones)+CountRows(colDeleteMilestones)>0)
                     Width: =30
                     X: =btn_mEdit.X+btn_mEdit.Width
                     Y: =10
@@ -353,7 +353,7 @@
                     OnSelect: |-
                         =Collect('PhD Milestones',{NUID:galStudentLlist.Selected.NUID,Date:Today()});
                         Select(btnLoadMilestones);
-                        UpdateContext({isEditing:true});
+                        UpdateContext({IsEditing:true});
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
@@ -377,12 +377,12 @@
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Edit
                     OnSelect: |-
-                        =UpdateContext({isEditing:true})
+                        =UpdateContext({IsEditing:true})
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="Edit Milestones"
-                    Visible: =Not(isEditing)
+                    Visible: =Not(IsEditing)
                     Width: =30
                     X: =Parent.Width-btn_mEdit.Width-btn_mSave.Width-10
                     Y: =10
@@ -402,12 +402,12 @@
                     Icon: =Icon.Cancel
                     OnSelect: |-
                         =Select(btnLoadMilestones);
-                        UpdateContext({isEditing:false})
+                        UpdateContext({IsEditing:false})
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="Discard Changes"
-                    Visible: =isEditing
+                    Visible: =IsEditing
                     Width: =30
                     X: =btn_mEdit.X
                     Y: =10
@@ -440,8 +440,8 @@
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
-                    DisplayMode: =If(isEditing,DisplayMode.Edit,DisplayMode.View)
-                    Fill: =If(isEditing,RGBA(245, 245, 245, 1),Color.White)
+                    DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                    Fill: =If(IsEditing,RGBA(245, 245, 245, 1),Color.White)
                     Font: =Font.'Segoe UI'
                     HoverBorderColor: =RGBA(16, 110, 190, 1)
                     HoverColor: =RGBA(50, 49, 48, 1)
@@ -493,8 +493,8 @@
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
-                    DisplayMode: =If(isEditing,DisplayMode.Edit,DisplayMode.View)
-                    Fill: =If(isEditing,RGBA(245, 245, 245, 1),Color.White)
+                    DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                    Fill: =If(IsEditing,RGBA(245, 245, 245, 1),Color.White)
                     Font: =Font.'Segoe UI'
                     HoverBorderColor: =RGBA(16, 110, 190, 1)
                     HoverColor: =RGBA(50, 49, 48, 1)
@@ -541,7 +541,7 @@
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
-                    DisplayMode: =If(isEditing,DisplayMode.Edit,DisplayMode.View)
+                    DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -609,7 +609,7 @@
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
-                    Visible: =isEditing
+                    Visible: =IsEditing
                     Width: =32
                     X: =mBy.X+mBy.Width+10
                     Y: =10
@@ -623,8 +623,8 @@
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
-                    DisplayMode: =If(isEditing,DisplayMode.Edit,DisplayMode.View)
-                    Fill: =If(isEditing,RGBA(245, 245, 245, 1),Color.White)
+                    DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                    Fill: =If(IsEditing,RGBA(245, 245, 245, 1),Color.White)
                     Font: =Font.'Segoe UI'
                     HoverDateFill: =RGBA(184, 187, 184, 1)
                     IconBackground: =RGBA(0, 120, 212, 1)
