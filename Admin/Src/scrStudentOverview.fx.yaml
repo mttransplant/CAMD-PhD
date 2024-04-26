@@ -95,7 +95,7 @@
             btnOverview_5 As Button:
                 Appearance: ='ButtonCanvas.Appearance'.Primary
                 BasePaletteColor: =
-                DisplayMode: =DisplayMode.Edit
+                DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
                 Height: =32
                 LayoutMinHeight: =32
