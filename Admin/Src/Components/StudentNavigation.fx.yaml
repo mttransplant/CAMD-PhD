@@ -1,6 +1,7 @@
 StudentNavigation As CanvasComponent:
     Fill: =RGBA(0, 0, 0, 0)
     Height: =75
+    OverviewScreenNav: =App.ActiveScreen
     Width: =1100
     X: =0
     Y: =0

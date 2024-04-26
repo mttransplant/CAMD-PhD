@@ -14345,7 +14345,8 @@
         },
         "X",
         "Y",
-        "ZIndex"
+        "ZIndex",
+        "OverviewScreenNav"
       ],
       "DynamicProperties": [
         {
@@ -14404,6 +14405,11 @@
       "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
+        {
+          "Category": "Data",
+          "PropertyName": "OverviewScreenNav",
+          "RuleProviderType": "System"
+        },
         {
           "Category": "Design",
           "PropertyName": "ZIndex",
