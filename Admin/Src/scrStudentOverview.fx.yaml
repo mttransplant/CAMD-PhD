@@ -59,8 +59,14 @@
                 ZIndex: =1
 
         StudentNavigation_1 As StudentNavigation:
+            CoursesScreenNav: =scrStudentCourses
+            EvaluationsScreenNav: =scrStudentEvaluations
+            HistoryScreenNav: =scrStudentHistory
             LayoutMinHeight: =640
             LayoutMinWidth: =640
+            ListSceenNav: =scrStudentList
+            MilestonesScreenNav: =scrStudentMilestones
+            OverviewScreenNav: =scrStudentOverview
             ZIndex: =3
 
         MainContainer2 As groupContainer.verticalAutoLayoutContainer:

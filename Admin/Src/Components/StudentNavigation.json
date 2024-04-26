@@ -107,7 +107,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "NavContainer_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 187,
+            "PublishOrderIndex": 180,
             "Rules": [
               {
                 "Category": "Data",
@@ -171,7 +171,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "If(EditStudentInfo.Unsaved,Notify(\"Caution, unsaved changes exist. Please Undo or Save changes before leaving this screen.\",NotificationType.Warning),Select(btn_oCancel);Navigate(scrStudentList))",
+                "InvariantScript": "Navigate(StudentNavigation.ListSceenNav)",
                 "Property": "OnSelect",
                 "RuleProviderType": "User"
               }
@@ -286,7 +286,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "NavContainer_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 188,
+            "PublishOrderIndex": 181,
             "Rules": [
               {
                 "Category": "Data",
@@ -344,7 +344,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(scrStudentOverview)",
+                "InvariantScript": "Navigate(StudentNavigation.OverviewScreenNav)",
                 "Property": "OnSelect",
                 "RuleProviderType": "User"
               }
@@ -467,7 +467,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "NavContainer_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 189,
+            "PublishOrderIndex": 182,
             "Rules": [
               {
                 "Category": "Data",
@@ -531,7 +531,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(scrStudentMilestones)",
+                "InvariantScript": "Navigate(StudentNavigation.MilestonesScreenNav)",
                 "Property": "OnSelect",
                 "RuleProviderType": "User"
               }
@@ -654,7 +654,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "NavContainer_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 190,
+            "PublishOrderIndex": 183,
             "Rules": [
               {
                 "Category": "Data",
@@ -718,7 +718,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(scrStudentHistory)",
+                "InvariantScript": "Navigate(StudentNavigation.HistoryScreenNav)",
                 "Property": "OnSelect",
                 "RuleProviderType": "User"
               }
@@ -841,7 +841,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "NavContainer_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 191,
+            "PublishOrderIndex": 184,
             "Rules": [
               {
                 "Category": "Data",
@@ -905,7 +905,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(scrStudentEvaluations)",
+                "InvariantScript": "Navigate(StudentNavigation.EvaluationsScreenNav)",
                 "Property": "OnSelect",
                 "RuleProviderType": "User"
               }
@@ -1028,7 +1028,7 @@
             "OptimizeForDevices": "Off",
             "Parent": "NavContainer_2",
             "PersistMetaDataIDKey": false,
-            "PublishOrderIndex": 192,
+            "PublishOrderIndex": 185,
             "Rules": [
               {
                 "Category": "Data",
@@ -1092,7 +1092,7 @@
               },
               {
                 "Category": "Behavior",
-                "InvariantScript": "Navigate(scrStudentCourses)",
+                "InvariantScript": "Navigate(StudentNavigation.CoursesScreenNav)",
                 "Property": "OnSelect",
                 "RuleProviderType": "User"
               }
@@ -1192,7 +1192,7 @@
         "OptimizeForDevices": "Off",
         "Parent": "StudentNavigation",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 186,
+        "PublishOrderIndex": 179,
         "Rules": [
           {
             "Category": "Design",
@@ -1390,7 +1390,7 @@
       "EvaluationsScreenNav",
       "CoursesScreenNav"
     ],
-    "LastModifiedTimestamp": "638496865587458272",
+    "LastModifiedTimestamp": "638496867194584756",
     "Name": "StudentNavigation",
     "Rules": [
       {
@@ -1540,7 +1540,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638496865587458272",
+  "LastModifiedTimestamp": "638496867194584756",
   "Name": "cb18d79056fb4ea79fcadbe824464887",
   "OverridableProperties": {},
   "Version": "1.0"

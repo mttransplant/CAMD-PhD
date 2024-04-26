@@ -35,7 +35,7 @@ StudentNavigation As CanvasComponent:
             Height: =32
             LayoutMinHeight: =32
             LayoutMinWidth: =96
-            OnSelect: =If(EditStudentInfo.Unsaved,Notify("Caution, unsaved changes exist. Please Undo or Save changes before leaving this screen.",NotificationType.Warning),Select(btn_oCancel);Navigate(scrStudentList))
+            OnSelect: =Navigate(StudentNavigation.ListSceenNav)
             Text: ="Back to List"
             Width: =140
             X: =0
@@ -49,7 +49,7 @@ StudentNavigation As CanvasComponent:
             Height: =32
             LayoutMinHeight: =32
             LayoutMinWidth: =96
-            OnSelect: =Navigate(scrStudentOverview)
+            OnSelect: =Navigate(StudentNavigation.OverviewScreenNav)
             Text: ="Overview"
             Width: =140
             X: =0
@@ -64,7 +64,7 @@ StudentNavigation As CanvasComponent:
             Height: =32
             LayoutMinHeight: =32
             LayoutMinWidth: =96
-            OnSelect: =Navigate(scrStudentMilestones)
+            OnSelect: =Navigate(StudentNavigation.MilestonesScreenNav)
             Text: ="Milestones"
             Width: =140
             X: =0
@@ -79,7 +79,7 @@ StudentNavigation As CanvasComponent:
             Height: =32
             LayoutMinHeight: =32
             LayoutMinWidth: =96
-            OnSelect: =Navigate(scrStudentHistory)
+            OnSelect: =Navigate(StudentNavigation.HistoryScreenNav)
             Text: ="Activity History"
             Width: =140
             X: =0
@@ -94,7 +94,7 @@ StudentNavigation As CanvasComponent:
             Height: =32
             LayoutMinHeight: =32
             LayoutMinWidth: =96
-            OnSelect: =Navigate(scrStudentEvaluations)
+            OnSelect: =Navigate(StudentNavigation.EvaluationsScreenNav)
             Text: ="Evaluations"
             Width: =140
             X: =0
@@ -109,7 +109,7 @@ StudentNavigation As CanvasComponent:
             Height: =32
             LayoutMinHeight: =32
             LayoutMinWidth: =96
-            OnSelect: =Navigate(scrStudentCourses)
+            OnSelect: =Navigate(StudentNavigation.CoursesScreenNav)
             Text: ="Courses"
             Width: =140
             X: =0
