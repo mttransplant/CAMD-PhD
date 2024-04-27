@@ -1,4 +1,5 @@
 "scrAdminMenu As screen.'autoLayout_HeaderFooter_ver1.0'":
+    Height: =App.DesignHeight
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: =
     OnVisible: =
@@ -6,7 +7,7 @@
     ScreenContainer2_5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
-        Height: =Parent.Height
+        Height: =Max(App.Height, App.DesignHeight)
         LayoutAlignItems: =LayoutAlignItems.Stretch
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =16
@@ -57,65 +58,77 @@
                 Width: =HeaderContainer2_5.Width
                 ZIndex: =1
 
-        Container3 As groupContainer.manualLayoutContainer:
+        Container7 As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
+            LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =100
             LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =4
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            ZIndex: =5
+            ZIndex: =6
 
-            btnFunding As Button:
-                BasePaletteColor: =
-                DisplayMode: =DisplayMode.Edit
-                FontColor: =
-                FontSize: =56
-                Height: =Parent.Height/2-10
-                OnSelect: =Navigate(scrAdminMenu)
-                Text: ="Funding"
-                Width: =Parent.Width/2-10
-                X: =Parent.Width/2+5
-                Y: =Parent.Height/2+5
+            Container3 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
                 ZIndex: =1
 
-            btnTARA As Button:
-                BasePaletteColor: =
-                DisplayMode: =DisplayMode.Edit
-                FontColor: =
-                FontSize: =56
-                Height: =Parent.Height/2-10
-                OnSelect: =Navigate(scrAdminMenu)  
-                Text: ="TA/RA-ships"
-                Width: =Parent.Width/2-10
-                X: =5
-                Y: =Parent.Height/2+5
-                ZIndex: =2
+                btnFunding As Button:
+                    BasePaletteColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    FontSize: =56
+                    Height: =Parent.Height/2-10
+                    OnSelect: =Navigate(scrAdminMenu)
+                    Text: ="Funding"
+                    Width: =Parent.Width/2-10
+                    X: =Parent.Width/2+5
+                    Y: =Parent.Height/2+5
+                    ZIndex: =1
 
-            btnAdvisor As Button:
-                BasePaletteColor: =
-                DisplayMode: =DisplayMode.Edit
-                FontColor: =
-                FontSize: =56
-                Height: =Parent.Height/2-10
-                OnSelect: =Navigate(scrAdvisors)
-                Text: ="Advisors"
-                Width: =Parent.Width/2-10
-                X: =Parent.Width/2+5
-                Y: =5
-                ZIndex: =3
+                btnTARA As Button:
+                    BasePaletteColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    FontSize: =56
+                    Height: =Parent.Height/2-10
+                    OnSelect: =Navigate(scrAdminMenu)  
+                    Text: ="TA/RA-ships"
+                    Width: =Parent.Width/2-10
+                    X: =5
+                    Y: =Parent.Height/2+5
+                    ZIndex: =2
 
-            btnStudent As Button:
-                BasePaletteColor: =
-                DisplayMode: =DisplayMode.Edit
-                FontColor: =
-                FontSize: =56
-                Height: =Parent.Height/2-10
-                OnSelect: =Navigate(scrStudentList)
-                Text: ="Students"
-                Width: =Parent.Width/2-10
-                X: =5
-                Y: =5
-                ZIndex: =4
+                btnAdvisor As Button:
+                    BasePaletteColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    FontSize: =56
+                    Height: =Parent.Height/2-10
+                    OnSelect: =Navigate(scrAdvisors)
+                    Text: ="Advisors"
+                    Width: =Parent.Width/2-10
+                    X: =Parent.Width/2+5
+                    Y: =5
+                    ZIndex: =3
+
+                btnStudent As Button:
+                    BasePaletteColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    FontSize: =56
+                    Height: =Parent.Height/2-10
+                    OnSelect: =Navigate(scrStudentList)
+                    Text: ="Students"
+                    Width: =Parent.Width/2-10
+                    X: =5
+                    Y: =5
+                    ZIndex: =4
 
