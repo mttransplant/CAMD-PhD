@@ -592,7 +592,9 @@
                         ZIndex: =1
 
     Spinner2 As Spinner:
+        BasePaletteColor: =
         DisplayMode: =DisplayMode.Edit
+        FontColor: =
         Height: =Self.Width
         SpinnerSize: ='Spinner.SpinnerSize'.Huge
         Visible: =IsLoading
