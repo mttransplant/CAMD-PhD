@@ -267,18 +267,18 @@
                         Y: =10
                         ZIndex: =6
 
-                    btnLoadAdvisors As button:
+                    btnLoadAdvisors As icon.Reload:
                         BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        Fill: =RGBA(0, 120, 212, 1)
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
+                        Color: =RGBA(0, 120, 212, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =20
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(255, 255, 255, 1)
-                        HoverFill: =RGBA(16, 110, 190, 1)
+                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Reload
                         OnSelect: |-
                             =UpdateContext({IsLoading:true});
                             Select(btnResetNewAdvisorForm);
@@ -286,19 +286,14 @@
                             ClearCollect(colAdvisorUpdates,Filter(colAdvisors,'Advisor Email'="nothing"));
                             ClearCollect(colAdvisees,'PhD Students');
                             UpdateContext({IsLoading:false});
-                        PressedBorderColor: =RGBA(0, 69, 120, 1)
-                        PressedColor: =RGBA(255, 255, 255, 1)
-                        PressedFill: =RGBA(16, 110, 190, 1)
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =15
-                        Text: ="Button"
-                        Visible: =false
-                        Width: =40
-                        X: =960
-                        ZIndex: =7
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Visible: =!IsEditing
+                        Width: =btn_aSave.Width
+                        X: =btn_aSave.X
+                        Y: =10
+                        ZIndex: =8
 
                 cntSpinner As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
