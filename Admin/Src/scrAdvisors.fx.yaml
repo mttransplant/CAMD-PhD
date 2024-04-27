@@ -5,7 +5,7 @@
         Clear(colAdvisors)
     OnVisible: =Select(btnLoadAdvisors)
 
-    ScreenContainer2_6 As groupContainer.verticalAutoLayoutContainer:
+    cntAdvisorScreen As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -25,8 +25,8 @@
         X: =(Parent.Width-Self.Width)/2
         ZIndex: =1
 
-        HeaderContainer1_1 As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.Start
+        cntHeaderAdvisors As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
@@ -44,6 +44,7 @@
             ZIndex: =1
 
             Container6_1 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
                 LayoutMinHeight: =50
@@ -55,7 +56,7 @@
                 Width: =Parent.Width
                 ZIndex: =3
 
-                Header_8 As label:
+                labHeaderAdvisors As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -70,10 +71,10 @@
                     Height: =Parent.Height
                     Size: =30
                     Text: ="CAMD PhD Database - Advisors"
-                    Width: =HeaderContainer1_1.Width
+                    Width: =cntHeaderAdvisors.Width
                     ZIndex: =1
 
-                Icon3_1 As icon.Home:
+                icoHomeAdv As icon.Home:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(255, 255, 255, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -95,7 +96,7 @@
                     ZIndex: =2
 
         Container1 As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.Start
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             LayoutMinHeight: =100
             LayoutMinWidth: =250
@@ -104,7 +105,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =Parent.Width-(ScreenContainer2_6.PaddingLeft+ScreenContainer2_6.PaddingRight)
+            Width: =Parent.Width-(cntAdvisorScreen.PaddingLeft+cntAdvisorScreen.PaddingRight)
             ZIndex: =4
 
             cntAdvisors As groupContainer.verticalAutoLayoutContainer:
@@ -124,7 +125,7 @@
                 Width: =Parent.Width*0.75
                 ZIndex: =1
 
-                mColumns_1 As groupContainer.manualLayoutContainer:
+                cntAdvColumns As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.Light
                     Fill: =RGBA(180, 214, 250, 1)
@@ -139,7 +140,7 @@
                     Width: =Parent.Width
                     ZIndex: =1
 
-                    Label1_5 As label:
+                    labAdvisorName As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -156,7 +157,7 @@
                         X: =txtAdvisorName.X
                         ZIndex: =1
 
-                    Label1_6 As label:
+                    labAdvisorEmail As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -173,7 +174,7 @@
                         X: =txtAdvisorEmail.X
                         ZIndex: =2
 
-                    btn_mSave_1 As icon.Save:
+                    btn_aSave As icon.Save:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         Color: =RGBA(0, 120, 212, 1)
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -196,11 +197,11 @@
                         Tooltip: ="Save Changes"
                         Visible: =IsEditing And CountRows(colAdvisorUpdates)>0
                         Width: =30
-                        X: =btn_mEdit_1.X+btn_mEdit_1.Width
+                        X: =btn_aEdit.X+btn_aEdit.Width
                         Y: =10
                         ZIndex: =6
 
-                    btn_mEdit_1 As icon.Edit:
+                    btn_aEdit As icon.Edit:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         Color: =RGBA(0, 120, 212, 1)
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -220,11 +221,11 @@
                         Tooltip: ="Edit Milestones"
                         Visible: =Not(IsEditing)
                         Width: =30
-                        X: =Parent.Width-btn_mEdit_1.Width-btn_mSave_1.Width-10
+                        X: =Parent.Width-btn_aEdit.Width-btn_aSave.Width-10
                         Y: =10
                         ZIndex: =8
 
-                    btn_mCancel_1 As icon.Cancel:
+                    btn_aCancel As icon.Cancel:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         Color: =RGBA(0, 120, 212, 1)
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -245,7 +246,7 @@
                         Tooltip: ="Discard Changes"
                         Visible: =IsEditing
                         Width: =30
-                        X: =btn_mEdit_1.X
+                        X: =btn_aEdit.X
                         Y: =10
                         ZIndex: =9
 
@@ -278,7 +279,8 @@
                         Size: =15
                         Text: ="Button"
                         Visible: =false
-                        X: =40
+                        Width: =40
+                        X: =960
                         ZIndex: =10
 
                 cntSpinner As groupContainer.manualLayoutContainer:
@@ -432,7 +434,7 @@
                     DropShadow: =DropShadow.Light
                     Fill: =RGBA(180, 214, 250, 1)
                     FillPortions: =0
-                    Height: =mColumns_1.Height
+                    Height: =cntAdvColumns.Height
                     LayoutMinHeight: =30
                     LayoutMinWidth: =250
                     RadiusBottomLeft: =4
@@ -575,6 +577,7 @@
                     btnSubmitNewAdvisor As Button:
                         DisplayMode: =DisplayMode.Edit
                         FontSize: =24
+                        FontWeight: =FontWeight.Bold
                         Height: =40
                         OnSelect: |-
                             =Collect('PhD Advisors',{'Advisor Name':txtNewAdvisorName.Text,'Advisor Email':txtNewAdvisorEmail.Text});
@@ -589,8 +592,9 @@
                         Appearance: ='ButtonCanvas.Appearance'.Secondary
                         BasePaletteColor: =
                         DisplayMode: =DisplayMode.Edit
-                        FontColor: =
+                        FontColor: =RGBA(106, 122, 127, 1)
                         FontSize: =24
+                        FontWeight: =FontWeight.Normal
                         Height: =btnSubmitNewAdvisor.Height
                         OnSelect: |-
                             =Reset(txtNewAdvisorName);
