@@ -2834,6 +2834,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrStudentMilestones.ScreenContainer2_2.cntMilestones.cntSpinner_2.spnLoading_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ScreenContainer2_2.cntMilestones.cntSpinner_2.spnLoading_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ScreenContainer2_2.cntMilestones.cntSpinner_2.spnLoading_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrAdvisors.cntAdvisorScreen.Container1.cntAdvisors.cntAdvColumns.btnLoadAdvisors.OnSelect"
                 }
               ],

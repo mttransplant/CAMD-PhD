@@ -174,6 +174,23 @@
                         X: =txtAdvisorEmail.X
                         ZIndex: =2
 
+                    labAdviseeCount As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        PaddingLeft: =15
+                        Size: =13
+                        Text: ="Advisee Count"
+                        Width: =txtAdviseeCount.Width
+                        X: =txtAdviseeCount.X
+                        ZIndex: =3
+
                     btn_aSave As icon.Save:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         Color: =RGBA(0, 120, 212, 1)
@@ -199,7 +216,7 @@
                         Width: =30
                         X: =btn_aEdit.X+btn_aEdit.Width
                         Y: =10
-                        ZIndex: =6
+                        ZIndex: =4
 
                     btn_aEdit As icon.Edit:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -223,7 +240,7 @@
                         Width: =30
                         X: =Parent.Width-btn_aEdit.Width-btn_aSave.Width-10
                         Y: =10
-                        ZIndex: =8
+                        ZIndex: =5
 
                     btn_aCancel As icon.Cancel:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -248,7 +265,7 @@
                         Width: =30
                         X: =btn_aEdit.X
                         Y: =10
-                        ZIndex: =9
+                        ZIndex: =6
 
                     btnLoadAdvisors As button:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -281,7 +298,7 @@
                         Visible: =false
                         Width: =40
                         X: =960
-                        ZIndex: =10
+                        ZIndex: =7
 
                 cntSpinner As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
@@ -364,7 +381,7 @@
                         RadiusTopLeft: =0
                         RadiusTopRight: =0
                         Size: =13
-                        Width: =378
+                        Width: =343
                         X: =5
                         ZIndex: =1
 
@@ -413,7 +430,7 @@
                         X: =txtAdvisorName.X+txtAdvisorName.Width+5
                         ZIndex: =2
 
-                    Label3 As label:
+                    txtAdviseeCount As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -590,7 +607,7 @@
 
                     btnSubmitNewAdvisor As Button:
                         DisplayMode: =DisplayMode.Edit
-                        FontSize: =24
+                        FontSize: =18
                         FontWeight: =FontWeight.Bold
                         Height: =40
                         OnSelect: |-
@@ -607,7 +624,7 @@
                         BasePaletteColor: =
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(106, 122, 127, 1)
-                        FontSize: =24
+                        FontSize: =18
                         FontWeight: =FontWeight.Normal
                         Height: =btnSubmitNewAdvisor.Height
                         OnSelect: |-
