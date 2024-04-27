@@ -1,0 +1,69 @@
+{
+  "QualifiedValues": [
+    {
+      "Kind": "default.cds_cr829_studentinformation_forms",
+      "Namespace": "PhD Students (Forms)",
+      "Values": {
+        "Information": "fb4ce572-0886-4a2b-a9df-bc8501f77d0f"
+      }
+    },
+    {
+      "Kind": "default.cds_cr829_phdadvisors_forms",
+      "Namespace": "PhD Advisors (Forms)",
+      "Values": {
+        "Information": "c0adc522-74a9-495c-84e7-e095c30f1e13"
+      }
+    },
+    {
+      "Kind": "default.cds_systemuser_forms",
+      "Namespace": "Users (Forms)",
+      "Values": {
+        "Application User": "d26924ef-4d80-46f7-ab1d-e6ae80a54ce8",
+        "Information": "094fb08a-77bb-49e0-b7ea-8dbddfd01294",
+        "User": "c2cd9e55-d4b4-4b55-9951-16ead79643e5",
+        "User form – Business": "c2413504-7eb2-4c59-a087-95d819866114",
+        "User Hierarchy Tile Form": "c68d6c09-d7a7-4959-8d0f-44b8cff9b452"
+      }
+    },
+    {
+      "Kind": "default.cds_cr829_phdhistory_forms",
+      "Namespace": "PhD Histories (Forms)",
+      "Values": {
+        "Information": "03d9a6d8-7e82-4c0f-bcec-b3725b9fe69a"
+      }
+    },
+    {
+      "Kind": "default.cds_cr829_phdmilestone_forms",
+      "Namespace": "PhD Milestones (Forms)",
+      "Values": {
+        "Information": "99835570-9095-4d47-9fac-b0a4cd399f05"
+      }
+    },
+    {
+      "Kind": "default.cds_bulkdeletefailure_forms",
+      "Namespace": "Bulk Delete Failures (Forms)",
+      "Values": {}
+    },
+    {
+      "Kind": "default.cds_cr829_newtable_forms",
+      "Namespace": "PhD Advisor Assignments (Forms)",
+      "Values": {
+        "Information": "e14212aa-235b-467c-b5ef-7de5a31488ba"
+      }
+    },
+    {
+      "Kind": "default.cds_cr829_studentinformation_forms",
+      "Namespace": "PhD Students_1 (Forms)",
+      "Values": {
+        "Information": "fb4ce572-0886-4a2b-a9df-bc8501f77d0f"
+      }
+    },
+    {
+      "Kind": "default.cds_cr829_phdhistory_forms",
+      "Namespace": "PhD Histories_1 (Forms)",
+      "Values": {
+        "Information": "03d9a6d8-7e82-4c0f-bcec-b3725b9fe69a"
+      }
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr829_studentinformations",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr829_studentinformation",
+    "MaxGetRowsCount": 500,
+    "Name": "PhD Students",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr829_admitterm": "Admit Term",
+      "cr829_Advisor": "Advisor",
+      "cr829_CoAdvisor": "Co-Advisor",
+      "cr829_dissertationcommittee": "Dissertation Committee",
+      "cr829_email": "Email",
+      "cr829_expectedgraddate": "Expected Grad Date",
+      "cr829_firstname": "First Name",
+      "cr829_fullnamecalc": "Full Name Calc",
+      "cr829_individualpath": "Individual Path",
+      "cr829_lastname": "Last Name",
+      "cr829_nuid": "Student",
+      "cr829_nuid2": "NUID",
+      "cr829_status": "Status (cr829_status)",
+      "cr829_studentinformation_AsyncOperations": "System Jobs",
+      "cr829_studentinformation_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr829_studentinformation_DuplicateBaseRecord": "Duplicate Records (cr829_studentinformation_DuplicateBaseRecord)",
+      "cr829_studentinformation_DuplicateMatchingRecord": "Duplicate Records (cr829_studentinformation_DuplicateMatchingRecord)",
+      "cr829_studentinformation_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr829_studentinformation_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr829_studentinformation_ProcessSession": "Process Sessions",
+      "cr829_studentinformation_SyncErrors": "Sync Errors",
+      "cr829_studentinformationid": "StudentID",
+      "cr829_track": "Track",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status (statecode)",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PhD Students",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PhD Students (Views)",
+    "Name": "_cr829_studentinformation_views",
+    "RelatedEntityName": "PhD Students",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "20ed661b-6e8b-42f5-9be0-926d1bc4f8b3": "Active Student Information",
+      "6dd03b84-2d69-4fe4-9819-71e392b9d297": "Student Information Associated View",
+      "7529047d-5e2a-4b08-ac12-5c369f30fda9": "Student Information Lookup View",
+      "e6a551d3-f851-4684-8d4e-b10faee7f072": "Inactive Student Information",
+      "e96a6ece-f330-4944-8d54-a31afbdfe94f": "Student Information Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Track (PhD Students)",
+    "Name": "cr829_studentinformation_cr829_track",
+    "OptionSetInfoNameMapping": {
+      "0": "Regular",
+      "1": "Advanced"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr829_track",
+        "OptionSetReferenceEntityName": "PhD Students"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr829_track",
+    "RelatedEntityName": "PhD Students",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (PhD Students)",
+    "Name": "cr829_studentinformation_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PhD Students"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PhD Students",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PhD Students)",
+    "Name": "cr829_studentinformation_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PhD Students"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PhD Students",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr829_phdadvisorses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr829_phdadvisors",
+    "MaxGetRowsCount": 500,
+    "Name": "PhD Advisors",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr829_advisoremail": "Advisor Email",
+      "cr829_advisorname": "Advisor Name",
+      "cr829_phdadvisors_AsyncOperations": "System Jobs",
+      "cr829_phdadvisors_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr829_phdadvisors_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr829_phdadvisors_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr829_phdadvisors_ProcessSession": "Process Sessions",
+      "cr829_phdadvisors_SyncErrors": "Sync Errors",
+      "cr829_phdadvisorsid": "AdvisorID",
+      "cr829_studentinformation_Advisor_cr829_phdadvis": "PhD Students (cr829_studentinformation_Advisor_cr829_phdadvis)",
+      "cr829_studentinformation_CoAdvisor_cr829_phdadv": "PhD Students (cr829_studentinformation_CoAdvisor_cr829_phdadv)",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PhD Advisors",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PhD Advisors (Views)",
+    "Name": "_cr829_phdadvisors_views",
+    "RelatedEntityName": "PhD Advisors",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "1eb3d3bb-1841-4d60-a812-704781d093eb": "PhD Advisors Lookup View",
+      "5d39cf1d-a7e9-479c-bad7-9353d2b037ca": "PhD Advisors Associated View",
+      "76bec76a-9116-405d-b21e-3e481b23cc68": "Active PhD Advisors",
+      "864c525f-ba1b-4a48-912d-45063e4a43cf": "Inactive PhD Advisors",
+      "a6f36124-1316-4358-85c4-86d535f4a499": "PhD Advisors Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Status (PhD Advisors)",
+    "Name": "cr829_phdadvisors_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PhD Advisors"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PhD Advisors",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PhD Advisors)",
+    "Name": "cr829_phdadvisors_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PhD Advisors"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PhD Advisors",
+    "Type": "OptionSetInfo"
+  }
+]
