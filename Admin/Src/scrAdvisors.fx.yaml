@@ -282,20 +282,30 @@
                         X: =40
                         ZIndex: =10
 
-                spnLoading As Spinner:
-                    AlignInContainer: =AlignInContainer.Center
-                    BasePaletteColor: =
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    Height: =Self.Width
-                    LayoutMinHeight: =200
-                    LayoutMinWidth: =200
-                    SpinnerSize: ='Spinner.SpinnerSize'.Huge
+                cntSpinner As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =Parent.Height
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
                     Visible: =IsLoading
-                    Width: =100
-                    X: =(galAdvisors.Width-spnLoading.Width)/2
-                    Y: =100
-                    ZIndex: =2
+                    Width: =Parent.Width
+                    ZIndex: =3
+
+                    spnLoading As Spinner:
+                        BasePaletteColor: =
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =
+                        Height: =Self.Width
+                        SpinnerSize: ='Spinner.SpinnerSize'.Huge
+                        Visible: =true
+                        Width: =100
+                        X: =(Parent.Width-spnLoading.Width)/2
+                        Y: =40
+                        ZIndex: =1
 
                 galAdvisors As gallery.galleryVertical:
                     AlignInContainer: =AlignInContainer.SetByContainer
@@ -308,8 +318,9 @@
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
                     TemplateSize: =40
+                    Visible: =!IsLoading
                     Width: =Parent.Width
-                    ZIndex: =3
+                    ZIndex: =4
 
                     txtAdvisorName As text:
                         BorderColor: =RGBA(245, 245, 245, 1)
