@@ -1,6 +1,11 @@
 "scrStudentList As screen.'autoLayout_HeaderFooter_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnVisible: =ClearCollect(colCompletedMilestones,Filter('PhD Milestones','Milestone Status' in ['Milestone Status (PhD Milestones)'.Yes,'Milestone Status (PhD Milestones)'.Waived]));
+    OnVisible: |-
+        =Select(btnLoadStudentListData);
+        Set(ColorMilestoneIsMissing,Color.LightGray);
+        Set(ColorMilestoneIsFulfilled,Color.ForestGreen);
+        Set(IconMilestoneIsMissing,Icon.CancelBadge);
+        Set(IconMilestoneIsFulfilled,Icon.CheckBadge);
 
     ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -400,12 +405,68 @@
                     Y: =10
                     ZIndex: =16
 
+                btnLoadStudentListData As button:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    Fill: =RGBA(0, 120, 212, 1)
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Semibold
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(255, 255, 255, 1)
+                    HoverFill: =RGBA(16, 110, 190, 1)
+                    OnSelect: |-
+                        =UpdateContext({IsLoading:true});
+                        ClearCollect(colStudents,'PhD Students');
+                        ClearCollect(colCompletedMilestones,Filter('PhD Milestones','Milestone Status' in ['Milestone Status (PhD Milestones)'.Yes,'Milestone Status (PhD Milestones)'.Waived]));
+                        UpdateContext({IsLoading:false});
+                    PressedBorderColor: =RGBA(0, 69, 120, 1)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =RGBA(16, 110, 190, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =15
+                    Text: ="Button"
+                    Visible: =false
+                    X: =40
+                    Y: =10
+                    ZIndex: =17
+
+            cntSpinner_1 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =Parent.Height
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Visible: =IsLoading
+                Width: =Parent.Width
+                ZIndex: =2
+
+                spnLoading_1 As Spinner:
+                    BasePaletteColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =Self.Width
+                    SpinnerSize: ='Spinner.SpinnerSize'.Huge
+                    Visible: =true
+                    Width: =100
+                    X: =(Parent.Width-spnLoading_1.Width)/2
+                    Y: =40
+                    ZIndex: =1
+
             galStudentLlist As gallery.galleryVertical:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Height: =90
-                Items: =Sort(Sort('PhD Students','Last Name',SortOrder.Ascending),'First Name',SortOrder.Ascending)
+                Items: =Sort(Sort(colStudents,'First Name',SortOrder.Ascending),'Last Name',SortOrder.Ascending)
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
@@ -413,8 +474,9 @@
                 TemplateFill: =
                 TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(50, Self.Height - 60))
                 Transition: =Transition.Push
+                Visible: =!IsLoading
                 Width: =IndividualPath.X+IndividualPath.Width+20
-                ZIndex: =2
+                ZIndex: =3
 
                 SeparatorLine As rectangle:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -605,7 +667,7 @@
 
                 CourseInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,Color.ForestGreen,Color.IndianRed)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
@@ -614,7 +676,7 @@
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(16, 110, 190, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,Icon.CheckBadge,Icon.CancelBadge)
+                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
                     OnSelect: =Select(Parent)
                     PaddingBottom: =5
                     PaddingLeft: =5
@@ -630,7 +692,7 @@
 
                 PaperInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,Color.ForestGreen,Color.IndianRed)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
@@ -639,7 +701,7 @@
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(16, 110, 190, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,Icon.CheckBadge,Icon.CancelBadge)
+                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
                     OnSelect: =Select(Parent)
                     PaddingBottom: =5
                     PaddingLeft: =5
@@ -655,7 +717,7 @@
 
                 QualInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,Color.ForestGreen,Color.IndianRed)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
@@ -664,7 +726,7 @@
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(16, 110, 190, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,Icon.CheckBadge,Icon.CancelBadge)
+                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
                     OnSelect: =Select(Parent)
                     PaddingBottom: =5
                     PaddingLeft: =5
@@ -680,7 +742,7 @@
 
                 ProposalInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,Color.ForestGreen,Color.IndianRed)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
@@ -689,7 +751,7 @@
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(16, 110, 190, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,Icon.CheckBadge,Icon.CancelBadge)
+                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
                     OnSelect: =Select(Parent)
                     PaddingBottom: =5
                     PaddingLeft: =5
@@ -705,7 +767,7 @@
 
                 TA_Ind As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,Color.ForestGreen,Color.IndianRed)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
@@ -714,7 +776,7 @@
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(16, 110, 190, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,Icon.CheckBadge,Icon.CancelBadge)
+                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
                     OnSelect: =Select(Parent)
                     PaddingBottom: =5
                     PaddingLeft: =5
@@ -730,7 +792,7 @@
 
                 DefenseInd As icon.CancelBadge:
                     BorderColor: =RGBA(0, 0, 0, 0)
-                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,Color.ForestGreen,Color.IndianRed)
+                    Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
@@ -739,7 +801,7 @@
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(16, 110, 190, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
-                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,Icon.CheckBadge,Icon.CancelBadge)
+                    Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
                     OnSelect: =Select(Parent)
                     PaddingBottom: =5
                     PaddingLeft: =5

@@ -183,9 +183,11 @@
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(16, 110, 190, 1)
                 OnSelect: |-
-                    =ClearCollect(colStudentMilestones,Filter('PhD Milestones',galStudentLlist.Selected.NUID=NUID));
+                    =UpdateContext({IsLoading:true});
+                    ClearCollect(colStudentMilestones,Filter('PhD Milestones',galStudentLlist.Selected.NUID=NUID));
                     ClearCollect(colUpdateMilestones,Filter('PhD Milestones',NUID=""));
-                    ClearCollect(colDeleteMilestones,Filter('PhD Milestones',NUID=""))
+                    ClearCollect(colDeleteMilestones,Filter('PhD Milestones',NUID=""));
+                    UpdateContext({IsLoading:false});
                 PressedBorderColor: =RGBA(0, 69, 120, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(16, 110, 190, 1)
@@ -415,6 +417,31 @@
                     Y: =10
                     ZIndex: =9
 
+            cntSpinner_2 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =Parent.Height
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Visible: =IsLoading
+                Width: =Parent.Width
+                ZIndex: =2
+
+                spnLoading_2 As Spinner:
+                    BasePaletteColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =Self.Width
+                    SpinnerSize: ='Spinner.SpinnerSize'.Huge
+                    Visible: =true
+                    Width: =100
+                    X: =(Parent.Width-spnLoading_2.Width)/2
+                    Y: =40
+                    ZIndex: =1
+
             galMilesones As gallery.galleryVertical:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =RGBA(245, 245, 245, 1)
@@ -426,8 +453,9 @@
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =40
+                Visible: =!IsLoading
                 Width: =Parent.Width
-                ZIndex: =2
+                ZIndex: =3
 
                 mMilestone As dropdown:
                     BorderColor: =If(mMilestone.SelectedText.Value="Select Milestone…",Color.Red,RGBA(245, 245, 245, 1))
