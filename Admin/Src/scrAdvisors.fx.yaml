@@ -263,8 +263,7 @@
                         HoverFill: =RGBA(16, 110, 190, 1)
                         OnSelect: |-
                             =UpdateContext({IsLoading:true});
-                            Reset(txtNewAdvisorName);
-                            Reset(txtNewAdvisorEmail);
+                            Select(btnResetNewAdvisorForm);
                             ClearCollect(colAdvisors,'PhD Advisors');
                             ClearCollect(colAdvisorUpdates,Filter(colAdvisors,'Advisor Email'="nothing"));
                             ClearCollect(colNewAdvisor,colAdvisorUpdates);
@@ -573,32 +572,32 @@
                     Width: =Parent.Width
                     ZIndex: =4
 
-                    Button4 As button:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        Fill: =RGBA(0, 120, 212, 1)
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(255, 255, 255, 1)
-                        HoverFill: =RGBA(16, 110, 190, 1)
+                    btnSubmitNewAdvisor As Button:
+                        DisplayMode: =DisplayMode.Edit
+                        FontSize: =24
+                        Height: =40
                         OnSelect: |-
                             =Collect('PhD Advisors',{'Advisor Name':txtNewAdvisorName.Text,'Advisor Email':txtNewAdvisorEmail.Text});
                             Select(btnLoadAdvisors)
-                        PressedBorderColor: =RGBA(0, 69, 120, 1)
-                        PressedColor: =RGBA(255, 255, 255, 1)
-                        PressedFill: =RGBA(16, 110, 190, 1)
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =15
                         Text: ="Submit New Advisor"
                         Width: =Parent.Width-(2*Self.X)
                         X: =10
-                        Y: =10
-                        ZIndex: =1
+                        Y: =10  
+                        ZIndex: =2
+
+                    btnResetNewAdvisorForm As Button:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        BasePaletteColor: =
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =
+                        FontSize: =24
+                        Height: =btnSubmitNewAdvisor.Height
+                        OnSelect: |-
+                            =Reset(txtNewAdvisorName);
+                            Reset(txtNewAdvisorEmail);
+                        Text: ="Reset New Advisor"
+                        Width: =Parent.Width-(2*Self.X)
+                        X: =btnSubmitNewAdvisor.X
+                        Y: =btnSubmitNewAdvisor.Y+btnSubmitNewAdvisor.Height+10
+                        ZIndex: =3
 

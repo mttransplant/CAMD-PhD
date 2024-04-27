@@ -2024,6 +2024,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.cntNewAdvisor.cntSubmitNewAdvisor.btnSubmitNewAdvisor.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.cntNewAdvisor.cntSubmitNewAdvisor.btnSubmitNewAdvisor.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrAdvisors",
+                "type": "scrAdvisors.ScreenContainer2_6.Container1.cntNewAdvisor.cntSubmitNewAdvisor.btnSubmitNewAdvisor"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.cntAdvisors.galAdvisors.AccessibleLabel"
                 }
               ],
@@ -2757,6 +2787,36 @@
                 "member": "AccessibleLabel",
                 "module": "scrStudentOverview",
                 "type": "scrStudentOverview.ScreenContainer2.MainContainer2.EditStudentInfo.'Dissertation Committee_DataCard5'.frmCommittee"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.cntNewAdvisor.cntSubmitNewAdvisor.btnResetNewAdvisorForm.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.cntNewAdvisor.cntSubmitNewAdvisor.btnResetNewAdvisorForm.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrAdvisors",
+                "type": "scrAdvisors.ScreenContainer2_6.Container1.cntNewAdvisor.cntSubmitNewAdvisor.btnResetNewAdvisorForm"
               }
             }
           ],
