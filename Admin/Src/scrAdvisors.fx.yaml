@@ -179,7 +179,7 @@
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="Save Changes"
-                    Visible: =IsEditing And (CountRows(colUpdateMilestones)+CountRows(colDeleteMilestones)>0)
+                    Visible: =IsEditing And CountRows(colAdvisorUpdates)>0
                     Width: =30
                     X: =btn_mEdit_1.X+btn_mEdit_1.Width
                     Y: =10
@@ -203,7 +203,7 @@
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="Add Milestone"
-                    Visible: =CountRows(colUpdateMilestones)+CountRows(colDeleteMilestones)=0
+                    Visible: =CountRows(colAdvisorUpdates)=0
                     Width: =30
                     X: =btn_mEdit_1.X+btn_mEdit_1.Width
                     Y: =10

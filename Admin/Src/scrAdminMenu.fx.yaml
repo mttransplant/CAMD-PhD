@@ -99,7 +99,7 @@
                 FontColor: =
                 FontSize: =56
                 Height: =Parent.Height/2-10
-                OnSelect: =Navigate(scrAdminMenu)
+                OnSelect: =Navigate(scrAdvisors)
                 Text: ="Advisors"
                 Width: =Parent.Width/2-10
                 X: =Parent.Width/2+5
