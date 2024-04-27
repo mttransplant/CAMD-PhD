@@ -200,32 +200,6 @@
                         Y: =10
                         ZIndex: =6
 
-                    "'btn-mAdd_1' As icon.Add":
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        Color: =RGBA(0, 120, 212, 1)
-                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
-                        DisabledColor: =RGBA(225, 223, 221, 1)
-                        DisabledFill: =RGBA(0, 0, 0, 0)
-                        FocusedBorderThickness: =4
-                        Height: =20
-                        HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(16, 110, 190, 1)
-                        HoverFill: =RGBA(0, 0, 0, 0)
-                        Icon: =Icon.Add
-                        OnSelect: |-
-                            =Collect('PhD Advisors',{'Advisor Name':"",'Advisor Email':""});
-                            Select(btnLoadAdvisors);
-                            UpdateContext({IsEditing:true})
-                        PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =RGBA(16, 110, 190, 1)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        Tooltip: ="Add Milestone"
-                        Visible: =CountRows(colAdvisorUpdates)=0
-                        Width: =30
-                        X: =btn_mEdit_1.X+btn_mEdit_1.Width
-                        Y: =10
-                        ZIndex: =7
-
                     btn_mEdit_1 As icon.Edit:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         Color: =RGBA(0, 120, 212, 1)
@@ -577,6 +551,9 @@
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
                         HoverColor: =RGBA(255, 255, 255, 1)
                         HoverFill: =RGBA(16, 110, 190, 1)
+                        OnSelect: |-
+                            =Collect('PhD Advisors',{'Advisor Name':txtAdvisorName.Text,'Advisor Email':txtAdvisorEmail.Text});
+                            Select(btnLoadAdvisors)
                         PressedBorderColor: =RGBA(0, 69, 120, 1)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(16, 110, 190, 1)
