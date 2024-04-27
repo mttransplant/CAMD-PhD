@@ -2114,19 +2114,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.Container4.cntNewAdvisorDetails.txtNewAdvisorName.AccessibleLabel"
+                  "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.cntNewAdvisor.cntNewAdvisorDetails.txtNewAdvisorName.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.Container4.cntNewAdvisorDetails.txtNewAdvisorName.AccessibleLabel",
+                  "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.cntNewAdvisor.cntNewAdvisorDetails.txtNewAdvisorName.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAdvisors",
-                "type": "scrAdvisors.ScreenContainer2_6.Container1.Container4.cntNewAdvisorDetails.txtNewAdvisorName"
+                "type": "scrAdvisors.ScreenContainer2_6.Container1.cntNewAdvisor.cntNewAdvisorDetails.txtNewAdvisorName"
               }
             }
           ],
@@ -2144,19 +2144,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.Container4.cntNewAdvisorDetails.txtNewAdvisorEmail.AccessibleLabel"
+                  "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.cntNewAdvisor.cntNewAdvisorDetails.txtNewAdvisorEmail.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.Container4.cntNewAdvisorDetails.txtNewAdvisorEmail.AccessibleLabel",
+                  "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.cntNewAdvisor.cntNewAdvisorDetails.txtNewAdvisorEmail.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAdvisors",
-                "type": "scrAdvisors.ScreenContainer2_6.Container1.Container4.cntNewAdvisorDetails.txtNewAdvisorEmail"
+                "type": "scrAdvisors.ScreenContainer2_6.Container1.cntNewAdvisor.cntNewAdvisorDetails.txtNewAdvisorEmail"
               }
             }
           ],
@@ -2174,19 +2174,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdvisors.Spinner2.AccessibleLabel"
+                  "fullyQualifiedName": "scrAdvisors.spnLoading.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdvisors.Spinner2.AccessibleLabel",
+                  "fullyQualifiedName": "scrAdvisors.spnLoading.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAdvisors",
-                "type": "scrAdvisors.Spinner2"
+                "type": "scrAdvisors.spnLoading"
               }
             }
           ],
