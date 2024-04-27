@@ -3,6 +3,7 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: =
     OnVisible: =
+    Width: =App.DesignWidth
 
     ScreenContainer2_5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
