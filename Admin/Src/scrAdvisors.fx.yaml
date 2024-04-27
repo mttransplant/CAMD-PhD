@@ -235,7 +235,7 @@
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        Tooltip: ="Edit Milestones"
+                        Tooltip: ="Edit Advisors"
                         Visible: =Not(IsEditing)
                         Width: =30
                         X: =Parent.Width-btn_aEdit.Width-btn_aSave.Width-10
@@ -289,6 +289,7 @@
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="Reload"
                         Visible: =!IsEditing
                         Width: =btn_aSave.Width
                         X: =btn_aSave.X
