@@ -267,7 +267,7 @@
                             Select(btnResetNewAdvisorForm);
                             ClearCollect(colAdvisors,'PhD Advisors');
                             ClearCollect(colAdvisorUpdates,Filter(colAdvisors,'Advisor Email'="nothing"));
-                            ClearCollect(colNewAdvisor,colAdvisorUpdates);
+                            ClearCollect(colAdvisees,'PhD Students');
                             UpdateContext({IsLoading:false});
                         PressedBorderColor: =RGBA(0, 69, 120, 1)
                         PressedColor: =RGBA(255, 255, 255, 1)
@@ -412,6 +412,20 @@
                         Width: =408
                         X: =txtAdvisorName.X+txtAdvisorName.Width+5
                         ZIndex: =2
+
+                    Label3 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Size: =13
+                        Text: =CountRows(Filter(colAdvisees,Advisor.'Advisor Email'=ThisItem.'Advisor Email'))
+                        X: =txtAdvisorEmail.X+txtAdvisorEmail.Width+5
+                        ZIndex: =3
 
             cntNewAdvisor As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer

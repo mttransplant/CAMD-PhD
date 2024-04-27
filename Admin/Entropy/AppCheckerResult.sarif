@@ -2834,6 +2834,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrAdvisors.cntAdvisorScreen.Container1.cntAdvisors.cntAdvColumns.btnLoadAdvisors.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAdvisors.cntAdvisorScreen.Container1.cntAdvisors.cntAdvColumns.btnLoadAdvisors.OnSelect",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrAdvisors",
+                "type": "scrAdvisors.cntAdvisorScreen.Container1.cntAdvisors.cntAdvColumns.btnLoadAdvisors"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrStudentList.ScreenContainer1.MainContainer1.cntColNames.btnLoadStudentListData.OnSelect"
                 }
               ],
@@ -3389,7 +3419,7 @@
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Limit the data collected from the data source by updating the formula \"ClearCollect(colStudents, 'PhD Students')\" to include a filtering function, such as 'Filter' or 'Search'."
+                  "Limit the data collected from the data source by updating the formula \"ClearCollect(colAdvisees, 'PhD Students')\" to include a filtering function, such as 'Filter' or 'Search'."
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
