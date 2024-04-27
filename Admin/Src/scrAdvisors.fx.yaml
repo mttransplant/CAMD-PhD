@@ -273,8 +273,7 @@
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(16, 110, 190, 1)
                     OnSelect: |-
-                        =UpdateContext({IsEditing:false});
-                        ClearCollect(colAdvisors,'PhD Advisors');
+                        =ClearCollect(colAdvisors,'PhD Advisors');
                         ClearCollect(colAdvisorUpdates,Filter(colAdvisors,'Advisor Email'="nothing"))
                     PressedBorderColor: =RGBA(0, 69, 120, 1)
                     PressedColor: =RGBA(255, 255, 255, 1)
