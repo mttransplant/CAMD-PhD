@@ -1,14 +1,12 @@
 "scrAdminMenu As screen.'autoLayout_HeaderFooter_ver1.0'":
-    Height: =App.DesignHeight
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: =
     OnVisible: =
-    Width: =App.DesignWidth
 
     ScreenContainer2_5 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
-        Height: =Max(App.Height, App.DesignHeight)
+        Height: =Min(App.Height, App.DesignHeight)
         LayoutAlignItems: =LayoutAlignItems.Stretch
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =16
