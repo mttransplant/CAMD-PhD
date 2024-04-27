@@ -606,7 +606,9 @@
                     ZIndex: =4
 
                     btnSubmitNewAdvisor As Button:
+                        BasePaletteColor: =
                         DisplayMode: =DisplayMode.Edit
+                        FontColor: =
                         FontSize: =18
                         FontWeight: =FontWeight.Bold
                         Height: =40

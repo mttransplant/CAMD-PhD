@@ -461,7 +461,7 @@
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Height: =90
-                Items: =Sort(Sort(colStudents,'Last Name',SortOrder.Ascending),'First Name',SortOrder.Ascending)
+                Items: =Sort(Sort(colStudents,'First Name',SortOrder.Ascending),'Last Name',SortOrder.Ascending)
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
