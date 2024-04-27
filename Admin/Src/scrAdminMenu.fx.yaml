@@ -67,7 +67,7 @@
             RadiusTopRight: =4
             ZIndex: =5
 
-            btnStudents_4 As Button:
+            btnFunding As Button:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -80,7 +80,7 @@
                 Y: =Parent.Height/2+5
                 ZIndex: =1
 
-            btnStudents_5 As Button:
+            btnTARA As Button:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -93,7 +93,7 @@
                 Y: =Parent.Height/2+5
                 ZIndex: =2
 
-            btnStudents_6 As Button:
+            btnAdvisor As Button:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -106,7 +106,7 @@
                 Y: =5
                 ZIndex: =3
 
-            btnStudents_7 As Button:
+            btnStudent As Button:
                 BasePaletteColor: =
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
