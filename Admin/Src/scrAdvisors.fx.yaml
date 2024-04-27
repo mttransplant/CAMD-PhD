@@ -594,10 +594,11 @@
 
     Spinner2 As Spinner:
         DisplayMode: =DisplayMode.Edit
-        Height: =72
+        Height: =Self.Width
         SpinnerSize: ='Spinner.SpinnerSize'.Huge
-        Width: =95
-        X: =365
+        Visible: =IsLoading
+        Width: =100
+        X: =galAdvisors.X+((galAdvisors.Width-Self.Width)/2)
         Y: =230
         ZIndex: =2
 
