@@ -1994,6 +1994,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrStudentList.ScreenContainer1.MainContainer1.cntSpinner_1.spnLoading_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentList.ScreenContainer1.MainContainer1.cntSpinner_1.spnLoading_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentList",
+                "type": "scrStudentList.ScreenContainer1.MainContainer1.cntSpinner_1.spnLoading_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.cntAdvisors.galAdvisors.AccessibleLabel"
                 }
               ],
@@ -2744,6 +2774,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrStudentList.ScreenContainer1.MainContainer1.cntColNames.btnLoadStudentListData.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentList.ScreenContainer1.MainContainer1.cntColNames.btnLoadStudentListData.OnSelect",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrStudentList",
+                "type": "scrStudentList.ScreenContainer1.MainContainer1.cntColNames.btnLoadStudentListData"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.cntAdvisors.mColumns_1.btnLoadAdvisors.OnSelect"
                 }
               ],
@@ -3269,7 +3329,7 @@
               "properties": {
                 "componentType": "app",
                 "howToFix": [
-                  "Limit the data collected from the data source by updating the formula \"ClearCollect(colAdvisors, 'PhD Advisors')\" to include a filtering function, such as 'Filter' or 'Search'."
+                  "Limit the data collected from the data source by updating the formula \"ClearCollect(colStudents, 'PhD Students')\" to include a filtering function, such as 'Filter' or 'Search'."
                 ],
                 "level": "Medium",
                 "primaryCategory": "performance",
