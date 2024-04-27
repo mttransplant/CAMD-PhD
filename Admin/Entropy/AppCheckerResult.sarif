@@ -2174,19 +2174,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdvisors.spnLoading.AccessibleLabel"
+                  "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.cntAdvisors.spnLoading.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdvisors.spnLoading.AccessibleLabel",
+                  "fullyQualifiedName": "scrAdvisors.ScreenContainer2_6.Container1.cntAdvisors.spnLoading.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAdvisors",
-                "type": "scrAdvisors.spnLoading"
+                "type": "scrAdvisors.ScreenContainer2_6.Container1.cntAdvisors.spnLoading"
               }
             }
           ],
