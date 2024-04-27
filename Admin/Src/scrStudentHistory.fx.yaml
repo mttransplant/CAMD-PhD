@@ -1,7 +1,10 @@
 "scrStudentHistory As screen.'autoLayout_HeaderFooter_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: =Clear(colStudentHistory)
-    OnVisible: =ClearCollect(colStudentHistory,Filter('PhD Histories',galStudentLlist.Selected.NUID=NUID))
+    OnVisible: |-
+        =UpdateContext({IsLoading:true});
+        ClearCollect(colStudentHistory,Filter('PhD Histories',galStudentLlist.Selected.NUID=NUID));
+        UpdateContext({IsLoading:false});
 
     ScreenContainer2_1 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -256,6 +259,31 @@
                     Y: =8
                     ZIndex: =5
 
+            cntSpinner_3 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =Parent.Height
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Visible: =IsLoading
+                Width: =Parent.Width
+                ZIndex: =2
+
+                spnLoading_3 As Spinner:
+                    BasePaletteColor: =
+                    DisplayMode: =DisplayMode.Edit
+                    FontColor: =
+                    Height: =Self.Width
+                    SpinnerSize: ='Spinner.SpinnerSize'.Huge
+                    Visible: =true
+                    Width: =100
+                    X: =(Parent.Width-spnLoading_3.Width)/2
+                    Y: =40
+                    ZIndex: =1
+
             galHistory As gallery.galleryVertical:
                 AlignInContainer: =AlignInContainer.Start
                 BorderColor: =RGBA(245, 245, 245, 1)
@@ -267,8 +295,9 @@
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =40
+                Visible: =!IsLoading
                 Width: =Parent.Width
-                ZIndex: =2
+                ZIndex: =3
 
                 hType As Text:
                     Align: ='TextCanvas.Align'.Start
