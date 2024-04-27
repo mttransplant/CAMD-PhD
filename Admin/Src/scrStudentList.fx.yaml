@@ -416,7 +416,7 @@
                         =UpdateContext({IsLoading:true});
                         ClearCollect(colStudents,'PhD Students');
                         ClearCollect(colCompletedMilestones,Filter('PhD Milestones','Milestone Status' in ['Milestone Status (PhD Milestones)'.Yes,'Milestone Status (PhD Milestones)'.Waived]));
-                        UpdateContext({IsLoading:true});
+                        UpdateContext({IsLoading:false});
                     PressedBorderColor: =RGBA(0, 69, 120, 1)
                     PressedColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(16, 110, 190, 1)
