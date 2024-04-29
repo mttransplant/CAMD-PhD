@@ -3014,36 +3014,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.MainContainer2.cntEdit.btn_oSave.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.MainContainer2.cntEdit.btn_oSave.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ScreenContainer2.MainContainer2.cntEdit.btn_oSave"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.MainContainer2.cntEdit.btn_oSave.TabIndex"
                 }
               ],
@@ -3068,6 +3038,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.MainContainer2.cntEdit.btn_oSave.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.MainContainer2.cntEdit.btn_oSave.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentOverview",
+                "type": "scrStudentOverview.ScreenContainer2.MainContainer2.cntEdit.btn_oSave"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
