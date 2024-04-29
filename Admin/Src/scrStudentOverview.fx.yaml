@@ -349,7 +349,7 @@
                 NumberOfColumns: =2
                 ZIndex: =2
 
-                "'Admit Term_DataCard1' As typedDataCard.textualViewCard":
+                GPA_DataCard As typedDataCard.textualViewCard:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="cr829_admitterm"
@@ -407,7 +407,7 @@
                         Y: =10
                         ZIndex: =2
 
-                "'Admit Term_DataCard2' As typedDataCard.textualViewCard":
+                Credits_EarnedDataCard As typedDataCard.textualViewCard:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="cr829_admitterm"

@@ -232,65 +232,85 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
-                TextCanvas7 As Text:
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    Height: =32
-                    Size: =16
+                Label8 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Size: =13
                     Text: ="Change Type"
-                    Weight: ='TextCanvas.Weight'.Bold
                     Width: =hType.Width
                     X: =hType.X
-                    Y: =8
-                    ZIndex: =1
+                    ZIndex: =6
 
-                TextCanvas8 As Text:
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    Height: =32
-                    Size: =16
+                Label8_1 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Size: =13
                     Text: ="Changed From"
-                    Weight: ='TextCanvas.Weight'.Bold
                     Width: =hFrom.Width
                     X: =hFrom.X
-                    Y: =8
-                    ZIndex: =2
+                    ZIndex: =7
 
-                TextCanvas9 As Text:
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    Height: =32
-                    Size: =16
+                Label8_2 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Size: =13
                     Text: ="Changed To"
-                    Weight: ='TextCanvas.Weight'.Bold
                     Width: =hTo.Width
                     X: =hTo.X
-                    Y: =8
-                    ZIndex: =3
+                    ZIndex: =8
 
-                TextCanvas10 As Text:
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    Height: =32
-                    Size: =16
+                Label8_3 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Size: =13
                     Text: ="Changed Date/Time"
-                    Weight: ='TextCanvas.Weight'.Bold
                     Width: =hDate.Width
                     X: =hDate.X
-                    Y: =8
-                    ZIndex: =4
+                    ZIndex: =9
 
-                TextCanvas11 As Text:
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    Height: =32
-                    Size: =16
+                Label8_4 As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Size: =13
                     Text: ="Changed By"
-                    Weight: ='TextCanvas.Weight'.Bold
                     Width: =hBy.Width
                     X: =hBy.X
-                    Y: =8
-                    ZIndex: =5
+                    ZIndex: =10
 
             cntSpinner_3 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
@@ -332,68 +352,82 @@
                 Width: =Parent.Width
                 ZIndex: =3
 
-                hType As Text:
-                    Align: ='TextCanvas.Align'.Start
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    Height: =30
-                    Size: =16
+                hType As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Size: =13
                     Text: =ThisItem.Change
-                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                     Width: =173
                     X: =5
-                    Y: =10
-                    ZIndex: =2
+                    ZIndex: =7
 
-                hFrom As Text:
-                    Align: ='TextCanvas.Align'.Start
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    Height: =30
-                    Size: =16
+                hFrom As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =13
                     Text: =ThisItem.From
-                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                     Width: =227
                     X: =hType.X+hType.Width+5
-                    Y: =10
-                    ZIndex: =3
+                    ZIndex: =8
 
-                hTo As Text:
-                    Align: ='TextCanvas.Align'.Start
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    Height: =30
-                    Size: =16
+                hTo As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =13
                     Text: =ThisItem.To
-                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                     Width: =212
                     X: =hFrom.X+hFrom.Width+5
-                    Y: =10
-                    ZIndex: =4
+                    ZIndex: =9
 
-                hDate As Text:
-                    Align: ='TextCanvas.Align'.Start
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    Height: =30
-                    Size: =16
+                hDate As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =13
                     Text: =ThisItem.'Created On'
-                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                     Width: =224
                     X: =hTo.X+hTo.Width+5
-                    Y: =10
-                    ZIndex: =5
+                    ZIndex: =10
 
-                hBy As Text:
-                    Align: ='TextCanvas.Align'.Start
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =RGBA(0, 0, 0, 1)
-                    Height: =30
-                    Size: =16
+                hBy As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =13
                     Text: =ThisItem.'Created By'.'First Name'&" "&ThisItem.'Created By'.'Last Name'
-                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
                     Width: =164
                     X: =hDate.X+hDate.Width+5
-                    Y: =10
-                    ZIndex: =6
+                    ZIndex: =11
 
