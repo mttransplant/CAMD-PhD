@@ -76,6 +76,7 @@
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
+                    DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                     FocusedBorderThickness: =4
                     Height: =30
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -86,6 +87,7 @@
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
+                    Tooltip: =If(IsEditing,"Main Menu unavailable. Save or discard changes first.","Main Menu")
                     Width: =30
                     X: =5
                     Y: =(Parent.Height-Self.Height)/2
@@ -299,9 +301,9 @@
                     OnSelect: |-
                         =Patch('PhD Students',{StudentID:galStudentLlist.Selected.StudentID},EditStudentInfo.Updates);
                         Collect('PhD Histories',colStudentUpdates);
-                        Refresh('PhD Students');
                         Notify("Student Update Successful",NotificationType.Success,5000);
-                        UpdateContext({IsEditing:false})
+                        UpdateContext({IsEditing:false});
+                        Refresh('PhD Students');
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)

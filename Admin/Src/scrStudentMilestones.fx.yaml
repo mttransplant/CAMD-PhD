@@ -1,8 +1,9 @@
 "scrStudentMilestones As screen.'autoLayout_HeaderFooter_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: |-
-        =Select(btn_mCancel);
-        Clear(colStudentMilestones)
+        =Clear(colStudentMilestones);
+        Clear(colDeleteMilestones);
+        Clear(colUpdateMilestones)
     OnVisible: |-
         =Select(btnLoadMilestones);
         UpdateContext({IsEditing:false})
@@ -79,6 +80,7 @@
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
+                    DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                     FocusedBorderThickness: =4
                     Height: =30
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -89,6 +91,7 @@
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
+                    Tooltip: =If(IsEditing,"Main Menu unavailable. Save or discard changes first.","Main Menu")
                     Width: =30
                     X: =5
                     Y: =(Parent.Height-Self.Height)/2
