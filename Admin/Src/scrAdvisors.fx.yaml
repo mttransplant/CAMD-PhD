@@ -2,7 +2,8 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: |-
         =Clear(colAdvisorUpdates);
-        Clear(colAdvisors)
+        Clear(colAdvisors);
+        Clear(colAdvisees)
     OnVisible: =Select(btnLoadAdvisors)
 
     cntAdvisorScreen As groupContainer.verticalAutoLayoutContainer:
