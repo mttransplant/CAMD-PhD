@@ -277,6 +277,7 @@
                         UpdateContext({IsEditing:false});
                         Clear(colStudentUpdates);
                         Refresh('PhD Students');
+                        ResetForm(EditStudentInfo)
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
@@ -854,7 +855,7 @@
                         Items: =Choices([@'PhD Students'].cr829_Advisor)
                         OnChange: |-
                             =If(
-                                frmAdvisor.Selected.'Advisor Name' = ThisItem.Advisor.'Advisor Name',
+                                frmAdvisor.Selected.'Advisor Name' = LookUp('PhD Students',NUID=ThisItem.NUID).Advisor.'Advisor Name',
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -993,7 +994,7 @@
                         Items: =Choices([@'PhD Students'].cr829_CoAdvisor)
                         OnChange: |-
                             =If(
-                                frmCoAdvisor.Selected.'Advisor Name' = ThisItem.'Co-Advisor'.'Advisor Name',
+                                frmCoAdvisor.Selected.'Advisor Name' = LookUp('PhD Students',NUID=ThisItem.NUID).'Co-Advisor'.'Advisor Name',
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -1133,7 +1134,7 @@
                         Items: =Choices('Track (PhD Students)')
                         OnChange: |-
                             =If(
-                                Text(frmTrack.Selected.Value) = Text(ThisItem.Track),
+                                frmTrack.Selected.Value = LookUp('PhD Students',NUID=ThisItem.NUID).Track,
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -1403,7 +1404,7 @@
                         MaxLength: =Parent.MaxLength
                         OnChange: |-
                             =If(
-                                frmPath.Text = ThisItem.'Individual Path',
+                                frmPath.Text = LookUp('PhD Students',NUID=ThisItem.NUID).'Individual Path',
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -1538,7 +1539,7 @@
                         MaxLength: =Parent.MaxLength
                         OnChange: |-
                             =If(
-                                frmCommittee.Text = ThisItem.'Dissertation Committee',
+                                frmCommittee.Text = LookUp('PhD Students',NUID=ThisItem.NUID).'Dissertation Committee',
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
