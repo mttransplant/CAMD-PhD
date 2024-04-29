@@ -3404,36 +3404,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.HeaderContainer2_4.Container6_6.Header_11.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.HeaderContainer2_4.Container6_6.Header_11.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.HeaderContainer2_4.Container6_6.Header_11"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.HeaderContainer2_3.Container6_5.Header_10.Text"
                 }
               ],
@@ -3464,36 +3434,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.HeaderContainer2_3.Container6_5.Header_10.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.HeaderContainer2_3.Container6_5.Header_10.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "scrStudentEvaluations",
-                "type": "scrStudentEvaluations.ScreenContainer2_3.HeaderContainer2_3.Container6_5.Header_10"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrStudentMilestones.ScreenContainer2_2.HeaderContainer2_2.Container6_3.Header_8.Text"
                 }
               ],
@@ -3505,36 +3445,6 @@
               },
               "properties": {
                 "member": "Text",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ScreenContainer2_2.HeaderContainer2_2.Container6_3.Header_8"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ScreenContainer2_2.HeaderContainer2_2.Container6_3.Header_8.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ScreenContainer2_2.HeaderContainer2_2.Container6_3.Header_8.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
                 "module": "scrStudentMilestones",
                 "type": "scrStudentMilestones.ScreenContainer2_2.HeaderContainer2_2.Container6_3.Header_8"
               }
@@ -3674,36 +3584,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentHistory.ScreenContainer2_1.HeaderContainer2_1.Container6_4.Header_9.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentHistory.ScreenContainer2_1.HeaderContainer2_1.Container6_4.Header_9.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "scrStudentHistory",
-                "type": "scrStudentHistory.ScreenContainer2_1.HeaderContainer2_1.Container6_4.Header_9"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.HeaderContainer2.Container6_2.Header_7.Text"
                 }
               ],
@@ -3715,36 +3595,6 @@
               },
               "properties": {
                 "member": "Text",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ScreenContainer2.HeaderContainer2.Container6_2.Header_7"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.HeaderContainer2.Container6_2.Header_7.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.HeaderContainer2.Container6_2.Header_7.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
                 "module": "scrStudentOverview",
                 "type": "scrStudentOverview.ScreenContainer2.HeaderContainer2.Container6_2.Header_7"
               }
