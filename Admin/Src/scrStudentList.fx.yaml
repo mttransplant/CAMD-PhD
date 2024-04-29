@@ -523,7 +523,7 @@
                     Height: =Parent.TemplateHeight-10
                     OnSelect: =Select(Parent);Navigate(scrStudentOverview)
                     Size: =13
-                    Text: =Text(First(Filter(colCurrentInfo,NUID = ThisItem.NUID)).EXPECTED_GRADUATION_DATE,"m/d/yy")
+                    Text: =Text(LookUp(colCurrentInfo,NUID = ThisItem.NUID).EXPECTED_GRADUATION_DATE,"m/d/yy")
                     Width: =91
                     X: ='Co-Advisor'.X+'Co-Advisor'.Width+5
                     Y: =5
