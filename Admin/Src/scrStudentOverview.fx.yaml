@@ -387,7 +387,7 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: =""
-                    Default: =Text(LookUp('PhD Student Current Infos',NUID = ThisItem.NUID).CREDIT_EARNED,"0.0")
+                    Default: =Text(LookUp('PhD Student Current Infos',NUID = ThisItem.NUID).'Credits Earned',"0.0")
                     DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_admitterm)
                     Fill: =RGBA(0, 0, 0, 0)
@@ -731,7 +731,7 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="cr829_expectedgraddate"
-                    Default: =Text(LookUp(colCurrentInfo,NUID = ThisItem.NUID).EXPECTED_GRADUATION_DATE,"m/d/yy")
+                    Default: =Text(LookUp(colCurrentInfo,NUID = ThisItem.NUID).'Expected Grad Date',"m/d/yy")
                     DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@'PhD Student Current Infos'],DataSourceInfo.DisplayName,cr829_expected_graduation_date)
                     Fill: =RGBA(0, 0, 0, 0)
