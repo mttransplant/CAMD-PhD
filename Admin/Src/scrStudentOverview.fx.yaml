@@ -854,7 +854,7 @@
                         Items: =Choices([@'PhD Students'].cr829_Advisor)
                         OnChange: |-
                             =If(
-                                frmAdvisor.Selected.'Advisor Name' = galStudentLlist.Selected.Advisor.'Advisor Name',
+                                frmAdvisor.Selected.'Advisor Name' = ThisItem.Advisor.'Advisor Name',
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -867,7 +867,7 @@
                                     {
                                         NUID: ThisItem.NUID,
                                         Change: "Advisor",
-                                        From: Text(galStudentLlist.Selected.Advisor.'Advisor Name'),
+                                        From: Text(ThisItem.Advisor.'Advisor Name'),
                                         To: frmAdvisor.Selected.'Advisor Name'
                                     }
                                 )
@@ -993,7 +993,7 @@
                         Items: =Choices([@'PhD Students'].cr829_CoAdvisor)
                         OnChange: |-
                             =If(
-                                frmCoAdvisor.Selected.'Advisor Name' = galStudentLlist.Selected.'Co-Advisor'.'Advisor Name',
+                                frmCoAdvisor.Selected.'Advisor Name' = ThisItem.'Co-Advisor'.'Advisor Name',
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -1006,7 +1006,7 @@
                                     {
                                         NUID: ThisItem.NUID,
                                         Change: "Co-Advisor",
-                                        From: Text(galStudentLlist.Selected.'Co-Advisor'.'Advisor Name'),
+                                        From: Text(ThisItem.'Co-Advisor'.'Advisor Name'),
                                         To: frmCoAdvisor.Selected.'Advisor Name'
                                     }
                                 )
@@ -1133,7 +1133,7 @@
                         Items: =Choices('Track (PhD Students)')
                         OnChange: |-
                             =If(
-                                Text(frmTrack.Selected.Value) = Text(galStudentLlist.Selected.Track),
+                                Text(frmTrack.Selected.Value) = Text(ThisItem.Track),
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -1146,7 +1146,7 @@
                                     {
                                         NUID: ThisItem.NUID,
                                         Change: "Track",
-                                        From: Text(galStudentLlist.Selected.Track),
+                                        From: Text(ThisItem.Track),
                                         To: Text(frmTrack.Selected.Value)
                                     }
                                 )
@@ -1268,7 +1268,7 @@
                         MaxLength: =Parent.MaxLength
                         OnChange: |-
                             =If(
-                                frmStatus.Text = galStudentLlist.Selected.Status.Text,
+                                frmStatus.Text = ThisItem.'Status (cr829_status)',
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -1281,7 +1281,7 @@
                                     {
                                         NUID: ThisItem.NUID,
                                         Change: "Status",
-                                        From: If(IsBlank(galStudentLlist.Selected.Status.Text),"",galStudentLlist.Selected.Status.Text),
+                                        From: If(IsBlank(ThisItem.'Status (cr829_status)'),"",ThisItem.'Status (cr829_status)'),
                                         To: frmStatus.Text
                                     }
                                 )
@@ -1403,7 +1403,7 @@
                         MaxLength: =Parent.MaxLength
                         OnChange: |-
                             =If(
-                                frmPath.Text = galStudentLlist.Selected.'Individual Path',
+                                frmPath.Text = ThisItem.'Individual Path',
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -1416,7 +1416,7 @@
                                     {
                                         NUID: ThisItem.NUID,
                                         Change: "Path",
-                                        From: If(IsBlank(galStudentLlist.Selected.'Individual Path'),"",galStudentLlist.Selected.'Individual Path'),
+                                        From: If(IsBlank(ThisItem.'Individual Path'),"",ThisItem.'Individual Path'),
                                         To: frmPath.Text
                                     }
                                 )
@@ -1538,7 +1538,7 @@
                         MaxLength: =Parent.MaxLength
                         OnChange: |-
                             =If(
-                                frmCommittee.Text = galStudentLlist.Selected.'Dissertation Committee',
+                                frmCommittee.Text = ThisItem.'Dissertation Committee',
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -1551,7 +1551,7 @@
                                     {
                                         NUID: ThisItem.NUID,
                                         Change: "Committee",
-                                        From: If(IsBlank(galStudentLlist.Selected.'Dissertation Committee'),"",galStudentLlist.Selected.'Dissertation Committee'),
+                                        From: If(IsBlank(ThisItem.'Dissertation Committee'),"",ThisItem.'Dissertation Committee'),
                                         To: frmCommittee.Text
                                     }
                                 )
