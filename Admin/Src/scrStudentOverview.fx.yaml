@@ -303,6 +303,7 @@
                         Collect('PhD Histories',colStudentUpdates);
                         Notify("Student Update Successful",NotificationType.Success,5000);
                         UpdateContext({IsEditing:false});
+                        Clear(colStudentUpdates);
                         Refresh('PhD Students');
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
