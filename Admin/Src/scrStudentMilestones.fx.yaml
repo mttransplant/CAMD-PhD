@@ -479,6 +479,7 @@
                     ZIndex: =1
 
             galMilesones As gallery.galleryVertical:
+                '#CopilotOverlayLabel': ="Filtered"
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true

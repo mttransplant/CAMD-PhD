@@ -10777,8 +10777,8 @@
         },
         {
           "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": true,
-          "AutoRuleBindingString": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_expectedgraddate)",
           "InvariantPropertyName": "DisplayName",
           "IsLockable": true,
           "NameMapSourceSchema": "?"
@@ -10848,7 +10848,7 @@
         {
           "Category": "Data",
           "PropertyName": "DisplayName",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -13450,7 +13450,7 @@
       "MetaDataIDKey": "",
       "Name": "Header_7",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 0,
+      "ParentIndex": 1,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
@@ -13970,7 +13970,7 @@
       "MetaDataIDKey": "",
       "Name": "icoHome_1",
       "OptimizeForDevices": "Off",
-      "ParentIndex": 1,
+      "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {

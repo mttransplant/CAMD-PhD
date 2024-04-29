@@ -733,7 +733,7 @@
                     DataField: ="cr829_expectedgraddate"
                     Default: =Text(LookUp(colCurrentInfo,NUID = ThisItem.NUID).EXPECTED_GRADUATION_DATE,"m/d/yy")
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_expectedgraddate)
+                    DisplayName: =DataSourceInfo([@'PhD Student Current Infos'],DataSourceInfo.DisplayName,cr829_expected_graduation_date)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =40
                     Required: =false
@@ -852,7 +852,7 @@
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(245, 245, 245, 1)
-                        Items: =Choices([@'PhD Students'].cr829_Advisor)
+                        Items: =Choices([@'PhD Students'].Advisor)
                         OnChange: |-
                             =If(
                                 frmAdvisor.Selected.'Advisor Name' = LookUp('PhD Students',NUID=ThisItem.NUID).Advisor.'Advisor Name',
@@ -868,7 +868,7 @@
                                     {
                                         NUID: ThisItem.NUID,
                                         Change: "Advisor",
-                                        From:If(IsBlank(ThisItem.'Advisor'.'Advisor Name'),"",ThisItem.'Advisor'.'Advisor Name'),
+                                        From:If(IsBlank(ThisItem.Advisor.'Advisor Name'),"",ThisItem.Advisor.'Advisor Name'),
                                         To: If(IsBlank(frmAdvisor.Selected.'Advisor Name'),"",frmAdvisor.Selected.'Advisor Name')
                                     }
                                 )
@@ -878,7 +878,7 @@
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(0, 120, 212, 1)
                         SearchFields: =["cr829_advisorname"]
-                        SearchItems: =Search(Choices([@'PhD Students'].cr829_Advisor),frmAdvisor.SearchText,cr829_advisorname)
+                        SearchItems: =Search(Choices([@'PhD Students'].Advisor),frmAdvisor.SearchText,cr829_advisorname)
                         SelectionFill: =RGBA(0, 120, 212, 1)
                         SelectMultiple: =false
                         Size: =13
@@ -991,7 +991,7 @@
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(245, 245, 245, 1)
-                        Items: =Choices([@'PhD Students'].cr829_CoAdvisor)
+                        Items: =Choices([@'PhD Students'].'Co-Advisor')
                         OnChange: |-
                             =If(
                                 frmCoAdvisor.Selected.'Advisor Name' = LookUp('PhD Students',NUID=ThisItem.NUID).'Co-Advisor'.'Advisor Name',
@@ -1017,7 +1017,7 @@
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(0, 120, 212, 1)
                         SearchFields: =["cr829_advisorname"]
-                        SearchItems: =Search(Choices([@'PhD Students'].cr829_CoAdvisor),frmCoAdvisor.SearchText,cr829_advisorname)
+                        SearchItems: =Search(Choices([@'PhD Students'].'Co-Advisor'),frmCoAdvisor.SearchText,cr829_advisorname)
                         SelectionFill: =RGBA(0, 120, 212, 1)
                         SelectMultiple: =false
                         Size: =13
