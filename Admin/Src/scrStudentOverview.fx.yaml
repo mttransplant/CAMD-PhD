@@ -1,6 +1,8 @@
 "scrStudentOverview As screen.'autoLayout_HeaderFooter_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnHidden: =Select(btn_oCancel)
+    OnHidden: |-
+        =Select(btn_oCancel);
+        UpdateContext({ThisStudent:Blank()})
     OnVisible: |-
         =UpdateContext({IsEditing:false,ThisStudent:LookUp('PhD Student Current Infos',NUID=galStudentLlist.Selected.NUID)});
 
