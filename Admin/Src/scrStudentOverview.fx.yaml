@@ -2,7 +2,7 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: =Select(btn_oCancel)
     OnVisible: |-
-        =UpdateContext({IsEditing:false})
+        =UpdateContext({IsEditing:false,ThisStudent:LookUp('PhD Student Current Infos',NUID=galStudentLlist.Selected.NUID)});
 
     ScreenContainer2 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -329,7 +329,9 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: =""
-                    Default: =Text(LookUp('PhD Student Current Infos',NUID = ThisItem.NUID).GPA,"0.000")
+                    Default: |-
+                        =//Text(LookUp('PhD Student Current Infos',NUID = ThisItem.NUID).GPA,"0.000")
+                        Text(ThisStudent.GPA,"0.000")
                     DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_admitterm)
                     Fill: =RGBA(0, 0, 0, 0)
@@ -387,7 +389,9 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: =""
-                    Default: =Text(LookUp('PhD Student Current Infos',NUID = ThisItem.NUID).'Credits Earned',"0.0")
+                    Default: |-
+                        =//Text(LookUp('PhD Student Current Infos',NUID = ThisItem.NUID).'Credits Earned',"0.0")
+                        Text(ThisStudent.'Credits Earned',"0.0")
                     DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_admitterm)
                     Fill: =RGBA(0, 0, 0, 0)
@@ -731,7 +735,9 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="cr829_expectedgraddate"
-                    Default: =Text(LookUp(colCurrentInfo,NUID = ThisItem.NUID).'Expected Grad Date',"m/d/yy")
+                    Default: |-
+                        =//Text(LookUp(colCurrentInfo,NUID = ThisItem.NUID).'Expected Grad Date',"m/d/yy")
+                        Text(ThisStudent.'Expected Grad Date',"m/d/yy")
                     DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@'PhD Student Current Infos'],DataSourceInfo.DisplayName,cr829_expected_graduation_date)
                     Fill: =RGBA(0, 0, 0, 0)
