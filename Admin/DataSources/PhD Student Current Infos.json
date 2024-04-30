@@ -1,0 +1,101 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr829_phdstudentcurrentinfos",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr829_phdstudentcurrentinfo",
+    "MaxGetRowsCount": 500,
+    "Name": "PhD Student Current Infos",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr829_asofterm": "AS_OF_TERM",
+      "cr829_asoftermdescription": "AS_OF_TERM_DESC",
+      "cr829_creditearned": "Credits Earned",
+      "cr829_expected_graduation_date": "Expected Grad Date",
+      "cr829_gpa": "GPA",
+      "cr829_nuid": "NUID",
+      "cr829_phdstudentcurrentinfo_AsyncOperations": "System Jobs",
+      "cr829_phdstudentcurrentinfo_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr829_phdstudentcurrentinfo_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr829_phdstudentcurrentinfo_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr829_phdstudentcurrentinfo_ProcessSession": "Process Sessions",
+      "cr829_phdstudentcurrentinfo_SyncErrors": "Sync Errors",
+      "cr829_phdstudentcurrentinfoid": "PhD Student Current Info",
+      "cr829_studentstatusdescription": "STUDENT_STATUS_DESC",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PhD Student Current Infos",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PhD Student Current Infos (Views)",
+    "Name": "_cr829_phdstudentcurrentinfo_views",
+    "RelatedEntityName": "PhD Student Current Infos",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "6ebe6e75-2ba4-43c5-964f-8ee08664faed": "Active PhD Student Current Infos",
+      "7d75b12d-4593-49ad-bea2-7a469af10321": "PhD Student Current Info Associated View",
+      "8f8f69ff-41af-4e88-b7d1-032d5d89e6fa": "PhD Student Current Info Advanced Find View",
+      "b3bfd3d2-9b94-4178-aeb5-e79f597b106f": "Inactive PhD Student Current Infos",
+      "bacc4d7e-231b-4a89-a883-1d0dee5b2e1e": "PhD Student Current Info Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (PhD Student Current Infos)",
+    "Name": "cr829_phdstudentcurrentinfo_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PhD Student Current Infos"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PhD Student Current Infos",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PhD Student Current Infos)",
+    "Name": "cr829_phdstudentcurrentinfo_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PhD Student Current Infos"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PhD Student Current Infos",
+    "Type": "OptionSetInfo"
+  }
+]

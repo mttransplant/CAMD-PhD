@@ -2,7 +2,7 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: =Select(btn_oCancel)
     OnVisible: |-
-        =UpdateContext({IsEditing:false})
+        =UpdateContext({IsEditing:false,ThisStudent:LookUp('PhD Student Current Infos',NUID=galStudentLlist.Selected.NUID)});
 
     ScreenContainer2 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -40,23 +40,58 @@
             Width: =Parent.Width
             ZIndex: =1
 
-            Header_1 As label:
-                Align: =Align.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisplayMode: =DisplayMode.View
-                Fill: =RGBA(71, 158, 245, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Height: =HeaderContainer1.Height
-                Size: =30
-                Text: ="Detail for "&galStudentLlist.Selected.'First Name'&" "&galStudentLlist.Selected.'Last Name'
-                Width: =HeaderContainer2.Width
-                ZIndex: =1
+            Container6_2 As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =Parent.Height
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =2
+
+                Header_7 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(71, 158, 245, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =Parent.Height
+                    Size: =30
+                    Text: ="Detail for "&galStudentLlist.Selected.'First Name'&" "&galStudentLlist.Selected.'Last Name'
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                icoHome_1 As icon.Home:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
+                    FocusedBorderThickness: =4
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Home
+                    OnSelect: =Navigate(scrAdminMenu)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Tooltip: =If(IsEditing,"Main Menu unavailable. Save or discard changes first.","Main Menu")
+                    Width: =30
+                    X: =5
+                    Y: =(Parent.Height-Self.Height)/2
+                    ZIndex: =2
 
         navOverview As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -167,34 +202,6 @@
                 Y: =0
                 ZIndex: =6
 
-            btnLoadMilestones_3 As button:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                DisabledFill: =RGBA(242, 242, 241, 0)
-                Fill: =RGBA(0, 120, 212, 1)
-                Font: =Font.'Segoe UI'
-                FontWeight: =FontWeight.Semibold
-                HoverBorderColor: =RGBA(0, 0, 0, 0)
-                HoverColor: =RGBA(255, 255, 255, 1)
-                HoverFill: =RGBA(16, 110, 190, 1)
-                OnSelect: |-
-                    =ClearCollect(colStudentMilestones,Filter('PhD Milestones',galStudentLlist.Selected.NUID=NUID));
-                    ClearCollect(colUpdateMilestones,Filter('PhD Milestones',NUID=""));
-                    ClearCollect(colDeleteMilestones,Filter('PhD Milestones',NUID=""))
-                PressedBorderColor: =RGBA(0, 69, 120, 1)
-                PressedColor: =RGBA(255, 255, 255, 1)
-                PressedFill: =RGBA(16, 110, 190, 1)
-                RadiusBottomLeft: =0
-                RadiusBottomRight: =0
-                RadiusTopLeft: =0
-                RadiusTopRight: =0
-                Size: =15
-                Text: ="Button"
-                Visible: =false
-                ZIndex: =7
-
         MainContainer2 As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
@@ -266,9 +273,11 @@
                     OnSelect: |-
                         =Patch('PhD Students',{StudentID:galStudentLlist.Selected.StudentID},EditStudentInfo.Updates);
                         Collect('PhD Histories',colStudentUpdates);
-                        Refresh('PhD Students');
                         Notify("Student Update Successful",NotificationType.Success,5000);
-                        UpdateContext({IsEditing:false})
+                        UpdateContext({IsEditing:false});
+                        Clear(colStudentUpdates);
+                        Refresh('PhD Students');
+                        ResetForm(EditStudentInfo)
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
@@ -309,12 +318,132 @@
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DataSource: ='PhD Students'
                 FillPortions: =0
-                Height: =125
-                Item: =galStudentLlist.Selected
+                Height: =165
+                Item: =LookUp('PhD Students',NUID=galStudentLlist.Selected.NUID)
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
                 NumberOfColumns: =2
                 ZIndex: =2
+
+                GPA_DataCard As typedDataCard.textualViewCard:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: =""
+                    Default: |-
+                        =//Text(LookUp('PhD Student Current Infos',NUID = ThisItem.NUID).GPA,"0.000")
+                        Text(ThisStudent.GPA,"0.000")
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_admitterm)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =667
+                    X: =0
+                    Y: =3
+                    ZIndex: =1
+
+                    DataCardKey5 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: ="GPA"
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (DataCardValue3.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    DataCardValue3 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Default
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey5.X + DataCardKey5.Width
+                        Y: =10
+                        ZIndex: =2
+
+                Credits_EarnedDataCard As typedDataCard.textualViewCard:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: =""
+                    Default: |-
+                        =//Text(LookUp('PhD Student Current Infos',NUID = ThisItem.NUID).'Credits Earned',"0.0")
+                        Text(ThisStudent.'Credits Earned',"0.0")
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_admitterm)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =667
+                    X: =1
+                    Y: =3
+                    ZIndex: =1
+
+                    DataCardKey6 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: ="Credits Earned"
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (DataCardValue4.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    DataCardValue4 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Default
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey6.X + DataCardKey6.Width
+                        Y: =10
+                        ZIndex: =2
 
                 "'First Name_DataCard3' As typedDataCard.textualViewCard":
                     BorderColor: =RGBA(245, 245, 245, 1)
@@ -606,9 +735,11 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="cr829_expectedgraddate"
-                    Default: =ThisItem.'Expected Grad Date'
+                    Default: |-
+                        =//Text(LookUp(colCurrentInfo,NUID = ThisItem.NUID).'Expected Grad Date',"m/d/yy")
+                        Text(ThisStudent.'Expected Grad Date',"m/d/yy")
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_expectedgraddate)
+                    DisplayName: =DataSourceInfo([@'PhD Student Current Infos'],DataSourceInfo.DisplayName,cr829_expected_graduation_date)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =40
                     Required: =false
@@ -654,7 +785,7 @@
                         PaddingRight: =0
                         PaddingTop: =0
                         Size: =13
-                        Text: =Text(ThisItem.'Expected Grad Date',"m/d/yyyy")
+                        Text: =Parent.Default
                         Width: =(Parent.Width - 60) * 0.6
                         X: =DataCardKey39.X + DataCardKey39.Width
                         Y: =10
@@ -664,7 +795,7 @@
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DataSource: ='PhD Students'
                 DefaultMode: =If(IsEditing,FormMode.Edit,FormMode.View)
-                Item: =galStudentLlist.Selected
+                Item: =LookUp('PhD Students',NUID=galStudentLlist.Selected.NUID)
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
                 NumberOfColumns: =2
@@ -727,10 +858,10 @@
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(245, 245, 245, 1)
-                        Items: =Choices([@'PhD Students'].cr829_Advisor)
+                        Items: =Choices([@'PhD Students'].Advisor)
                         OnChange: |-
                             =If(
-                                frmAdvisor.Selected.'Advisor Name' = galStudentLlist.Selected.Advisor.'Advisor Name',
+                                frmAdvisor.Selected.'Advisor Name' = LookUp('PhD Students',NUID=ThisItem.NUID).Advisor.'Advisor Name',
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -743,8 +874,8 @@
                                     {
                                         NUID: ThisItem.NUID,
                                         Change: "Advisor",
-                                        From: Text(galStudentLlist.Selected.Advisor.'Advisor Name'),
-                                        To: frmAdvisor.Selected.'Advisor Name'
+                                        From:If(IsBlank(ThisItem.Advisor.'Advisor Name'),"",ThisItem.Advisor.'Advisor Name'),
+                                        To: If(IsBlank(frmAdvisor.Selected.'Advisor Name'),"",frmAdvisor.Selected.'Advisor Name')
                                     }
                                 )
                             )
@@ -753,7 +884,7 @@
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(0, 120, 212, 1)
                         SearchFields: =["cr829_advisorname"]
-                        SearchItems: =Search(Choices([@'PhD Students'].cr829_Advisor),frmAdvisor.SearchText,cr829_advisorname)
+                        SearchItems: =Search(Choices([@'PhD Students'].Advisor),frmAdvisor.SearchText,cr829_advisorname)
                         SelectionFill: =RGBA(0, 120, 212, 1)
                         SelectMultiple: =false
                         Size: =13
@@ -866,10 +997,10 @@
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(245, 245, 245, 1)
-                        Items: =Choices([@'PhD Students'].cr829_CoAdvisor)
+                        Items: =Choices([@'PhD Students'].'Co-Advisor')
                         OnChange: |-
                             =If(
-                                frmCoAdvisor.Selected.'Advisor Name' = galStudentLlist.Selected.'Co-Advisor'.'Advisor Name',
+                                frmCoAdvisor.Selected.'Advisor Name' = LookUp('PhD Students',NUID=ThisItem.NUID).'Co-Advisor'.'Advisor Name',
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -882,8 +1013,8 @@
                                     {
                                         NUID: ThisItem.NUID,
                                         Change: "Co-Advisor",
-                                        From: Text(galStudentLlist.Selected.'Co-Advisor'.'Advisor Name'),
-                                        To: frmCoAdvisor.Selected.'Advisor Name'
+                                        From:If(IsBlank(ThisItem.'Co-Advisor'.'Advisor Name'),"",ThisItem.'Co-Advisor'.'Advisor Name'),
+                                        To: If(IsBlank(frmCoAdvisor.Selected.'Advisor Name'),"",frmCoAdvisor.Selected.'Advisor Name')
                                     }
                                 )
                             )
@@ -892,7 +1023,7 @@
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(0, 120, 212, 1)
                         SearchFields: =["cr829_advisorname"]
-                        SearchItems: =Search(Choices([@'PhD Students'].cr829_CoAdvisor),frmCoAdvisor.SearchText,cr829_advisorname)
+                        SearchItems: =Search(Choices([@'PhD Students'].'Co-Advisor'),frmCoAdvisor.SearchText,cr829_advisorname)
                         SelectionFill: =RGBA(0, 120, 212, 1)
                         SelectMultiple: =false
                         Size: =13
@@ -1009,7 +1140,7 @@
                         Items: =Choices('Track (PhD Students)')
                         OnChange: |-
                             =If(
-                                Text(frmTrack.Selected.Value) = Text(galStudentLlist.Selected.Track),
+                                frmTrack.Selected.Value = LookUp('PhD Students',NUID=ThisItem.NUID).Track,
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -1022,7 +1153,7 @@
                                     {
                                         NUID: ThisItem.NUID,
                                         Change: "Track",
-                                        From: Text(galStudentLlist.Selected.Track),
+                                        From: Text(ThisItem.Track),
                                         To: Text(frmTrack.Selected.Value)
                                     }
                                 )
@@ -1144,7 +1275,7 @@
                         MaxLength: =Parent.MaxLength
                         OnChange: |-
                             =If(
-                                frmStatus.Text = galStudentLlist.Selected.Status.Text,
+                                frmStatus.Text = ThisItem.'Status (cr829_status)',
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -1157,7 +1288,7 @@
                                     {
                                         NUID: ThisItem.NUID,
                                         Change: "Status",
-                                        From: If(IsBlank(galStudentLlist.Selected.Status.Text),"",galStudentLlist.Selected.Status.Text),
+                                        From: If(IsBlank(ThisItem.'Status (cr829_status)'),"",ThisItem.'Status (cr829_status)'),
                                         To: frmStatus.Text
                                     }
                                 )
@@ -1279,7 +1410,7 @@
                         MaxLength: =Parent.MaxLength
                         OnChange: |-
                             =If(
-                                frmPath.Text = galStudentLlist.Selected.'Individual Path',
+                                frmPath.Text = LookUp('PhD Students',NUID=ThisItem.NUID).'Individual Path',
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -1292,7 +1423,7 @@
                                     {
                                         NUID: ThisItem.NUID,
                                         Change: "Path",
-                                        From: If(IsBlank(galStudentLlist.Selected.'Individual Path'),"",galStudentLlist.Selected.'Individual Path'),
+                                        From: If(IsBlank(ThisItem.'Individual Path'),"",ThisItem.'Individual Path'),
                                         To: frmPath.Text
                                     }
                                 )
@@ -1414,7 +1545,7 @@
                         MaxLength: =Parent.MaxLength
                         OnChange: |-
                             =If(
-                                frmCommittee.Text = galStudentLlist.Selected.'Dissertation Committee',
+                                frmCommittee.Text = LookUp('PhD Students',NUID=ThisItem.NUID).'Dissertation Committee',
                                 Remove(
                                     colStudentUpdates,
                                     Filter(
@@ -1427,7 +1558,7 @@
                                     {
                                         NUID: ThisItem.NUID,
                                         Change: "Committee",
-                                        From: If(IsBlank(galStudentLlist.Selected.'Dissertation Committee'),"",galStudentLlist.Selected.'Dissertation Committee'),
+                                        From: If(IsBlank(ThisItem.'Dissertation Committee'),"",ThisItem.'Dissertation Committee'),
                                         To: frmCommittee.Text
                                     }
                                 )

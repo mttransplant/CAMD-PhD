@@ -75,7 +75,7 @@
                     Width: =HeaderContainer1.Width
                     ZIndex: =1
 
-                Icon3 As icon.Home:
+                icoHome As icon.Home:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(255, 255, 255, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -420,6 +420,7 @@
                     OnSelect: |-
                         =UpdateContext({IsLoading:true});
                         ClearCollect(colStudents,'PhD Students');
+                        ClearCollect(colCurrentInfo,'PhD Student Current Infos');
                         ClearCollect(colCompletedMilestones,Filter('PhD Milestones','Milestone Status' in ['Milestone Status (PhD Milestones)'.Yes,'Milestone Status (PhD Milestones)'.Waived]));
                         UpdateContext({IsLoading:false});
                     PressedBorderColor: =RGBA(0, 69, 120, 1)
@@ -462,6 +463,7 @@
                     ZIndex: =1
 
             galStudentLlist As gallery.galleryVertical:
+                '#CopilotOverlayLabel': ="Filtered"
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
@@ -522,7 +524,7 @@
                     Height: =Parent.TemplateHeight-10
                     OnSelect: =Select(Parent);Navigate(scrStudentOverview)
                     Size: =13
-                    Text: =Text(ThisItem.'Expected Grad Date',"m/d/yy")
+                    Text: =Text(LookUp(colCurrentInfo,NUID = ThisItem.NUID).'Expected Grad Date',"m/d/yy")
                     Width: =91
                     X: ='Co-Advisor'.X+'Co-Advisor'.Width+5
                     Y: =5

@@ -2,7 +2,8 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: |-
         =Clear(colAdvisorUpdates);
-        Clear(colAdvisors)
+        Clear(colAdvisors);
+        Clear(colAdvisees)
     OnVisible: =Select(btnLoadAdvisors)
 
     cntAdvisorScreen As groupContainer.verticalAutoLayoutContainer:
@@ -235,7 +236,7 @@
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
-                        Tooltip: ="Edit Milestones"
+                        Tooltip: ="Edit Advisors"
                         Visible: =Not(IsEditing)
                         Width: =30
                         X: =Parent.Width-btn_aEdit.Width-btn_aSave.Width-10
@@ -289,6 +290,7 @@
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="Reload"
                         Visible: =!IsEditing
                         Width: =btn_aSave.Width
                         X: =btn_aSave.X
@@ -321,6 +323,7 @@
                         ZIndex: =1
 
                 galAdvisors As gallery.galleryVertical:
+                    '#CopilotOverlayLabel': ="Filtered"
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
