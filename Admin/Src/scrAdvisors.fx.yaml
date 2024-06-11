@@ -469,7 +469,7 @@
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         Size: =13
-                        Text: =CountRows(Filter(colAdvisees,Advisor.'Advisor Email'=ThisItem.'Advisor Email'))
+                        Text: =CountRows(Filter(colAdvisees,'Co-Advisor'.'Advisor Email'=ThisItem.'Advisor Email'))
                         Width: =176
                         X: =754
                         ZIndex: =4
