@@ -1,0 +1,472 @@
+"scrPositions As screen.'autoLayout_HeaderFooter_ver1.0'":
+    LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnHidden: |-
+        =Clear(colAdvisorUpdates);
+        Clear(colAdvisors);
+        Clear(colAdvisees)
+    OnVisible: =Select(btnLoadAdvisors_1)
+
+    cntPositions As groupContainer.verticalAutoLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Fill: =RGBA(245, 245, 245, 1)
+        Height: =Parent.Height
+        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutDirection: =LayoutDirection.Vertical
+        LayoutGap: =16
+        LayoutMode: =LayoutMode.Auto
+        PaddingBottom: =16
+        PaddingLeft: =16
+        PaddingRight: =16
+        PaddingTop: =16
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =Min(App.Width,App.DesignWidth)
+        X: =(Parent.Width-Self.Width)/2
+        ZIndex: =1
+
+        cntHeaderPositions As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =75
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =Min(galStudentLlist.Width,Parent.Width-32)
+            X: =MainContainer1.X
+            ZIndex: =1
+
+            Container6_7 As groupContainer.manualLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.Light
+                Height: =Parent.Height
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =3
+
+                labHeaderPositions As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(71, 158, 245, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =Parent.Height
+                    Size: =30
+                    Text: ="CAMD PhD Database - Advisors"
+                    Width: =cntHeaderPositions.Width
+                    ZIndex: =1
+
+                icoHomePositions As icon.Home:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(255, 255, 255, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Home
+                    OnSelect: =Navigate(scrAdminMenu)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Width: =30
+                    X: =5
+                    Y: =(Parent.Height-Self.Height)/2
+                    ZIndex: =2
+
+        Container1_1 As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
+            DropShadow: =DropShadow.Light
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =Parent.Width-(cntPositions.PaddingLeft+cntPositions.PaddingRight)
+            ZIndex: =4
+
+            cntAdvisors_1 As groupContainer.verticalAutoLayoutContainer:
+                AlignInContainer: =AlignInContainer.SetByContainer
+                DropShadow: =DropShadow.Light
+                Fill: =RGBA(255, 255, 255, 1)
+                FillPortions: =0
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =8
+                RadiusBottomRight: =8
+                RadiusTopLeft: =8
+                RadiusTopRight: =8
+                Width: =Parent.Width*0.75
+                ZIndex: =1
+
+                cntAdvColumns_1 As groupContainer.manualLayoutContainer:
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    DropShadow: =DropShadow.Light
+                    Fill: =RGBA(180, 214, 250, 1)
+                    FillPortions: =0
+                    Height: =40
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    labAdvisorName_1 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        PaddingLeft: =15
+                        Size: =13
+                        Text: ="Advisor Name"
+                        Width: =txtAdvisorName_1.Width
+                        X: =txtAdvisorName_1.X
+                        ZIndex: =1
+
+                    labAdvisorEmail_1 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        PaddingLeft: =15
+                        Size: =13
+                        Text: ="Advisor Email"
+                        Width: =txtAdvisorEmail_1.Width
+                        X: =txtAdvisorEmail_1.X
+                        ZIndex: =2
+
+                    labAdviseeCount_1 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        PaddingLeft: =15
+                        Size: =13
+                        Text: ="Advisee Count"
+                        Width: =txtAdviseeCount_1.Width
+                        X: =txtAdviseeCount_1.X
+                        ZIndex: =3
+
+                    btn_aSave_1 As icon.Save:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(0, 120, 212, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =20
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Save
+                        OnSelect: |-
+                            =Patch('PhD Advisors',ShowColumns(colAdvisorUpdates,'Advisor Name', 'Advisor Email', AdvisorID));
+                            Notify("Edits successfully saved",NotificationType.Success,5000);
+                            UpdateContext({IsEditing:false});
+                            Select(btnLoadAdvisors_1)
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="Save Changes"
+                        Visible: =IsEditing And CountRows(colAdvisorUpdates)>0
+                        Width: =30
+                        X: =btn_aEdit_1.X+btn_aEdit_1.Width
+                        Y: =10
+                        ZIndex: =4
+
+                    btn_aEdit_1 As icon.Edit:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(0, 120, 212, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =20
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Edit
+                        OnSelect: |-
+                            =UpdateContext({IsEditing:true})
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="Edit Advisors"
+                        Visible: =Not(IsEditing)
+                        Width: =30
+                        X: =Parent.Width-btn_aEdit_1.Width-btn_aSave_1.Width-10
+                        Y: =10
+                        ZIndex: =5
+
+                    btn_aCancel_1 As icon.Cancel:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(0, 120, 212, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =20
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Cancel
+                        OnSelect: |-
+                            =UpdateContext({IsEditing:false});
+                            Select(btnLoadAdvisors_1)
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="Discard Changes"
+                        Visible: =IsEditing
+                        Width: =30
+                        X: =btn_aEdit_1.X
+                        Y: =10
+                        ZIndex: =6
+
+                    btnLoadAdvisors_1 As icon.Reload:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(0, 120, 212, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =20
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Reload
+                        OnSelect: |-
+                            =UpdateContext({IsLoading:true});
+                            Select(btnResetNewAdvisorForm_1);
+                            ClearCollect(colAdvisors,'PhD Advisors');
+                            ClearCollect(colAdvisorUpdates,Filter(colAdvisors,'Advisor Email'="nothing"));
+                            ClearCollect(colAdvisees,'PhD Students');
+                            UpdateContext({IsLoading:false});
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="Reload"
+                        Visible: =!IsEditing
+                        Width: =btn_aSave_1.Width
+                        X: =btn_aSave_1.X
+                        Y: =10
+                        ZIndex: =8
+
+                    labCoAdviseeCount_1 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        PaddingLeft: =15
+                        Size: =13
+                        Text: ="Co-Advisee Count"
+                        Width: =txtCoAdviseeCount_1.Width
+                        X: =txtCoAdviseeCount_1.X
+                        ZIndex: =9
+
+                cntSpinner_4 As groupContainer.manualLayoutContainer:
+                    DropShadow: =DropShadow.Light
+                    Height: =Parent.Height
+                    LayoutMinHeight: =100
+                    LayoutMinWidth: =250
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Visible: =IsLoading
+                    Width: =Parent.Width
+                    ZIndex: =3
+
+                    spnLoading_4 As Spinner:
+                        BasePaletteColor: =
+                        DisplayMode: =DisplayMode.Edit
+                        FontColor: =
+                        Height: =Self.Width
+                        SpinnerSize: ='Spinner.SpinnerSize'.Huge
+                        Visible: =true
+                        Width: =100
+                        X: =(Parent.Width-spnLoading_4.Width)/2
+                        Y: =40
+                        ZIndex: =1
+
+                galAdvisors_1 As gallery.galleryVertical:
+                    '#CopilotOverlayLabel': ="Filtered"
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    DelayItemLoading: =true
+                    Height: =Parent.Height
+                    Items: =Sort(colAdvisors,'Advisor Name')
+                    Layout: =Layout.Vertical
+                    LayoutMinHeight: =287
+                    LayoutMinWidth: =320
+                    LoadingSpinner: =LoadingSpinner.Data
+                    TemplateSize: =40
+                    Visible: =!IsLoading
+                    Width: =Parent.Width
+                    ZIndex: =4
+
+                    txtAdvisorName_1 As text:
+                        BorderColor: =RGBA(245, 245, 245, 1)
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        Default: =ThisItem.'Advisor Name'
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnChange: |-
+                            =If(
+                                IsBlank(
+                                    LookUp(
+                                        colAdvisorUpdates,
+                                        AdvisorID = ThisItem.AdvisorID
+                                    )
+                                ),
+                                Collect(
+                                    colAdvisorUpdates,
+                                    ThisItem
+                                )
+                            );
+                            UpdateIf(
+                                colAdvisorUpdates,
+                                AdvisorID = ThisItem.AdvisorID,
+                                {'Advisor Name': txtAdvisorName_1.Text}
+                            )
+                        OnSelect: =Select(Parent)
+                        PressedBorderColor: =RGBA(0, 120, 212, 1)
+                        PressedColor: =RGBA(50, 49, 48, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13
+                        Width: =263
+                        ZIndex: =1
+
+                    txtAdvisorEmail_1 As text:
+                        BorderColor: =RGBA(245, 245, 245, 1)
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        Default: =ThisItem.'Advisor Email'
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(255, 255, 255, 1)
+                        OnChange: |-
+                            =If(
+                                IsBlank(
+                                    LookUp(
+                                        colAdvisorUpdates,
+                                        AdvisorID = ThisItem.AdvisorID
+                                    )
+                                ),
+                                Collect(
+                                    colAdvisorUpdates,
+                                    ThisItem
+                                )
+                            );
+                            UpdateIf(
+                                colAdvisorUpdates,
+                                AdvisorID = ThisItem.AdvisorID,
+                                {'Advisor Email': txtAdvisorEmail_1.Text}
+                            )
+                        OnSelect: =Select(Parent)
+                        PressedBorderColor: =RGBA(0, 120, 212, 1)
+                        PressedColor: =RGBA(50, 49, 48, 1)
+                        PressedFill: =RGBA(255, 255, 255, 1)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Size: =13
+                        Width: =326
+                        ZIndex: =2
+
+                    txtAdviseeCount_1 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Size: =13
+                        Text: =CountRows(Filter(colAdvisees,Advisor.'Advisor Email'=ThisItem.'Advisor Email'))
+                        ZIndex: =3
+
+                    txtCoAdviseeCount_1 As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Size: =13
+                        Text: =CountRows(Filter(colAdvisees,'Co-Advisor'.'Advisor Email'=ThisItem.'Advisor Email'))
+                        Width: =176
+                        ZIndex: =4
+
