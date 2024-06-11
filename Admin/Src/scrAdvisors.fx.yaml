@@ -297,6 +297,23 @@
                         Y: =10
                         ZIndex: =8
 
+                    labCoAdviseeCount As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        PaddingLeft: =15
+                        Size: =13
+                        Text: ="Co-Advisee Count"
+                        Width: =txtCoAdviseeCount.Width
+                        X: =txtCoAdviseeCount.X
+                        ZIndex: =9
+
                 cntSpinner As groupContainer.manualLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Height: =Parent.Height
@@ -379,7 +396,7 @@
                         RadiusTopLeft: =0
                         RadiusTopRight: =0
                         Size: =13
-                        Width: =343
+                        Width: =263
                         X: =5
                         ZIndex: =1
 
@@ -424,7 +441,7 @@
                         RadiusTopLeft: =0
                         RadiusTopRight: =0
                         Size: =13
-                        Width: =408
+                        Width: =326
                         X: =txtAdvisorName.X+txtAdvisorName.Width+5
                         ZIndex: =2
 
@@ -441,6 +458,21 @@
                         Text: =CountRows(Filter(colAdvisees,Advisor.'Advisor Email'=ThisItem.'Advisor Email'))
                         X: =txtAdvisorEmail.X+txtAdvisorEmail.Width+5
                         ZIndex: =3
+
+                    txtCoAdviseeCount As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Size: =13
+                        Text: =CountRows(Filter(colAdvisees,Advisor.'Advisor Email'=ThisItem.'Advisor Email'))
+                        Width: =176
+                        X: =754
+                        ZIndex: =4
 
             cntNewAdvisor As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
