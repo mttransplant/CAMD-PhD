@@ -604,22 +604,29 @@
                     ZIndex: =4
 
                     btnSubmitNewAdvisor As Button:
+                        Align: =""
                         BasePaletteColor: =
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =
                         FontSize: =18
                         FontWeight: =FontWeight.Bold
                         Height: =40
+                        Icon: =""
+                        IconRotation: =0
+                        IconStyle: ="Outline"
+                        Layout: ="Icon before"
                         OnSelect: |-
                             =Collect('PhD Advisors',{'Advisor Name':txtNewAdvisorName.Text,'Advisor Email':txtNewAdvisorEmail.Text});
                             Select(btnLoadAdvisors)
                         Text: ="Submit New Advisor"
+                        VerticalAlign: =""
                         Width: =Parent.Width-(2*Self.X)
                         X: =10
                         Y: =10  
                         ZIndex: =2
 
                     btnResetNewAdvisorForm As Button:
+                        Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Secondary
                         BasePaletteColor: =
                         DisplayMode: =DisplayMode.Edit
@@ -627,10 +634,15 @@
                         FontSize: =18
                         FontWeight: =FontWeight.Normal
                         Height: =btnSubmitNewAdvisor.Height
+                        Icon: =""
+                        IconRotation: =0
+                        IconStyle: ="Outline"
+                        Layout: ="Icon before"
                         OnSelect: |-
                             =Reset(txtNewAdvisorName);
                             Reset(txtNewAdvisorEmail);
                         Text: ="Reset New Advisor"
+                        VerticalAlign: =""
                         Width: =Parent.Width-(2*Self.X)
                         X: =btnSubmitNewAdvisor.X
                         Y: =btnSubmitNewAdvisor.Y+btnSubmitNewAdvisor.Height+10

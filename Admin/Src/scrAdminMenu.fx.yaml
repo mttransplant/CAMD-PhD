@@ -80,52 +80,76 @@
                 ZIndex: =1
 
                 btnFunding As Button:
+                    Align: =""
                     BasePaletteColor: =
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =
                     FontSize: =56
                     Height: =Parent.Height/2-10
+                    Icon: =""
+                    IconRotation: =0
+                    IconStyle: ="Outline"
+                    Layout: ="Icon before"
                     OnSelect: =Navigate(scrAdminMenu)
                     Text: ="Funding"
+                    VerticalAlign: =""
                     Width: =Parent.Width/2-10
                     X: =Parent.Width/2+5
                     Y: =Parent.Height/2+5
                     ZIndex: =1
 
                 btnTARA As Button:
+                    Align: =""
                     BasePaletteColor: =
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =
                     FontSize: =56
                     Height: =Parent.Height/2-10
+                    Icon: =""
+                    IconRotation: =0
+                    IconStyle: ="Outline"
+                    Layout: ="Icon before"
                     OnSelect: =Navigate(scrAdminMenu)  
                     Text: ="TA/RA-ships"
+                    VerticalAlign: =""
                     Width: =Parent.Width/2-10
                     X: =5
                     Y: =Parent.Height/2+5
                     ZIndex: =2
 
                 btnAdvisor As Button:
+                    Align: =""
                     BasePaletteColor: =
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =
                     FontSize: =56
                     Height: =Parent.Height/2-10
+                    Icon: =""
+                    IconRotation: =0
+                    IconStyle: ="Outline"
+                    Layout: ="Icon before"
                     OnSelect: =Navigate(scrAdvisors)
                     Text: ="Advisors"
+                    VerticalAlign: =""
                     Width: =Parent.Width/2-10
                     X: =Parent.Width/2+5
                     Y: =5
                     ZIndex: =3
 
                 btnStudent As Button:
+                    Align: =""
                     BasePaletteColor: =
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =
                     FontSize: =56
                     Height: =Parent.Height/2-10
+                    Icon: =""
+                    IconRotation: =0
+                    IconStyle: ="Outline"
+                    Layout: ="Icon before"
                     OnSelect: =Navigate(scrStudentList)
                     Text: ="Students"
+                    VerticalAlign: =""
                     Width: =Parent.Width/2-10
                     X: =5
                     Y: =5

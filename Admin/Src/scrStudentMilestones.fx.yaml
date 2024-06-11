@@ -117,90 +117,126 @@
             ZIndex: =2
 
             btnBack_2 As Button:
+                Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
                 Height: =32
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 OnSelect: =Navigate(scrStudentList)
                 Text: ="Back to List"
+                VerticalAlign: =""
                 Width: =140
                 X: =0
                 Y: =0
                 ZIndex: =1
 
             btnOverview_2 As Button:
+                Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
                 Height: =32
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 OnSelect: =Navigate(scrStudentOverview)
                 Text: ="Overview"
+                VerticalAlign: =""
                 Width: =140
                 X: =0
                 Y: =0
                 ZIndex: =2
 
             btnMilestones_2 As Button:
+                Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Primary
                 BasePaletteColor: =
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
                 Height: =32
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 OnSelect: =Navigate(scrStudentMilestones)
                 Text: ="Milestones"
+                VerticalAlign: =""
                 Width: =140
                 X: =0
                 Y: =0
                 ZIndex: =3
 
             btnHistory_2 As Button:
+                Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
                 Height: =32
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 OnSelect: =Navigate(scrStudentHistory)
                 Text: ="Activity History"
+                VerticalAlign: =""
                 Width: =140
                 X: =0
                 Y: =0
                 ZIndex: =4
 
             btnEvaluations_2 As Button:
+                Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
                 Height: =32
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 OnSelect: =Navigate(scrStudentEvaluations)
                 Text: ="Evaluations"
+                VerticalAlign: =""
                 Width: =140
                 X: =0
                 Y: =0
                 ZIndex: =5
 
             btnCourses_2 As Button:
+                Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
                 Height: =32
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 OnSelect: =Navigate(scrStudentCourses)
                 Text: ="Courses"
+                VerticalAlign: =""
                 Width: =140
                 X: =0
                 Y: =0
