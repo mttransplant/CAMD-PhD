@@ -109,8 +109,8 @@
                     IconRotation: =0
                     IconStyle: ="Outline"
                     Layout: ="Icon before"
-                    OnSelect: =Navigate(scrAdminMenu)  
-                    Text: ="TA/RA-ships"
+                    OnSelect: =Navigate(scrPositions)  
+                    Text: ="TA/RA Positions"
                     VerticalAlign: =""
                     Width: =Parent.Width/2-10
                     X: =5

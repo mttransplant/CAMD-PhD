@@ -1,0 +1,143 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr829_phdpositionses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr829_phdpositions",
+    "Name": "PhD Positions",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr829_bannerindex": "Banner Index",
+      "cr829_dateclosed": "Date Closed",
+      "cr829_facultylead": "Faculty Lead",
+      "cr829_phdpositions_AsyncOperations": "System Jobs",
+      "cr829_phdpositions_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr829_phdpositions_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr829_phdpositions_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr829_phdpositions_ProcessSession": "Process Sessions",
+      "cr829_phdpositions_SyncErrors": "Sync Errors",
+      "cr829_phdpositionsid": "PhD Positions",
+      "cr829_positiondescription": "Position Description",
+      "cr829_positiontitle": "Position Title",
+      "cr829_positiontype": "Position Type",
+      "cr829_projectdescription": "Project Description",
+      "cr829_projecttitle": "Project Title",
+      "cr829_qualifications": "Qualifications",
+      "cr829_weeklyhours": "Weekly Hours",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PhD Positions",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PhD Positions (Views)",
+    "Name": "_cr829_phdpositions_views",
+    "RelatedEntityName": "PhD Positions",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "019f52ea-04d6-485f-8901-ba5dac10b3c9": "PhD Positions Lookup View",
+      "2127c4d4-2f0b-4cdc-bade-dcb9b1cb05cf": "PhD Positions Associated View",
+      "439a9db2-ca51-424a-a34d-2faf3ce59ad3": "Active PhD Positions",
+      "c965f818-d95a-4408-9b90-12f30a531c1f": "Inactive PhD Positions",
+      "e58f7f88-c834-4c76-8cf5-e35f292a0f75": "PhD Positions Advanced Find View"
+    }
+  },
+  {
+    "DisplayName": "Position Type (PhD Positions)",
+    "Name": "cr829_phdpositions_cr829_positiontype",
+    "OptionSetInfoNameMapping": {
+      "115260000": "TA",
+      "115260001": "RA"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr829_positiontype",
+        "OptionSetReferenceEntityName": "PhD Positions"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr829_positiontype",
+    "RelatedEntityName": "PhD Positions",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Weekly Hours (PhD Positions)",
+    "Name": "cr829_phdpositions_cr829_weeklyhours",
+    "OptionSetInfoNameMapping": {
+      "115260000": "10",
+      "115260001": "20"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr829_weeklyhours",
+        "OptionSetReferenceEntityName": "PhD Positions"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr829_weeklyhours",
+    "RelatedEntityName": "PhD Positions",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (PhD Positions)",
+    "Name": "cr829_phdpositions_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PhD Positions"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PhD Positions",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PhD Positions)",
+    "Name": "cr829_phdpositions_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PhD Positions"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PhD Positions",
+    "Type": "OptionSetInfo"
+  }
+]
