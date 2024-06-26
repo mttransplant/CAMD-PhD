@@ -356,7 +356,7 @@
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DataSource: ='PhD Students'
                 FillPortions: =0
-                Height: =165
+                Height: =200
                 Item: =LookUp('PhD Students',NUID=galStudentLlist.Selected.NUID)
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
@@ -476,6 +476,66 @@
                         Text: =Parent.Default
                         Width: =(Parent.Width - 60) * 0.6
                         X: =DataCardKey6.X + DataCardKey6.Width
+                        Y: =10
+                        ZIndex: =2
+
+                TrackDataCard As typedDataCard.textualViewCard:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_admitterm"
+                    Default: =LookUp(colCurrentInfo,NUID = ThisItem.NUID).TRACK
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_admitterm)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =667
+                    X: =0
+                    Y: =4
+                    ZIndex: =1
+
+                    DataCardKey4 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: |-
+                            ="Track
+                            "
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (DataCardValue2.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    DataCardValue2 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Default
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey4.X + DataCardKey4.Width
                         Y: =10
                         ZIndex: =2
 
@@ -736,7 +796,7 @@
                         Height: =34
                         PaddingLeft: =0
                         Size: =13
-                        Text: =Parent.DisplayName
+                        Text: ="Admit Term"
                         Width: =(Parent.Width - 60) * 0.4
                         Wrap: =false
                         X: =30
@@ -794,7 +854,7 @@
                         Height: =34
                         PaddingLeft: =0
                         Size: =13
-                        Text: =Parent.DisplayName
+                        Text: ="Expected Grad Date"
                         Width: =(Parent.Width - 60) * 0.4
                         Wrap: =false
                         X: =30
@@ -845,8 +905,8 @@
                     Required: =false
                     Update: =frmAdvisor.Selected
                     Width: =667
-                    X: =0
-                    Y: =1
+                    X: =1
+                    Y: =0
                     ZIndex: =1
 
                     DataCardKey1 As label:
@@ -1111,146 +1171,6 @@
                         Y: =DataCardKey2.Y
                         ZIndex: =4
 
-                Track_DataCard5 As typedDataCard.comboBoxOptionSetSingleEditCard:
-                    BorderColor: =RGBA(245, 245, 245, 1)
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="cr829_track"
-                    Default: =ThisItem.Track
-                    DisplayMode: =Parent.DisplayMode
-                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_track)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =50
-                    Required: =false
-                    Update: =frmTrack.Selected.Value
-                    Width: =667
-                    X: =0
-                    Y: =0
-                    ZIndex: =3
-
-                    DataCardKey46 As label:
-                        AutoHeight: =true
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =34
-                        PaddingLeft: =0
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =(Parent.Width - 60) * 0.4
-                        Wrap: =false
-                        X: =30
-                        Y: =10 + (frmTrack.Height / 2) - (Self.Height / 2)
-                        ZIndex: =1
-
-                    frmTrack As combobox:
-                        BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                        ChevronBackground: =RGBA(245, 245, 245, 1)
-                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                        ChevronFill: =RGBA(50, 49, 48, 1)
-                        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
-                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
-                        Color: =RGBA(50, 49, 48, 1)
-                        DefaultSelectedItems: =[Parent.Default]
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayFields: =["Value"]
-                        DisplayMode: =Parent.DisplayMode
-                        Fill: =If(IsEditing,RGBA(245, 245, 245, 1),Color.White)
-                        Font: =Font.'Segoe UI'
-                        HoverBorderColor: =RGBA(16, 110, 190, 1)
-                        HoverColor: =RGBA(50, 49, 48, 1)
-                        HoverFill: =RGBA(245, 245, 245, 1)
-                        IsSearchable: =false
-                        Items: =Choices('Track (PhD Students)')
-                        OnChange: |-
-                            =If(
-                                frmTrack.Selected.Value = LookUp('PhD Students',NUID=ThisItem.NUID).Track,
-                                Remove(
-                                    colStudentUpdates,
-                                    Filter(
-                                        colStudentUpdates,
-                                        Change = "Track"
-                                    )
-                                ),
-                                Collect(
-                                    colStudentUpdates,
-                                    {
-                                        NUID: ThisItem.NUID,
-                                        Change: "Track",
-                                        From: Text(ThisItem.Track),
-                                        To: Text(frmTrack.Selected.Value)
-                                    }
-                                )
-                            )
-                        PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
-                        PressedBorderColor: =RGBA(16, 110, 190, 1)
-                        PressedColor: =RGBA(255, 255, 255, 1)
-                        PressedFill: =RGBA(0, 120, 212, 1)
-                        SearchFields: =["Value"]
-                        SearchItems: =[]
-                        SelectionFill: =RGBA(0, 120, 212, 1)
-                        SelectMultiple: =false
-                        Size: =13
-                        Tooltip: =Parent.DisplayName
-                        Width: =(Parent.Width - 60) * 0.6
-                        X: =DataCardKey46.X + DataCardKey46.Width
-                        Y: =10
-                        ZIndex: =2
-
-                    ErrorMessage17 As label:
-                        AutoHeight: =true
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(168, 0, 0, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(168, 0, 0, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =10
-                        Live: =Live.Assertive
-                        PaddingBottom: =0
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =13
-                        Text: =Parent.Error
-                        Visible: =Parent.DisplayMode=DisplayMode.Edit
-                        Width: =Parent.Width - 60
-                        X: =30
-                        Y: =frmTrack.Y + frmTrack.Height
-                        ZIndex: =3
-
-                    StarVisible17 As label:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =DataCardKey46.Height
-                        PaddingLeft: =0
-                        Size: =13
-                        Text: ="*"
-                        Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                        Width: =30
-                        Wrap: =false
-                        Y: =DataCardKey46.Y
-                        ZIndex: =4
-
                 "'Status (cr829_status)_DataCard4' As typedDataCard.textualEditCard":
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
@@ -1264,7 +1184,7 @@
                     Required: =false
                     Update: =frmStatus.Text
                     Width: =667
-                    X: =1
+                    X: =0
                     Y: =0
                     ZIndex: =3
 
@@ -1400,7 +1320,7 @@
                     Update: =frmPath.Text
                     Width: =667
                     X: =0
-                    Y: =2
+                    Y: =1
                     ZIndex: =3
 
                     DataCardKey53 As label:
@@ -1534,7 +1454,7 @@
                     Required: =false
                     Update: =frmCommittee.Text
                     Width: =667
-                    X: =1
+                    X: =0
                     Y: =2
                     ZIndex: =3
 

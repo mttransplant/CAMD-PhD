@@ -3614,36 +3614,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.MainContainer2.EditStudentInfo.Track_DataCard5.frmTrack.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.MainContainer2.EditStudentInfo.Track_DataCard5.frmTrack.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ScreenContainer2.MainContainer2.EditStudentInfo.Track_DataCard5.frmTrack"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.MainContainer2.EditStudentInfo.'Status (cr829_status)_DataCard4'.frmStatus.AccessibleLabel"
                 }
               ],
