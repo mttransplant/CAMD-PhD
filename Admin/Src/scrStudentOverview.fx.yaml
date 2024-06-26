@@ -369,7 +369,7 @@
                     DataField: =""
                     Default: =Text(LookUp(colCurrentInfo,NUID = ThisItem.NUID).GPA,"0.000")
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_admitterm)
+                    DisplayName: ="GPA"
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =40
                     Required: =false
@@ -427,7 +427,7 @@
                     DataField: =""
                     Default: =Text(LookUp(colCurrentInfo,NUID = ThisItem.NUID).CREDIT_EARNED,"0.0")
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_admitterm)
+                    DisplayName: ="Credits Earned"
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =40
                     Required: =false
@@ -485,7 +485,7 @@
                     DataField: =""
                     Default: =LookUp(colCurrentInfo,NUID = ThisItem.NUID).TRACK
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_admitterm)
+                    DisplayName: ="Track"
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =40
                     Required: =false
@@ -773,7 +773,7 @@
                     DataField: =""
                     Default: =LookUp(colCurrentInfo,NUID = ThisItem.NUID).ADMIT_TERM
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_admitterm)
+                    DisplayName: ="Admit Term"
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =40
                     Required: =false
