@@ -1,1 +1,27 @@
-{}
+{
+  "6e886857-4207-47e1-932d-4a18f60aee90": {
+    "connectionRef": {
+      "displayName": "Oracle Database",
+      "gatewayObjectIdHint": "082d7c88-d9ec-4d8a-baba-92acc6d34a57",
+      "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1693/1.0.1693.3738/oracle/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_oracle",
+      "isOnPremiseConnection": true,
+      "sharedConnectionId": "/providers/microsoft.powerapps/apis/shared_oracle/connections/3439a7ae9d9044f8acaa3700d5ca1a92"
+    },
+    "datasets": {
+      "default": {
+        "dataSources": {
+          "CAMD.PHD_STUDENT_INFO_VW": {
+            "tableName": "[CAMD].[PHD_STUDENT_INFO_VW]"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "CAMD.PHD_STUDENT_INFO_VW"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "6e886857-4207-47e1-932d-4a18f60aee90"
+  }
+}

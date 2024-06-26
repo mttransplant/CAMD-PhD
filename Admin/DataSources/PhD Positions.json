@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr829_phdpositions",
+    "MaxGetRowsCount": 500,
     "Name": "PhD Positions",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
