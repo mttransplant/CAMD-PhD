@@ -420,7 +420,6 @@
                     OnSelect: |-
                         =UpdateContext({IsLoading:true});
                         ClearCollect(colStudents,'PhD Students');
-                        // ClearCollect(colCurrentInfo,'PhD Student Current Infos');
                         ClearCollect(colCurrentInfo, 'CAMD.PHD_STUDENT_INFO_VW');
                         ClearCollect(colCompletedMilestones,Filter('PhD Milestones','Milestone Status' in ['Milestone Status (PhD Milestones)'.Yes,'Milestone Status (PhD Milestones)'.Waived]));
                         UpdateContext({IsLoading:false});
