@@ -2,6 +2,14 @@
   "6e886857-4207-47e1-932d-4a18f60aee90": {
     "connectionRef": {
       "displayName": "Oracle Database",
+      "executionRestrictions": {
+        "apiId": "/providers/microsoft.powerapps/apis/shared_oracle",
+        "apiVer": 1,
+        "appVer": "3.24062.17",
+        "modifiedOn": "2024-06-26 20:45:36",
+        "policy": "{\"type\":\"tabular\",\"dataSources\":{\"[camd].[phd_student_info_vw]\":[\"get\"]}}",
+        "version": 1
+      },
       "gatewayObjectIdHint": "082d7c88-d9ec-4d8a-baba-92acc6d34a57",
       "iconUri": "https://connectoricons-prod.azureedge.net/releases/v1.0.1693/1.0.1693.3738/oracle/icon.png",
       "id": "/providers/microsoft.powerapps/apis/shared_oracle",

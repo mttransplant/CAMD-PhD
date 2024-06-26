@@ -420,7 +420,8 @@
                     OnSelect: |-
                         =UpdateContext({IsLoading:true});
                         ClearCollect(colStudents,'PhD Students');
-                        ClearCollect(colCurrentInfo,'PhD Student Current Infos');
+                        // ClearCollect(colCurrentInfo,'PhD Student Current Infos');
+                        ClearCollect(colCurrentInfo, 'CAMD.PHD_STUDENT_INFO_VW');
                         ClearCollect(colCompletedMilestones,Filter('PhD Milestones','Milestone Status' in ['Milestone Status (PhD Milestones)'.Yes,'Milestone Status (PhD Milestones)'.Waived]));
                         UpdateContext({IsLoading:false});
                     PressedBorderColor: =RGBA(0, 69, 120, 1)
@@ -524,7 +525,7 @@
                     Height: =Parent.TemplateHeight-10
                     OnSelect: =Select(Parent);Navigate(scrStudentOverview)
                     Size: =13
-                    Text: =Text(LookUp(colCurrentInfo,NUID = ThisItem.NUID).'Expected Grad Date',"m/d/yy")
+                    Text: =LookUp(colCurrentInfo,NUID = ThisItem.NUID).EXPECTED_GRADUATION_DATE
                     Width: =91
                     X: ='Co-Advisor'.X+'Co-Advisor'.Width+5
                     Y: =5
@@ -596,7 +597,7 @@
                     Height: =Parent.TemplateHeight-10
                     OnSelect: =Select(Parent);Navigate(scrStudentOverview)
                     Size: =13
-                    Text: =ThisItem.Track
+                    Text: =LookUp(colCurrentInfo,NUID = ThisItem.NUID).TRACK
                     Width: =111
                     X: =AdmitTerm.X+AdmitTerm.Width+5
                     Y: =5
@@ -613,7 +614,7 @@
                     Font: =Font.'Segoe UI'
                     OnSelect: =Select(Parent);Navigate(scrStudentOverview)
                     Size: =13
-                    Text: =ThisItem.'Admit Term'
+                    Text: =LookUp(colCurrentInfo,NUID = ThisItem.NUID).ADMIT_TERM
                     Width: =116
                     X: =Email.X+Email.Width+5
                     Y: =5

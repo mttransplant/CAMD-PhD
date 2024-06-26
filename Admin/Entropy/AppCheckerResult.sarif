@@ -3884,19 +3884,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentList.ScreenContainer1.MainContainer1.cntColNames.btnLoadStudentListData.OnSelect"
+                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentList.ScreenContainer1.MainContainer1.cntColNames.btnLoadStudentListData.OnSelect",
+                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions.OnSelect",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "OnSelect",
-                "module": "scrStudentList",
-                "type": "scrStudentList.ScreenContainer1.MainContainer1.cntColNames.btnLoadStudentListData"
+                "module": "scrPositions",
+                "type": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions"
               }
             }
           ],
@@ -3914,19 +3914,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions.OnSelect"
+                  "fullyQualifiedName": "scrStudentList.ScreenContainer1.MainContainer1.cntColNames.btnLoadStudentListData.OnSelect"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions.OnSelect",
+                  "fullyQualifiedName": "scrStudentList.ScreenContainer1.MainContainer1.cntColNames.btnLoadStudentListData.OnSelect",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "OnSelect",
-                "module": "scrPositions",
-                "type": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions"
+                "module": "scrStudentList",
+                "type": "scrStudentList.ScreenContainer1.MainContainer1.cntColNames.btnLoadStudentListData"
               }
             }
           ],
@@ -4214,6 +4214,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrStudentOverview.ThisStudent"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentOverview.ThisStudent",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ThisStudent",
+                "module": "scrStudentOverview",
+                "type": "scrStudentOverview"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.HeaderContainer2.Container6_2.Header_7.Text"
                 }
               ],
@@ -4371,6 +4401,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
+              }
+            },
+            {
+              "id": "app-UnusedVariables",
+              "messageStrings": {
+                "issue": {
+                  "text": "Unused variable"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove the unused variable."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
               }
             }
           ],
