@@ -482,7 +482,7 @@
                 TrackDataCard As typedDataCard.textualViewCard:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
-                    DataField: ="cr829_admitterm"
+                    DataField: =""
                     Default: =LookUp(colCurrentInfo,NUID = ThisItem.NUID).TRACK
                     DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_admitterm)
@@ -770,7 +770,7 @@
                 "'Admit Term_DataCard3' As typedDataCard.textualViewCard":
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
-                    DataField: ="cr829_admitterm"
+                    DataField: =""
                     Default: =LookUp(colCurrentInfo,NUID = ThisItem.NUID).ADMIT_TERM
                     DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_admitterm)
@@ -828,7 +828,7 @@
                 "'Expected Grad Date_DataCard3' As typedDataCard.textualViewCard":
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
-                    DataField: ="cr829_expectedgraddate"
+                    DataField: =""
                     Default: =LookUp(colCurrentInfo,NUID = ThisItem.NUID).EXPECTED_GRADUATION_DATE
                     DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@'PhD Student Current Infos'],DataSourceInfo.DisplayName,cr829_expected_graduation_date)
