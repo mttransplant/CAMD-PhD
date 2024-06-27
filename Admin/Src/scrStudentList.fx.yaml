@@ -420,7 +420,7 @@
                     OnSelect: |-
                         =UpdateContext({IsLoading:true});
                         ClearCollect(colStudents,'PhD Students');
-                        ClearCollect(colCurrentInfo, 'CAMD.PHD_STUDENT_INFO_VW');
+                        ClearCollect(colCurrentInfo, 'CAMD.PHD_STUDENT_INFO_TBL');
                         ClearCollect(colCompletedMilestones,Filter('PhD Milestones','Milestone Status' in ['Milestone Status (PhD Milestones)'.Yes,'Milestone Status (PhD Milestones)'.Waived]));
                         UpdateContext({IsLoading:false});
                     PressedBorderColor: =RGBA(0, 69, 120, 1)

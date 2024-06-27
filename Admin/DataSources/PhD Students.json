@@ -65,26 +65,6 @@
     }
   },
   {
-    "DisplayName": "Track (PhD Students)",
-    "Name": "cr829_studentinformation_cr829_track",
-    "OptionSetInfoNameMapping": {
-      "0": "Regular",
-      "1": "Advanced"
-    },
-    "OptionSetIsBooleanValued": false,
-    "OptionSetIsGlobal": false,
-    "OptionSetReference": {
-      "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "cr829_track",
-        "OptionSetReferenceEntityName": "PhD Students"
-      }
-    },
-    "OptionSetTypeKey": "PicklistType",
-    "RelatedColumnInvariantName": "cr829_track",
-    "RelatedEntityName": "PhD Students",
-    "Type": "OptionSetInfo"
-  },
-  {
     "DisplayName": "Status (PhD Students)",
     "Name": "cr829_studentinformation_statecode",
     "OptionSetInfoNameMapping": {

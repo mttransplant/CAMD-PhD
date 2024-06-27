@@ -6,8 +6,8 @@
         "apiId": "/providers/microsoft.powerapps/apis/shared_oracle",
         "apiVer": 1,
         "appVer": "3.24062.17",
-        "modifiedOn": "2024-06-26 21:06:24",
-        "policy": "{\"type\":\"tabular\",\"dataSources\":{\"[camd].[phd_student_info_vw]\":[\"get\"]}}",
+        "modifiedOn": "2024-06-27 15:19:22",
+        "policy": "{\"type\":\"tabular\",\"dataSources\":{\"[camd].[phd_student_info_tbl]\":[\"get\"]}}",
         "version": 1
       },
       "gatewayObjectIdHint": "082d7c88-d9ec-4d8a-baba-92acc6d34a57",
@@ -19,6 +19,9 @@
     "datasets": {
       "default": {
         "dataSources": {
+          "CAMD.PHD_STUDENT_INFO_TBL": {
+            "tableName": "[CAMD].[PHD_STUDENT_INFO_TBL]"
+          },
           "CAMD.PHD_STUDENT_INFO_VW": {
             "tableName": "[CAMD].[PHD_STUDENT_INFO_VW]"
           }
@@ -26,7 +29,8 @@
       }
     },
     "dataSources": [
-      "CAMD.PHD_STUDENT_INFO_VW"
+      "CAMD.PHD_STUDENT_INFO_VW",
+      "CAMD.PHD_STUDENT_INFO_TBL"
     ],
     "dependencies": {},
     "dependents": [],
