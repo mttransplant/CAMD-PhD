@@ -21,15 +21,11 @@
         "dataSources": {
           "CAMD.PHD_STUDENT_INFO_TBL": {
             "tableName": "[CAMD].[PHD_STUDENT_INFO_TBL]"
-          },
-          "CAMD.PHD_STUDENT_INFO_VW": {
-            "tableName": "[CAMD].[PHD_STUDENT_INFO_VW]"
           }
         }
       }
     },
     "dataSources": [
-      "CAMD.PHD_STUDENT_INFO_VW",
       "CAMD.PHD_STUDENT_INFO_TBL"
     ],
     "dependencies": {},
