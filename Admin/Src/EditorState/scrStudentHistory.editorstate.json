@@ -47,7 +47,8 @@
         "IconRotation",
         "IconStyle",
         "Align",
-        "VerticalAlign"
+        "VerticalAlign",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -152,6 +153,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "DisplayMode",
           "RuleProviderType": "Unknown"
@@ -237,7 +243,8 @@
         "IconRotation",
         "IconStyle",
         "Align",
-        "VerticalAlign"
+        "VerticalAlign",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -342,6 +349,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "Y",
           "RuleProviderType": "Unknown"
@@ -427,7 +439,8 @@
         "IconRotation",
         "IconStyle",
         "Align",
-        "VerticalAlign"
+        "VerticalAlign",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -532,6 +545,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "Y",
           "RuleProviderType": "Unknown"
@@ -617,7 +635,8 @@
         "IconRotation",
         "IconStyle",
         "Align",
-        "VerticalAlign"
+        "VerticalAlign",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -722,6 +741,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "Y",
           "RuleProviderType": "Unknown"
@@ -807,7 +831,8 @@
         "IconRotation",
         "IconStyle",
         "Align",
-        "VerticalAlign"
+        "VerticalAlign",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -912,6 +937,11 @@
           "RuleProviderType": "Unknown"
         },
         {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
           "Category": "Design",
           "PropertyName": "Y",
           "RuleProviderType": "Unknown"
@@ -997,7 +1027,8 @@
         "IconRotation",
         "IconStyle",
         "Align",
-        "VerticalAlign"
+        "VerticalAlign",
+        "BorderStyle"
       ],
       "DynamicProperties": [
         {
@@ -1099,6 +1130,11 @@
         {
           "Category": "Data",
           "PropertyName": "IconStyle",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "BorderStyle",
           "RuleProviderType": "Unknown"
         },
         {

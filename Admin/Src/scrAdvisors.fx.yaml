@@ -638,6 +638,7 @@
                     btnSubmitNewAdvisor As Button:
                         Align: =""
                         BasePaletteColor: =
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =
                         FontSize: =18
@@ -661,6 +662,7 @@
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Secondary
                         BasePaletteColor: =
+                        BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(106, 122, 127, 1)
                         FontSize: =18

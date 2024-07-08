@@ -118,6 +118,7 @@
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
+                BorderStyle: =""
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
                 Height: =32
@@ -139,6 +140,7 @@
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Primary
                 BasePaletteColor: =
+                BorderStyle: =""
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
                 Height: =32
@@ -160,6 +162,7 @@
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
+                BorderStyle: =""
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
                 Height: =32
@@ -181,6 +184,7 @@
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
+                BorderStyle: =""
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
                 Height: =32
@@ -202,6 +206,7 @@
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
+                BorderStyle: =""
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
                 Height: =32
@@ -223,6 +228,7 @@
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
+                BorderStyle: =""
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
                 Height: =32
