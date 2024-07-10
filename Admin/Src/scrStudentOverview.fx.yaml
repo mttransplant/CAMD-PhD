@@ -360,16 +360,16 @@
                     Y: =10
                     ZIndex: =5
 
-            ReadOnlyStudentInfo As formViewer:
+            ReadOnlyStudentInfo_old As formViewer:
                 BorderColor: =RGBA(245, 245, 245, 1)
-                DataSource: ='PhD Students'
+                DataSource: =colCurrentInfo
                 FillPortions: =0
                 Height: =210
-                Item: =LookUp('PhD Students',NUID=galStudentLlist.Selected.NUID)
+                Item: =LookUp(colCurrentInfo,NUID=galStudentLlist.Selected.NUID)
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
                 NumberOfColumns: =2
-                ZIndex: =2
+                ZIndex: =3
 
                 GPA_DataCard As typedDataCard.textualViewCard:
                     BorderColor: =RGBA(245, 245, 245, 1)
@@ -550,8 +550,8 @@
                 "'First Name_DataCard3' As typedDataCard.textualViewCard":
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
-                    DataField: ="cr829_firstname"
-                    Default: =ThisItem.'First Name'
+                    DataField: =ThisItem.FIRST_NAME
+                    Default: =ThisItem.FIRST_NAME
                     DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_firstname)
                     Fill: =RGBA(0, 0, 0, 0)
@@ -609,7 +609,7 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="cr829_lastname"
-                    Default: =ThisItem.'Last Name'
+                    Default: =ThisItem.LAST_NAME
                     DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_lastname)
                     Fill: =RGBA(0, 0, 0, 0)
@@ -725,7 +725,7 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="cr829_email"
-                    Default: =ThisItem.Email
+                    Default: =ThisItem.EMAIL
                     DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_email)
                     Fill: =RGBA(0, 0, 0, 0)
@@ -899,7 +899,7 @@
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
                 NumberOfColumns: =2
-                ZIndex: =3
+                ZIndex: =4
 
                 Advisor_DataCard1 As typedDataCard.comboBoxEditCard:
                     BorderColor: =RGBA(245, 245, 245, 1)

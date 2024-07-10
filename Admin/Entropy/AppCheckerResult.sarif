@@ -4214,19 +4214,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.MainContainer2.ReadOnlyStudentInfo.Item"
+                  "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.MainContainer2.ReadOnlyStudentInfo_old.Item"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.MainContainer2.ReadOnlyStudentInfo.Item",
+                  "fullyQualifiedName": "scrStudentOverview.ScreenContainer2.MainContainer2.ReadOnlyStudentInfo_old.Item",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Item",
                 "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ScreenContainer2.MainContainer2.ReadOnlyStudentInfo"
+                "type": "scrStudentOverview.ScreenContainer2.MainContainer2.ReadOnlyStudentInfo_old"
               }
             }
           ],
