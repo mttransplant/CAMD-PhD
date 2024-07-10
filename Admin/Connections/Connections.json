@@ -5,8 +5,8 @@
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_oracle",
         "apiVer": 1,
-        "appVer": "3.24062.17",
-        "modifiedOn": "2024-06-27 15:19:22",
+        "appVer": "3.24064.21",
+        "modifiedOn": "2024-07-10 20:00:54",
         "policy": "{\"type\":\"tabular\",\"dataSources\":{\"[camd].[phd_student_info_tbl]\":[\"get\"]}}",
         "version": 1
       },

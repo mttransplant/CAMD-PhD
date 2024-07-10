@@ -1,10 +1,12 @@
 "scrStudentOverview As screen.'autoLayout_HeaderFooter_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnHidden: |-
-        =Select(btn_oCancel);
-        UpdateContext({ThisStudent:Blank()})
+    OnHidden: =Select(btn_oCancel);
     OnVisible: |-
-        =UpdateContext({IsEditing:false,ThisStudent:LookUp('PhD Student Current Infos',NUID=galStudentLlist.Selected.NUID)});
+        =UpdateContext({IsEditing:false});
+        Set(ColorMilestoneIsMissing,Color.LightGray);
+        Set(ColorMilestoneIsFulfilled,Color.ForestGreen);
+        Set(IconMilestoneIsMissing,Icon.CancelBadge);
+        Set(IconMilestoneIsFulfilled,Icon.CheckBadge);
 
     ScreenContainer2 As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -362,7 +364,7 @@
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DataSource: ='PhD Students'
                 FillPortions: =0
-                Height: =200
+                Height: =210
                 Item: =LookUp('PhD Students',NUID=galStudentLlist.Selected.NUID)
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
