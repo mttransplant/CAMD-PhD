@@ -419,8 +419,6 @@
                     HoverFill: =RGBA(16, 110, 190, 1)
                     OnSelect: |-
                         =UpdateContext({IsLoading:true});
-                        // ClearCollect(colStudents,'PhD Students');
-                        // ClearCollect(colCurrentInfo, 'CAMD.PHD_STUDENT_INFO_TBL');
                         ClearCollect(colCompletedMilestones,Filter('PhD Milestones','Milestone Status' in ['Milestone Status (PhD Milestones)'.Yes,'Milestone Status (PhD Milestones)'.Waived]));
                         UpdateContext({IsLoading:false});
                     PressedBorderColor: =RGBA(0, 69, 120, 1)
@@ -468,7 +466,7 @@
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Height: =90
-                Items: =Sort(Sort('PhD Students','First Name',SortOrder.Ascending),'Last Name',SortOrder.Ascending)
+                Items: =Sort(Sort('PhD Students','Last Name',SortOrder.Ascending),'First Name',SortOrder.Ascending)
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
@@ -676,7 +674,7 @@
                     FocusedBorderThickness: =4
                     Height: =30
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
                     OnSelect: =Select(Parent)
@@ -701,7 +699,7 @@
                     FocusedBorderThickness: =4
                     Height: =30
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
                     OnSelect: =Select(Parent)
@@ -726,7 +724,7 @@
                     FocusedBorderThickness: =4
                     Height: =30
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
                     OnSelect: =Select(Parent)
@@ -751,7 +749,7 @@
                     FocusedBorderThickness: =4
                     Height: =30
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
                     OnSelect: =Select(Parent)
@@ -776,7 +774,7 @@
                     FocusedBorderThickness: =4
                     Height: =30
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
                     OnSelect: =Select(Parent)
@@ -801,7 +799,7 @@
                     FocusedBorderThickness: =4
                     Height: =30
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
-                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=ThisItem.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
                     OnSelect: =Select(Parent)
