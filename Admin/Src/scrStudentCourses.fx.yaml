@@ -462,7 +462,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Subject
-                    Width: =79
+                    Width: =95
                     X: =txtCollege.X+txtCollege.Width
                     ZIndex: =3
 
@@ -479,7 +479,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Course
-                    Width: =70
+                    Width: =txtSubject.Width
                     X: =txtSubject.X+txtSubject.Width
                     ZIndex: =4
 
