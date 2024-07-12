@@ -6668,7 +6668,14 @@
         "BorderThickness",
         "FocusedBorderThickness",
         "Size",
-        "Italic",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "false",
+          "InvariantPropertyName": "Italic",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Underline",
         "Strikethrough",
         "PaddingTop",
@@ -6748,7 +6755,7 @@
         {
           "Category": "Design",
           "PropertyName": "Italic",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
