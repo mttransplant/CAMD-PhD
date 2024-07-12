@@ -257,8 +257,9 @@
 
             cntCourseHeaders As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
+                Fill: =RGBA(180, 214, 250, 1)
                 FillPortions: =0
-                Height: =50
+                Height: =40
                 LayoutMinHeight: =50
                 LayoutMinWidth: =250
                 RadiusBottomLeft: =4
@@ -268,10 +269,129 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
+                labTerm As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Term"
+                    Width: =txtTerm.Width
+                    X: =txtTerm.X
+                    ZIndex: =1
+
+                labColl As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Coll"
+                    Width: =txtCollege.Width
+                    X: =txtCollege.X
+                    ZIndex: =2
+
+                labSubj As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Subj"
+                    Width: =txtSubject.Width
+                    X: =txtSubject.X
+                    ZIndex: =3
+
+                labCrse As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Course"
+                    Width: =txtCourse.Width
+                    X: =txtCourse.X
+                    ZIndex: =4
+
+                labTitle As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Title"
+                    Width: =txtTitle.Width
+                    X: =txtTitle.X
+                    ZIndex: =5
+
+                labCredits As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Credits"
+                    Width: =txtCredits.Width
+                    X: =txtCredits.X
+                    ZIndex: =6
+
+                labRegStatus As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Registration Status"
+                    Width: =txtRegStatus.Width
+                    X: =txtRegStatus.X
+                    ZIndex: =7
+
             galEnrollments As gallery.galleryVertical:
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
-                Items: =Sort(Sort(Sort('PhD Enrollments','Term Code'),Subject),Course)
+                Items: =Sort(Sort(Sort(Filter('PhD Enrollments',NUID=galStudentLlist.Selected.NUID),'Term Code'),Subject),Course)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =40
@@ -288,11 +408,12 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
+                    Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Term
-                    X: =40
-                    Y: =10
+                    Width: =195
+                    X: =5
                     ZIndex: =1
 
                 txtCollege As label:
@@ -304,12 +425,12 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
+                    Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.College
-                    Width: =45
-                    X: =123
-                    Y: =10
+                    Width: =65
+                    X: =txtTerm.X+txtTerm.Width
                     ZIndex: =2
 
                 txtSubject As label:
@@ -321,11 +442,12 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
+                    Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Subject
-                    X: =190
-                    Y: =10
+                    Width: =65
+                    X: =txtCollege.X+txtCollege.Width
                     ZIndex: =3
 
                 txtCourse As label:
@@ -337,12 +459,12 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
+                    Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Course
-                    Width: =53
-                    X: =287
-                    Y: =10
+                    Width: =70
+                    X: =txtSubject.X+txtSubject.Width
                     ZIndex: =4
 
                 txtTitle As label:
@@ -354,12 +476,12 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
+                    Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Title
                     Width: =292
-                    X: =366
-                    Y: =10
+                    X: =txtCourse.X+txtCourse.Width
                     ZIndex: =5
 
                 txtCredits As label:
@@ -371,12 +493,12 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
+                    Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.'Credit Hours'
-                    Width: =32
-                    X: =658
-                    Y: =10
+                    Width: =70
+                    X: =txtTitle.X+txtTitle.Width
                     ZIndex: =6
 
                 txtRegStatus As label:
@@ -388,10 +510,11 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
+                    Height: =Parent.TemplateHeight
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.'Reg Status'
-                    X: =729
-                    Y: =10
+                    Width: =178
+                    X: =txtCredits.X+txtCredits.Width
                     ZIndex: =7
 

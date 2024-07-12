@@ -4154,6 +4154,36 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "scrStudentCourses",
+                "type": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrStudentHistory.ScreenContainer2_1.HeaderContainer2_1.Container6_4.Header_9.Text"
                 }
               ],
