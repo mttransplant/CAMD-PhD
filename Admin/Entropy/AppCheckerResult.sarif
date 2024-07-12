@@ -3764,19 +3764,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.Gallery1.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.Gallery1.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.Gallery1"
+                "type": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments"
               }
             }
           ],
@@ -3794,19 +3794,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.Gallery1.TabIndex"
+                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.Gallery1.TabIndex",
+                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.Gallery1"
+                "type": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments"
               }
             }
           ],
@@ -5007,6 +5007,36 @@
                 "member": "HoverColor",
                 "module": "scrStudentOverview",
                 "type": "scrStudentOverview.ScreenContainer2.MainContainer2.Milestones.'Milestone Icons'.DefenseInd_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "scrStudentCourses",
+                "type": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments"
               }
             }
           ],

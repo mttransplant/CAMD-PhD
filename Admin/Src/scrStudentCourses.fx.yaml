@@ -268,13 +268,14 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
-            Gallery1 As gallery.galleryVertical:
+            galEnrollments As gallery.galleryVertical:
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
-                Items: =CustomGallerySample
+                Items: =Filter('PhD Enrollments',NUID=galStudentLlist.Selected.NUID)
                 Layout: =Layout.Vertical
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
                 Width: =Parent.Width
+                Y: =cntCourseHeaders.Y+cntCourseHeaders.Height
                 ZIndex: =1
 

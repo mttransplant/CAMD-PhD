@@ -1,0 +1,104 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr829_phdenrollmentses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr829_phdenrollments",
+    "Name": "PhD Enrollments",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr829_course": "Course",
+      "cr829_course_college": "College",
+      "cr829_credit_hours": "Credit Hours",
+      "cr829_nuid": "NUID",
+      "cr829_phdenrollments_AsyncOperations": "System Jobs",
+      "cr829_phdenrollments_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr829_phdenrollments_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr829_phdenrollments_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr829_phdenrollments_ProcessSession": "Process Sessions",
+      "cr829_phdenrollments_SyncErrors": "Sync Errors",
+      "cr829_phdenrollmentsid": "PhD Enrollments",
+      "cr829_reg_status": "Reg Status Code",
+      "cr829_reg_status_desc": "Reg Status",
+      "cr829_subject": "Subject",
+      "cr829_term": "Term Code",
+      "cr829_term_desc": "Term",
+      "cr829_title": "Title",
+      "cr829_uuid": "UUID",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PhD Enrollments",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PhD Enrollments (Views)",
+    "Name": "_cr829_phdenrollments_views",
+    "RelatedEntityName": "PhD Enrollments",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "200f67b7-c359-4880-9a43-998197f928fd": "PhD Enrollments Associated View",
+      "3f867e45-d36e-4f75-b422-c6165e24c496": "Active PhD Enrollmentss",
+      "4b5572fe-2bd6-4b40-9192-b52a063a5cb8": "PhD Enrollments Advanced Find View",
+      "a3d2b215-99b2-41e7-8c99-b8d65c18150c": "Inactive PhD Enrollmentss",
+      "b484b888-a77e-4704-b15f-0a9b79b19fa6": "PhD Enrollments Lookup View"
+    }
+  },
+  {
+    "DisplayName": "Status (PhD Enrollments)",
+    "Name": "cr829_phdenrollments_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PhD Enrollments"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PhD Enrollments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PhD Enrollments)",
+    "Name": "cr829_phdenrollments_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PhD Enrollments"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PhD Enrollments",
+    "Type": "OptionSetInfo"
+  }
+]
