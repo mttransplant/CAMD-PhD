@@ -1,10 +1,10 @@
 {
   "QualifiedValues": [
     {
-      "Kind": "default.cds_cr829_studentinformation_forms",
+      "Kind": "default.cds_cr829_phdstudents_forms",
       "Namespace": "PhD Students (Forms)",
       "Values": {
-        "Information": "fb4ce572-0886-4a2b-a9df-bc8501f77d0f"
+        "Information": "426aa490-523b-4265-839d-9730bf3a8e29"
       }
     },
     {
@@ -40,10 +40,10 @@
       }
     },
     {
-      "Kind": "default.cds_cr829_phdstudentcurrentinfo_forms",
-      "Namespace": "PhD Student Current Infos (Forms)",
+      "Kind": "default.cds_cr829_phdenrollments_forms",
+      "Namespace": "PhD Enrollments (Forms)",
       "Values": {
-        "Information": "0ab89d0b-b559-4ea7-a37e-9eb50f990f08"
+        "Information": "b3a18b4d-10f5-410f-9f07-e6e673c3e886"
       }
     },
     {
@@ -51,6 +51,20 @@
       "Namespace": "PhD Positions (Forms)",
       "Values": {
         "Information": "2eff2edd-be39-4c02-9305-9f7f0cd22b93"
+      }
+    },
+    {
+      "Kind": "default.cds_cr829_studentinformation_forms",
+      "Namespace": "PhD Students (Forms)1",
+      "Values": {
+        "Information": "fb4ce572-0886-4a2b-a9df-bc8501f77d0f"
+      }
+    },
+    {
+      "Kind": "default.cds_cr829_phdstudentcurrentinfo_forms",
+      "Namespace": "PhD Student Current Infos (Forms)",
+      "Values": {
+        "Information": "0ab89d0b-b559-4ea7-a37e-9eb50f990f08"
       }
     },
     {
@@ -81,7 +95,7 @@
     },
     {
       "Kind": "default.cds_cr829_phdstudents_forms",
-      "Namespace": "PhD Students (Forms)1",
+      "Namespace": "PhD Students (Forms)11",
       "Values": {
         "Information": "426aa490-523b-4265-839d-9730bf3a8e29"
       }
@@ -96,13 +110,6 @@
     {
       "Kind": "default.cds_cr829_phdenrollments_forms",
       "Namespace": "PhD Enrollmentss (Forms)",
-      "Values": {
-        "Information": "b3a18b4d-10f5-410f-9f07-e6e673c3e886"
-      }
-    },
-    {
-      "Kind": "default.cds_cr829_phdenrollments_forms",
-      "Namespace": "PhD Enrollments (Forms)",
       "Values": {
         "Information": "b3a18b4d-10f5-410f-9f07-e6e673c3e886"
       }

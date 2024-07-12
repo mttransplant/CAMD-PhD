@@ -520,7 +520,7 @@
                     Y: =40
                     ZIndex: =1
 
-            galMilesones As gallery.galleryVertical:
+            galMilestones As gallery.galleryVertical:
                 '#CopilotOverlayLabel': ="Filtered"
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =RGBA(245, 245, 245, 1)
