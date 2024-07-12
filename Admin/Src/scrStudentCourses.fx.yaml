@@ -388,6 +388,22 @@
                     X: =txtRegStatus.X
                     ZIndex: =7
 
+                labGrade As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Size: =13
+                    Text: ="Grade"
+                    Width: =txtGrade.Width
+                    X: =txtGrade.X
+                    ZIndex: =8
+
             galEnrollments As gallery.galleryVertical:
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
@@ -412,7 +428,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Term
-                    Width: =195
+                    Width: =207
                     X: =5
                     ZIndex: =1
 
@@ -429,7 +445,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.College
-                    Width: =65
+                    Width: =76
                     X: =txtTerm.X+txtTerm.Width
                     ZIndex: =2
 
@@ -446,7 +462,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Subject
-                    Width: =65
+                    Width: =79
                     X: =txtCollege.X+txtCollege.Width
                     ZIndex: =3
 
@@ -480,7 +496,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Title
-                    Width: =292
+                    Width: =320
                     X: =txtCourse.X+txtCourse.Width
                     ZIndex: =5
 
@@ -497,7 +513,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.'Credit Hours'
-                    Width: =70
+                    Width: =86
                     X: =txtTitle.X+txtTitle.Width
                     ZIndex: =6
 
@@ -514,7 +530,24 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.'Reg Status'
-                    Width: =178
+                    Width: =195
                     X: =txtCredits.X+txtCredits.Width
                     ZIndex: =7
+
+                txtGrade As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =Parent.TemplateHeight
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: ="TBD"
+                    Width: =67
+                    X: =txtRegStatus.X+txtRegStatus.Width
+                    ZIndex: =8
 
