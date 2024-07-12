@@ -1768,7 +1768,7 @@
                         Y: =10
                         ZIndex: =5
 
-                    labDefence_1 As label:
+                    labDefense_1 As label:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -1781,7 +1781,7 @@
                         FontWeight: =FontWeight.Semibold
                         Height: =Parent.Height
                         Size: =13
-                        Text: ="Defence"
+                        Text: ="Defense"
                         Width: =Parent.Width/6
                         X: =DefenseInd.X
                         Y: =10
