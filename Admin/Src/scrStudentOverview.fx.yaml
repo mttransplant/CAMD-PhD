@@ -317,7 +317,7 @@
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Save
                     OnSelect: |-
-                        =Patch('PhD Students',{StudentID:galStudentLlist.Selected.StudentID},EditStudentInfo.Updates);
+                        =Patch('PhD Students',{NUID:galStudentLlist.Selected.NUID},EditStudentInfo.Updates);
                         Collect('PhD Histories',colStudentUpdates);
                         Notify("Student Update Successful",NotificationType.Success,5000);
                         UpdateContext({IsEditing:false});
@@ -362,31 +362,31 @@
 
             ReadOnlyStudentInfo_old As formViewer:
                 BorderColor: =RGBA(245, 245, 245, 1)
-                DataSource: =colCurrentInfo
+                DataSource: ='PhD Students'
                 FillPortions: =0
                 Height: =210
-                Item: =LookUp(colCurrentInfo,NUID=galStudentLlist.Selected.NUID)
+                Item: =LookUp('PhD Students',NUID=galStudentLlist.Selected.NUID)
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
                 NumberOfColumns: =2
                 ZIndex: =3
 
-                GPA_DataCard As typedDataCard.textualViewCard:
+                "'First Name_DataCard1' As typedDataCard.textualViewCard":
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
-                    DataField: =""
-                    Default: =Text(LookUp(colCurrentInfo,NUID = ThisItem.NUID).GPA,"0.000")
+                    DataField: ="cr829_first_name"
+                    Default: =ThisItem.'First Name'
                     DisplayMode: =DisplayMode.View
-                    DisplayName: ="GPA"
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_first_name)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =40
                     Required: =false
                     Width: =667
                     X: =0
-                    Y: =3
+                    Y: =0
                     ZIndex: =1
 
-                    DataCardKey5 As label:
+                    DataCardKey3 As label:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -400,14 +400,14 @@
                         Height: =34
                         PaddingLeft: =0
                         Size: =13
-                        Text: ="GPA"
+                        Text: =Parent.DisplayName
                         Width: =(Parent.Width - 60) * 0.4
                         Wrap: =false
                         X: =30
-                        Y: =10 + (DataCardValue3.Height / 2) - (Self.Height / 2)
+                        Y: =10 + (DataCardValue1.Height / 2) - (Self.Height / 2)
                         ZIndex: =1
 
-                    DataCardValue3 As label:
+                    DataCardValue1 As label:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -425,81 +425,23 @@
                         Size: =13
                         Text: =Parent.Default
                         Width: =(Parent.Width - 60) * 0.6
-                        X: =DataCardKey5.X + DataCardKey5.Width
+                        X: =DataCardKey3.X + DataCardKey3.Width
                         Y: =10
                         ZIndex: =2
 
-                Credits_EarnedDataCard As typedDataCard.textualViewCard:
+                "'Last Name_DataCard1' As typedDataCard.textualViewCard":
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
-                    DataField: =""
-                    Default: =Text(LookUp(colCurrentInfo,NUID = ThisItem.NUID).CREDIT_EARNED,"0.0")
+                    DataField: ="cr829_last_name"
+                    Default: =ThisItem.'Last Name'
                     DisplayMode: =DisplayMode.View
-                    DisplayName: ="Credits Earned"
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_last_name)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =40
                     Required: =false
                     Width: =667
                     X: =1
-                    Y: =3
-                    ZIndex: =1
-
-                    DataCardKey6 As label:
-                        AutoHeight: =true
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =34
-                        PaddingLeft: =0
-                        Size: =13
-                        Text: ="Credits Earned"
-                        Width: =(Parent.Width - 60) * 0.4
-                        Wrap: =false
-                        X: =30
-                        Y: =10 + (DataCardValue4.Height / 2) - (Self.Height / 2)
-                        ZIndex: =1
-
-                    DataCardValue4 As label:
-                        AutoHeight: =true
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        Height: =27
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =13
-                        Text: =Parent.Default
-                        Width: =(Parent.Width - 60) * 0.6
-                        X: =DataCardKey6.X + DataCardKey6.Width
-                        Y: =10
-                        ZIndex: =2
-
-                TrackDataCard As typedDataCard.textualViewCard:
-                    BorderColor: =RGBA(245, 245, 245, 1)
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: =""
-                    Default: =LookUp(colCurrentInfo,NUID = ThisItem.NUID).TRACK
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: ="Track"
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =40
-                    Required: =false
-                    Width: =667
-                    X: =0
-                    Y: =4
+                    Y: =0
                     ZIndex: =1
 
                     DataCardKey4 As label:
@@ -516,9 +458,7 @@
                         Height: =34
                         PaddingLeft: =0
                         Size: =13
-                        Text: |-
-                            ="Track
-                            "
+                        Text: =Parent.DisplayName
                         Width: =(Parent.Width - 60) * 0.4
                         Wrap: =false
                         X: =30
@@ -547,138 +487,22 @@
                         Y: =10
                         ZIndex: =2
 
-                "'First Name_DataCard3' As typedDataCard.textualViewCard":
+                NUID_DataCard1 As typedDataCard.textualViewCard:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
-                    DataField: =ThisItem.FIRST_NAME
-                    Default: =ThisItem.FIRST_NAME
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_firstname)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =40
-                    Required: =false
-                    Width: =667
-                    X: =0
-                    Y: =0
-                    ZIndex: =2
-
-                    DataCardKey35 As label:
-                        AutoHeight: =true
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =34
-                        PaddingLeft: =0
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =(Parent.Width - 60) * 0.4
-                        Wrap: =false
-                        X: =30
-                        Y: =10 + (DataCardValue34.Height / 2) - (Self.Height / 2)
-                        ZIndex: =1
-
-                    DataCardValue34 As label:
-                        AutoHeight: =true
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        Height: =27
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =13
-                        Text: =Parent.Default
-                        Width: =(Parent.Width - 60) * 0.6
-                        X: =DataCardKey35.X + DataCardKey35.Width
-                        Y: =10
-                        ZIndex: =2
-
-                "'Last Name_DataCard3' As typedDataCard.textualViewCard":
-                    BorderColor: =RGBA(245, 245, 245, 1)
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="cr829_lastname"
-                    Default: =ThisItem.LAST_NAME
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_lastname)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =40
-                    Required: =false
-                    Width: =667
-                    X: =1
-                    Y: =0
-                    ZIndex: =2
-
-                    DataCardKey36 As label:
-                        AutoHeight: =true
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =34
-                        PaddingLeft: =0
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =(Parent.Width - 60) * 0.4
-                        Wrap: =false
-                        X: =30
-                        Y: =10 + (DataCardValue35.Height / 2) - (Self.Height / 2)
-                        ZIndex: =1
-
-                    DataCardValue35 As label:
-                        AutoHeight: =true
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        Height: =27
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =13
-                        Text: =Parent.Default
-                        Width: =(Parent.Width - 60) * 0.6
-                        X: =DataCardKey36.X + DataCardKey36.Width
-                        Y: =10
-                        ZIndex: =2
-
-                NUID_DataCard3 As typedDataCard.textualViewCard:
-                    BorderColor: =RGBA(245, 245, 245, 1)
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="cr829_nuid2"
+                    DataField: ="cr829_nuid"
                     Default: =ThisItem.NUID
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_nuid2)
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_nuid)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =40
                     Required: =false
                     Width: =667
                     X: =0
                     Y: =1
-                    ZIndex: =2
+                    ZIndex: =1
 
-                    DataCardKey43 As label:
+                    DataCardKey5 As label:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -696,10 +520,10 @@
                         Width: =(Parent.Width - 60) * 0.4
                         Wrap: =false
                         X: =30
-                        Y: =10 + (DataCardValue42.Height / 2) - (Self.Height / 2)
+                        Y: =10 + (DataCardValue3.Height / 2) - (Self.Height / 2)
                         ZIndex: =1
 
-                    DataCardValue42 As label:
+                    DataCardValue3 As label:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -717,15 +541,15 @@
                         Size: =13
                         Text: =Parent.Default
                         Width: =(Parent.Width - 60) * 0.6
-                        X: =DataCardKey43.X + DataCardKey43.Width
+                        X: =DataCardKey5.X + DataCardKey5.Width
                         Y: =10
                         ZIndex: =2
 
-                Email_DataCard3 As typedDataCard.emailViewCard:
+                Email_DataCard1 As typedDataCard.emailViewCard:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="cr829_email"
-                    Default: =ThisItem.EMAIL
+                    Default: =ThisItem.Email
                     DisplayMode: =DisplayMode.View
                     DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_email)
                     Fill: =RGBA(0, 0, 0, 0)
@@ -734,9 +558,9 @@
                     Width: =667
                     X: =1
                     Y: =1
-                    ZIndex: =2
+                    ZIndex: =1
 
-                    DataCardKey40 As label:
+                    DataCardKey6 As label:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -754,10 +578,10 @@
                         Width: =(Parent.Width - 60) * 0.4
                         Wrap: =false
                         X: =30
-                        Y: =10 + (DataCardValue39.Height / 2) - (Self.Height / 2)
+                        Y: =10 + (DataCardValue4.Height / 2) - (Self.Height / 2)
                         ZIndex: =1
 
-                    DataCardValue39 As htmlViewer:
+                    DataCardValue4 As htmlViewer:
                         AutoHeight: =true
                         Color: =RGBA(0, 120, 212, 1)
                         DisabledBorderColor: =RGBA(161, 159, 157, 1)
@@ -771,26 +595,26 @@
                         PaddingTop: =0
                         Size: =13
                         Width: =(Parent.Width - 60) * 0.6
-                        X: =DataCardKey40.X + DataCardKey40.Width
+                        X: =DataCardKey6.X + DataCardKey6.Width
                         Y: =10
                         ZIndex: =2
 
-                "'Admit Term_DataCard3' As typedDataCard.textualViewCard":
+                ADMIT_TERM_DataCard1 As typedDataCard.textualViewCard:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
-                    DataField: =""
-                    Default: =LookUp(colCurrentInfo,NUID = ThisItem.NUID).ADMIT_TERM
+                    DataField: ="cr829_admit_term"
+                    Default: =ThisItem.'Admit Term'
                     DisplayMode: =DisplayMode.View
-                    DisplayName: ="Admit Term"
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_admit_term)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =40
                     Required: =false
                     Width: =667
                     X: =0
                     Y: =2
-                    ZIndex: =2
+                    ZIndex: =1
 
-                    DataCardKey37 As label:
+                    DataCardKey7 As label:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -804,14 +628,14 @@
                         Height: =34
                         PaddingLeft: =0
                         Size: =13
-                        Text: ="Admit Term"
+                        Text: =Parent.DisplayName
                         Width: =(Parent.Width - 60) * 0.4
                         Wrap: =false
                         X: =30
-                        Y: =10 + (DataCardValue36.Height / 2) - (Self.Height / 2)
+                        Y: =10 + (DataCardValue5.Height / 2) - (Self.Height / 2)
                         ZIndex: =1
 
-                    DataCardValue36 As label:
+                    DataCardValue5 As label:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -829,26 +653,26 @@
                         Size: =13
                         Text: =Parent.Default
                         Width: =(Parent.Width - 60) * 0.6
-                        X: =DataCardKey37.X + DataCardKey37.Width
+                        X: =DataCardKey7.X + DataCardKey7.Width
                         Y: =10
                         ZIndex: =2
 
-                "'Expected Grad Date_DataCard3' As typedDataCard.textualViewCard":
+                "'Expected Grad Date_DataCard1' As typedDataCard.textualViewCard":
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
-                    DataField: =""
-                    Default: =LookUp(colCurrentInfo,NUID = ThisItem.NUID).EXPECTED_GRADUATION_DATE
+                    DataField: ="cr829_expected_graduation_date"
+                    Default: =ThisItem.'Expected Grad Date'
                     DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@'PhD Student Current Infos'],DataSourceInfo.DisplayName,cr829_expected_graduation_date)
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_expected_graduation_date)
                     Fill: =RGBA(0, 0, 0, 0)
                     Height: =40
                     Required: =false
                     Width: =667
                     X: =1
                     Y: =2
-                    ZIndex: =2
+                    ZIndex: =1
 
-                    DataCardKey39 As label:
+                    DataCardKey8 As label:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -862,14 +686,14 @@
                         Height: =34
                         PaddingLeft: =0
                         Size: =13
-                        Text: ="Expected Grad Date"
+                        Text: =Parent.DisplayName
                         Width: =(Parent.Width - 60) * 0.4
                         Wrap: =false
                         X: =30
-                        Y: =10 + (DataCardValue38.Height / 2) - (Self.Height / 2)
+                        Y: =10 + (DataCardValue6.Height / 2) - (Self.Height / 2)
                         ZIndex: =1
 
-                    DataCardValue38 As label:
+                    DataCardValue6 As label:
                         AutoHeight: =true
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -887,7 +711,239 @@
                         Size: =13
                         Text: =Parent.Default
                         Width: =(Parent.Width - 60) * 0.6
-                        X: =DataCardKey39.X + DataCardKey39.Width
+                        X: =DataCardKey8.X + DataCardKey8.Width
+                        Y: =10
+                        ZIndex: =2
+
+                GPA_DataCard1 As typedDataCard.textualViewCard:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_gpa"
+                    Default: =ThisItem.GPA
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_gpa)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =667
+                    X: =0
+                    Y: =3
+                    ZIndex: =1
+
+                    DataCardKey9 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (DataCardValue7.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    DataCardValue7 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Default
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey9.X + DataCardKey9.Width
+                        Y: =10
+                        ZIndex: =2
+
+                "'Credit Earned_DataCard1' As typedDataCard.textualViewCard":
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_credit_earned"
+                    Default: =ThisItem.'Credit Earned'
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_credit_earned)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =667
+                    X: =1
+                    Y: =3
+                    ZIndex: =1
+
+                    DataCardKey10 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (DataCardValue8.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    DataCardValue8 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Default
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey10.X + DataCardKey10.Width
+                        Y: =10
+                        ZIndex: =2
+
+                Track_DataCard1 As typedDataCard.textualViewCard:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_track"
+                    Default: =ThisItem.Track
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_track)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =667
+                    X: =0
+                    Y: =4
+                    ZIndex: =1
+
+                    DataCardKey11 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (DataCardValue9.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    DataCardValue9 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Default
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey11.X + DataCardKey11.Width
+                        Y: =10
+                        ZIndex: =2
+
+                "'Student Status_DataCard1' As typedDataCard.textualViewCard":
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_student_status_desc"
+                    Default: =ThisItem.'Student Status'
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_student_status_desc)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =667
+                    X: =1
+                    Y: =4
+                    ZIndex: =1
+
+                    DataCardKey12 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (DataCardValue10.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    DataCardValue10 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Default
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey12.X + DataCardKey12.Width
                         Y: =10
                         ZIndex: =2
 

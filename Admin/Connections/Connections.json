@@ -4,10 +4,9 @@
       "displayName": "Oracle Database",
       "executionRestrictions": {
         "apiId": "/providers/microsoft.powerapps/apis/shared_oracle",
-        "apiVer": 1,
         "appVer": "3.24064.21",
-        "modifiedOn": "2024-07-10 20:35:53",
-        "policy": "{\"type\":\"tabular\",\"dataSources\":{\"[camd].[phd_student_info_tbl]\":[\"get\"]}}",
+        "modifiedOn": "2024-07-12 13:52:22",
+        "policy": "{\"type\":\"unused\"}",
         "version": 1
       },
       "gatewayObjectIdHint": "082d7c88-d9ec-4d8a-baba-92acc6d34a57",

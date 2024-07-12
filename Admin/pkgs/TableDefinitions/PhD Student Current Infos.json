@@ -3,10 +3,6 @@
   "EntityName": "PhD Student Current Infos",
   "environmentVariableName": "",
   "InstanceUrl": "https://orgfd48bb1a.crm.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "cr829_phdstudentcurrentinfos",
-    "logicalName": "cr829_phdstudentcurrentinfo"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://orgfd48bb1a.crm.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('cr829_phdstudentcurrentinfo')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",
