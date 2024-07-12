@@ -362,6 +362,7 @@
 
             ReadOnlyStudentInfo_old As formViewer:
                 BorderColor: =RGBA(245, 245, 245, 1)
+                BorderStyle: =BorderStyle.None
                 DataSource: ='PhD Students'
                 FillPortions: =0
                 Height: =210
@@ -369,7 +370,7 @@
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
                 NumberOfColumns: =2
-                ZIndex: =3
+                ZIndex: =2
 
                 "'First Name_DataCard1' As typedDataCard.textualViewCard":
                     BorderColor: =RGBA(245, 245, 245, 1)
@@ -949,13 +950,16 @@
 
             EditStudentInfo As form:
                 BorderColor: =RGBA(245, 245, 245, 1)
+                BorderStyle: =BorderStyle.None
                 DataSource: ='PhD Students'
                 DefaultMode: =If(IsEditing,FormMode.Edit,FormMode.View)
+                FillPortions: =0
+                Height: =170
                 Item: =LookUp('PhD Students',NUID=galStudentLlist.Selected.NUID)
-                LayoutMinHeight: =250
+                LayoutMinHeight: =150
                 LayoutMinWidth: =400
                 NumberOfColumns: =2
-                ZIndex: =4
+                ZIndex: =3
 
                 Advisor_DataCard1 As typedDataCard.comboBoxEditCard:
                     BorderColor: =RGBA(245, 245, 245, 1)
@@ -1639,4 +1643,318 @@
                         Wrap: =false
                         Y: =DataCardKey54.Y
                         ZIndex: =4
+
+            Milestones As groupContainer.verticalAutoLayoutContainer:
+                BorderStyle: =BorderStyle.None
+                FillPortions: =0
+                Height: =100
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =4
+
+                "'Milestone Labels' As groupContainer.horizontalAutoLayoutContainer":
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    Height: =Parent.Height/2
+                    LayoutMinHeight: =
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =1
+
+                    labCourse_1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =13
+                        Text: ="Course Req"
+                        Width: =Parent.Width/6
+                        X: =CourseInd.X
+                        Y: =10
+                        ZIndex: =1
+
+                    labPaper_1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =13
+                        Text: ="Paper Req"
+                        Width: =Parent.Width/6
+                        X: =PaperInd.X
+                        Y: =10
+                        ZIndex: =2
+
+                    labQual_1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =13
+                        Text: ="Qual Exam"
+                        Width: =Parent.Width/6
+                        X: =QualInd.X
+                        Y: =10
+                        ZIndex: =3
+
+                    labProposal_1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =13
+                        Text: ="Proposal"
+                        Width: =Parent.Width/6
+                        X: =ProposalInd.X
+                        Y: =10
+                        ZIndex: =4
+
+                    labTA_1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =13
+                        Text: ="TA"
+                        Width: =Parent.Width/6
+                        X: =TA_Ind.X
+                        Y: =10
+                        ZIndex: =5
+
+                    labDefence_1 As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =Parent.Height
+                        Size: =13
+                        Text: ="Defence"
+                        Width: =Parent.Width/6
+                        X: =DefenseInd.X
+                        Y: =10
+                        ZIndex: =6
+
+                "'Milestone Icons' As groupContainer.horizontalAutoLayoutContainer":
+                    AlignInContainer: =AlignInContainer.SetByContainer
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    Height: =Parent.Height/2
+                    LayoutMinHeight: =
+                    LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    RadiusBottomLeft: =4
+                    RadiusBottomRight: =4
+                    RadiusTopLeft: =4
+                    RadiusTopRight: =4
+                    Width: =Parent.Width
+                    ZIndex: =2
+
+                    CourseInd_1 As icon.CancelBadge:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height-15
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
+                        OnSelect: =
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Parent.Width/6
+                        X: =GradDate.X+GradDate.Width+5
+                        Y: =10
+                        ZIndex: =1
+
+                    PaperInd_1 As icon.CancelBadge:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height-15
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
+                        OnSelect: =
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Parent.Width/6
+                        X: =CourseInd_1.X+CourseInd_1.Width+5
+                        Y: =10
+                        ZIndex: =2
+
+                    QualInd_1 As icon.CancelBadge:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height-15
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
+                        OnSelect: =
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Parent.Width/6
+                        X: =PaperInd_1.X+PaperInd_1.Width+5
+                        Y: =10
+                        ZIndex: =3
+
+                    ProposalInd_1 As icon.CancelBadge:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height-15
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
+                        OnSelect: =
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Parent.Width/6
+                        X: =QualInd_1.X+QualInd_1.Width+5
+                        Y: =10
+                        ZIndex: =4
+
+                    TA_Ind_1 As icon.CancelBadge:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height-15
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
+                        OnSelect: =
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Parent.Width/6
+                        X: =ProposalInd_1.X+ProposalInd_1.Width+5
+                        Y: =10
+                        ZIndex: =5
+
+                    DefenseInd_1 As icon.CancelBadge:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height-15
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,IconMilestoneIsFulfilled,IconMilestoneIsMissing)
+                        OnSelect: =
+                        PaddingBottom: =5
+                        PaddingLeft: =5
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Width: =Parent.Width/6
+                        X: =TA_Ind_1.X+TA_Ind_1.Width+5
+                        Y: =10
+                        ZIndex: =6
 
