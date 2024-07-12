@@ -3764,6 +3764,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.Gallery1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.Gallery1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentCourses",
+                "type": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.Gallery1.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.Gallery1.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scrStudentCourses",
+                "type": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.Gallery1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrAdvisors.cntAdvisorScreen.Container1.cntAdvisors.cntAdvColumns.btnLoadAdvisors.OnSelect"
                 }
               ],

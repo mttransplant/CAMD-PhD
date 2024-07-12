@@ -255,20 +255,26 @@
             Width: =Parent.Width
             ZIndex: =4
 
-            Label2_1 As label:
-                Align: =Align.Center
-                AlignInContainer: =AlignInContainer.Center
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FillPortions: =1
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Size: =52
-                Text: ="Courses are TBD"
+            cntCourseHeaders As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                FillPortions: =0
+                Height: =50
+                LayoutMinHeight: =50
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Width: =Parent.Width
+                ZIndex: =1
+
+            Gallery1 As gallery.galleryVertical:
+                BorderColor: =RGBA(245, 245, 245, 1)
+                DelayItemLoading: =true
+                Items: =CustomGallerySample
+                Layout: =Layout.Vertical
+                LoadingSpinner: =LoadingSpinner.Data
+                TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(280, Self.Height - 60))
                 Width: =Parent.Width
                 ZIndex: =1
 
