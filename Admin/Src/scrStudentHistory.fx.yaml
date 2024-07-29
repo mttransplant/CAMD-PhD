@@ -2,9 +2,9 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: =Clear(colStudentHistory)
     OnVisible: |-
-        =UpdateContext({IsLoading:true});
+        =// UpdateContext({IsLoading:true});
         ClearCollect(colStudentHistory,Filter('PhD Histories',galStudentLlist.Selected.NUID=NUID));
-        UpdateContext({IsLoading:false});
+        // UpdateContext({IsLoading:false});
 
     ctrStudentHistory As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -363,7 +363,7 @@
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Visible: =IsLoading
+                Visible: =false
                 Width: =Parent.Width
                 ZIndex: =2
 
@@ -390,8 +390,8 @@
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
+                LoadingSpinnerColor: =Color.DarkGray
                 TemplateSize: =40
-                Visible: =!IsLoading
                 Width: =Parent.Width
                 ZIndex: =3
 

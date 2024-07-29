@@ -262,11 +262,8 @@
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(16, 110, 190, 1)
                 OnSelect: |-
-                    =// UpdateContext({IsLoading:true});
-                    ClearCollect(colStudentMilestones,Filter('PhD Milestones',galStudentLlist.Selected.NUID=NUID));
-                    ClearCollect(colUpdateMilestones,Filter('PhD Milestones',NUID=""));
+                    =ClearCollect(colUpdateMilestones,Filter('PhD Milestones',NUID=""));
                     ClearCollect(colDeleteMilestones,Filter('PhD Milestones',NUID=""));
-                    // UpdateContext({IsLoading:false});
                 PressedBorderColor: =RGBA(0, 69, 120, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(16, 110, 190, 1)
@@ -496,38 +493,13 @@
                     Y: =10
                     ZIndex: =9
 
-            ctrMilestonesSpinner As groupContainer.manualLayoutContainer:
-                DropShadow: =DropShadow.Light
-                Height: =Parent.Height
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =false
-                Width: =Parent.Width
-                ZIndex: =2
-
-                spnMilestonesLoading As Spinner:
-                    BasePaletteColor: =
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    Height: =Self.Width
-                    SpinnerSize: ='Spinner.SpinnerSize'.Huge
-                    Visible: =true
-                    Width: =100
-                    X: =(Parent.Width-spnMilestonesLoading.Width)/2
-                    Y: =(Parent.Height-spnMilestonesLoading.Height)/2
-                    ZIndex: =1
-
             galMilestones As gallery.galleryVertical:
                 '#CopilotOverlayLabel': ="Filtered"
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Height: =Parent.Height
-                Items: =Sort(Sort(colStudentMilestones,Milestone,SortOrder.Ascending),Date,SortOrder.Ascending)
+                Items: =Sort(Filter('PhD Milestones',galStudentLlist.Selected.NUID=NUID),Date,SortOrder.Descending)
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
@@ -609,7 +581,7 @@
                     HoverBorderColor: =RGBA(16, 110, 190, 1)
                     HoverColor: =RGBA(50, 49, 48, 1)
                     HoverFill: =RGBA(245, 245, 245, 1)
-                    Items: =Choices(colStudentMilestones.'Milestone Status')
+                    Items: =Choices('Milestone Status (PhD Milestones)')
                     OnChange: |-
                         =If(
                             IsBlank(
@@ -714,9 +686,7 @@
                     HoverColor: =RGBA(16, 110, 190, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Trash
-                    OnSelect: |-
-                        =Collect(colDeleteMilestones,ThisItem);
-                        Remove(colStudentMilestones,ThisItem)
+                    OnSelect: =Collect(colDeleteMilestones,ThisItem);
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)

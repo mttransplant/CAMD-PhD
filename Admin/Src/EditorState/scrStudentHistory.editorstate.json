@@ -2450,7 +2450,7 @@
         {
           "Category": "Design",
           "PropertyName": "Visible",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -2765,7 +2765,14 @@
         "Transition",
         "DelayItemLoading",
         "LoadingSpinner",
-        "LoadingSpinnerColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Self.BorderColor",
+          "InvariantPropertyName": "LoadingSpinnerColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "DisplayMode",
         "BorderColor",
         "DisabledBorderColor",
@@ -2804,14 +2811,7 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        {
-          "AFDDataSourceName": "",
-          "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "true",
-          "InvariantPropertyName": "Visible",
-          "IsLockable": false,
-          "NameMapSourceSchema": "?"
-        },
+        "Visible",
         "#CopilotOverlayLabel",
         "#CopilotOverlayVisible"
       ],
@@ -2990,7 +2990,7 @@
         {
           "Category": "Design",
           "PropertyName": "LoadingSpinnerColor",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
