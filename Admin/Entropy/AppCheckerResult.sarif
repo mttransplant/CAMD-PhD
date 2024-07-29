@@ -14,19 +14,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.HeaderContainer2_4.Container6_6.icoHome_5.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrStudentCoursesHeader.ctrStudentCoursesHeader2.icoCoursesHome.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.HeaderContainer2_4.Container6_6.icoHome_5.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrStudentCoursesHeader.ctrStudentCoursesHeader2.icoCoursesHome.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.HeaderContainer2_4.Container6_6.icoHome_5"
+                "type": "scrStudentCourses.ctrStudentCourses.ctrStudentCoursesHeader.ctrStudentCoursesHeader2.icoCoursesHome"
               }
             }
           ],
@@ -44,19 +44,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.HeaderContainer2_4.Container6_6.icoHome_5.TabIndex"
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrStudentCoursesHeader.ctrStudentCoursesHeader2.icoCoursesHome.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.HeaderContainer2_4.Container6_6.icoHome_5.TabIndex",
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrStudentCoursesHeader.ctrStudentCoursesHeader2.icoCoursesHome.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.HeaderContainer2_4.Container6_6.icoHome_5"
+                "type": "scrStudentCourses.ctrStudentCourses.ctrStudentCoursesHeader.ctrStudentCoursesHeader2.icoCoursesHome"
               }
             }
           ],
@@ -74,19 +74,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnBack_4.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesBack.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnBack_4.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesBack.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnBack_4"
+                "type": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesBack"
               }
             }
           ],
@@ -104,19 +104,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnOverview_4.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesOverview.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnOverview_4.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesOverview.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnOverview_4"
+                "type": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesOverview"
               }
             }
           ],
@@ -134,19 +134,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnMilestones_4.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesMilestones.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnMilestones_4.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesMilestones.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnMilestones_4"
+                "type": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesMilestones"
               }
             }
           ],
@@ -164,19 +164,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnHistory_4.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesHistory.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnHistory_4.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesHistory.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnHistory_4"
+                "type": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesHistory"
               }
             }
           ],
@@ -194,19 +194,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnEvaluations_4.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesEvaluations.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnEvaluations_4.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesEvaluations.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnEvaluations_4"
+                "type": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesEvaluations"
               }
             }
           ],
@@ -224,19 +224,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnCourses_4.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesCourses.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnCourses_4.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesCourses.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.navMilestones_2.btnCourses_4"
+                "type": "scrStudentCourses.ctrStudentCourses.ctrCoursesNav.btnCoursesCourses"
               }
             }
           ],
@@ -254,19 +254,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesMain.galEnrollments.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesMain.galEnrollments.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments"
+                "type": "scrStudentCourses.ctrStudentCourses.ctrCoursesMain.galEnrollments"
               }
             }
           ],
@@ -284,19 +284,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments.TabIndex"
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesMain.galEnrollments.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments.TabIndex",
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesMain.galEnrollments.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments"
+                "type": "scrStudentCourses.ctrStudentCourses.ctrCoursesMain.galEnrollments"
               }
             }
           ],
@@ -3914,19 +3914,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.HeaderContainer2_4.Container6_6.Header_11.Text"
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrStudentCoursesHeader.ctrStudentCoursesHeader2.labCoursesHeader.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.HeaderContainer2_4.Container6_6.Header_11.Text",
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrStudentCoursesHeader.ctrStudentCoursesHeader2.labCoursesHeader.Text",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Text",
                 "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.HeaderContainer2_4.Container6_6.Header_11"
+                "type": "scrStudentCourses.ctrStudentCourses.ctrStudentCoursesHeader.ctrStudentCoursesHeader2.labCoursesHeader"
               }
             }
           ],
@@ -3944,19 +3944,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments.Items"
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesMain.galEnrollments.Items"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments.Items",
+                  "fullyQualifiedName": "scrStudentCourses.ctrStudentCourses.ctrCoursesMain.galEnrollments.Items",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Items",
                 "module": "scrStudentCourses",
-                "type": "scrStudentCourses.ScreenContainer2_4.cntMilestones_2.galEnrollments"
+                "type": "scrStudentCourses.ctrStudentCourses.ctrCoursesMain.galEnrollments"
               }
             }
           ],

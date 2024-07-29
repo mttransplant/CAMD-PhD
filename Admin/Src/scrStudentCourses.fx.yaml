@@ -3,7 +3,7 @@
     OnHidden: =
     OnVisible: =
 
-    ScreenContainer2_4 As groupContainer.verticalAutoLayoutContainer:
+    ctrStudentCourses As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -23,7 +23,7 @@
         X: =(Parent.Width-Self.Width)/2
         ZIndex: =1
 
-        HeaderContainer2_4 As groupContainer.horizontalAutoLayoutContainer:
+        ctrStudentCoursesHeader As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -39,7 +39,7 @@
             Width: =Parent.Width
             ZIndex: =1
 
-            Container6_6 As groupContainer.manualLayoutContainer:
+            ctrStudentCoursesHeader2 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
                 LayoutMinHeight: =50
@@ -51,7 +51,7 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
-                Header_11 As label:
+                labCoursesHeader As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -69,7 +69,7 @@
                     Width: =Parent.Width
                     ZIndex: =1
 
-                icoHome_5 As icon.Home:
+                icoCoursesHome As icon.Home:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(255, 255, 255, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -90,7 +90,7 @@
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =2
 
-        navMilestones_2 As groupContainer.horizontalAutoLayoutContainer:
+        ctrCoursesNav As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -109,7 +109,7 @@
             Width: =Parent.Width
             ZIndex: =2
 
-            btnBack_4 As Button:
+            btnCoursesBack As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -131,7 +131,7 @@
                 Y: =0
                 ZIndex: =1
 
-            btnOverview_4 As Button:
+            btnCoursesOverview As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -153,7 +153,7 @@
                 Y: =0
                 ZIndex: =2
 
-            btnMilestones_4 As Button:
+            btnCoursesMilestones As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -175,7 +175,7 @@
                 Y: =0
                 ZIndex: =3
 
-            btnHistory_4 As Button:
+            btnCoursesHistory As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -197,7 +197,7 @@
                 Y: =0
                 ZIndex: =4
 
-            btnEvaluations_4 As Button:
+            btnCoursesEvaluations As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -219,7 +219,7 @@
                 Y: =0
                 ZIndex: =5
 
-            btnCourses_4 As Button:
+            btnCoursesCourses As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Primary
                 BasePaletteColor: =
@@ -240,7 +240,7 @@
                 Y: =0
                 ZIndex: =6
 
-        cntMilestones_2 As groupContainer.verticalAutoLayoutContainer:
+        ctrCoursesMain As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -255,7 +255,7 @@
             Width: =Parent.Width
             ZIndex: =4
 
-            cntCourseHeaders As groupContainer.manualLayoutContainer:
+            ctrCoursesColumns As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(180, 214, 250, 1)
                 FillPortions: =0
@@ -414,8 +414,8 @@
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =40
                 Width: =Parent.Width
-                Y: =cntCourseHeaders.Y+cntCourseHeaders.Height
-                ZIndex: =1
+                Y: =ctrCoursesColumns.Y+ctrCoursesColumns.Height
+                ZIndex: =3
 
                 txtTerm As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
