@@ -3,6 +3,7 @@
     OnHidden: =Select(btn_oCancel);
     OnVisible: |-
         =UpdateContext({IsEditing:false});
+        ClearCollect(colCompletedMilestones,Filter('PhD Milestones','Milestone Status' in ['Milestone Status (PhD Milestones)'.Yes,'Milestone Status (PhD Milestones)'.Waived]));
         Set(ColorMilestoneIsMissing,Color.LightGray);
         Set(ColorMilestoneIsFulfilled,Color.ForestGreen);
         Set(IconMilestoneIsMissing,Icon.CancelBadge);
