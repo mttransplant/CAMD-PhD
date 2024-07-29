@@ -318,7 +318,7 @@
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Save
                     OnSelect: |-
-                        =// Patch('PhD Students',{NUID:galStudentLlist.Selected.NUID},EditStudentInfo.Updates);
+                        =Patch('PhD Students',LookUp('PhD Students',NUID=galStudentLlist.Selected.NUID),EditStudentInfo.Updates);
                         Collect('PhD Histories',colStudentUpdates);
                         Notify("Student Update Successful",NotificationType.Success,5000);
                         UpdateContext({IsEditing: false });
