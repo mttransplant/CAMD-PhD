@@ -6,7 +6,7 @@
         ClearCollect(colStudentHistory,Filter('PhD Histories',galStudentLlist.Selected.NUID=NUID));
         UpdateContext({IsLoading:false});
 
-    ScreenContainer2_1 As groupContainer.verticalAutoLayoutContainer:
+    ctrStudentHistory As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -26,7 +26,7 @@
         X: =(Parent.Width-Self.Width)/2
         ZIndex: =1
 
-        HeaderContainer2_1 As groupContainer.horizontalAutoLayoutContainer:
+        ctrHistoryHeader As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -42,7 +42,7 @@
             Width: =Parent.Width
             ZIndex: =1
 
-            Container6_4 As groupContainer.manualLayoutContainer:
+            ctrHistoryHeader2 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
                 LayoutMinHeight: =50
@@ -54,7 +54,7 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
-                Header_9 As label:
+                labHistoryHeader As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -72,7 +72,7 @@
                     Width: =Parent.Width
                     ZIndex: =1
 
-                icoHome_3 As icon.Home:
+                icoHistoryHome As icon.Home:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(255, 255, 255, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -93,7 +93,7 @@
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =2
 
-        NavContainer_1 As groupContainer.horizontalAutoLayoutContainer:
+        ctrHistoryNav As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -112,7 +112,7 @@
             Width: =Parent.Width
             ZIndex: =2
 
-            btnBack_1 As Button:
+            btnHistoryBack As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -134,7 +134,7 @@
                 Y: =0
                 ZIndex: =1
 
-            btnOverview_1 As Button:
+            btnHistoryOverview As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -156,7 +156,7 @@
                 Y: =0
                 ZIndex: =2
 
-            btnMilestones_1 As Button:
+            btnHistoryMilestones As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -178,7 +178,7 @@
                 Y: =0
                 ZIndex: =3
 
-            btnHistory_1 As Button:
+            btnHistoryHistory As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Primary
                 BasePaletteColor: =
@@ -200,7 +200,7 @@
                 Y: =0
                 ZIndex: =4
 
-            btnEvaluations_1 As Button:
+            btnHistoryEvaluations As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -222,7 +222,7 @@
                 Y: =0
                 ZIndex: =5
 
-            btnCourses_1 As Button:
+            btnHistoryCourses As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -244,7 +244,7 @@
                 Y: =0
                 ZIndex: =6
 
-        MainContainer2_1 As groupContainer.verticalAutoLayoutContainer:
+        ctrHistoryMain As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -259,7 +259,7 @@
             Width: =Parent.Width
             ZIndex: =4
 
-            Container2 As groupContainer.manualLayoutContainer:
+            ctrHistoryColumns As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.Start
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(180, 214, 250, 1)
@@ -274,7 +274,7 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
-                Label8 As label:
+                labHistoryChangeType As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -290,7 +290,7 @@
                     X: =hType.X
                     ZIndex: =6
 
-                Label8_1 As label:
+                labHistoryChangedFrom As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -306,7 +306,7 @@
                     X: =hFrom.X
                     ZIndex: =7
 
-                Label8_2 As label:
+                labHistoryChangedTo As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -322,7 +322,7 @@
                     X: =hTo.X
                     ZIndex: =8
 
-                Label8_3 As label:
+                labHistoryChangedDate As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -338,7 +338,7 @@
                     X: =hDate.X
                     ZIndex: =9
 
-                Label8_4 As label:
+                labHistoryChangedBy As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -354,7 +354,7 @@
                     X: =hBy.X
                     ZIndex: =10
 
-            cntSpinner_3 As groupContainer.manualLayoutContainer:
+            ctrHistorySpinner As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
                 LayoutMinHeight: =100
@@ -367,7 +367,7 @@
                 Width: =Parent.Width
                 ZIndex: =2
 
-                spnLoading_3 As Spinner:
+                spnHistoryLoading As Spinner:
                     BasePaletteColor: =
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =
@@ -375,7 +375,7 @@
                     SpinnerSize: ='Spinner.SpinnerSize'.Huge
                     Visible: =true
                     Width: =100
-                    X: =(Parent.Width-spnLoading_3.Width)/2
+                    X: =(Parent.Width-spnHistoryLoading.Width)/2
                     Y: =40
                     ZIndex: =1
 

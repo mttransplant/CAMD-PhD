@@ -309,7 +309,7 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
-                Label1 As label:
+                labMilestonesMilestone As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -326,7 +326,7 @@
                     X: =mMilestone.X
                     ZIndex: =1
 
-                Label1_1 As label:
+                labMilestonesStatus As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -343,7 +343,7 @@
                     X: =mStatus.X
                     ZIndex: =2
 
-                Label1_2 As label:
+                labMilestonesNote As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -360,7 +360,7 @@
                     X: =mNote.X
                     ZIndex: =3
 
-                Label1_3 As label:
+                labMilestonesDate As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -377,7 +377,7 @@
                     X: =mDate.X
                     ZIndex: =4
 
-                Label1_4 As label:
+                labMilestonesModified As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -389,11 +389,11 @@
                     FontWeight: =FontWeight.Bold
                     Size: =13
                     Text: ="Modified By"
-                    Width: =mBy.Width-btn_mSave.Width
+                    Width: =mBy.Width-btnMilestonesSave.Width
                     X: =mBy.X
                     ZIndex: =5
 
-                btn_mSave As icon.Save:
+                btnMilestonesSave As icon.Save:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(0, 120, 212, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -417,11 +417,11 @@
                     Tooltip: ="Save Changes"
                     Visible: =IsEditing And (CountRows(colUpdateMilestones)+CountRows(colDeleteMilestones)>0)
                     Width: =30
-                    X: =btn_mEdit.X+btn_mEdit.Width
+                    X: =btnMilestonesEdit.X+btnMilestonesEdit.Width
                     Y: =10
                     ZIndex: =6
 
-                "'btn-mAdd' As icon.Add":
+                btnMilestonesAdd As icon.Add:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(0, 120, 212, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -443,11 +443,11 @@
                     Tooltip: ="Add Milestone"
                     Visible: =CountRows(colUpdateMilestones)+CountRows(colDeleteMilestones)=0
                     Width: =30
-                    X: =btn_mEdit.X+btn_mEdit.Width
+                    X: =btnMilestonesEdit.X+btnMilestonesEdit.Width
                     Y: =10
                     ZIndex: =7
 
-                btn_mEdit As icon.Edit:
+                btnMilestonesEdit As icon.Edit:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(0, 120, 212, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -467,11 +467,11 @@
                     Tooltip: ="Edit Milestones"
                     Visible: =Not(IsEditing)
                     Width: =30
-                    X: =Parent.Width-btn_mEdit.Width-btn_mSave.Width-10
+                    X: =Parent.Width-btnMilestonesEdit.Width-btnMilestonesSave.Width-10
                     Y: =10
                     ZIndex: =8
 
-                btn_mCancel As icon.Cancel:
+                btnMilestonesCancel As icon.Cancel:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(0, 120, 212, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -492,7 +492,7 @@
                     Tooltip: ="Discard Changes"
                     Visible: =IsEditing
                     Width: =30
-                    X: =btn_mEdit.X
+                    X: =btnMilestonesEdit.X
                     Y: =10
                     ZIndex: =9
 
