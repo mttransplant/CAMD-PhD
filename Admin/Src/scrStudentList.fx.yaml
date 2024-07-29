@@ -7,7 +7,7 @@
         Set(IconMilestoneIsMissing,Icon.CancelBadge);
         Set(IconMilestoneIsFulfilled,Icon.CheckBadge);
 
-    ScreenContainer1 As groupContainer.verticalAutoLayoutContainer:
+    ctrStudentList As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -23,11 +23,11 @@
         RadiusBottomRight: =4
         RadiusTopLeft: =4
         RadiusTopRight: =4
-        Width: =Min(MainContainer1.Width+32,Parent.Width)
+        Width: =Min(ctrListMain.Width+32,Parent.Width)
         X: =(Parent.Width-Self.Width)/2
         ZIndex: =1
 
-        HeaderContainer1 As groupContainer.horizontalAutoLayoutContainer:
+        ctrListHeader As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.Start
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -42,7 +42,7 @@
             RadiusTopLeft: =8
             RadiusTopRight: =8
             Width: =Min(galStudentLlist.Width,Parent.Width-32)
-            X: =MainContainer1.X
+            X: =ctrListMain.X
             ZIndex: =1
 
             Container6 As groupContainer.manualLayoutContainer:
@@ -72,7 +72,7 @@
                     Height: =Parent.Height
                     Size: =30
                     Text: ="CAMD PhD Database - Student List"
-                    Width: =HeaderContainer1.Width
+                    Width: =ctrListHeader.Width
                     ZIndex: =1
 
                 icoHome As icon.Home:
@@ -96,7 +96,7 @@
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =2
 
-        MainContainer1 As groupContainer.verticalAutoLayoutContainer:
+        ctrListMain As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.Start
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -109,10 +109,10 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
-            Width: =Min(galStudentLlist.Width, App.Width-(2*ScreenContainer1.LayoutGap))
+            Width: =Min(galStudentLlist.Width, App.Width-(2*ctrStudentList.LayoutGap))
             ZIndex: =3
 
-            cntColNames As groupContainer.manualLayoutContainer:
+            ctrColNames As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(180, 214, 250, 1)
@@ -435,7 +435,7 @@
                     Y: =10
                     ZIndex: =17
 
-            cntSpinner_1 As groupContainer.manualLayoutContainer:
+            ctrSpinner_1 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
                 LayoutMinHeight: =100
@@ -457,7 +457,7 @@
                     Visible: =true
                     Width: =100
                     X: =(Parent.Width-spnLoading_1.Width)/2
-                    Y: =40
+                    Y: =(Parent.Height-spnLoading_1.Height)/2
                     ZIndex: =1
 
             galStudentLlist As gallery.galleryVertical:

@@ -41,7 +41,7 @@
             RadiusTopLeft: =8
             RadiusTopRight: =8
             Width: =Min(galStudentLlist.Width,Parent.Width-32)
-            X: =MainContainer1.X
+            X: =ctrListMain.X
             ZIndex: =1
 
             Container6_1 As groupContainer.manualLayoutContainer:

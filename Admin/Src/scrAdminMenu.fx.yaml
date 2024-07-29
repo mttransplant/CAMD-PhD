@@ -51,7 +51,7 @@
                 Fill: =RGBA(71, 158, 245, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =HeaderContainer1.Height
+                Height: =ctrListHeader.Height
                 Size: =30
                 Text: ="CAMD PhD Admin Menu"
                 Width: =ctrMenuHeader.Width

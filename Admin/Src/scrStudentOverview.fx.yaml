@@ -8,7 +8,7 @@
         Set(IconMilestoneIsMissing,Icon.CancelBadge);
         Set(IconMilestoneIsFulfilled,Icon.CheckBadge);
 
-    ScreenContainer2 As groupContainer.verticalAutoLayoutContainer:
+    ctrStudentOverview As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -29,7 +29,7 @@
         X: =(Parent.Width-Self.Width)/2
         ZIndex: =1
 
-        HeaderContainer2 As groupContainer.horizontalAutoLayoutContainer:
+        ctrOverviewHeader As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -45,7 +45,7 @@
             Width: =Parent.Width
             ZIndex: =1
 
-            Container6_2 As groupContainer.manualLayoutContainer:
+            ctrOverviewHeader2 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
                 LayoutMinHeight: =50
@@ -57,7 +57,7 @@
                 Width: =Parent.Width
                 ZIndex: =2
 
-                Header_7 As label:
+                labOverviewHeader As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -75,7 +75,7 @@
                     Width: =Parent.Width
                     ZIndex: =1
 
-                icoHome_1 As icon.Home:
+                icoOverviewHome As icon.Home:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(255, 255, 255, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -98,7 +98,7 @@
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =2
 
-        navOverview As groupContainer.horizontalAutoLayoutContainer:
+        ctrOverviewNav As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -117,7 +117,7 @@
             Width: =Parent.Width
             ZIndex: =2
 
-            btnBack_5 As Button:
+            btnOverviewBack As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -139,7 +139,7 @@
                 Y: =0
                 ZIndex: =1
 
-            btnOverview_5 As Button:
+            btnOverviewOverview As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Primary
                 BasePaletteColor: =
@@ -161,7 +161,7 @@
                 Y: =0
                 ZIndex: =2
 
-            btnMilestones_5 As Button:
+            btnOverviewMilestones As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -183,7 +183,7 @@
                 Y: =0
                 ZIndex: =3
 
-            btnHistory_5 As Button:
+            btnOverviewHistory As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -205,7 +205,7 @@
                 Y: =0
                 ZIndex: =4
 
-            btnEvaluations_5 As Button:
+            btnOverviewEvaluations As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -227,7 +227,7 @@
                 Y: =0
                 ZIndex: =5
 
-            btnCourses_5 As Button:
+            btnOverviewCourses As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -249,7 +249,7 @@
                 Y: =0
                 ZIndex: =6
 
-        MainContainer2 As groupContainer.verticalAutoLayoutContainer:
+        ctrOverviewMain As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -264,7 +264,7 @@
             Width: =Parent.Width
             ZIndex: =3
 
-            cntEdit As groupContainer.manualLayoutContainer:
+            ctrEdit As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.End
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(180, 214, 250, 1)
@@ -1644,7 +1644,7 @@
                         Y: =DataCardKey54.Y
                         ZIndex: =4
 
-            Milestones As groupContainer.verticalAutoLayoutContainer:
+            ctrMilestones As groupContainer.verticalAutoLayoutContainer:
                 BorderStyle: =BorderStyle.None
                 FillPortions: =0
                 Height: =100
@@ -1658,7 +1658,7 @@
                 RadiusTopRight: =4
                 ZIndex: =4
 
-                "'Milestone Labels' As groupContainer.horizontalAutoLayoutContainer":
+                ctrMilestoneLabels As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -1673,7 +1673,7 @@
                     Width: =Parent.Width
                     ZIndex: =1
 
-                    labCourse_1 As label:
+                    labOverviewMilestoneCourse As label:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -1692,7 +1692,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    labPaper_1 As label:
+                    labOverviewMilestonePaper As label:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -1711,7 +1711,7 @@
                         Y: =10
                         ZIndex: =2
 
-                    labQual_1 As label:
+                    labOverviewMilestoneQual As label:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -1730,7 +1730,7 @@
                         Y: =10
                         ZIndex: =3
 
-                    labProposal_1 As label:
+                    labOverviewMilestoneProposal As label:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -1749,7 +1749,7 @@
                         Y: =10
                         ZIndex: =4
 
-                    labTA_1 As label:
+                    labOverviewMilestoneTA As label:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -1768,7 +1768,7 @@
                         Y: =10
                         ZIndex: =5
 
-                    labDefense_1 As label:
+                    labOverviewMilestoneDefense As label:
                         Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -1787,7 +1787,7 @@
                         Y: =10
                         ZIndex: =6
 
-                "'Milestone Icons' As groupContainer.horizontalAutoLayoutContainer":
+                ctrMilestoneIcons As groupContainer.horizontalAutoLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -1802,7 +1802,7 @@
                     Width: =Parent.Width
                     ZIndex: =2
 
-                    CourseInd_1 As icon.CancelBadge:
+                    icoOverviewMilestoneCourse As icon.CancelBadge:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Course Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
@@ -1828,7 +1828,7 @@
                         Y: =10
                         ZIndex: =1
 
-                    PaperInd_1 As icon.CancelBadge:
+                    icoOverviewMilestonePaper As icon.CancelBadge:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Paper Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
@@ -1850,11 +1850,11 @@
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         Width: =Parent.Width/6
-                        X: =CourseInd_1.X+CourseInd_1.Width+5
+                        X: =icoOverviewMilestoneCourse.X+icoOverviewMilestoneCourse.Width+5
                         Y: =10
                         ZIndex: =2
 
-                    QualInd_1 As icon.CancelBadge:
+                    icoOverviewMilestoneQual As icon.CancelBadge:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Qualifying Examination'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
@@ -1876,11 +1876,11 @@
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         Width: =Parent.Width/6
-                        X: =PaperInd_1.X+PaperInd_1.Width+5
+                        X: =icoOverviewMilestonePaper.X+icoOverviewMilestonePaper.Width+5
                         Y: =10
                         ZIndex: =3
 
-                    ProposalInd_1 As icon.CancelBadge:
+                    icoOverviewMilestoneProposal As icon.CancelBadge:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Proposal'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
@@ -1902,11 +1902,11 @@
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         Width: =Parent.Width/6
-                        X: =QualInd_1.X+QualInd_1.Width+5
+                        X: =icoOverviewMilestoneQual.X+icoOverviewMilestoneQual.Width+5
                         Y: =10
                         ZIndex: =4
 
-                    TA_Ind_1 As icon.CancelBadge:
+                    icoOverviewMilestoneTA As icon.CancelBadge:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Teaching Requirement'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
@@ -1928,11 +1928,11 @@
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         Width: =Parent.Width/6
-                        X: =ProposalInd_1.X+ProposalInd_1.Width+5
+                        X: =icoOverviewMilestoneProposal.X+icoOverviewMilestoneProposal.Width+5
                         Y: =10
                         ZIndex: =5
 
-                    DefenseInd_1 As icon.CancelBadge:
+                    icoOverviewMilestoneDefense As icon.CancelBadge:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         Color: =If(CountRows(Filter(Filter(colCompletedMilestones,NUID=galStudentLlist.Selected.NUID),Milestone='Milestone (PhD Milestones)'.'Dissertation Defense'))>0,ColorMilestoneIsFulfilled,ColorMilestoneIsMissing)
@@ -1954,7 +1954,7 @@
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         Width: =Parent.Width/6
-                        X: =TA_Ind_1.X+TA_Ind_1.Width+5
+                        X: =icoOverviewMilestoneTA.X+icoOverviewMilestoneTA.Width+5
                         Y: =10
                         ZIndex: =6
 
