@@ -1,10 +1,7 @@
 "scrStudentHistory As screen.'autoLayout_HeaderFooter_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: =Clear(colStudentHistory)
-    OnVisible: |-
-        =// UpdateContext({IsLoading:true});
-        ClearCollect(colStudentHistory,Filter('PhD Histories',galStudentLlist.Selected.NUID=NUID));
-        // UpdateContext({IsLoading:false});
+    OnVisible: =ClearCollect(colStudentHistory,Filter('PhD Histories',galStudentLlist.Selected.NUID=NUID));
 
     ctrStudentHistory As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -353,31 +350,6 @@
                     Width: =hBy.Width
                     X: =hBy.X
                     ZIndex: =10
-
-            ctrHistorySpinner As groupContainer.manualLayoutContainer:
-                DropShadow: =DropShadow.Light
-                Height: =Parent.Height
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =false
-                Width: =Parent.Width
-                ZIndex: =2
-
-                spnHistoryLoading As Spinner:
-                    BasePaletteColor: =
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    Height: =Self.Width
-                    SpinnerSize: ='Spinner.SpinnerSize'.Huge
-                    Visible: =true
-                    Width: =100
-                    X: =(Parent.Width-spnHistoryLoading.Width)/2
-                    Y: =40
-                    ZIndex: =1
 
             galHistory As gallery.galleryVertical:
                 '#CopilotOverlayLabel': ="Filtered"
