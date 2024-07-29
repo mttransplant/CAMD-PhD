@@ -3,7 +3,7 @@
     OnHidden: =
     OnVisible: =
 
-    ScreenContainer2_5 As groupContainer.verticalAutoLayoutContainer:
+    ctrAdminMenu As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Min(App.Height, App.DesignHeight)
@@ -23,7 +23,7 @@
         X: =(Parent.Width-Self.Width)/2
         ZIndex: =1
 
-        HeaderContainer2_5 As groupContainer.horizontalAutoLayoutContainer:
+        ctrMenuHeader As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -39,7 +39,7 @@
             Width: =Parent.Width
             ZIndex: =1
 
-            Header_6 As label:
+            labMenuHeader As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -54,10 +54,10 @@
                 Height: =HeaderContainer1.Height
                 Size: =30
                 Text: ="CAMD PhD Admin Menu"
-                Width: =HeaderContainer2_5.Width
+                Width: =ctrMenuHeader.Width
                 ZIndex: =1
 
-        Container7 As groupContainer.verticalAutoLayoutContainer:
+        ctrMenuNav As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =100
@@ -69,7 +69,7 @@
             RadiusTopRight: =4
             ZIndex: =6
 
-            Container3 As groupContainer.manualLayoutContainer:
+            ctrNav As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
