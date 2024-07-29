@@ -8,7 +8,7 @@
         =Select(btnLoadMilestones);
         UpdateContext({IsEditing:false})
 
-    ScreenContainer2_2 As groupContainer.verticalAutoLayoutContainer:
+    ctrStudentMilestones As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -28,7 +28,7 @@
         X: =(Parent.Width-Self.Width)/2
         ZIndex: =1
 
-        HeaderContainer2_2 As groupContainer.horizontalAutoLayoutContainer:
+        ctrMilestonesHeader As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -44,7 +44,7 @@
             Width: =Parent.Width
             ZIndex: =1
 
-            Container6_3 As groupContainer.manualLayoutContainer:
+            ctrMilestonesHeader2 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
                 LayoutMinHeight: =50
@@ -56,7 +56,7 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
-                Header_8 As label:
+                labMilestonesHeader As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -74,7 +74,7 @@
                     Width: =Parent.Width
                     ZIndex: =1
 
-                icoHome_2 As icon.Home:
+                icoMilestonesHome As icon.Home:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(255, 255, 255, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -97,7 +97,7 @@
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =2
 
-        navMilestones As groupContainer.horizontalAutoLayoutContainer:
+        ctrMilestonesNav As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -116,7 +116,7 @@
             Width: =Parent.Width
             ZIndex: =2
 
-            btnBack_2 As Button:
+            btnMilestonesBack As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -138,7 +138,7 @@
                 Y: =0
                 ZIndex: =1
 
-            btnOverview_2 As Button:
+            btnMilestonesOverview As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -160,7 +160,7 @@
                 Y: =0
                 ZIndex: =2
 
-            btnMilestones_2 As Button:
+            btnMilestonesMilestones As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Primary
                 BasePaletteColor: =
@@ -182,7 +182,7 @@
                 Y: =0
                 ZIndex: =3
 
-            btnHistory_2 As Button:
+            btnMilestonesHistory As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -204,13 +204,14 @@
                 Y: =0
                 ZIndex: =4
 
-            btnEvaluations_2 As Button:
+            btnMilestonesEvaluations As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
                 BorderStyle: =""
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
+                FontWeight: =FontWeight.Normal
                 Height: =32
                 Icon: =""
                 IconRotation: =0
@@ -226,7 +227,7 @@
                 Y: =0
                 ZIndex: =5
 
-            btnCourses_2 As Button:
+            btnMilestonesCourses As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -278,7 +279,7 @@
                 Visible: =false
                 ZIndex: =7
 
-        cntMilestones As groupContainer.verticalAutoLayoutContainer:
+        ctrMilestonesMain As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -293,7 +294,7 @@
             Width: =Parent.Width
             ZIndex: =4
 
-            mColumns As groupContainer.manualLayoutContainer:
+            ctrMilestonesColumns As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(180, 214, 250, 1)
@@ -495,7 +496,7 @@
                     Y: =10
                     ZIndex: =9
 
-            cntSpinner_2 As groupContainer.manualLayoutContainer:
+            ctrMilestonesSpinner As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
                 LayoutMinHeight: =100
@@ -508,7 +509,7 @@
                 Width: =Parent.Width
                 ZIndex: =2
 
-                spnLoading_2 As Spinner:
+                spnMilestonesLoading As Spinner:
                     BasePaletteColor: =
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =
@@ -516,8 +517,8 @@
                     SpinnerSize: ='Spinner.SpinnerSize'.Huge
                     Visible: =true
                     Width: =100
-                    X: =(Parent.Width-spnLoading_2.Width)/2
-                    Y: =40
+                    X: =(Parent.Width-spnMilestonesLoading.Width)/2
+                    Y: =(Parent.Height-spnMilestonesLoading.Height)/2
                     ZIndex: =1
 
             galMilestones As gallery.galleryVertical:

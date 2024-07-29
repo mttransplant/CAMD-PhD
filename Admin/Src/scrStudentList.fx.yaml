@@ -112,7 +112,7 @@
             Width: =Min(galStudentLlist.Width, App.Width-(2*ctrStudentList.LayoutGap))
             ZIndex: =3
 
-            ctrColNames As groupContainer.manualLayoutContainer:
+            ctrListColumns As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(180, 214, 250, 1)
@@ -435,7 +435,7 @@
                     Y: =10
                     ZIndex: =17
 
-            ctrSpinner_1 As groupContainer.manualLayoutContainer:
+            ctrListSpinner As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
                 LayoutMinHeight: =100
@@ -448,7 +448,7 @@
                 Width: =Parent.Width
                 ZIndex: =2
 
-                spnLoading_1 As Spinner:
+                spnListLoading As Spinner:
                     BasePaletteColor: =
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =
@@ -456,8 +456,8 @@
                     SpinnerSize: ='Spinner.SpinnerSize'.Huge
                     Visible: =true
                     Width: =100
-                    X: =(Parent.Width-spnLoading_1.Width)/2
-                    Y: =(Parent.Height-spnLoading_1.Height)/2
+                    X: =(Parent.Width-spnListLoading.Width)/2
+                    Y: =(Parent.Height-spnListLoading.Height)/2
                     ZIndex: =1
 
             galStudentLlist As gallery.galleryVertical:
