@@ -109,7 +109,7 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
-            Width: =Min(galStudentLlist.Width, App.Width)
+            Width: =Min(galStudentLlist.Width, App.Width-(2*ScreenContainer1.LayoutGap))
             ZIndex: =3
 
             cntColNames As groupContainer.manualLayoutContainer:
