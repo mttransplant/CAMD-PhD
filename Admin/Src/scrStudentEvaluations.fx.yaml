@@ -3,7 +3,7 @@
     OnHidden: =
     OnVisible: =
 
-    ScreenContainer2_3 As groupContainer.verticalAutoLayoutContainer:
+    ctrStudentEvaluations As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -23,7 +23,7 @@
         X: =(Parent.Width-Self.Width)/2
         ZIndex: =1
 
-        HeaderContainer2_3 As groupContainer.horizontalAutoLayoutContainer:
+        ctrEvaluationsHeader As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -39,7 +39,7 @@
             Width: =Parent.Width
             ZIndex: =1
 
-            Container6_5 As groupContainer.manualLayoutContainer:
+            ctrEvaluationsHeader2 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
                 LayoutMinHeight: =50
@@ -51,7 +51,7 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
-                Header_10 As label:
+                labEvaluationsHeader As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -69,7 +69,7 @@
                     Width: =Parent.Width
                     ZIndex: =1
 
-                icoHome_4 As icon.Home:
+                icoEvaluationsHome As icon.Home:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(255, 255, 255, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -90,7 +90,7 @@
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =2
 
-        navMilestones_1 As groupContainer.horizontalAutoLayoutContainer:
+        ctrEvaluationsNav As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -109,7 +109,7 @@
             Width: =Parent.Width
             ZIndex: =2
 
-            btnBack_3 As Button:
+            btnEvaluationsBack As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -131,7 +131,7 @@
                 Y: =0
                 ZIndex: =1
 
-            btnOverview_3 As Button:
+            btnEvaluationsOverview As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -153,7 +153,7 @@
                 Y: =0
                 ZIndex: =2
 
-            btnMilestones_3 As Button:
+            btnEvaluationsMilestones As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -175,7 +175,7 @@
                 Y: =0
                 ZIndex: =3
 
-            btnHistory_3 As Button:
+            btnEvaluationsHistory As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -197,7 +197,7 @@
                 Y: =0
                 ZIndex: =4
 
-            btnEvaluations_3 As Button:
+            btnEvaluationsEvaluations As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Primary
                 BasePaletteColor: =
@@ -219,7 +219,7 @@
                 Y: =0
                 ZIndex: =5
 
-            btnCourses_3 As Button:
+            btnEvaluationsCourses As Button:
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
@@ -241,7 +241,7 @@
                 Y: =0
                 ZIndex: =6
 
-        cntMilestones_1 As groupContainer.verticalAutoLayoutContainer:
+        ctrEvaluationsMain As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)

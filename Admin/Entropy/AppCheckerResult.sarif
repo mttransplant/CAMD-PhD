@@ -704,19 +704,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.HeaderContainer2_3.Container6_5.icoHome_4.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsHeader.ctrEvaluationsHeader2.icoEvaluationsHome.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.HeaderContainer2_3.Container6_5.icoHome_4.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsHeader.ctrEvaluationsHeader2.icoEvaluationsHome.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentEvaluations",
-                "type": "scrStudentEvaluations.ScreenContainer2_3.HeaderContainer2_3.Container6_5.icoHome_4"
+                "type": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsHeader.ctrEvaluationsHeader2.icoEvaluationsHome"
               }
             }
           ],
@@ -734,19 +734,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.HeaderContainer2_3.Container6_5.icoHome_4.TabIndex"
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsHeader.ctrEvaluationsHeader2.icoEvaluationsHome.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.HeaderContainer2_3.Container6_5.icoHome_4.TabIndex",
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsHeader.ctrEvaluationsHeader2.icoEvaluationsHome.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "scrStudentEvaluations",
-                "type": "scrStudentEvaluations.ScreenContainer2_3.HeaderContainer2_3.Container6_5.icoHome_4"
+                "type": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsHeader.ctrEvaluationsHeader2.icoEvaluationsHome"
               }
             }
           ],
@@ -764,19 +764,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnBack_3.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsBack.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnBack_3.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsBack.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentEvaluations",
-                "type": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnBack_3"
+                "type": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsBack"
               }
             }
           ],
@@ -794,19 +794,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnOverview_3.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsOverview.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnOverview_3.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsOverview.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentEvaluations",
-                "type": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnOverview_3"
+                "type": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsOverview"
               }
             }
           ],
@@ -824,19 +824,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnMilestones_3.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsMilestones.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnMilestones_3.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsMilestones.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentEvaluations",
-                "type": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnMilestones_3"
+                "type": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsMilestones"
               }
             }
           ],
@@ -854,19 +854,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnHistory_3.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsHistory.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnHistory_3.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsHistory.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentEvaluations",
-                "type": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnHistory_3"
+                "type": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsHistory"
               }
             }
           ],
@@ -884,19 +884,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnEvaluations_3.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsEvaluations.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnEvaluations_3.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsEvaluations.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentEvaluations",
-                "type": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnEvaluations_3"
+                "type": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsEvaluations"
               }
             }
           ],
@@ -914,19 +914,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnCourses_3.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsCourses.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnCourses_3.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsCourses.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrStudentEvaluations",
-                "type": "scrStudentEvaluations.ScreenContainer2_3.navMilestones_1.btnCourses_3"
+                "type": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsNav.btnEvaluationsCourses"
               }
             }
           ],
@@ -3974,19 +3974,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.HeaderContainer2_3.Container6_5.Header_10.Text"
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsHeader.ctrEvaluationsHeader2.labEvaluationsHeader.Text"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentEvaluations.ScreenContainer2_3.HeaderContainer2_3.Container6_5.Header_10.Text",
+                  "fullyQualifiedName": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsHeader.ctrEvaluationsHeader2.labEvaluationsHeader.Text",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Text",
                 "module": "scrStudentEvaluations",
-                "type": "scrStudentEvaluations.ScreenContainer2_3.HeaderContainer2_3.Container6_5.Header_10"
+                "type": "scrStudentEvaluations.ctrStudentEvaluations.ctrEvaluationsHeader.ctrEvaluationsHeader2.labEvaluationsHeader"
               }
             }
           ],
