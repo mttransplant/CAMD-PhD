@@ -417,10 +417,7 @@
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(16, 110, 190, 1)
-                    OnSelect: |-
-                        =UpdateContext({IsLoading:true});
-                        ClearCollect(colCompletedMilestones,Filter('PhD Milestones','Milestone Status' in ['Milestone Status (PhD Milestones)'.Yes,'Milestone Status (PhD Milestones)'.Waived]));
-                        UpdateContext({IsLoading:false});
+                    OnSelect: =ClearCollect(colCompletedMilestones,Filter('PhD Milestones','Milestone Status' in ['Milestone Status (PhD Milestones)'.Yes,'Milestone Status (PhD Milestones)'.Waived]));
                     PressedBorderColor: =RGBA(0, 69, 120, 1)
                     PressedColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(16, 110, 190, 1)
@@ -435,31 +432,6 @@
                     Y: =10
                     ZIndex: =17
 
-            ctrListSpinner As groupContainer.manualLayoutContainer:
-                DropShadow: =DropShadow.Light
-                Height: =Parent.Height
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
-                Visible: =IsLoading
-                Width: =Parent.Width
-                ZIndex: =2
-
-                spnListLoading As Spinner:
-                    BasePaletteColor: =
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    Height: =Self.Width
-                    SpinnerSize: ='Spinner.SpinnerSize'.Huge
-                    Visible: =true
-                    Width: =100
-                    X: =(Parent.Width-spnListLoading.Width)/2
-                    Y: =(Parent.Height-spnListLoading.Height)/2
-                    ZIndex: =1
-
             galStudentLlist As gallery.galleryVertical:
                 '#CopilotOverlayLabel': ="Filtered"
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -471,10 +443,10 @@
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
+                LoadingSpinnerColor: =Color.DarkGray
                 TemplateFill: =
                 TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(50, Self.Height - 60))
                 Transition: =Transition.Push
-                Visible: =!IsLoading
                 Width: =IndividualPath.X+IndividualPath.Width+20
                 ZIndex: =3
 

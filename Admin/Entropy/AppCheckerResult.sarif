@@ -374,36 +374,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentList.ctrStudentList.ctrListMain.ctrListSpinner.spnListLoading.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentList.ctrStudentList.ctrListMain.ctrListSpinner.spnListLoading.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentList",
-                "type": "scrStudentList.ctrStudentList.ctrListMain.ctrListSpinner.spnListLoading"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrStudentList.ctrStudentList.ctrListMain.galStudentLlist.AccessibleLabel"
                 }
               ],
