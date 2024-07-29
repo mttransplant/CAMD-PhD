@@ -409,6 +409,8 @@
                 DelayItemLoading: =true
                 Items: =Sort(Sort(Sort(Filter('PhD Enrollments',NUID=galStudentLlist.Selected.NUID),'Term Code'),Subject),Course)
                 Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
                 TemplateSize: =40
                 Width: =Parent.Width

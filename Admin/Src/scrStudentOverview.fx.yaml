@@ -16,6 +16,7 @@
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =16
         LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
         PaddingBottom: =16
         PaddingLeft: =16
         PaddingRight: =16
@@ -253,7 +254,7 @@
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             LayoutDirection: =LayoutDirection.Vertical
-            LayoutMinHeight: =100
+            LayoutMinHeight: =550
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =8
@@ -368,7 +369,7 @@
                 Height: =210
                 Item: =LookUp('PhD Students',NUID=galStudentLlist.Selected.NUID)
                 LayoutMinHeight: =250
-                LayoutMinWidth: =400
+                LayoutMinWidth: =ReadOnlyStudentInfo_old.Width
                 NumberOfColumns: =2
                 ZIndex: =2
 
@@ -957,7 +958,7 @@
                 Height: =170
                 Item: =LookUp('PhD Students',NUID=galStudentLlist.Selected.NUID)
                 LayoutMinHeight: =150
-                LayoutMinWidth: =400
+                LayoutMinWidth: =EditStudentInfo.Width
                 NumberOfColumns: =2
                 ZIndex: =3
 
