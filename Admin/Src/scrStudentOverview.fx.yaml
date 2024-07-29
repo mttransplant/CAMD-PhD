@@ -318,13 +318,12 @@
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Save
                     OnSelect: |-
-                        =Patch('PhD Students',{NUID:galStudentLlist.Selected.NUID},EditStudentInfo.Updates);
+                        =// Patch('PhD Students',{NUID:galStudentLlist.Selected.NUID},EditStudentInfo.Updates);
                         Collect('PhD Histories',colStudentUpdates);
                         Notify("Student Update Successful",NotificationType.Success,5000);
-                        UpdateContext({IsEditing:false});
+                        UpdateContext({IsEditing: false });
                         Clear(colStudentUpdates);
-                        Refresh('PhD Students');
-                        ResetForm(EditStudentInfo)
+                        Refresh('PhD Students');ResetForm(EditStudentInfo)
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
