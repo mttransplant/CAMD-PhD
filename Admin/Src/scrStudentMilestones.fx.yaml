@@ -1,8 +1,7 @@
 "scrStudentMilestones As screen.'autoLayout_HeaderFooter_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: |-
-        =Clear(colStudentMilestones);
-        Clear(colDeleteMilestones);
+        =Clear(colDeleteMilestones);
         Clear(colUpdateMilestones)
     OnVisible: |-
         =Select(btnLoadMilestones);
