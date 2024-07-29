@@ -412,6 +412,7 @@
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
+                LoadingSpinnerColor: =Color.DarkGray
                 TemplateSize: =40
                 Width: =Parent.Width
                 Y: =ctrCoursesColumns.Y+ctrCoursesColumns.Height
