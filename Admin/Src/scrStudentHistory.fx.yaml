@@ -1,7 +1,7 @@
 "scrStudentHistory As screen.'autoLayout_HeaderFooter_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnHidden: =Clear(colStudentHistory)
-    OnVisible: =ClearCollect(colStudentHistory,Filter('PhD Histories',galStudentLlist.Selected.NUID=NUID));
+    OnHidden: =
+    OnVisible: =
 
     ctrStudentHistory As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -357,7 +357,7 @@
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Height: =Parent.Height
-                Items: =Sort(colStudentHistory,'Created On',SortOrder.Descending)
+                Items: =Sort(Filter('PhD Histories',galStudentLlist.Selected.NUID=NUID),'Created On',SortOrder.Descending)
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
