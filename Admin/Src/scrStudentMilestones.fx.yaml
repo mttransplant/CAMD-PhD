@@ -262,11 +262,11 @@
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(16, 110, 190, 1)
                 OnSelect: |-
-                    =UpdateContext({IsLoading:true});
+                    =// UpdateContext({IsLoading:true});
                     ClearCollect(colStudentMilestones,Filter('PhD Milestones',galStudentLlist.Selected.NUID=NUID));
                     ClearCollect(colUpdateMilestones,Filter('PhD Milestones',NUID=""));
                     ClearCollect(colDeleteMilestones,Filter('PhD Milestones',NUID=""));
-                    UpdateContext({IsLoading:false});
+                    // UpdateContext({IsLoading:false});
                 PressedBorderColor: =RGBA(0, 69, 120, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(16, 110, 190, 1)
@@ -505,7 +505,7 @@
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Visible: =IsLoading
+                Visible: =false
                 Width: =Parent.Width
                 ZIndex: =2
 
@@ -532,8 +532,8 @@
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
+                LoadingSpinnerColor: =Color.DarkGray
                 TemplateSize: =40
-                Visible: =!IsLoading
                 Width: =Parent.Width
                 ZIndex: =3
 
