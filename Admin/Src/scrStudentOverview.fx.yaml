@@ -1244,7 +1244,7 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="cr829_status"
-                    Default: =ThisItem.'Status (cr829_status)'
+                    Default: =ThisItem.cr829_status
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_status)
                     Fill: =RGBA(0, 0, 0, 0)
@@ -1379,7 +1379,7 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="cr829_individualpath"
-                    Default: =ThisItem.'Individual Path'
+                    Default: =ThisItem.cr829_individualpath
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_individualpath)
                     Fill: =RGBA(0, 0, 0, 0)
@@ -1514,7 +1514,7 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
                     DataField: ="cr829_dissertationcommittee"
-                    Default: =ThisItem.'Dissertation Committee'
+                    Default: =ThisItem.cr829_dissertationcommittee
                     DisplayMode: =Parent.DisplayMode
                     DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_dissertationcommittee)
                     Fill: =RGBA(0, 0, 0, 0)

@@ -438,7 +438,7 @@
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Height: =90
-                Items: =Sort(Sort('PhD Students','Last Name',SortOrder.Ascending),'First Name',SortOrder.Ascending)
+                Items: =Sort('PhD Students','Full Name',SortOrder.Ascending)
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
@@ -477,7 +477,7 @@
                     Font: =Font.'Segoe UI'
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: =ThisItem.'Individual Path'
+                    Text: =ThisItem.cr829_individualpath
                     X: =DefenseInd.X+DefenseInd.Width+5
                     Y: =5
                     ZIndex: =2
@@ -548,7 +548,7 @@
                     Height: =Parent.TemplateHeight-10
                     OnSelect: =Select(Parent);Navigate(scrStudentOverview)
                     Size: =13
-                    Text: =ThisItem.'Status (cr829_status)'
+                    Text: =ThisItem.cr829_status
                     Width: =197
                     X: =Track.X+Track.Width+5   
                     Y: =5
@@ -619,7 +619,7 @@
                     Height: =Parent.TemplateHeight-10
                     OnSelect: =Select(Parent);Navigate(scrStudentOverview)
                     Size: =13
-                    Text: =ThisItem.'Last Name'&", "&ThisItem.'First Name'
+                    Text: =ThisItem.'Full Name'
                     Width: =226
                     X: =5
                     Y: =5
