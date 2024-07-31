@@ -1018,6 +1018,7 @@
                         SelectionFill: =RGBA(0, 120, 212, 1)
                         Size: =13
                         Tooltip: =Parent.DisplayName
+                        Visible: =false
                         Width: =DateValue1.Width / 2 - 10
                         X: =DateValue1.X + DateValue1.Width + 10
                         Y: =DateValue1.Y
@@ -1042,6 +1043,7 @@
                         Size: =13
                         Text: |-
                             =":"
+                        Visible: =false
                         Width: =10
                         Wrap: =false
                         X: =HourValue1.X + HourValue1.Width
@@ -1080,6 +1082,7 @@
                         SelectionFill: =RGBA(0, 120, 212, 1)
                         Size: =13
                         Tooltip: =Parent.DisplayName
+                        Visible: =false
                         Width: =HourValue1.Width
                         X: =HourValue1.X + HourValue1.Width + Separator1.Width
                         Y: =HourValue1.Y
@@ -1458,6 +1461,7 @@
                         SelectionFill: =RGBA(0, 120, 212, 1)
                         Size: =13
                         Tooltip: =Parent.DisplayName
+                        Visible: =false
                         Width: =DateValue2.Width / 2 - 10
                         X: =DateValue2.X + DateValue2.Width + 10
                         Y: =DateValue2.Y
@@ -1482,6 +1486,7 @@
                         Size: =13
                         Text: |-
                             =":"
+                        Visible: =false
                         Width: =10
                         Wrap: =false
                         X: =HourValue2.X + HourValue2.Width
@@ -1520,6 +1525,7 @@
                         SelectionFill: =RGBA(0, 120, 212, 1)
                         Size: =13
                         Tooltip: =Parent.DisplayName
+                        Visible: =false
                         Width: =HourValue2.Width
                         X: =HourValue2.X + HourValue2.Width + Separator2.Width
                         Y: =HourValue2.Y
