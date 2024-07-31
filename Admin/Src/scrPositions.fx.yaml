@@ -141,7 +141,7 @@
                     PaddingLeft: =15
                     Size: =13
                     Text: ="Student Placed"
-                    Width: =Parent.Width-Self.X-5
+                    Width: =txtStudentPlaced.Width
                     X: =txtStudentPlaced.X
                     ZIndex: =1
 
