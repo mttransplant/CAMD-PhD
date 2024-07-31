@@ -226,14 +226,14 @@
 
             ctrHiddenSizes As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =labPosDescHeight.Height
+                FillPortions: =0
+                Height: =0
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Visible: =false
                 ZIndex: =2
 
                 labPosDescHeight As label:
