@@ -138,7 +138,6 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    PaddingLeft: =15
                     Size: =13
                     Text: ="Student Placed"
                     Width: =labStudentPlaced.Width
@@ -157,7 +156,6 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    PaddingLeft: =15
                     Size: =13
                     Text: ="End Date"
                     Width: =labEndDate.Width
@@ -176,7 +174,6 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    PaddingLeft: =15
                     Size: =13
                     Text: ="Start Date"
                     Width: =labStartDate.Width
@@ -195,7 +192,6 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    PaddingLeft: =15
                     Size: =13
                     Text: ="Hrs/Wk"
                     Width: =labProjHours.Width
@@ -214,7 +210,6 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    PaddingLeft: =15
                     Size: =13
                     Text: ="Type"
                     Width: =labPosType.Width
@@ -232,7 +227,6 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    PaddingLeft: =15
                     Size: =13
                     Text: ="Faculty Lead"
                     Width: =labFacultyLead.Width
@@ -250,7 +244,6 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
-                    PaddingLeft: =15
                     Size: =13
                     Text: ="Project Title"
                     Width: =labProjTitle.Width
@@ -385,6 +378,22 @@
                     Size: =13
                     Text: =ThisItem.'Project Title'
                     Width: =297
-                    X: =40
+                    X: =5
                     ZIndex: =14
+
+                SeparatorLine_1 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledFill: =RGBA(0, 0, 0, 1)
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(0, 0, 0, 1)
+                    FocusedBorderThickness: =4
+                    Height: =1
+                    HoverFill: =RGBA(0, 0, 0, 1)
+                    OnSelect: =Select(Parent)
+                    PressedFill: =RGBA(0, 0, 0, 1)
+                    Width: =Parent.TemplateWidth
+                    Y: =39
+                    ZIndex: =15
 
