@@ -182,6 +182,7 @@
                     ZIndex: =3
 
                 labProjHours As label:
+                    Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -200,6 +201,7 @@
                     ZIndex: =4
 
                 labPosType As label:
+                    Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -320,7 +322,7 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    Width: =139
+                    Width: =txtStartDate.Width
                     X: =txtStartDate.X+txtStartDate.Width
                     ZIndex: =2
 
@@ -347,11 +349,12 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    Width: =139
+                    Width: =133
                     X: =txtProjHours.X+txtProjHours.Width
                     ZIndex: =3
 
                 txtProjHours As text:
+                    Align: =Align.Center
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -374,11 +377,12 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    Width: =85
+                    Width: =96
                     X: =txtPosType.X+txtPosType.Width
                     ZIndex: =4
 
                 txtPosType As text:
+                    Align: =Align.Center
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
