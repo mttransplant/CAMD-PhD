@@ -1,0 +1,99 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr829_phdfundingsourceses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr829_phdfundingsources",
+    "Name": "PhD Funding Sources",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr829_banner_account": "Banner Account",
+      "cr829_banner_index": "Banner Index",
+      "cr829_banner_organization": "Banner Organization",
+      "cr829_contact_email": "Contact Email",
+      "cr829_contact_name": "Contact Name",
+      "cr829_funding_source_name": "Funding Source Name",
+      "cr829_phdfundingsources_AsyncOperations": "System Jobs",
+      "cr829_phdfundingsources_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr829_phdfundingsources_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr829_phdfundingsources_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr829_phdfundingsources_ProcessSession": "Process Sessions",
+      "cr829_phdfundingsources_SyncErrors": "Sync Errors",
+      "cr829_phdfundingsourcesid": "PhD Funding Sources",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PhD Funding Sources",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PhD Funding Sources (Views)",
+    "Name": "_cr829_phdfundingsources_views",
+    "RelatedEntityName": "PhD Funding Sources",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "08548a81-9c77-4ca0-9b1b-6a59bf82f76e": "PhD Funding Sources Advanced Find View",
+      "0b864af6-4eb7-4fba-addd-e6ab9288157e": "Inactive PhD Funding Sources",
+      "104e0b60-6873-4d10-8c04-5544daee40dc": "Active PhD Funding Sources",
+      "3bbf269d-659e-462f-8d77-48000333c773": "PhD Funding Sources Lookup View",
+      "e3dcd2f2-664e-447b-9978-06629ce9b08f": "PhD Funding Sources Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (PhD Funding Sources)",
+    "Name": "cr829_phdfundingsources_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PhD Funding Sources"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PhD Funding Sources",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PhD Funding Sources)",
+    "Name": "cr829_phdfundingsources_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PhD Funding Sources"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PhD Funding Sources",
+    "Type": "OptionSetInfo"
+  }
+]

@@ -128,13 +128,103 @@
                     X: =labFundingTitle.X
                     ZIndex: =7
 
+                colFundingOrg As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Banner Org"
+                    Width: =labFundingOrg.Width
+                    X: =labFundingOrg.X
+                    ZIndex: =8
+
+                colFundingIndex As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Banner Index"
+                    Width: =labFundingIndex.Width
+                    X: =labFundingIndex.X
+                    ZIndex: =9
+
+                colFundingAcct As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Banner Account"
+                    Width: =labFundingIndex.Width
+                    X: =labFundingAcct.X
+                    ZIndex: =10
+
+                colFundingContact As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Contact"
+                    Width: =labFundingContact.Width
+                    X: =labFundingContact.X
+                    ZIndex: =11
+
+                colFundingEmail As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Email"
+                    Width: =labFundingEmail.Width
+                    X: =labFundingEmail.X
+                    ZIndex: =12
+
             galFunding As gallery.galleryVertical:
                 '#CopilotOverlayLabel': ="Filtered"
                 AlignInContainer: =AlignInContainer.SetByContainer
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Height: =Parent.Height
-                Items: =Sort(Sort('PhD Positions','Project Title'),'Faculty Lead')
+                Items: ='PhD Funding Sources'
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
@@ -172,7 +262,80 @@
                     Font: =Font.'Segoe UI'
                     OnSelect: =Select(Parent)
                     Size: =13
-                    Text: =ThisItem.'Position Title'
+                    Text: =ThisItem.'Funding Source Name'
+                    Width: =251
                     X: =5
                     ZIndex: =16
+
+                labFundingOrg As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.'Banner Organization'
+                    X: =labFundingTitle.X+labFundingTitle.Width
+                    ZIndex: =17
+
+                labFundingIndex As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.'Banner Index'
+                    X: =labFundingOrg.X+labFundingOrg.Width
+                    ZIndex: =18
+
+                labFundingAcct As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.'Banner Account'
+                    X: =labFundingIndex.X+labFundingIndex.Width
+                    ZIndex: =19
+
+                labFundingContact As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.'Contact Name'
+                    Width: =207
+                    X: =labFundingAcct.X+labFundingAcct.Width
+                    ZIndex: =20
+
+                labFundingEmail As htmlViewer:
+                    Color: =RGBA(15, 108, 189, 1)
+                    Font: =Font.'Segoe UI'
+                    HtmlText: |-
+                        ="<a href=mailto:"&ThisItem.'Contact Email'&">"&ThisItem.'Contact Email'&"</a"
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Width: =Parent.Width-Self.X-10
+                    X: =labFundingContact.X+labFundingContact.Width
+                    ZIndex: =22
 
