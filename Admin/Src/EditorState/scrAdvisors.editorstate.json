@@ -6571,7 +6571,14 @@
         "HoverFill",
         "Font",
         "FontWeight",
-        "Align",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Align.Left",
+          "InvariantPropertyName": "Align",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "VerticalAlign",
         {
           "AFDDataSourceName": "",
@@ -6720,7 +6727,7 @@
         {
           "Category": "Design",
           "PropertyName": "Align",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -7421,7 +7428,14 @@
         "HoverFill",
         "Font",
         "FontWeight",
-        "Align",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Align.Left",
+          "InvariantPropertyName": "Align",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "VerticalAlign",
         {
           "AFDDataSourceName": "",
@@ -7495,7 +7509,7 @@
         {
           "Category": "Design",
           "PropertyName": "Align",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
