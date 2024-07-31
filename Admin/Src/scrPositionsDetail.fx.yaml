@@ -226,7 +226,6 @@
 
             ctrHiddenSizes As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                FillPortions: =0
                 Height: =labPosDescHeight.Height
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
@@ -692,7 +691,7 @@
                         EnableSpellCheck: =true
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
-                        Height: =labPosDescHeight.Height
+                        Height: =labPosDescHeight.Height*1.1
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -808,7 +807,7 @@
                         EnableSpellCheck: =true
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
-                        Height: =labProjDescHeight.Height
+                        Height: =labProjDescHeight.Height*1.1
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -924,7 +923,7 @@
                         EnableSpellCheck: =true
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
-                        Height: =labQualHeight.Height
+                        Height: =labQualHeight.Height*1.1
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)

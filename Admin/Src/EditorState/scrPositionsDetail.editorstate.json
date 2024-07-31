@@ -276,17 +276,17 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
           "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -2662,7 +2662,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "DataCardKey28": {
@@ -2937,7 +2937,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "DataCardKey29": {
@@ -3212,7 +3212,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "DataCardKey30": {
@@ -3487,7 +3487,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "DataCardKey31": {
@@ -3762,7 +3762,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "DataCardKey32": {
@@ -4037,7 +4037,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "DataCardKey33": {
@@ -4312,7 +4312,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "DataCardKey34": {
@@ -4587,7 +4587,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "DataCardKey35": {
@@ -4862,7 +4862,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "DataCardKey36": {
@@ -5137,7 +5137,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "DataCardKey37": {
@@ -5412,7 +5412,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "DataCardKey38": {
@@ -5687,7 +5687,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "DataCardValue23": {
@@ -10144,7 +10144,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "criticalErrorLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "ErrorMessage18": {
@@ -10426,7 +10426,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "criticalErrorLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "ErrorMessage19": {
@@ -10708,7 +10708,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "criticalErrorLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "ErrorMessage20": {
@@ -10990,7 +10990,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "criticalErrorLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "ErrorMessage22": {
@@ -11272,7 +11272,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "criticalErrorLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "ErrorMessage23": {
@@ -11554,7 +11554,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "criticalErrorLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "ErrorMessage26": {
@@ -11836,7 +11836,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "criticalErrorLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "ErrorMessage27": {
@@ -12118,7 +12118,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "criticalErrorLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "ErrorMessage28": {
@@ -12400,7 +12400,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "criticalErrorLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "ErrorMessage29": {
@@ -12682,7 +12682,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "criticalErrorLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "ErrorMessage30": {
@@ -12964,7 +12964,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "criticalErrorLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "ErrorMessage31": {
@@ -13246,7 +13246,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "criticalErrorLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "Faculty Lead_DataCard1": {
@@ -16468,7 +16468,7 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -18336,7 +18336,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "StarVisible18": {
@@ -18618,7 +18618,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "StarVisible19": {
@@ -18900,7 +18900,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "StarVisible20": {
@@ -19182,7 +19182,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "StarVisible22": {
@@ -19464,7 +19464,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "StarVisible23": {
@@ -19746,7 +19746,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "StarVisible26": {
@@ -20028,7 +20028,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "StarVisible27": {
@@ -20310,7 +20310,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "StarVisible28": {
@@ -20592,7 +20592,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "StarVisible29": {
@@ -20874,7 +20874,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "StarVisible30": {
@@ -21156,7 +21156,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "StarVisible31": {
@@ -21438,7 +21438,7 @@
           "RuleProviderType": "Unknown"
         }
       ],
-      "StyleName": "accentLabelStyle",
+      "StyleName": "defaultLabelStyle",
       "Type": "ControlInfo"
     },
     "Student Placed_DataCard1": {
