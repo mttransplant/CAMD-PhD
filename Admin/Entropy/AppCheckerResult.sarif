@@ -614,66 +614,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrPositions",
-                "type": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scrPositions",
-                "type": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.AccessibleLabel"
                 }
               ],
@@ -3537,36 +3477,6 @@
                 "member": "OnSelect",
                 "module": "scrAdvisors",
                 "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions.OnSelect"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions.OnSelect",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "OnSelect",
-                "module": "scrPositions",
-                "type": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.cntAdvColumns_1.btnLoadPositions"
               }
             }
           ],
