@@ -141,108 +141,6 @@
                     Width: =Parent.Width
                     ZIndex: =1
 
-                    btn_aSave_1 As icon.Save:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        Color: =RGBA(0, 120, 212, 1)
-                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
-                        DisabledColor: =RGBA(225, 223, 221, 1)
-                        DisabledFill: =RGBA(0, 0, 0, 0)
-                        FocusedBorderThickness: =4
-                        Height: =20
-                        HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(16, 110, 190, 1)
-                        HoverFill: =RGBA(0, 0, 0, 0)
-                        Icon: =Icon.Save
-                        OnSelect: |-
-                            =Patch('PhD Advisors',ShowColumns(colAdvisorUpdates,'Advisor Name', 'Advisor Email', AdvisorID));
-                            Notify("Edits successfully saved",NotificationType.Success,5000);
-                            UpdateContext({IsEditing:false});
-                            Select(btnLoadPositions)
-                        PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =RGBA(16, 110, 190, 1)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        Tooltip: ="Save Changes"
-                        Visible: =IsEditing And CountRows(colAdvisorUpdates)>0
-                        Width: =30
-                        X: =btn_aEdit_1.X+btn_aEdit_1.Width
-                        Y: =10
-                        ZIndex: =1
-
-                    btn_aEdit_1 As icon.Edit:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        Color: =RGBA(0, 120, 212, 1)
-                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
-                        DisabledColor: =RGBA(225, 223, 221, 1)
-                        DisabledFill: =RGBA(0, 0, 0, 0)
-                        FocusedBorderThickness: =4
-                        Height: =20
-                        HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(16, 110, 190, 1)
-                        HoverFill: =RGBA(0, 0, 0, 0)
-                        Icon: =Icon.Edit
-                        OnSelect: |-
-                            =UpdateContext({IsEditing:true})
-                        PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =RGBA(16, 110, 190, 1)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        Tooltip: ="Edit Advisors"
-                        Visible: =Not(IsEditing)
-                        Width: =30
-                        X: =Parent.Width-btn_aEdit_1.Width-btn_aSave_1.Width-10
-                        Y: =10
-                        ZIndex: =2
-
-                    btn_aCancel_1 As icon.Cancel:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        Color: =RGBA(0, 120, 212, 1)
-                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
-                        DisabledColor: =RGBA(225, 223, 221, 1)
-                        DisabledFill: =RGBA(0, 0, 0, 0)
-                        FocusedBorderThickness: =4
-                        Height: =20
-                        HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(16, 110, 190, 1)
-                        HoverFill: =RGBA(0, 0, 0, 0)
-                        Icon: =Icon.Cancel
-                        OnSelect: |-
-                            =UpdateContext({IsEditing:false});
-                            Select(btnLoadPositions)
-                        PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =RGBA(16, 110, 190, 1)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        Tooltip: ="Discard Changes"
-                        Visible: =IsEditing
-                        Width: =30
-                        X: =btn_aEdit_1.X
-                        Y: =10
-                        ZIndex: =3
-
-                    btnLoadPositions As icon.Reload:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        Color: =RGBA(0, 120, 212, 1)
-                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
-                        DisabledColor: =RGBA(225, 223, 221, 1)
-                        DisabledFill: =RGBA(0, 0, 0, 0)
-                        FocusedBorderThickness: =4
-                        Height: =20
-                        HoverBorderColor: =RGBA(0, 0, 0, 0)
-                        HoverColor: =RGBA(16, 110, 190, 1)
-                        HoverFill: =RGBA(0, 0, 0, 0)
-                        Icon: =Icon.Reload
-                        OnSelect: |-
-                            =UpdateContext({IsLoading:true});
-                            ClearCollect(colPositions,'PhD Positions');
-                            UpdateContext({IsLoading:false});
-                        PressedBorderColor: =RGBA(0, 0, 0, 0)
-                        PressedColor: =RGBA(16, 110, 190, 1)
-                        PressedFill: =RGBA(0, 0, 0, 0)
-                        Tooltip: ="Reload"
-                        Visible: =!IsEditing
-                        Width: =btn_aSave_1.Width
-                        X: =btn_aSave_1.X
-                        Y: =10
-                        ZIndex: =4
-
                     labProjDesc As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
@@ -258,7 +156,7 @@
                         Text: ="Project Description"
                         Width: =txtProjDesc.Width
                         X: =txtProjDesc.X
-                        ZIndex: =5
+                        ZIndex: =1
 
                     labProjHours As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -275,7 +173,7 @@
                         Text: ="Hrs/Wk"
                         Width: =txtProjHours.Width
                         X: =txtProjHours.X
-                        ZIndex: =6
+                        ZIndex: =2
 
                     labPosType As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -292,7 +190,7 @@
                         Text: ="Type"
                         Width: =txtPosType.Width
                         X: =txtPosType.X
-                        ZIndex: =7
+                        ZIndex: =3
 
                     labProjTitle As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -309,7 +207,7 @@
                         Text: ="Project Title"
                         Width: =txtProjTitle.Width
                         X: =txtProjTitle.X
-                        ZIndex: =8
+                        ZIndex: =4
 
                     labFacultyLead As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -326,32 +224,29 @@
                         Text: ="Faculty Lead"
                         Width: =txtFacultyLead.Width
                         X: =txtFacultyLead.X
-                        ZIndex: =9
+                        ZIndex: =5
 
-                cntSpinner_4 As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    Height: =Parent.Height
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Visible: =IsLoading
-                    Width: =Parent.Width
-                    ZIndex: =3
-
-                    spnLoading_4 As Spinner:
-                        BasePaletteColor: =
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =
-                        Height: =Self.Width
-                        SpinnerSize: ='Spinner.SpinnerSize'.Huge
-                        Visible: =true
-                        Width: =100
-                        X: =(Parent.Width-spnLoading_4.Width)/2
-                        Y: =40
-                        ZIndex: =1
+                    btnLoadPositions As icon.Reload:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(0, 120, 212, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =20
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Reload
+                        OnSelect: =ClearCollect(colPositions,'PhD Positions');
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="Reload"
+                        Width: =30
+                        X: =Parent.Width-btnLoadPositions.Width-10
+                        Y: =10
+                        ZIndex: =6
 
                 galAdvisors_1 As gallery.galleryVertical:
                     '#CopilotOverlayLabel': ="Filtered"
@@ -364,8 +259,8 @@
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
+                    LoadingSpinnerColor: =Color.DarkGray
                     TemplateSize: =40
-                    Visible: =!IsLoading
                     Width: =Parent.Width
                     ZIndex: =4
 
@@ -377,7 +272,7 @@
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                        DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -405,7 +300,7 @@
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                        DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -432,7 +327,7 @@
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                        DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -459,7 +354,7 @@
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                        DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -486,7 +381,7 @@
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                        DisplayMode: =DisplayMode.View
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
