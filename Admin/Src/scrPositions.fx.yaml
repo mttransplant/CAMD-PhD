@@ -127,7 +127,7 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
-                labStudentPlaced As label:
+                colStudentPlaced As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -141,11 +141,11 @@
                     PaddingLeft: =15
                     Size: =13
                     Text: ="Student Placed"
-                    Width: =txtStudentPlaced.Width
-                    X: =txtStudentPlaced.X
+                    Width: =labStudentPlaced.Width
+                    X: =labStudentPlaced.X
                     ZIndex: =1
 
-                labEndDate As label:
+                colEndDate As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -160,11 +160,11 @@
                     PaddingLeft: =15
                     Size: =13
                     Text: ="End Date"
-                    Width: =txtEndDate.Width
-                    X: =txtEndDate.X
+                    Width: =labEndDate.Width
+                    X: =labEndDate.X
                     ZIndex: =2
 
-                labStartDate As label:
+                colStartDate As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -179,11 +179,11 @@
                     PaddingLeft: =15
                     Size: =13
                     Text: ="Start Date"
-                    Width: =txtStartDate.Width
-                    X: =txtStartDate.X
+                    Width: =labStartDate.Width
+                    X: =labStartDate.X
                     ZIndex: =3
 
-                labProjHours As label:
+                colProjHours As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -198,11 +198,11 @@
                     PaddingLeft: =15
                     Size: =13
                     Text: ="Hrs/Wk"
-                    Width: =txtProjHours.Width
-                    X: =txtProjHours.X
+                    Width: =labProjHours.Width
+                    X: =labProjHours.X
                     ZIndex: =4
 
-                labPosType As label:
+                colPosType As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -217,29 +217,11 @@
                     PaddingLeft: =15
                     Size: =13
                     Text: ="Type"
-                    Width: =txtPosType.Width
-                    X: =txtPosType.X
+                    Width: =labPosType.Width
+                    X: =labPosType.X
                     ZIndex: =5
 
-                labProjTitle As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(50, 49, 48, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
-                    DisplayMode: =DisplayMode.View
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    PaddingLeft: =15
-                    Size: =13
-                    Text: ="Project Title"
-                    Width: =txtProjTitle.Width
-                    X: =txtProjTitle.X
-                    ZIndex: =6
-
-                labFacultyLead As label:
+                colFacultyLead As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -253,8 +235,26 @@
                     PaddingLeft: =15
                     Size: =13
                     Text: ="Faculty Lead"
-                    Width: =txtFacultyLead.Width
-                    X: =txtFacultyLead.X
+                    Width: =labFacultyLead.Width
+                    X: =labFacultyLead.X
+                    ZIndex: =6
+
+                colProjTitle As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =15
+                    Size: =13
+                    Text: ="Project Title"
+                    Width: =labProjTitle.Width
+                    X: =labProjTitle.X
                     ZIndex: =7
 
             galPositions As gallery.galleryVertical:
@@ -274,7 +274,7 @@
                 Width: =Parent.Width
                 ZIndex: =4
 
-                txtStudentPlaced As text:
+                labStudentPlaced As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -298,10 +298,10 @@
                     RadiusTopRight: =0
                     Size: =13
                     Width: =Parent.Width-Self.X-10
-                    X: =txtEndDate.X+txtEndDate.Width
+                    X: =labEndDate.X+labEndDate.Width
                     ZIndex: =1
 
-                txtEndDate As text:
+                labEndDate As text:
                     Align: =Align.Center
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.None
@@ -325,11 +325,11 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    Width: =txtStartDate.Width
-                    X: =txtStartDate.X+txtStartDate.Width
+                    Width: =labStartDate.Width
+                    X: =labStartDate.X+labStartDate.Width
                     ZIndex: =2
 
-                txtStartDate As text:
+                labStartDate As text:
                     Align: =Align.Center
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.None
@@ -354,10 +354,10 @@
                     RadiusTopRight: =0
                     Size: =13
                     Width: =133
-                    X: =txtProjHours.X+txtProjHours.Width
+                    X: =labProjHours.X+labProjHours.Width
                     ZIndex: =3
 
-                txtProjHours As text:
+                labProjHours As text:
                     Align: =Align.Center
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.None
@@ -382,10 +382,10 @@
                     RadiusTopRight: =0
                     Size: =13
                     Width: =96
-                    X: =txtPosType.X+txtPosType.Width
+                    X: =labPosType.X+labPosType.Width
                     ZIndex: =4
 
-                txtPosType As text:
+                labPosType As text:
                     Align: =Align.Center
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.None
@@ -410,10 +410,10 @@
                     RadiusTopRight: =0
                     Size: =13
                     Width: =64
-                    X: =txtFacultyLead.X+txtFacultyLead.Width
+                    X: =labFacultyLead.X+labFacultyLead.Width
                     ZIndex: =5
 
-                txtFacultyLead As text:
+                labFacultyLead As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -437,10 +437,10 @@
                     RadiusTopRight: =0
                     Size: =13
                     Width: =193
-                    X: =txtProjTitle.X+txtProjTitle.Width
+                    X: =labProjTitle.X+labProjTitle.Width
                     ZIndex: =6
 
-                txtProjTitle As text:
+                labProjTitle As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2

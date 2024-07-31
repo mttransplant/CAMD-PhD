@@ -4034,19 +4034,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtFacultyLead.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labFacultyLead.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtFacultyLead.AccessibleLabel",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labFacultyLead.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrPositions",
-                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtFacultyLead"
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labFacultyLead"
               }
             }
           ],
@@ -4064,19 +4064,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjTitle.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labProjTitle.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjTitle.AccessibleLabel",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labProjTitle.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrPositions",
-                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjTitle"
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labProjTitle"
               }
             }
           ],
@@ -4094,19 +4094,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtPosType.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labPosType.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtPosType.AccessibleLabel",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labPosType.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrPositions",
-                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtPosType"
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labPosType"
               }
             }
           ],
@@ -4124,19 +4124,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjHours.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labProjHours.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjHours.AccessibleLabel",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labProjHours.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrPositions",
-                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjHours"
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labProjHours"
               }
             }
           ],
@@ -4154,19 +4154,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtStartDate.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labStartDate.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtStartDate.AccessibleLabel",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labStartDate.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrPositions",
-                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtStartDate"
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labStartDate"
               }
             }
           ],
@@ -4184,19 +4184,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtEndDate.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labEndDate.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtEndDate.AccessibleLabel",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labEndDate.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrPositions",
-                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtEndDate"
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labEndDate"
               }
             }
           ],
@@ -4214,19 +4214,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtStudentPlaced.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labStudentPlaced.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtStudentPlaced.AccessibleLabel",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labStudentPlaced.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrPositions",
-                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtStudentPlaced"
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.labStudentPlaced"
               }
             }
           ],
