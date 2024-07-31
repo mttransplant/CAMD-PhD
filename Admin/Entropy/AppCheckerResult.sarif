@@ -554,19 +554,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.cntPositions.cntHeaderPositions.Container6_7.icoHomePositions.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsHeader.ctrPositionsHeader2.icoPositionsHome.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.cntHeaderPositions.Container6_7.icoHomePositions.AccessibleLabel",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsHeader.ctrPositionsHeader2.icoPositionsHome.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrPositions",
-                "type": "scrPositions.cntPositions.cntHeaderPositions.Container6_7.icoHomePositions"
+                "type": "scrPositions.ctrPositions.ctrPositionsHeader.ctrPositionsHeader2.icoPositionsHome"
               }
             }
           ],
@@ -584,19 +584,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.cntPositions.cntHeaderPositions.Container6_7.icoHomePositions.TabIndex"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsHeader.ctrPositionsHeader2.icoPositionsHome.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.cntHeaderPositions.Container6_7.icoHomePositions.TabIndex",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsHeader.ctrPositionsHeader2.icoPositionsHome.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "scrPositions",
-                "type": "scrPositions.cntPositions.cntHeaderPositions.Container6_7.icoHomePositions"
+                "type": "scrPositions.ctrPositions.ctrPositionsHeader.ctrPositionsHeader2.icoPositionsHome"
               }
             }
           ],
@@ -614,49 +614,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrPositions",
-                "type": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.TabIndex",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "scrPositions",
-                "type": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1"
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions"
               }
             }
           ],
@@ -674,19 +644,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtFacultyLead.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtFacultyLead.AccessibleLabel",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrPositions",
-                "type": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtFacultyLead"
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions"
               }
             }
           ],
@@ -704,19 +674,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtProjTitle.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjDesc.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtProjTitle.AccessibleLabel",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjDesc.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrPositions",
-                "type": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtProjTitle"
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjDesc"
               }
             }
           ],
@@ -734,19 +704,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtPosType.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjHours.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtPosType.AccessibleLabel",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjHours.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrPositions",
-                "type": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtPosType"
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjHours"
               }
             }
           ],
@@ -764,19 +734,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtProjHours.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtPosType.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtProjHours.AccessibleLabel",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtPosType.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrPositions",
-                "type": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtProjHours"
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtPosType"
               }
             }
           ],
@@ -794,19 +764,49 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtProjDesc.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjTitle.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtProjDesc.AccessibleLabel",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjTitle.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrPositions",
-                "type": "scrPositions.cntPositions.Container1_1.cntAdvisors_1.galAdvisors_1.txtProjDesc"
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjTitle"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtFacultyLead.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtFacultyLead.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrPositions",
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtFacultyLead"
               }
             }
           ],
@@ -3584,19 +3584,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.cntPositions.cntHeaderPositions.X"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsHeader.X"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.cntHeaderPositions.X",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsHeader.X",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "X",
                 "module": "scrPositions",
-                "type": "scrPositions.cntPositions.cntHeaderPositions"
+                "type": "scrPositions.ctrPositions.ctrPositionsHeader"
               }
             }
           ],
@@ -3614,19 +3614,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.cntPositions.cntHeaderPositions.Width"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsHeader.Width"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.cntPositions.cntHeaderPositions.Width",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsHeader.Width",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Width",
                 "module": "scrPositions",
-                "type": "scrPositions.cntPositions.cntHeaderPositions"
+                "type": "scrPositions.ctrPositions.ctrPositionsHeader"
               }
             }
           ],

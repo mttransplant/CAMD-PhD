@@ -6,7 +6,7 @@
         Clear(colAdvisees)
     OnVisible: =
 
-    cntPositions As groupContainer.verticalAutoLayoutContainer:
+    ctrPositions As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -26,7 +26,7 @@
         X: =(Parent.Width-Self.Width)/2
         ZIndex: =1
 
-        cntHeaderPositions As groupContainer.horizontalAutoLayoutContainer:
+        ctrPositionsHeader As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -44,7 +44,7 @@
             X: =ctrListMain.X
             ZIndex: =1
 
-            Container6_7 As groupContainer.manualLayoutContainer:
+            ctrPositionsHeader2 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
@@ -57,7 +57,7 @@
                 Width: =Parent.Width
                 ZIndex: =3
 
-                labHeaderPositions As label:
+                labPositionsHeader As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -72,10 +72,10 @@
                     Height: =Parent.Height
                     Size: =30
                     Text: ="CAMD PhD Database - TA/RA Positions"
-                    Width: =cntHeaderPositions.Width
+                    Width: =ctrPositionsHeader.Width
                     ZIndex: =1
 
-                icoHomePositions As icon.Home:
+                icoPositionsHome As icon.Home:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(255, 255, 255, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -96,284 +96,270 @@
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =2
 
-        Container1_1 As groupContainer.horizontalAutoLayoutContainer:
+        ctrPositionsMain As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            Height: =Parent.Height
+            LayoutDirection: =LayoutDirection.Vertical
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
-            Width: =Parent.Width-(cntPositions.PaddingLeft+cntPositions.PaddingRight)
-            ZIndex: =4
+            RadiusBottomLeft: =8
+            RadiusBottomRight: =8
+            RadiusTopLeft: =8
+            RadiusTopRight: =8
+            Width: =Parent.Width
+            ZIndex: =5
 
-            cntAdvisors_1 As groupContainer.verticalAutoLayoutContainer:
+            ctrPositionsColumns As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
-                Fill: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(180, 214, 250, 1)
                 FillPortions: =0
-                Height: =Parent.Height
-                LayoutDirection: =LayoutDirection.Vertical
+                Height: =40
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
-                LayoutMode: =LayoutMode.Auto
-                RadiusBottomLeft: =8
-                RadiusBottomRight: =8
-                RadiusTopLeft: =8
-                RadiusTopRight: =8
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
                 Width: =Parent.Width
                 ZIndex: =1
 
-                cntAdvColumns_1 As groupContainer.manualLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
-                    DropShadow: =DropShadow.Light
-                    Fill: =RGBA(180, 214, 250, 1)
-                    FillPortions: =0
-                    Height: =40
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =Parent.Width
+                labProjDesc As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =15
+                    Size: =13
+                    Text: ="Project Description"
+                    Width: =txtProjDesc.Width
+                    X: =txtProjDesc.X
                     ZIndex: =1
 
-                    labProjDesc As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Bold
-                        PaddingLeft: =15
-                        Size: =13
-                        Text: ="Project Description"
-                        Width: =txtProjDesc.Width
-                        X: =txtProjDesc.X
-                        ZIndex: =1
+                labProjHours As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =15
+                    Size: =13
+                    Text: ="Hrs/Wk"
+                    Width: =txtProjHours.Width
+                    X: =txtProjHours.X
+                    ZIndex: =2
 
-                    labProjHours As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Bold
-                        PaddingLeft: =15
-                        Size: =13
-                        Text: ="Hrs/Wk"
-                        Width: =txtProjHours.Width
-                        X: =txtProjHours.X
-                        ZIndex: =2
+                labPosType As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =15
+                    Size: =13
+                    Text: ="Type"
+                    Width: =txtPosType.Width
+                    X: =txtPosType.X
+                    ZIndex: =3
 
-                    labPosType As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Bold
-                        PaddingLeft: =15
-                        Size: =13
-                        Text: ="Type"
-                        Width: =txtPosType.Width
-                        X: =txtPosType.X
-                        ZIndex: =3
-
-                    labProjTitle As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Bold
-                        PaddingLeft: =15
-                        Size: =13
-                        Text: ="Project Title"
-                        Width: =txtProjTitle.Width
-                        X: =txtProjTitle.X
-                        ZIndex: =4
-
-                    labFacultyLead As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Bold
-                        PaddingLeft: =15
-                        Size: =13
-                        Text: ="Faculty Lead"
-                        Width: =txtFacultyLead.Width
-                        X: =txtFacultyLead.X
-                        ZIndex: =5
-
-                galAdvisors_1 As gallery.galleryVertical:
-                    '#CopilotOverlayLabel': ="Filtered"
-                    AlignInContainer: =AlignInContainer.SetByContainer
-                    BorderColor: =RGBA(245, 245, 245, 1)
-                    DelayItemLoading: =true
-                    Height: =Parent.Height
-                    Items: =Sort(Sort('PhD Positions','Project Title'),'Faculty Lead')
-                    Layout: =Layout.Vertical
-                    LayoutMinHeight: =287
-                    LayoutMinWidth: =320
-                    LoadingSpinner: =LoadingSpinner.Data
-                    LoadingSpinnerColor: =Color.DarkGray
-                    TemplateSize: =40
-                    Width: =Parent.Width
+                labProjTitle As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =15
+                    Size: =13
+                    Text: ="Project Title"
+                    Width: =txtProjTitle.Width
+                    X: =txtProjTitle.X
                     ZIndex: =4
 
-                    txtProjDesc As text:
-                        BorderColor: =RGBA(245, 245, 245, 1)
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        Default: =ThisItem.'Project Description'
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =DisplayMode.View
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        HoverBorderColor: =RGBA(16, 110, 190, 1)
-                        HoverColor: =RGBA(50, 49, 48, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        Mode: =TextMode.MultiLine
-                        OnSelect: =Select(Parent)
-                        PressedBorderColor: =RGBA(0, 120, 212, 1)
-                        PressedColor: =RGBA(50, 49, 48, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Width: =584
-                        X: =txtProjHours.X+txtProjHours.Width+5
-                        ZIndex: =1
+                labFacultyLead As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =15
+                    Size: =13
+                    Text: ="Faculty Lead"
+                    Width: =txtFacultyLead.Width
+                    X: =txtFacultyLead.X
+                    ZIndex: =5
 
-                    txtProjHours As text:
-                        BorderColor: =RGBA(245, 245, 245, 1)
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        Default: =ThisItem.'Weekly Hours'
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =DisplayMode.View
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        HoverBorderColor: =RGBA(16, 110, 190, 1)
-                        HoverColor: =RGBA(50, 49, 48, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =Select(Parent)
-                        PressedBorderColor: =RGBA(0, 120, 212, 1)
-                        PressedColor: =RGBA(50, 49, 48, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Width: =85
-                        X: =txtPosType.X+txtPosType.Width+5
-                        ZIndex: =2
+            galPositions As gallery.galleryVertical:
+                '#CopilotOverlayLabel': ="Filtered"
+                AlignInContainer: =AlignInContainer.SetByContainer
+                BorderColor: =RGBA(245, 245, 245, 1)
+                DelayItemLoading: =true
+                Height: =Parent.Height
+                Items: =Sort(Sort('PhD Positions','Project Title'),'Faculty Lead')
+                Layout: =Layout.Vertical
+                LayoutMinHeight: =287
+                LayoutMinWidth: =320
+                LoadingSpinner: =LoadingSpinner.Data
+                LoadingSpinnerColor: =Color.DarkGray
+                TemplateSize: =40
+                Width: =Parent.Width
+                ZIndex: =4
 
-                    txtPosType As text:
-                        BorderColor: =RGBA(245, 245, 245, 1)
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        Default: =ThisItem.'Position Type'
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =DisplayMode.View
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        HoverBorderColor: =RGBA(16, 110, 190, 1)
-                        HoverColor: =RGBA(50, 49, 48, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =Select(Parent)
-                        PressedBorderColor: =RGBA(0, 120, 212, 1)
-                        PressedColor: =RGBA(50, 49, 48, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Width: =64
-                        X: =txtProjTitle.X+txtProjTitle.Width+5
-                        ZIndex: =3
+                txtProjDesc As text:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =ThisItem.'Project Description'
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    Mode: =TextMode.MultiLine
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedColor: =RGBA(50, 49, 48, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Width: =584
+                    X: =txtProjHours.X+txtProjHours.Width
+                    ZIndex: =1
 
-                    txtProjTitle As text:
-                        BorderColor: =RGBA(245, 245, 245, 1)
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        Default: =ThisItem.'Project Title'
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =DisplayMode.View
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        HoverBorderColor: =RGBA(16, 110, 190, 1)
-                        HoverColor: =RGBA(50, 49, 48, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =Select(Parent)
-                        PressedBorderColor: =RGBA(0, 120, 212, 1)
-                        PressedColor: =RGBA(50, 49, 48, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Width: =330
-                        X: =labFacultyLead.X+labFacultyLead.Width+5
-                        ZIndex: =4
+                txtProjHours As text:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =ThisItem.'Weekly Hours'
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedColor: =RGBA(50, 49, 48, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Width: =85
+                    X: =txtPosType.X+txtPosType.Width
+                    ZIndex: =2
 
-                    txtFacultyLead As text:
-                        BorderColor: =RGBA(245, 245, 245, 1)
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        Default: =ThisItem.'Faculty Lead'
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        DisplayMode: =DisplayMode.View
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        HoverBorderColor: =RGBA(16, 110, 190, 1)
-                        HoverColor: =RGBA(50, 49, 48, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        OnSelect: =Select(Parent)
-                        PressedBorderColor: =RGBA(0, 120, 212, 1)
-                        PressedColor: =RGBA(50, 49, 48, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Width: =216
-                        ZIndex: =5
+                txtPosType As text:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =ThisItem.'Position Type'
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedColor: =RGBA(50, 49, 48, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Width: =64
+                    X: =txtProjTitle.X+txtProjTitle.Width
+                    ZIndex: =3
+
+                txtProjTitle As text:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =ThisItem.'Project Title'
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedColor: =RGBA(50, 49, 48, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Width: =330
+                    X: =txtFacultyLead.X+txtFacultyLead.Width
+                    ZIndex: =4
+
+                txtFacultyLead As text:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =ThisItem.'Faculty Lead'
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedColor: =RGBA(50, 49, 48, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Width: =250
+                    ZIndex: =5
 
