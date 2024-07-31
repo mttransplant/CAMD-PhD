@@ -142,7 +142,7 @@
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
-                    Tooltip: ="Edit Student Info"
+                    Tooltip: ="Edit Position Info"
                     Visible: =Not(IsEditing)
                     Width: =30
                     X: =1259
