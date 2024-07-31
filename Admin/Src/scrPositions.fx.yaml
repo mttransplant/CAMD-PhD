@@ -138,6 +138,7 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
                     Size: =13
                     Text: ="Student Placed"
                     Width: =labStudentPlaced.Width
@@ -156,6 +157,7 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
                     Size: =13
                     Text: ="End Date"
                     Width: =labEndDate.Width
@@ -174,6 +176,7 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
                     Size: =13
                     Text: ="Start Date"
                     Width: =labStartDate.Width
@@ -192,6 +195,7 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
                     Size: =13
                     Text: ="Hrs/Wk"
                     Width: =labProjHours.Width
@@ -210,6 +214,7 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
                     Size: =13
                     Text: ="Type"
                     Width: =labPosType.Width
@@ -227,6 +232,7 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
                     Size: =13
                     Text: ="Faculty Lead"
                     Width: =labFacultyLead.Width
@@ -244,6 +250,7 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
                     Size: =13
                     Text: ="Project Title"
                     Width: =labProjTitle.Width
