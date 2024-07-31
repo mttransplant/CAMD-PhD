@@ -195,7 +195,7 @@
                     FontWeight: =FontWeight.Bold
                     Height: =Parent.Height
                     Size: =13
-                    Text: ="Contact"
+                    Text: ="Contact Name"
                     Width: =labFundingContact.Width
                     X: =labFundingContact.X
                     ZIndex: =11
@@ -213,7 +213,7 @@
                     FontWeight: =FontWeight.Bold
                     Height: =Parent.Height
                     Size: =13
-                    Text: ="Email"
+                    Text: ="Contact Email"
                     Width: =labFundingEmail.Width
                     X: =labFundingEmail.X
                     ZIndex: =12
