@@ -1253,7 +1253,7 @@
         {
           "Category": "Design",
           "PropertyName": "Height",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -1538,7 +1538,7 @@
         {
           "AFDDataSourceName": "",
           "AutoRuleBindingEnabled": false,
-          "AutoRuleBindingString": "LayoutOverflow.Hide",
+          "AutoRuleBindingString": "",
           "InvariantPropertyName": "LayoutOverflowY",
           "IsLockable": false,
           "NameMapSourceSchema": "?"

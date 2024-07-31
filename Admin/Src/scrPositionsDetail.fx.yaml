@@ -12,7 +12,6 @@
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =16
         LayoutMode: =LayoutMode.Auto
-        LayoutOverflowY: =LayoutOverflow.Scroll
         PaddingBottom: =16
         PaddingLeft: =16
         PaddingRight: =16
@@ -691,7 +690,7 @@
                         EnableSpellCheck: =true
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
-                        Height: =labPosDescHeight.Height
+                        Height: =Min(500,labPosDescHeight.Height)
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -807,7 +806,7 @@
                         EnableSpellCheck: =true
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
-                        Height: =labProjDescHeight.Height
+                        Height: =Min(500,labProjDescHeight.Height)
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -923,7 +922,7 @@
                         EnableSpellCheck: =true
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
-                        Height: =labQualHeight.Height
+                        Height: =Min(500,labQualHeight.Height)
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
