@@ -12,6 +12,7 @@
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =16
         LayoutMode: =LayoutMode.Auto
+        LayoutOverflowY: =LayoutOverflow.Scroll
         PaddingBottom: =16
         PaddingLeft: =16
         PaddingRight: =16
@@ -97,8 +98,9 @@
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
+            Height: =ctrPositionsDetailEdit.Height+frmEditPosition.Height
             LayoutDirection: =LayoutDirection.Vertical
-            LayoutMinHeight: =550
+            LayoutMinHeight: =ctrPositionsDetailEdit.Height+frmEditPosition.Height
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
             RadiusBottomLeft: =8
@@ -218,6 +220,7 @@
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
+                    Tooltip: ="Back to Positions List"
                     Width: =30
                     X: =frmEditPosition.X
                     Y: =10
@@ -290,9 +293,11 @@
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DataSource: ='PhD Positions'
                 DefaultMode: =If(IsEditing,FormMode.Edit,FormMode.View)
+                FillPortions: =0
+                Height: ='End Date_DataCard1'.Y+'End Date_DataCard1'.Height+10
                 Item: =galPositions.Selected
                 LayoutMinHeight: =250
-                LayoutMinWidth: =400
+                LayoutMinWidth: =1332
                 ZIndex: =3
 
                 "'Position Title_DataCard4' As typedDataCard.textualEditCard":
