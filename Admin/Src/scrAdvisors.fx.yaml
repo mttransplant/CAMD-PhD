@@ -482,6 +482,7 @@
                     ZIndex: =1
 
                     labCreateNewAdvisor As label:
+                        Align: =Align.Center
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -493,7 +494,7 @@
                         FontWeight: =FontWeight.Bold
                         PaddingLeft: =15
                         Size: =13
-                        Text: ="Create New Advisor"
+                        Text: ="New Advisor"
                         Width: =334
                         ZIndex: =1
 
