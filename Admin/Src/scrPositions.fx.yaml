@@ -141,8 +141,8 @@
                     PaddingLeft: =15
                     Size: =13
                     Text: ="Student Placed"
-                    Width: =drpStudentPlaced.Width
-                    X: =drpStudentPlaced.X
+                    Width: =txtStudentPlaced.Width
+                    X: =txtStudentPlaced.X
                     ZIndex: =1
 
                 labEndDate As label:
@@ -269,35 +269,28 @@
                 Width: =Parent.Width
                 ZIndex: =4
 
-                drpStudentPlaced As dropdown:
+                txtStudentPlaced As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
-                    ChevronBackground: =RGBA(245, 245, 245, 1)
-                    ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-                    ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                    ChevronFill: =RGBA(50, 49, 48, 1)
-                    ChevronHoverBackground: =RGBA(245, 245, 245, 1)
-                    ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                    BorderThickness: =2
                     Color: =RGBA(50, 49, 48, 1)
+                    Default: =ThisItem.'Student Placed'.'Full Name'
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
                     DisplayMode: =DisplayMode.View
-                    Fill: =Color.White
+                    FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     HoverBorderColor: =RGBA(16, 110, 190, 1)
                     HoverColor: =RGBA(50, 49, 48, 1)
-                    HoverFill: =RGBA(245, 245, 245, 1)
-                    Items: =ThisItem.'Student Placed'
+                    HoverFill: =RGBA(255, 255, 255, 1)
                     OnSelect: =Select(Parent)
-                    PaddingBottom: =5
-                    PaddingLeft: =12
-                    PaddingRight: =5
-                    PaddingTop: =5
-                    PressedBorderColor: =RGBA(16, 110, 190, 1)
-                    PressedColor: =RGBA(255, 255, 255, 1)
-                    PressedFill: =RGBA(0, 120, 212, 1)
-                    SelectionColor: =RGBA(50, 49, 48, 1)
-                    SelectionFill: =RGBA(0, 120, 212, 1)
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedColor: =RGBA(50, 49, 48, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
                     Size: =13
                     Width: =314
                     X: =txtEndDate.X+txtEndDate.Width
