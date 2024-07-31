@@ -6,7 +6,7 @@
         Clear(colAdvisees)
     OnVisible: =Select(btnLoadAdvisors)
 
-    cntAdvisorScreen As groupContainer.verticalAutoLayoutContainer:
+    ctrAdvisorScreen As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -26,7 +26,7 @@
         X: =(Parent.Width-Self.Width)/2
         ZIndex: =1
 
-        cntHeaderAdvisors As groupContainer.horizontalAutoLayoutContainer:
+        ctrAdvisorsHeader As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
@@ -44,7 +44,7 @@
             X: =ctrListMain.X
             ZIndex: =1
 
-            Container6_1 As groupContainer.manualLayoutContainer:
+            ctrAdvisorsHeader2 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
@@ -72,7 +72,7 @@
                     Height: =Parent.Height
                     Size: =30
                     Text: ="CAMD PhD Database - Advisors"
-                    Width: =cntHeaderAdvisors.Width
+                    Width: =ctrAdvisorsHeader.Width
                     ZIndex: =1
 
                 icoHomeAdv As icon.Home:
@@ -96,7 +96,7 @@
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =2
 
-        Container1 As groupContainer.horizontalAutoLayoutContainer:
+        ctrAdvisorsMain As groupContainer.horizontalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             LayoutMinHeight: =100
@@ -106,10 +106,10 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            Width: =Parent.Width-(cntAdvisorScreen.PaddingLeft+cntAdvisorScreen.PaddingRight)
+            Width: =Parent.Width-(ctrAdvisorScreen.PaddingLeft+ctrAdvisorScreen.PaddingRight)
             ZIndex: =4
 
-            cntAdvisors As groupContainer.verticalAutoLayoutContainer:
+            ctrAdvisorsList As groupContainer.verticalAutoLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(255, 255, 255, 1)
@@ -126,7 +126,7 @@
                 Width: =Parent.Width*0.75
                 ZIndex: =1
 
-                cntAdvColumns As groupContainer.manualLayoutContainer:
+                ctrAdvColumns As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.Light
                     Fill: =RGBA(180, 214, 250, 1)
@@ -281,12 +281,10 @@
                         HoverFill: =RGBA(0, 0, 0, 0)
                         Icon: =Icon.Reload
                         OnSelect: |-
-                            =UpdateContext({IsLoading:true});
-                            Select(btnResetNewAdvisorForm);
+                            =Select(btnClearForm);
                             ClearCollect(colAdvisors,'PhD Advisors');
                             ClearCollect(colAdvisorUpdates,Filter(colAdvisors,'Advisor Email'="nothing"));
                             ClearCollect(colAdvisees,'PhD Students');
-                            UpdateContext({IsLoading:false});
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
@@ -314,31 +312,6 @@
                         X: =txtCoAdviseeCount.X
                         ZIndex: =9
 
-                cntSpinner As groupContainer.manualLayoutContainer:
-                    DropShadow: =DropShadow.Light
-                    Height: =Parent.Height
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Visible: =IsLoading
-                    Width: =Parent.Width
-                    ZIndex: =3
-
-                    spnLoading As Spinner:
-                        BasePaletteColor: =
-                        DisplayMode: =DisplayMode.Edit
-                        FontColor: =
-                        Height: =Self.Width
-                        SpinnerSize: ='Spinner.SpinnerSize'.Huge
-                        Visible: =true
-                        Width: =100
-                        X: =(Parent.Width-spnLoading.Width)/2
-                        Y: =40
-                        ZIndex: =1
-
                 galAdvisors As gallery.galleryVertical:
                     '#CopilotOverlayLabel': ="Filtered"
                     AlignInContainer: =AlignInContainer.SetByContainer
@@ -350,8 +323,8 @@
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
                     LoadingSpinner: =LoadingSpinner.Data
+                    LoadingSpinnerColor: =Color.DarkGray
                     TemplateSize: =40
-                    Visible: =!IsLoading
                     Width: =Parent.Width
                     ZIndex: =4
 
@@ -490,12 +463,12 @@
                 Width: =Parent.Width*0.25
                 ZIndex: =2
 
-                cntNewAdvisorColumn As groupContainer.manualLayoutContainer:
+                ctrNewAdvisorTitle As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.Light
                     Fill: =RGBA(180, 214, 250, 1)
                     FillPortions: =0
-                    Height: =cntAdvColumns.Height
+                    Height: =ctrAdvColumns.Height
                     LayoutMinHeight: =30
                     LayoutMinWidth: =250
                     RadiusBottomLeft: =4
@@ -506,7 +479,7 @@
                     Y: =40
                     ZIndex: =1
 
-                    Label1_7 As label:
+                    labCreateNewAdvisor As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         BorderStyle: =BorderStyle.None
                         BorderThickness: =2
@@ -522,7 +495,7 @@
                         Width: =334
                         ZIndex: =1
 
-                cntNewAdvisorDetails As groupContainer.manualLayoutContainer:
+                ctrNewAdvisorDetails As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.Light
                     FillPortions: =0
@@ -623,7 +596,7 @@
                         Y: =labNewAdvisorEmail.Y+labNewAdvisorEmail.Height
                         ZIndex: =4
 
-                cntSubmitNewAdvisor As groupContainer.manualLayoutContainer:
+                ctrSubmitNewAdvisor As groupContainer.manualLayoutContainer:
                     AlignInContainer: =AlignInContainer.SetByContainer
                     DropShadow: =DropShadow.Light
                     LayoutMinHeight: =100
@@ -635,7 +608,7 @@
                     Width: =Parent.Width
                     ZIndex: =4
 
-                    btnSubmitNewAdvisor As Button:
+                    btnAddNewAdvisor As Button:
                         Align: =""
                         BasePaletteColor: =
                         BorderStyle: =""
@@ -651,14 +624,14 @@
                         OnSelect: |-
                             =Collect('PhD Advisors',{'Advisor Name':txtNewAdvisorName.Text,'Advisor Email':txtNewAdvisorEmail.Text});
                             Select(btnLoadAdvisors)
-                        Text: ="Submit New Advisor"
+                        Text: ="Add New Advisor"
                         VerticalAlign: =""
                         Width: =Parent.Width-(2*Self.X)
                         X: =10
                         Y: =10  
                         ZIndex: =2
 
-                    btnResetNewAdvisorForm As Button:
+                    btnClearForm As Button:
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Secondary
                         BasePaletteColor: =
@@ -667,7 +640,7 @@
                         FontColor: =RGBA(106, 122, 127, 1)
                         FontSize: =18
                         FontWeight: =FontWeight.Normal
-                        Height: =btnSubmitNewAdvisor.Height
+                        Height: =btnAddNewAdvisor.Height
                         Icon: =""
                         IconRotation: =0
                         IconStyle: ="Outline"
@@ -675,10 +648,10 @@
                         OnSelect: |-
                             =Reset(txtNewAdvisorName);
                             Reset(txtNewAdvisorEmail);
-                        Text: ="Reset New Advisor"
+                        Text: ="Clear Form"
                         VerticalAlign: =""
                         Width: =Parent.Width-(2*Self.X)
-                        X: =btnSubmitNewAdvisor.X
-                        Y: =btnSubmitNewAdvisor.Y+btnSubmitNewAdvisor.Height+10
+                        X: =btnAddNewAdvisor.X
+                        Y: =btnAddNewAdvisor.Y+btnAddNewAdvisor.Height+10
                         ZIndex: =3
 
