@@ -1,6 +1,6 @@
 "scrPositionsDetail As screen.'autoLayout_HeaderFooter_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnHidden: =Select(btn_oCancel_1);
+    OnHidden: =Select(btnPosCancel);
     OnVisible: |-
         =UpdateContext({IsEditing:false});
 
@@ -124,7 +124,7 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
-                btn_oEdit_1 As icon.Edit:
+                btnPosEdit As icon.Edit:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(0, 120, 212, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -148,7 +148,7 @@
                     Y: =10
                     ZIndex: =3
 
-                btn_oSave_1 As icon.Save:
+                btnPosSave As icon.Save:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(0, 120, 212, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -173,11 +173,11 @@
                     Tooltip: ="Save Changes"
                     Visible: =IsEditing
                     Width: =30
-                    X: =btn_oEdit_1.X+btn_oEdit_1.Width
+                    X: =btnPosEdit.X+btnPosEdit.Width
                     Y: =10
                     ZIndex: =4
 
-                btn_oCancel_1 As icon.Cancel:
+                btnPosCancel As icon.Cancel:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     Color: =RGBA(0, 120, 212, 1)
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
@@ -199,7 +199,7 @@
                     Tooltip: ="Discard Changes"
                     Visible: =IsEditing
                     Width: =30
-                    X: =btn_oEdit_1.X
+                    X: =btnPosEdit.X
                     Y: =10
                     ZIndex: =5
 
