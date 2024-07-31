@@ -224,6 +224,70 @@
                     Y: =10
                     ZIndex: =6
 
+            ctrHiddenSizes As groupContainer.manualLayoutContainer:
+                DropShadow: =DropShadow.Light
+                FillPortions: =0
+                Height: =labPosDescHeight.Height
+                LayoutMinHeight: =100
+                LayoutMinWidth: =250
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                Visible: =false
+                ZIndex: =2
+
+                labPosDescHeight As label:
+                    AutoHeight: =true
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Size: =13
+                    Text: =DataCardValue26.Text
+                    Width: =DataCardValue26.Width
+                    X: ='Position Description_DataCard1'.X+DataCardValue26.X
+                    Y: ='Position Description_DataCard1'.Y+DataCardValue26.Y
+                    ZIndex: =1
+
+                labProjDescHeight As label:
+                    AutoHeight: =true
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Size: =13
+                    Text: =DataCardValue27.Text
+                    Width: =DataCardValue27.Width
+                    X: ='Project Description_DataCard1'.X+DataCardValue27.X
+                    Y: ='Project Description_DataCard1'.Y+DataCardValue27.Y
+                    ZIndex: =2
+
+                labQualHeight As label:
+                    AutoHeight: =true
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Size: =13
+                    Text: =DataCardValue28.Text
+                    Width: =DataCardValue28.Width
+                    X: =Qualifications_DataCard1.X+DataCardValue28.X
+                    Y: =Qualifications_DataCard1.Y+DataCardValue28.Y
+                    ZIndex: =3
+
             frmEditPosition As form:
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DataSource: ='PhD Positions'
@@ -231,7 +295,7 @@
                 Item: =galPositions.Selected
                 LayoutMinHeight: =250
                 LayoutMinWidth: =400
-                ZIndex: =2
+                ZIndex: =3
 
                 "'Position Title_DataCard4' As typedDataCard.textualEditCard":
                     BorderColor: =RGBA(245, 245, 245, 1)
@@ -625,9 +689,10 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         DisplayMode: =Parent.DisplayMode
+                        EnableSpellCheck: =true
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
-                        Height: =80
+                        Height: =labPosDescHeight.Height
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -740,9 +805,10 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         DisplayMode: =Parent.DisplayMode
+                        EnableSpellCheck: =true
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
-                        Height: =80
+                        Height: =labProjDescHeight.Height
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
@@ -855,9 +921,10 @@
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         DisplayMode: =Parent.DisplayMode
+                        EnableSpellCheck: =true
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
-                        Height: =80
+                        Height: =labQualHeight.Height
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
                         HoverColor: =RGBA(50, 49, 48, 1)
                         HoverFill: =RGBA(255, 255, 255, 1)
