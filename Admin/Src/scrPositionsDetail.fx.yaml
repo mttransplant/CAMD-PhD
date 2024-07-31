@@ -246,7 +246,7 @@
                     Update: =DataCardValue20.Selected
                     Width: =444
                     X: =2
-                    Y: =2
+                    Y: =3
                     ZIndex: =1
 
                     DataCardKey24 As label:
@@ -1055,8 +1055,8 @@
                     Required: =true
                     Update: =DataCardValue18.Text
                     Width: =444
-                    X: =0
-                    Y: =2
+                    X: =1
+                    Y: =3
                     ZIndex: =3
 
                     DataCardKey22 As label:
@@ -1169,7 +1169,7 @@
                     Required: =true
                     Update: =DataCardValue19.Selected.Value
                     Width: =444
-                    X: =1
+                    X: =0
                     Y: =2
                     ZIndex: =3
 
@@ -1286,7 +1286,7 @@
                     Required: =true
                     Update: =DataCardValue17.Selected.Value
                     Width: =444
-                    X: =1
+                    X: =0
                     Y: =3
                     ZIndex: =3
 
@@ -1403,8 +1403,8 @@
                     Required: =true
                     Update: =If(Not IsBlank(DateValue2.SelectedDate), DateTime(Year(DateValue2.SelectedDate), Month(DateValue2.SelectedDate), Day(DateValue2.SelectedDate), Value(HourValue2.Selected.Value), Value(MinuteValue2.Selected.Value), 0))
                     Width: =444
-                    X: =2
-                    Y: =3
+                    X: =1
+                    Y: =2
                     ZIndex: =3
 
                     DataCardKey20 As label:
@@ -1611,8 +1611,8 @@
                     Required: =true
                     Update: =If(Not IsBlank(DateValue1.SelectedDate), DateTime(Year(DateValue1.SelectedDate), Month(DateValue1.SelectedDate), Day(DateValue1.SelectedDate), Value(HourValue1.Selected.Value), Value(MinuteValue1.Selected.Value), 0))
                     Width: =444
-                    X: =0
-                    Y: =3
+                    X: =2
+                    Y: =2
                     ZIndex: =3
 
                     DataCardKey13 As label:
