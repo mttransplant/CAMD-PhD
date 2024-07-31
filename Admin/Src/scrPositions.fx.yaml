@@ -141,7 +141,7 @@
                     PaddingLeft: =15
                     Size: =13
                     Text: ="Student Placed"
-                    Width: =txtStudentPlaced.Width
+                    Width: =Parent.Width-Self.X-5
                     X: =txtStudentPlaced.X
                     ZIndex: =1
 
@@ -293,7 +293,7 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    Width: =314
+                    Width: =Parent.Width-Self.X-10
                     X: =txtEndDate.X+txtEndDate.Width
                     ZIndex: =1
 
@@ -402,35 +402,8 @@
                     RadiusTopRight: =0
                     Size: =13
                     Width: =64
-                    X: =txtProjTitle.X+txtProjTitle.Width
-                    ZIndex: =5
-
-                txtProjTitle As text:
-                    BorderColor: =RGBA(245, 245, 245, 1)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(50, 49, 48, 1)
-                    Default: =ThisItem.'Project Title'
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
-                    DisabledFill: =RGBA(242, 242, 241, 0)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    HoverBorderColor: =RGBA(16, 110, 190, 1)
-                    HoverColor: =RGBA(50, 49, 48, 1)
-                    HoverFill: =RGBA(255, 255, 255, 1)
-                    OnSelect: =Select(Parent);Navigate(scrPositionsDetail)
-                    PressedBorderColor: =RGBA(0, 120, 212, 1)
-                    PressedColor: =RGBA(50, 49, 48, 1)
-                    PressedFill: =RGBA(255, 255, 255, 1)
-                    RadiusBottomLeft: =0
-                    RadiusBottomRight: =0
-                    RadiusTopLeft: =0
-                    RadiusTopRight: =0
-                    Size: =13
-                    Width: =330
                     X: =txtFacultyLead.X+txtFacultyLead.Width
-                    ZIndex: =6
+                    ZIndex: =5
 
                 txtFacultyLead As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
@@ -455,6 +428,33 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    Width: =250
+                    Width: =193
+                    X: =txtProjTitle.X+txtProjTitle.Width
+                    ZIndex: =6
+
+                txtProjTitle As text:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =ThisItem.'Project Title'
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: =Select(Parent);Navigate(scrPositionsDetail)
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedColor: =RGBA(50, 49, 48, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Width: =385
                     ZIndex: =7
 
