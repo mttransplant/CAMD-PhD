@@ -475,7 +475,7 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    OnSelect: =Select(Parent)
+                    OnSelect: =Select(Parent);Navigate(scrStudentOverview)
                     Size: =13
                     Text: =ThisItem.cr829_individualpath
                     X: =DefenseInd.X+DefenseInd.Width+5
@@ -630,7 +630,7 @@
                     Font: =Font.'Segoe UI'
                     HtmlText: |-
                         ="<a href='mailto:" & ThisItem.Email & "'>" & ThisItem.Email & "</a>"
-                    OnSelect: =Select(Parent)
+                    OnSelect: =Select(Parent);
                     Size: =13
                     Width: =309
                     X: =NUID.X+NUID.Width+5
