@@ -178,7 +178,7 @@
                     Height: =Parent.Height
                     Size: =13
                     Text: ="Banner Account"
-                    Width: =labFundingIndex.Width
+                    Width: =labFundingAcct.Width
                     X: =labFundingAcct.X
                     ZIndex: =10
 
@@ -279,6 +279,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.'Banner Organization'
+                    Width: =116
                     X: =labFundingTitle.X+labFundingTitle.Width
                     ZIndex: =17
 
@@ -294,6 +295,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.'Banner Index'
+                    Width: =131
                     X: =labFundingOrg.X+labFundingOrg.Width
                     ZIndex: =18
 
@@ -309,6 +311,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.'Banner Account'
+                    Width: =147
                     X: =labFundingIndex.X+labFundingIndex.Width
                     ZIndex: =19
 
