@@ -146,6 +146,7 @@
                     ZIndex: =1
 
                 labEndDate As label:
+                    Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -164,6 +165,7 @@
                     ZIndex: =2
 
                 labStartDate As label:
+                    Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -300,6 +302,7 @@
                     ZIndex: =1
 
                 txtEndDate As text:
+                    Align: =Align.Center
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -327,6 +330,7 @@
                     ZIndex: =2
 
                 txtStartDate As text:
+                    Align: =Align.Center
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
