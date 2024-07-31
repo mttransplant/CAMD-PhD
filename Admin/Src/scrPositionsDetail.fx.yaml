@@ -67,7 +67,7 @@
                     Font: =Font.'Segoe UI'
                     Height: =Parent.Height
                     Size: =30
-                    Text: ="Detail for "&"''"&galPositions.Selected.'Project Title'&"''"
+                    Text: ="Detail for "&""""&galPositions.Selected.'Project Title'&""""
                     Width: =Parent.Width
                     ZIndex: =1
 
