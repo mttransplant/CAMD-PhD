@@ -246,7 +246,7 @@
                     Update: =DataCardValue20.Selected
                     Width: =444
                     X: =2
-                    Y: =3
+                    Y: =2
                     ZIndex: =1
 
                     DataCardKey24 As label:
@@ -365,7 +365,7 @@
                     Required: =true
                     Update: =DataCardValue11.Text
                     Width: =444
-                    X: =0
+                    X: =2
                     Y: =0
                     ZIndex: =3
 
@@ -480,7 +480,7 @@
                     Required: =true
                     Update: =DataCardValue13.Text
                     Width: =444
-                    X: =1
+                    X: =0
                     Y: =0
                     ZIndex: =3
 
@@ -594,8 +594,8 @@
                     Required: =true
                     Update: =DataCardValue12.Text
                     Width: =444
-                    X: =2
-                    Y: =0
+                    X: =0
+                    Y: =1
                     ZIndex: =3
 
                     DataCardKey15 As label:
@@ -710,8 +710,8 @@
                     Required: =true
                     Update: =DataCardValue15.Text
                     Width: =444
-                    X: =0
-                    Y: =1
+                    X: =1
+                    Y: =0
                     ZIndex: =3
 
                     DataCardKey18 As label:
@@ -1286,8 +1286,8 @@
                     Required: =true
                     Update: =DataCardValue17.Selected.Value
                     Width: =444
-                    X: =2
-                    Y: =2
+                    X: =1
+                    Y: =3
                     ZIndex: =3
 
                     DataCardKey21 As label:
@@ -1403,7 +1403,7 @@
                     Required: =true
                     Update: =If(Not IsBlank(DateValue2.SelectedDate), DateTime(Year(DateValue2.SelectedDate), Month(DateValue2.SelectedDate), Day(DateValue2.SelectedDate), Value(HourValue2.Selected.Value), Value(MinuteValue2.Selected.Value), 0))
                     Width: =444
-                    X: =0
+                    X: =2
                     Y: =3
                     ZIndex: =3
 
@@ -1611,7 +1611,7 @@
                     Required: =true
                     Update: =If(Not IsBlank(DateValue1.SelectedDate), DateTime(Year(DateValue1.SelectedDate), Month(DateValue1.SelectedDate), Day(DateValue1.SelectedDate), Value(HourValue1.Selected.Value), Value(MinuteValue1.Selected.Value), 0))
                     Width: =444
-                    X: =1
+                    X: =0
                     Y: =3
                     ZIndex: =3
 
