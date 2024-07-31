@@ -203,6 +203,27 @@
                     Y: =10
                     ZIndex: =5
 
+                btnBack As icon.BackArrow:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(0, 120, 212, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =20
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.BackArrow
+                    OnSelect: =Navigate(scrPositions)
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Width: =30
+                    X: =DataCardKey14.X
+                    Y: =10
+                    ZIndex: =6
+
             frmEditPosition As form:
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DataSource: ='PhD Positions'

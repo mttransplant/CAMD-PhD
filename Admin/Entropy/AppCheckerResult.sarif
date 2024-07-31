@@ -4244,6 +4244,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrPositionsDetail.ctrPositionsDetail.ctrPositionsDetailMain.ctrPositionsDetailEdit.btnBack.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrPositionsDetail.ctrPositionsDetail.ctrPositionsDetailMain.ctrPositionsDetailEdit.btnBack.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrPositionsDetail",
+                "type": "scrPositionsDetail.ctrPositionsDetail.ctrPositionsDetailMain.ctrPositionsDetailEdit.btnBack"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrPositionsDetail.ctrPositionsDetail.ctrPositionsDetailMain.ctrPositionsDetailEdit.btnBack.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrPositionsDetail.ctrPositionsDetail.ctrPositionsDetailMain.ctrPositionsDetailEdit.btnBack.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scrPositionsDetail",
+                "type": "scrPositionsDetail.ctrPositionsDetail.ctrPositionsDetailMain.ctrPositionsDetailEdit.btnBack"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect"
                 }
               ],
