@@ -283,7 +283,7 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    OnSelect: =Select(Parent)
+                    OnSelect: =Select(Parent);Navigate(scrPositionsDetail)
                     Size: =13
                     Text: =ThisItem.'Student Placed'.'Full Name'
                     Width: =Parent.Width-Self.X-10
@@ -300,7 +300,7 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    OnSelect: =Select(Parent)
+                    OnSelect: =Select(Parent);Navigate(scrPositionsDetail)
                     Size: =13
                     Text: =Text(ThisItem.'End Date',DateTimeFormat.ShortDate)
                     X: =labStartDate.X+labStartDate.Width
@@ -316,7 +316,7 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    OnSelect: =Select(Parent)
+                    OnSelect: =Select(Parent);Navigate(scrPositionsDetail)
                     Size: =13
                     Text: =Text(ThisItem.'Start Date',DateTimeFormat.ShortDate)
                     X: =labProjHours.X+labProjHours.Width
@@ -332,7 +332,7 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    OnSelect: =Select(Parent)
+                    OnSelect: =Select(Parent);Navigate(scrPositionsDetail)
                     Size: =13
                     Text: =ThisItem.'Weekly Hours'
                     Width: =94
@@ -349,7 +349,7 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    OnSelect: =Select(Parent)
+                    OnSelect: =Select(Parent);Navigate(scrPositionsDetail)
                     Size: =13
                     Text: =ThisItem.'Position Type'
                     Width: =70
@@ -365,7 +365,7 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    OnSelect: =Select(Parent)
+                    OnSelect: =Select(Parent);Navigate(scrPositionsDetail)
                     Size: =13
                     Text: =ThisItem.'Faculty Lead'
                     Width: =187
@@ -381,7 +381,7 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    OnSelect: =Select(Parent)
+                    OnSelect: =Select(Parent);Navigate(scrPositionsDetail)
                     Size: =13
                     Text: =ThisItem.'Project Title'
                     Width: =297
