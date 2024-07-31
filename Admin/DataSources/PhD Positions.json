@@ -11,7 +11,7 @@
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "cr829_bannerindex": "Banner Index",
-      "cr829_dateclosed": "Date Closed",
+      "cr829_enddate": "End Date",
       "cr829_facultylead": "Faculty Lead",
       "cr829_phdpositions_AsyncOperations": "System Jobs",
       "cr829_phdpositions_BulkDeleteFailures": "Bulk Delete Failures",
@@ -26,6 +26,7 @@
       "cr829_projectdescription": "Project Description",
       "cr829_projecttitle": "Project Title",
       "cr829_qualifications": "Qualifications",
+      "cr829_startdate": "Start Date",
       "cr829_StudentPlaced": "Student Placed",
       "cr829_weeklyhours": "Weekly Hours",
       "createdby": "Created By",

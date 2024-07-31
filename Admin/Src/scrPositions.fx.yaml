@@ -127,22 +127,59 @@
                 Width: =Parent.Width
                 ZIndex: =1
 
-                labProjDesc As label:
+                labStudentPlaced As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
                     Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
                     PaddingLeft: =15
                     Size: =13
-                    Text: ="Project Description"
-                    Width: =txtProjDesc.Width
-                    X: =txtProjDesc.X
+                    Text: ="Student Placed"
+                    Width: =drpStudentPlaced.Width
+                    X: =drpStudentPlaced.X
                     ZIndex: =1
+
+                labEndDate As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =15
+                    Size: =13
+                    Text: ="End Date"
+                    Width: =txtEndDate.Width
+                    X: =txtEndDate.X
+                    ZIndex: =2
+
+                labStartDate As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    PaddingLeft: =15
+                    Size: =13
+                    Text: ="Start Date"
+                    Width: =txtStartDate.Width
+                    X: =txtStartDate.X
+                    ZIndex: =3
 
                 labProjHours As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -151,6 +188,7 @@
                     Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
@@ -159,7 +197,7 @@
                     Text: ="Hrs/Wk"
                     Width: =txtProjHours.Width
                     X: =txtProjHours.X
-                    ZIndex: =2
+                    ZIndex: =4
 
                 labPosType As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -168,6 +206,7 @@
                     Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
@@ -176,7 +215,7 @@
                     Text: ="Type"
                     Width: =txtPosType.Width
                     X: =txtPosType.X
-                    ZIndex: =3
+                    ZIndex: =5
 
                 labProjTitle As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -185,6 +224,7 @@
                     Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
@@ -193,7 +233,7 @@
                     Text: ="Project Title"
                     Width: =txtProjTitle.Width
                     X: =txtProjTitle.X
-                    ZIndex: =4
+                    ZIndex: =6
 
                 labFacultyLead As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -202,6 +242,7 @@
                     Color: =RGBA(50, 49, 48, 1)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
@@ -210,7 +251,7 @@
                     Text: ="Faculty Lead"
                     Width: =txtFacultyLead.Width
                     X: =txtFacultyLead.X
-                    ZIndex: =5
+                    ZIndex: =7
 
             galPositions As gallery.galleryVertical:
                 '#CopilotOverlayLabel': ="Filtered"
@@ -228,11 +269,45 @@
                 Width: =Parent.Width
                 ZIndex: =4
 
-                txtProjDesc As text:
+                drpStudentPlaced As dropdown:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    ChevronBackground: =RGBA(245, 245, 245, 1)
+                    ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                    ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                    ChevronFill: =RGBA(50, 49, 48, 1)
+                    ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                    ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayMode: =DisplayMode.View
+                    Fill: =Color.White
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(245, 245, 245, 1)
+                    Items: =ThisItem.'Student Placed'
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =5
+                    PaddingLeft: =12
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    PressedBorderColor: =RGBA(16, 110, 190, 1)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =RGBA(0, 120, 212, 1)
+                    SelectionColor: =RGBA(50, 49, 48, 1)
+                    SelectionFill: =RGBA(0, 120, 212, 1)
+                    Size: =13
+                    Width: =314
+                    X: =txtEndDate.X+txtEndDate.Width
+                    ZIndex: =1
+
+                txtEndDate As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderThickness: =2
                     Color: =RGBA(50, 49, 48, 1)
-                    Default: =ThisItem.'Project Description'
+                    Default: =Text(ThisItem.'End Date',DateTimeFormat.ShortDate)
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
@@ -242,7 +317,6 @@
                     HoverBorderColor: =RGBA(16, 110, 190, 1)
                     HoverColor: =RGBA(50, 49, 48, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
-                    Mode: =TextMode.MultiLine
                     OnSelect: =Select(Parent)
                     PressedBorderColor: =RGBA(0, 120, 212, 1)
                     PressedColor: =RGBA(50, 49, 48, 1)
@@ -252,9 +326,36 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    Width: =584
+                    Width: =139
+                    X: =txtStartDate.X+txtStartDate.Width
+                    ZIndex: =2
+
+                txtStartDate As text:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =Text(ThisItem.'Start Date',DateTimeFormat.ShortDate)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedColor: =RGBA(50, 49, 48, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Width: =139
                     X: =txtProjHours.X+txtProjHours.Width
-                    ZIndex: =1
+                    ZIndex: =3
 
                 txtProjHours As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
@@ -281,7 +382,7 @@
                     Size: =13
                     Width: =85
                     X: =txtPosType.X+txtPosType.Width
-                    ZIndex: =2
+                    ZIndex: =4
 
                 txtPosType As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
@@ -308,7 +409,7 @@
                     Size: =13
                     Width: =64
                     X: =txtProjTitle.X+txtProjTitle.Width
-                    ZIndex: =3
+                    ZIndex: =5
 
                 txtProjTitle As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
@@ -335,7 +436,7 @@
                     Size: =13
                     Width: =330
                     X: =txtFacultyLead.X+txtFacultyLead.Width
-                    ZIndex: =4
+                    ZIndex: =6
 
                 txtFacultyLead As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
@@ -361,5 +462,5 @@
                     RadiusTopRight: =0
                     Size: =13
                     Width: =250
-                    ZIndex: =5
+                    ZIndex: =7
 

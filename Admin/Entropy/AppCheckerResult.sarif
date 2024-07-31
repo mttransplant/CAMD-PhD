@@ -614,6 +614,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.drpStudentPlaced.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.drpStudentPlaced.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrPositions",
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.drpStudentPlaced"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtEndDate.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtEndDate.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrPositions",
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtEndDate"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.TabIndex"
                 }
               ],
@@ -674,19 +734,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjDesc.AccessibleLabel"
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtStartDate.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjDesc.AccessibleLabel",
+                  "fullyQualifiedName": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtStartDate.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrPositions",
-                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtProjDesc"
+                "type": "scrPositions.ctrPositions.ctrPositionsMain.galPositions.txtStartDate"
               }
             }
           ],
