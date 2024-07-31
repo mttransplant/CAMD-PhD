@@ -123,7 +123,7 @@
                     FontWeight: =FontWeight.Bold
                     Height: =Parent.Height
                     Size: =13
-                    Text: ="Funding Title"
+                    Text: ="Funding Source Name"
                     Width: =labFundingTitle.Width
                     X: =labFundingTitle.X
                     ZIndex: =7
