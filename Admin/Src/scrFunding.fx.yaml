@@ -263,7 +263,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.'Funding Source Name'
-                    Width: =251
+                    Width: =264
                     X: =5
                     ZIndex: =16
 
@@ -327,7 +327,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.'Contact Name'
-                    Width: =207
+                    Width: =238
                     X: =labFundingAcct.X+labFundingAcct.Width
                     ZIndex: =20
 
