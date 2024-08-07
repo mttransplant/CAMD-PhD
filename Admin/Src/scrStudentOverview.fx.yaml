@@ -334,6 +334,64 @@
                 NumberOfColumns: =2
                 ZIndex: =2
 
+                "'Student Email_DataCard1' As typedDataCard.textualViewCard":
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =BorderStyle.Solid
+                    DataField: ="cr829_student_email"
+                    Default: =ThisItem.'Student Email'
+                    DisplayMode: =DisplayMode.View
+                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_student_email)
+                    Fill: =RGBA(0, 0, 0, 0)
+                    Height: =40
+                    Required: =false
+                    Width: =667
+                    X: =1
+                    Y: =2
+                    ZIndex: =1
+
+                    DataCardKey6 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Height: =34
+                        PaddingLeft: =0
+                        Size: =13
+                        Text: =Parent.DisplayName
+                        Width: =(Parent.Width - 60) * 0.4
+                        Wrap: =false
+                        X: =30
+                        Y: =10 + (DataCardValue4.Height / 2) - (Self.Height / 2)
+                        ZIndex: =1
+
+                    DataCardValue4 As label:
+                        AutoHeight: =true
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisplayMode: =Parent.DisplayMode
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        Height: =27
+                        PaddingLeft: =0
+                        PaddingRight: =0
+                        PaddingTop: =0
+                        Size: =13
+                        Text: =Parent.Default
+                        Width: =(Parent.Width - 60) * 0.6
+                        X: =DataCardKey6.X + DataCardKey6.Width
+                        Y: =10
+                        ZIndex: =2
+
                 "'First Name_DataCard1' As typedDataCard.textualViewCard":
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
@@ -508,60 +566,6 @@
                         Y: =10
                         ZIndex: =2
 
-                Email_DataCard1 As typedDataCard.emailViewCard:
-                    BorderColor: =RGBA(245, 245, 245, 1)
-                    BorderStyle: =BorderStyle.Solid
-                    DataField: ="cr829_email"
-                    Default: =ThisItem.Email
-                    DisplayMode: =DisplayMode.View
-                    DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_email)
-                    Fill: =RGBA(0, 0, 0, 0)
-                    Height: =40
-                    Required: =false
-                    Width: =667
-                    X: =1
-                    Y: =1
-                    ZIndex: =1
-
-                    DataCardKey6 As label:
-                        AutoHeight: =true
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Height: =34
-                        PaddingLeft: =0
-                        Size: =13
-                        Text: =Parent.DisplayName
-                        Width: =(Parent.Width - 60) * 0.4
-                        Wrap: =false
-                        X: =30
-                        Y: =10 + (DataCardValue4.Height / 2) - (Self.Height / 2)
-                        ZIndex: =1
-
-                    DataCardValue4 As htmlViewer:
-                        AutoHeight: =true
-                        Color: =RGBA(0, 120, 212, 1)
-                        DisabledBorderColor: =RGBA(161, 159, 157, 1)
-                        DisplayMode: =Parent.DisplayMode
-                        Font: =Font.'Segoe UI'
-                        Height: =31
-                        HtmlText: |-
-                            ="<a href='mailto:" & Parent.Default & "'>" & Parent.Default & "</a>"
-                        PaddingLeft: =0
-                        PaddingRight: =0
-                        PaddingTop: =0
-                        Size: =13
-                        Width: =(Parent.Width - 60) * 0.6
-                        X: =DataCardKey6.X + DataCardKey6.Width
-                        Y: =10
-                        ZIndex: =2
-
                 ADMIT_TERM_DataCard1 As typedDataCard.textualViewCard:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =BorderStyle.Solid
@@ -573,8 +577,8 @@
                     Height: =40
                     Required: =false
                     Width: =667
-                    X: =0
-                    Y: =2
+                    X: =1
+                    Y: =1
                     ZIndex: =1
 
                     DataCardKey7 As label:
@@ -631,7 +635,7 @@
                     Height: =40
                     Required: =false
                     Width: =667
-                    X: =1
+                    X: =0
                     Y: =2
                     ZIndex: =1
 

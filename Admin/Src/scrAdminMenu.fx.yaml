@@ -4,7 +4,7 @@
     OnVisible: |-
         =ClearCollect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Admins','Admin Name',Name,'Admin Email',Email),Name,Email),Role,"Admin"));
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Advisors','Advisor Name',Name,'Advisor Email',Email),Name,Email),Role,"Advisor"));
-        Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Students','Full Name',Name),Name,Email),Role,"Student"));
+        Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Students','Full Name',Name,'Student Email',Email),Name,Email),Role,"Student"));
         UpdateContext({IsTesting:false});
         Set(CurrentUser,If(IsTesting,"Celia Pearce",User().FullName));
         Set(CurrentEmail,If(IsTesting,"c.pearce@northeastern.edu",User().Email));

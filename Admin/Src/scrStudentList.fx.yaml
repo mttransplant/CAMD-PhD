@@ -586,7 +586,7 @@
                     Color: =RGBA(15, 108, 189, 1)
                     Font: =Font.'Segoe UI'
                     HtmlText: |-
-                        ="<a href='mailto:" & ThisItem.Email & "'>" & ThisItem.Email & "</a>"
+                        ="<a href='mailto:" & ThisItem.'Student Email' & "'>" & ThisItem.'Student Email' & "</a>"
                     OnSelect: =Select(Parent);
                     Size: =13
                     Width: =309
