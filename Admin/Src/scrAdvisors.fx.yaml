@@ -614,6 +614,7 @@
                     btnAddNewAdvisor As Button:
                         Align: =""
                         BasePaletteColor: =
+                        BorderColor: =
                         BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =
@@ -638,6 +639,7 @@
                         Align: =""
                         Appearance: ='ButtonCanvas.Appearance'.Secondary
                         BasePaletteColor: =
+                        BorderColor: =
                         BorderStyle: =""
                         DisplayMode: =DisplayMode.Edit
                         FontColor: =RGBA(106, 122, 127, 1)

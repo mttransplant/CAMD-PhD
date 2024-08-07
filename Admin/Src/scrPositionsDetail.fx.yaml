@@ -1254,6 +1254,7 @@
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Value"]
                         DisplayMode: =Parent.DisplayMode
                         Fill: =RGBA(245, 245, 245, 1)
                         Font: =Font.'Segoe UI'
@@ -1266,6 +1267,8 @@
                         PressedBorderColor: =RGBA(16, 110, 190, 1)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(0, 120, 212, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
                         SelectionFill: =RGBA(0, 120, 212, 1)
                         SelectMultiple: =false
                         Size: =13
@@ -1697,6 +1700,7 @@
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
+                        DisplayFields: =["Value"]
                         DisplayMode: =Parent.DisplayMode
                         Fill: =RGBA(245, 245, 245, 1)
                         Font: =Font.'Segoe UI'
@@ -1709,6 +1713,8 @@
                         PressedBorderColor: =RGBA(16, 110, 190, 1)
                         PressedColor: =RGBA(255, 255, 255, 1)
                         PressedFill: =RGBA(0, 120, 212, 1)
+                        SearchFields: =["Value"]
+                        SearchItems: =[]
                         SelectionFill: =RGBA(0, 120, 212, 1)
                         SelectMultiple: =false
                         Size: =13

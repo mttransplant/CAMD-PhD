@@ -122,6 +122,7 @@
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
+                BorderColor: =
                 BorderStyle: =""
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
@@ -144,6 +145,7 @@
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Primary
                 BasePaletteColor: =
+                BorderColor: =
                 BorderStyle: =""
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
@@ -166,6 +168,7 @@
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
+                BorderColor: =
                 BorderStyle: =""
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
@@ -188,6 +191,7 @@
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
+                BorderColor: =
                 BorderStyle: =""
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
@@ -210,6 +214,7 @@
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
+                BorderColor: =
                 BorderStyle: =""
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
@@ -232,6 +237,7 @@
                 Align: =""
                 Appearance: ='ButtonCanvas.Appearance'.Secondary
                 BasePaletteColor: =
+                BorderColor: =
                 BorderStyle: =""
                 DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
                 FontColor: =
@@ -361,7 +367,7 @@
                     Y: =10
                     ZIndex: =5
 
-            ReadOnlyStudentInfo_old As formViewer:
+            ReadOnlyStudentInfo As formViewer:
                 BorderColor: =RGBA(245, 245, 245, 1)
                 BorderStyle: =BorderStyle.None
                 DataSource: ='PhD Students'
@@ -369,7 +375,7 @@
                 Height: =210
                 Item: =LookUp('PhD Students',NUID=galStudentLlist.Selected.NUID)
                 LayoutMinHeight: =250
-                LayoutMinWidth: =ReadOnlyStudentInfo_old.Width
+                LayoutMinWidth: =ReadOnlyStudentInfo.Width
                 NumberOfColumns: =2
                 ZIndex: =2
 

@@ -82,6 +82,7 @@
                 btnFunding As Button:
                     Align: =""
                     BasePaletteColor: =
+                    BorderColor: =
                     BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =
@@ -102,6 +103,7 @@
                 btnTARA As Button:
                     Align: =""
                     BasePaletteColor: =
+                    BorderColor: =
                     BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =
@@ -122,6 +124,7 @@
                 btnAdvisor As Button:
                     Align: =""
                     BasePaletteColor: =
+                    BorderColor: =
                     BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =
@@ -142,6 +145,7 @@
                 btnStudent As Button:
                     Align: =""
                     BasePaletteColor: =
+                    BorderColor: =
                     BorderStyle: =""
                     DisplayMode: =DisplayMode.Edit
                     FontColor: =
