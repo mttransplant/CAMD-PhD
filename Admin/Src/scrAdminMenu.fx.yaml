@@ -29,6 +29,12 @@
         X: =(Parent.Width-Self.Width)/2
         ZIndex: =1
 
+        cmtHeader_1 As cmtHeader:
+            LayoutMinHeight: =640
+            LayoutMinWidth: =640
+            MenuScreen: =scrAdminMenu
+            ScreenTitle: ="Menu"
+
         ctrMenuHeader As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(71, 158, 245, 1)
@@ -40,6 +46,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
+            Visible: =false
             Width: =Parent.Width
             ZIndex: =2
 

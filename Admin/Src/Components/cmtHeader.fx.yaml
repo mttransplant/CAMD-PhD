@@ -1,7 +1,8 @@
-comHeader As CanvasComponent:
+cmtHeader As CanvasComponent:
     Fill: =RGBA(71, 158, 245, 1)
     Height: =75
     MenuScreen: =App.ActiveScreen
+    ScreenTitle: ="Text"
     Width: =Min(App.Width,App.DesignWidth)
     X: =0
     Y: =0
@@ -21,8 +22,8 @@ comHeader As CanvasComponent:
         Font: =Font.'Segoe UI'
         Height: =Parent.Height
         Size: =30
-        Text: ="CAMD PhD Admin Menu"
-        Width: =comHeader.Width
+        Text: ="CAMD PhD Database - "&cmtHeader.ScreenTitle
+        Width: =cmtHeader.Width
         Y: =20
         ZIndex: =2
 
@@ -41,6 +42,7 @@ comHeader As CanvasComponent:
         Text: =CurrentUser&" ("&CurrentRole&")"
         Width: =300
         X: =Parent.Width-Self.Width
+        Y: =Parent.Height-Self.Height
         ZIndex: =3
 
     icoHome_3 As icon.Home:
@@ -55,7 +57,7 @@ comHeader As CanvasComponent:
         HoverColor: =RGBA(16, 110, 190, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Home
-        OnSelect: =
+        OnSelect: =Navigate(cmtHeader.MenuScreen)
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =RGBA(16, 110, 190, 1)
         PressedFill: =RGBA(0, 0, 0, 0)
