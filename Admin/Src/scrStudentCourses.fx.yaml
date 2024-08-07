@@ -361,6 +361,7 @@
                     ZIndex: =5
 
                 labCredits As label:
+                    Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -377,6 +378,22 @@
                     X: =txtCredits.X
                     ZIndex: =6
 
+                labInstructor As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Size: =13
+                    Text: ="Instructor"
+                    Width: =txtInstructor.Width
+                    X: =txtInstructor.X
+                    ZIndex: =7
+
                 labRegStatus As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -392,22 +409,6 @@
                     Text: ="Registration Status"
                     Width: =txtRegStatus.Width
                     X: =txtRegStatus.X
-                    ZIndex: =7
-
-                labGrade As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(50, 49, 48, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Size: =13
-                    Text: ="Grade"
-                    Width: =txtGrade.Width
-                    X: =txtGrade.X
                     ZIndex: =8
 
             galEnrollments As gallery.galleryVertical:
@@ -437,7 +438,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.Term
-                    Width: =207
+                    Width: =163
                     X: =5
                     ZIndex: =1
 
@@ -510,6 +511,7 @@
                     ZIndex: =5
 
                 txtCredits As label:
+                    Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -526,6 +528,23 @@
                     X: =txtTitle.X+txtTitle.Width
                     ZIndex: =6
 
+                txtInstructor As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    Height: =Parent.TemplateHeight
+                    OnSelect: =Select(Parent)
+                    Size: =13
+                    Text: =ThisItem.'Instructor Name'
+                    Width: =236
+                    X: =txtCredits.X+txtCredits.Width
+                    ZIndex: =7
+
                 txtRegStatus As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -540,25 +559,6 @@
                     Size: =13
                     Text: =ThisItem.'Reg Status'
                     Width: =195
-                    X: =txtCredits.X+txtCredits.Width
-                    ZIndex: =7
-
-                txtGrade As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(50, 49, 48, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Lighter
-                    Height: =Parent.TemplateHeight
-                    Italic: =true
-                    OnSelect: =Select(Parent)
-                    Size: =13
-                    Text: ="TBD"
-                    Width: =67
-                    X: =txtRegStatus.X+txtRegStatus.Width
+                    X: =txtInstructor.X+txtInstructor.Width
                     ZIndex: =8
 
