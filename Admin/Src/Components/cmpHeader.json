@@ -124,9 +124,9 @@
         "MetaDataIDKey": "",
         "Name": "labHeader_2",
         "OptimizeForDevices": "Off",
-        "Parent": "cmtHeader",
+        "Parent": "cmpHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 408,
+        "PublishOrderIndex": 405,
         "Rules": [
           {
             "Category": "Data",
@@ -136,14 +136,20 @@
           },
           {
             "Category": "Data",
-            "InvariantScript": "\"CAMD PhD Database - \"&cmtHeader.ScreenTitle",
-            "Property": "Text",
-            "RuleProviderType": "User"
+            "InvariantScript": "TextRole.Default",
+            "Property": "Role",
+            "RuleProviderType": "Unknown"
           },
           {
             "Category": "Data",
-            "InvariantScript": "TextRole.Default",
-            "Property": "Role",
+            "InvariantScript": "\"CAMD PhD Database - \"&cmpHeader.ScreenTitle",
+            "Property": "Text",
+            "RuleProviderType": "Unknown"
+          },
+          {
+            "Category": "Design",
+            "InvariantScript": "Parent.Height",
+            "Property": "Height",
             "RuleProviderType": "Unknown"
           },
           {
@@ -334,7 +340,7 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "cmtHeader.Width",
+            "InvariantScript": "cmpHeader.Width",
             "Property": "Width",
             "RuleProviderType": "Unknown"
           },
@@ -354,12 +360,6 @@
             "Category": "Design",
             "InvariantScript": "true",
             "Property": "Visible",
-            "RuleProviderType": "Unknown"
-          },
-          {
-            "Category": "Design",
-            "InvariantScript": "Parent.Height",
-            "Property": "Height",
             "RuleProviderType": "Unknown"
           },
           {
@@ -468,9 +468,9 @@
         "MetaDataIDKey": "",
         "Name": "icoHome_3",
         "OptimizeForDevices": "Off",
-        "Parent": "cmtHeader",
+        "Parent": "cmpHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 409,
+        "PublishOrderIndex": 406,
         "Rules": [
           {
             "Category": "Design",
@@ -612,9 +612,9 @@
           },
           {
             "Category": "Behavior",
-            "InvariantScript": "Navigate(cmtHeader.MenuScreen)",
+            "InvariantScript": "Navigate(cmpHeader.MenuScreen)",
             "Property": "OnSelect",
-            "RuleProviderType": "User"
+            "RuleProviderType": "Unknown"
           }
         ],
         "StyleName": "defaultIconStyle",
@@ -731,9 +731,9 @@
         "MetaDataIDKey": "",
         "Name": "labCurrentUser_2",
         "OptimizeForDevices": "Off",
-        "Parent": "cmtHeader",
+        "Parent": "cmpHeader",
         "PersistMetaDataIDKey": false,
-        "PublishOrderIndex": 410,
+        "PublishOrderIndex": 407,
         "Rules": [
           {
             "Category": "Data",
@@ -815,8 +815,8 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "Parent.Width-Self.Width",
-            "Property": "X",
+            "InvariantScript": "Parent.Height-Self.Height",
+            "Property": "Y",
             "RuleProviderType": "Unknown"
           },
           {
@@ -827,9 +827,9 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "Parent.Height-Self.Height",
-            "Property": "Y",
-            "RuleProviderType": "User"
+            "InvariantScript": "Parent.Width-Self.Width",
+            "Property": "X",
+            "RuleProviderType": "Unknown"
           },
           {
             "Category": "Design",
@@ -1018,15 +1018,9 @@
       "MenuScreen",
       "ScreenTitle"
     ],
-    "LastModifiedTimestamp": "638586564880677517",
-    "Name": "cmtHeader",
+    "LastModifiedTimestamp": "638586567819324938",
+    "Name": "cmpHeader",
     "Rules": [
-      {
-        "Category": "Data",
-        "InvariantScript": "App.ActiveScreen",
-        "Property": "MenuScreen",
-        "RuleProviderType": "System"
-      },
       {
         "Category": "Data",
         "InvariantScript": "\"Text\"",
@@ -1034,27 +1028,15 @@
         "RuleProviderType": "System"
       },
       {
-        "Category": "Design",
-        "InvariantScript": "1",
-        "Property": "ZIndex",
+        "Category": "Data",
+        "InvariantScript": "App.ActiveScreen",
+        "Property": "MenuScreen",
         "RuleProviderType": "System"
       },
       {
         "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "Y",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "0",
-        "Property": "X",
-        "RuleProviderType": "System"
-      },
-      {
-        "Category": "Design",
-        "InvariantScript": "Min(App.Width,App.DesignWidth)",
-        "Property": "Width",
+        "InvariantScript": "RGBA(71, 158, 245, 1)",
+        "Property": "Fill",
         "RuleProviderType": "System"
       },
       {
@@ -1065,8 +1047,26 @@
       },
       {
         "Category": "Design",
-        "InvariantScript": "RGBA(71, 158, 245, 1)",
-        "Property": "Fill",
+        "InvariantScript": "Min(App.Width,App.DesignWidth)",
+        "Property": "Width",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "X",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "0",
+        "Property": "Y",
+        "RuleProviderType": "System"
+      },
+      {
+        "Category": "Design",
+        "InvariantScript": "1",
+        "Property": "ZIndex",
         "RuleProviderType": "System"
       }
     ]
@@ -1075,7 +1075,7 @@
     "AllowAccessToGlobals": true,
     "AllowCustomization": true,
     "Description": "",
-    "Name": "cmtHeader",
+    "Name": "cmpHeader",
     "TemplateGuid": "fc488f2cebb84e85868423af2b793ee1"
   },
   "ComponentType": "CanvasComponent",
@@ -1108,7 +1108,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638586564880677517",
+  "LastModifiedTimestamp": "638586567819324938",
   "Name": "fc488f2cebb84e85868423af2b793ee1",
   "OverridableProperties": {},
   "Version": "1.0"

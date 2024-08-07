@@ -1,6 +1,6 @@
 {
   "ControlStates": {
-    "cmtHeader": {
+    "cmpHeader": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
         {
@@ -41,39 +41,24 @@
       "IsLocked": false,
       "LayoutName": "",
       "MetaDataIDKey": "",
-      "Name": "cmtHeader",
+      "Name": "cmpHeader",
       "OptimizeForDevices": "Off",
       "ParentIndex": 0,
       "PersistMetaDataIDKey": false,
       "Properties": [
         {
           "Category": "Data",
-          "PropertyName": "MenuScreen",
-          "RuleProviderType": "System"
-        },
-        {
-          "Category": "Data",
           "PropertyName": "ScreenTitle",
           "RuleProviderType": "System"
         },
         {
-          "Category": "Design",
-          "PropertyName": "ZIndex",
+          "Category": "Data",
+          "PropertyName": "MenuScreen",
           "RuleProviderType": "System"
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "System"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "X",
-          "RuleProviderType": "System"
-        },
-        {
-          "Category": "Design",
-          "PropertyName": "Width",
+          "PropertyName": "Fill",
           "RuleProviderType": "System"
         },
         {
@@ -83,7 +68,22 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Fill",
+          "PropertyName": "Width",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "X",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Y",
+          "RuleProviderType": "System"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "ZIndex",
           "RuleProviderType": "System"
         }
       ],
@@ -292,7 +292,7 @@
         {
           "Category": "Behavior",
           "PropertyName": "OnSelect",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         }
       ],
       "StyleName": "defaultIconStyle",
@@ -464,7 +464,7 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "X",
+          "PropertyName": "Y",
           "RuleProviderType": "Unknown"
         },
         {
@@ -474,8 +474,8 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Y",
-          "RuleProviderType": "User"
+          "PropertyName": "X",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -724,12 +724,17 @@
         },
         {
           "Category": "Data",
-          "PropertyName": "Text",
-          "RuleProviderType": "User"
+          "PropertyName": "Role",
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Data",
-          "PropertyName": "Role",
+          "PropertyName": "Text",
+          "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Design",
+          "PropertyName": "Height",
           "RuleProviderType": "Unknown"
         },
         {
@@ -909,11 +914,6 @@
         },
         {
           "Category": "Design",
-          "PropertyName": "Height",
-          "RuleProviderType": "Unknown"
-        },
-        {
-          "Category": "Design",
           "PropertyName": "HoverColor",
           "RuleProviderType": "Unknown"
         }
@@ -922,5 +922,5 @@
       "Type": "ControlInfo"
     }
   },
-  "TopParentName": "cmtHeader"
+  "TopParentName": "cmpHeader"
 }

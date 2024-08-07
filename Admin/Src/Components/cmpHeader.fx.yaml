@@ -1,4 +1,4 @@
-cmtHeader As CanvasComponent:
+cmpHeader As CanvasComponent:
     Fill: =RGBA(71, 158, 245, 1)
     Height: =75
     MenuScreen: =App.ActiveScreen
@@ -22,8 +22,8 @@ cmtHeader As CanvasComponent:
         Font: =Font.'Segoe UI'
         Height: =Parent.Height
         Size: =30
-        Text: ="CAMD PhD Database - "&cmtHeader.ScreenTitle
-        Width: =cmtHeader.Width
+        Text: ="CAMD PhD Database - "&cmpHeader.ScreenTitle
+        Width: =cmpHeader.Width
         Y: =20
         ZIndex: =2
 
@@ -57,7 +57,7 @@ cmtHeader As CanvasComponent:
         HoverColor: =RGBA(16, 110, 190, 1)
         HoverFill: =RGBA(0, 0, 0, 0)
         Icon: =Icon.Home
-        OnSelect: =Navigate(cmtHeader.MenuScreen)
+        OnSelect: =Navigate(cmpHeader.MenuScreen)
         PressedBorderColor: =RGBA(0, 0, 0, 0)
         PressedColor: =RGBA(16, 110, 190, 1)
         PressedFill: =RGBA(0, 0, 0, 0)

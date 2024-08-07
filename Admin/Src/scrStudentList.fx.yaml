@@ -41,9 +41,10 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
+            Visible: =false
             Width: =Min(galStudentLlist.Width,Parent.Width-32)
             X: =ctrListMain.X
-            ZIndex: =1
+            ZIndex: =2
 
             Container6 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light

@@ -4424,19 +4424,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.icoHome_1.AccessibleLabel"
+                  "fullyQualifiedName": "cmpHeader.icoHome_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.icoHome_1.AccessibleLabel",
+                  "fullyQualifiedName": "cmpHeader.icoHome_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "scrAdminMenu",
-                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.icoHome_1"
+                "module": "cmpHeader",
+                "type": "cmpHeader.icoHome_3"
               }
             }
           ],
@@ -4454,79 +4454,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.icoHome_1.TabIndex"
+                  "fullyQualifiedName": "cmpHeader.icoHome_3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.icoHome_1.TabIndex",
+                  "fullyQualifiedName": "cmpHeader.icoHome_3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "scrAdminMenu",
-                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.icoHome_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "cmtHeader.icoHome_3.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "cmtHeader.icoHome_3.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "cmtHeader",
-                "type": "cmtHeader.icoHome_3"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "cmtHeader.icoHome_3.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "cmtHeader.icoHome_3.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "cmtHeader",
-                "type": "cmtHeader.icoHome_3"
+                "module": "cmpHeader",
+                "type": "cmpHeader.icoHome_3"
               }
             }
           ],
@@ -5847,36 +5787,6 @@
                 "member": "HoverColor",
                 "module": "scrStudentOverview",
                 "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneDefense"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.labHeader.Width"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.labHeader.Width",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Width",
-                "module": "scrAdminMenu",
-                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.labHeader"
               }
             }
           ],
