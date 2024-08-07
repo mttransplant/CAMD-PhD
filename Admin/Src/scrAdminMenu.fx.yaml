@@ -88,6 +88,7 @@
                     OnSelect: =Navigate(scrFunding)
                     Text: ="Funding Sources"
                     VerticalAlign: =""
+                    Visible: =CurrentRole="Admin"
                     Width: =Parent.Width/2-10
                     X: =Parent.Width/2+5
                     Y: =Parent.Height/2+5
@@ -109,6 +110,7 @@
                     OnSelect: =Navigate(scrPositions)  
                     Text: ="TA/RA Positions"
                     VerticalAlign: =""
+                    Visible: =CurrentRole="Admin"
                     Width: =Parent.Width/2-10
                     X: =5
                     Y: =Parent.Height/2+5
@@ -130,6 +132,7 @@
                     OnSelect: =Navigate(scrAdvisors)
                     Text: ="Advisors"
                     VerticalAlign: =""
+                    Visible: =CurrentRole="Admin"
                     Width: =Parent.Width/2-10
                     X: =Parent.Width/2+5
                     Y: =5
@@ -151,6 +154,7 @@
                     OnSelect: =Navigate(scrStudentList)
                     Text: ="Students"
                     VerticalAlign: =""
+                    Visible: =CurrentRole in ["Admin","Advisor"]
                     Width: =Parent.Width/2-10
                     X: =5
                     Y: =5
