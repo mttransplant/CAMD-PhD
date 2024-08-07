@@ -192,7 +192,6 @@
                     Icon: =Icon.Cancel
                     OnSelect: |-
                         =ResetForm(frmEditPosition);
-                        Clear(colStudentUpdates);
                         UpdateContext({IsEditing:false})
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
