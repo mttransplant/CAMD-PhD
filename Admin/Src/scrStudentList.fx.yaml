@@ -395,7 +395,7 @@
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Height: =90
-                Items: =Sort('PhD Students','Full Name',SortOrder.Ascending)
+                Items: =Sort(If(CurrentRole="Admin",'PhD Students',Filter('PhD Students',Advisor.'Advisor Email'=CurrentEmail)),'Full Name',SortOrder.Ascending)
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
