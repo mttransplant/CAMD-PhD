@@ -2,10 +2,12 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: =
     OnVisible: |-
-        =Set(CurrentUser,User().FullName);Set(CurrentEmail,User().Email);
-        ClearCollect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Students','Full Name',Name,'Email',User_Email),Name,User_Email),Role,"Student"));
+        =ClearCollect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Students','Full Name',Name,'Email',User_Email),Name,User_Email),Role,"Student"));
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Admins','Admin Name',Name,'Admin Email',User_Email),Name,User_Email),Role,"Admin"));
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Advisors','Advisor Name',Name,'Advisor Email',User_Email),Name,User_Email),Role,"Advisor"));
+        Set(CurrentUser,User().FullName);
+        Set(CurrentEmail,User().Email);
+        Set(CurrentRole,Filter(colUserList,User_Email=CurrentEmail));
 
     ctrAdminMenu As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light

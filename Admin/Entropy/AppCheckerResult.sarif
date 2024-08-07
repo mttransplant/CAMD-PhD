@@ -4424,17 +4424,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.CurrentEmail"
+                  "fullyQualifiedName": "App.CurrentRole"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.CurrentEmail",
+                  "fullyQualifiedName": "App.CurrentRole",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "CurrentEmail",
+                "member": "CurrentRole",
                 "module": "App",
                 "type": "App"
               }
