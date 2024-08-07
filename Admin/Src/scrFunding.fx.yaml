@@ -185,7 +185,7 @@
                     Height: =Parent.Height
                     Size: =13
                     Text: ="Contact Email"
-                    Width: =labFundingEmail.Width
+                    Width: =Parent.Width-Self.X-10
                     X: =labFundingEmail.X
                     ZIndex: =12
 
