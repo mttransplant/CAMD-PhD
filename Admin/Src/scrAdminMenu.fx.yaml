@@ -7,7 +7,7 @@
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Advisors','Advisor Name',Name,'Advisor Email',User_Email),Name,User_Email),Role,"Advisor"));
         Set(CurrentUser,User().FullName);
         Set(CurrentEmail,User().Email);
-        Set(CurrentRole,Filter(colUserList,User_Email=CurrentEmail));
+        Set(CurrentRole,First(Filter(colUserList,User_Email=User().Email)).Role);
 
     ctrAdminMenu As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -29,23 +29,21 @@
         X: =(Parent.Width-Self.Width)/2
         ZIndex: =1
 
-        ctrMenuHeader As groupContainer.horizontalAutoLayoutContainer:
-            AlignInContainer: =AlignInContainer.SetByContainer
+        ctrMenuHeader As groupContainer.manualLayoutContainer:
             DropShadow: =DropShadow.Light
-            Fill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(71, 158, 245, 1)
             FillPortions: =0
             Height: =75
-            LayoutMinHeight: =100
+            LayoutMinHeight: =50
             LayoutMinWidth: =250
-            LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =8
-            RadiusBottomRight: =8
-            RadiusTopLeft: =8
-            RadiusTopRight: =8
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             Width: =Parent.Width
-            ZIndex: =1
+            ZIndex: =2
 
-            labMenuHeader As label:
+            labHeader As label:
                 Align: =Align.Center
                 BorderColor: =RGBA(0, 0, 0, 0)
                 BorderStyle: =BorderStyle.None
@@ -54,14 +52,52 @@
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisplayMode: =DisplayMode.View
-                Fill: =RGBA(71, 158, 245, 1)
+                Fill: =RGBA(0,0,0,0)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
                 Height: =Parent.Height
                 Size: =30
                 Text: ="CAMD PhD Admin Menu"
-                Width: =ctrMenuHeader.Width
+                Width: =ctrListHeader.Width
                 ZIndex: =1
+
+            labCurrentUser As label:
+                Align: =Align.Right
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                BorderThickness: =2
+                Color: =RGBA(50, 49, 48, 1)
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                FocusedBorderThickness: =4
+                Font: =Font.'Segoe UI'
+                Height: =25
+                Size: =13
+                Text: =CurrentUser&" ("&CurrentRole&")"
+                Width: =300
+                X: =Parent.Width-Self.Width
+                ZIndex: =3
+
+            icoHome_1 As icon.Home:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                DisabledColor: =RGBA(225, 223, 221, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =30
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(16, 110, 190, 1)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Home
+                OnSelect: =Navigate(scrAdminMenu)
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =RGBA(16, 110, 190, 1)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Width: =30
+                X: =5
+                Y: =(Parent.Height-Self.Height)/2
+                ZIndex: =4
 
         ctrMenuNav As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
@@ -73,7 +109,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            ZIndex: =6
+            ZIndex: =3
 
             ctrNav As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light

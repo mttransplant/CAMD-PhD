@@ -4424,19 +4424,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.CurrentRole"
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.icoHome_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.CurrentRole",
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.icoHome_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "CurrentRole",
-                "module": "App",
-                "type": "App"
+                "member": "AccessibleLabel",
+                "module": "scrAdminMenu",
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.icoHome_1"
               }
             }
           ],
@@ -4446,25 +4446,55 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 2
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "App.CurrentUser"
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.icoHome_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "App.CurrentUser",
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.icoHome_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "CurrentUser",
+                "member": "TabIndex",
+                "module": "scrAdminMenu",
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.icoHome_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "App.CurrentEmail"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "App.CurrentEmail",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "CurrentEmail",
                 "module": "App",
                 "type": "App"
               }
@@ -5757,6 +5787,36 @@
                 "member": "HoverColor",
                 "module": "scrStudentOverview",
                 "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneDefense"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.labHeader.Width"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.labHeader.Width",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Width",
+                "module": "scrAdminMenu",
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuHeader.labHeader"
               }
             }
           ],

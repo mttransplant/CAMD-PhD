@@ -47,7 +47,7 @@
 
             Container6 As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
-                Height: =Parent.Height
+                Height: =75
                 LayoutMinHeight: =50
                 LayoutMinWidth: =250
                 RadiusBottomLeft: =4
