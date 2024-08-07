@@ -8,10 +8,6 @@
         
         UpdateContext({IsTesting:false, TestEmail:"c.pearce@northeastern.edu"});
         Set(CurrentUser,First(Sort(Filter(colUserList,Email=If(IsTesting,TestEmail,User().Email)),Role,SortOrder.Ascending)));
-        
-        // Set(CurrentUser,If(IsTesting,"Celia Pearce",User().FullName));
-        // Set(CurrentEmail,If(IsTesting,"c.pearce@northeastern.edu",User().Email));
-        // Set(CurrentRole,First(Sort(Filter(colUserList,Email=CurrentEmail),Role,SortOrder.Ascending)).Role);
 
     ctrAdminMenu As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
