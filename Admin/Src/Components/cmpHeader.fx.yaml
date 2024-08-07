@@ -39,7 +39,7 @@ cmpHeader As CanvasComponent:
         Font: =Font.'Segoe UI'
         Height: =25
         Size: =13
-        Text: =CurrentUser&" ("&CurrentRole&")"
+        Text: =CurrentUser.Name&" ("&CurrentUser.Role&")"
         Width: =300
         X: =Parent.Width-Self.Width
         Y: =Parent.Height-Self.Height

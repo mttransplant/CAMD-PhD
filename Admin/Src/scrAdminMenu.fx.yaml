@@ -5,10 +5,13 @@
         =ClearCollect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Admins','Admin Name',Name,'Admin Email',Email),Name,Email),Role,"Admin"));
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Advisors','Advisor Name',Name,'Advisor Email',Email),Name,Email),Role,"Advisor"));
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Students','Full Name',Name,'Student Email',Email),Name,Email),Role,"Student"));
-        UpdateContext({IsTesting:false});
-        Set(CurrentUser,If(IsTesting,"Celia Pearce",User().FullName));
-        Set(CurrentEmail,If(IsTesting,"c.pearce@northeastern.edu",User().Email));
-        Set(CurrentRole,First(Sort(Filter(colUserList,Email=CurrentEmail),Role,SortOrder.Ascending)).Role);
+        
+        UpdateContext({IsTesting:false, TestEmail:"c.pearce@northeastern.edu"});
+        Set(CurrentUser,First(Sort(Filter(colUserList,Email=If(IsTesting,TestEmail,User().Email)),Role,SortOrder.Ascending)));
+        
+        // Set(CurrentUser,If(IsTesting,"Celia Pearce",User().FullName));
+        // Set(CurrentEmail,If(IsTesting,"c.pearce@northeastern.edu",User().Email));
+        // Set(CurrentRole,First(Sort(Filter(colUserList,Email=CurrentEmail),Role,SortOrder.Ascending)).Role);
 
     ctrAdminMenu As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -88,7 +91,7 @@
                     OnSelect: =Navigate(scrFunding)
                     Text: ="Funding Sources"
                     VerticalAlign: =""
-                    Visible: =CurrentRole="Admin"
+                    Visible: =CurrentUser.Role="Admin"
                     Width: =Parent.Width/2-10
                     X: =Parent.Width/2+5
                     Y: =Parent.Height/2+5
@@ -110,7 +113,7 @@
                     OnSelect: =Navigate(scrPositions)  
                     Text: ="TA/RA Positions"
                     VerticalAlign: =""
-                    Visible: =CurrentRole="Admin"
+                    Visible: =CurrentUser.Role="Admin"
                     Width: =Parent.Width/2-10
                     X: =5
                     Y: =Parent.Height/2+5
@@ -132,7 +135,7 @@
                     OnSelect: =Navigate(scrAdvisors)
                     Text: ="Advisors"
                     VerticalAlign: =""
-                    Visible: =CurrentRole="Admin"
+                    Visible: =CurrentUser.Role="Admin"
                     Width: =Parent.Width/2-10
                     X: =Parent.Width/2+5
                     Y: =5
@@ -154,7 +157,7 @@
                     OnSelect: =Navigate(scrStudentList)
                     Text: ="Students"
                     VerticalAlign: =""
-                    Visible: =CurrentRole in ["Admin","Advisor"]
+                    Visible: =CurrentUser.Role in ["Admin","Advisor"]
                     Width: =Parent.Width/2-10
                     X: =5
                     Y: =5
