@@ -1,7 +1,10 @@
 "scrAdminMenu As screen.'autoLayout_HeaderFooter_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: =
-    OnVisible: =
+    OnVisible: |-
+        =Set(UserName, User().FullName);
+        Set(UserEmail, User().Email);
+        ClearCollect(colUserList,ShowColumns('PhD Students','Full Name',Email),ShowColumns('PhD Admins','Admin Name','Admin Email'),ShowColumns('PhD Advisors','Advisor Name','Advisor Email'));
 
     ctrAdminMenu As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -51,7 +54,7 @@
                 Fill: =RGBA(71, 158, 245, 1)
                 FocusedBorderThickness: =4
                 Font: =Font.'Segoe UI'
-                Height: =ctrListHeader.Height
+                Height: =Parent.Height
                 Size: =30
                 Text: ="CAMD PhD Admin Menu"
                 Width: =ctrMenuHeader.Width
@@ -71,6 +74,7 @@
 
             ctrNav As groupContainer.manualLayoutContainer:
                 DropShadow: =DropShadow.Light
+                Height: =Parent.Height
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
                 RadiusBottomLeft: =4
