@@ -59,7 +59,14 @@
             "NameMapSourceSchema": "?"
           },
           "X",
-          "Y",
+          {
+            "AFDDataSourceName": "",
+            "AutoRuleBindingEnabled": false,
+            "AutoRuleBindingString": "20",
+            "InvariantPropertyName": "Y",
+            "IsLockable": false,
+            "NameMapSourceSchema": "?"
+          },
           {
             "AFDDataSourceName": "",
             "AutoRuleBindingEnabled": false,
@@ -262,9 +269,9 @@
           },
           {
             "Category": "Design",
-            "InvariantScript": "20",
+            "InvariantScript": "Parent.Y",
             "Property": "Y",
-            "RuleProviderType": "Unknown"
+            "RuleProviderType": "User"
           },
           {
             "Category": "Design",
@@ -1018,7 +1025,7 @@
       "MenuScreen",
       "ScreenTitle"
     ],
-    "LastModifiedTimestamp": "638604484996267013",
+    "LastModifiedTimestamp": "638624501668575892",
     "Name": "cmpHeader",
     "Rules": [
       {
@@ -1108,7 +1115,7 @@
   "IsPcfControl": false,
   "IsPremiumPcfControl": false,
   "IsWidgetTemplate": false,
-  "LastModifiedTimestamp": "638604484996267013",
+  "LastModifiedTimestamp": "638624501668575892",
   "Name": "fc488f2cebb84e85868423af2b793ee1",
   "OverridableProperties": {},
   "Version": "1.0"

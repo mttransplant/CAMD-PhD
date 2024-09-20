@@ -24,7 +24,7 @@ cmpHeader As CanvasComponent:
         Size: =30
         Text: ="CAMD PhD Database - "&cmpHeader.ScreenTitle
         Width: =cmpHeader.Width
-        Y: =20
+        Y: =Parent.Y
         ZIndex: =2
 
     labCurrentUser_2 As label:
