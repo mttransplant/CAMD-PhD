@@ -6,9 +6,9 @@
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Advisors','Advisor Name',Name,'Advisor Email',Email),Name,Email),Role,"Advisor"));
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Students','Full Name',Name,'Student Email',Email),Name,Email),Role,"Student"));
         
-         UpdateContext({IsTesting:false, TestEmail:""}); //self
+        // UpdateContext({IsTesting:false, TestEmail:""}); //self
         // UpdateContext({IsTesting:true, TestEmail:"c.pearce@northeastern.edu"}); //faculty
-        // UpdateContext({IsTesting:true, TestEmail:"abdulhameed.r@northeastern.edu"}); //student
+         UpdateContext({IsTesting:true, TestEmail:"abdulhameed.r@northeastern.edu"}); //student
         Set(CurrentUser,First(Sort(Filter(colUserList,Email=If(IsTesting,TestEmail,User().Email)),Role,SortOrder.Ascending)));
 
     ctrAdminMenu As groupContainer.verticalAutoLayoutContainer:
@@ -178,7 +178,7 @@
                 Layout: ="Icon before"
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
-                OnSelect: =Navigate(scrFunding)
+                OnSelect: =Navigate(scrSelfEvalQuestions)
                 Text: ="Self Evaluation"
                 VerticalAlign: =""
                 Visible: =CurrentUser.Role="Student"
