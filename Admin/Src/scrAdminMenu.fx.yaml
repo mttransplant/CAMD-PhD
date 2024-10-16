@@ -6,9 +6,9 @@
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Advisors','Advisor Name',Name,'Advisor Email',Email),Name,Email),Role,"Advisor"));
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Students','Full Name',Name,'Student Email',Email),Name,Email),Role,"Student"));
         
-        // UpdateContext({IsTesting:false, TestEmail:""}); //self
+         UpdateContext({IsTesting:false, TestEmail:""}); //self
         // UpdateContext({IsTesting:true, TestEmail:"c.pearce@northeastern.edu"}); //faculty
-         UpdateContext({IsTesting:true, TestEmail:"abdulhameed.r@northeastern.edu"}); //student
+        // UpdateContext({IsTesting:true, TestEmail:"abdulhameed.r@northeastern.edu"}); //student
         Set(CurrentUser,First(Sort(Filter(colUserList,Email=If(IsTesting,TestEmail,User().Email)),Role,SortOrder.Ascending)));
 
     ctrAdminMenu As groupContainer.verticalAutoLayoutContainer:
@@ -61,16 +61,20 @@
             PaddingRight: |
                 =5
             PaddingTop: =5
-            RadiusBottomLeft: =10
-            RadiusBottomRight: =10
-            RadiusTopLeft: =10
-            RadiusTopRight: =10
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
             ZIndex: =3
 
             btnStudent As Button:
                 Align: =""
                 BasePaletteColor: =
                 BorderColor: =
+                BorderRadiusBottomLeft: =10
+                BorderRadiusBottomRight: =10
+                BorderRadiusTopLeft: =10
+                BorderRadiusTopRight: =10
                 BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -95,6 +99,10 @@
                 Align: =""
                 BasePaletteColor: =
                 BorderColor: =
+                BorderRadiusBottomLeft: =10
+                BorderRadiusBottomRight: =10
+                BorderRadiusTopLeft: =10
+                BorderRadiusTopRight: =10
                 BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -119,6 +127,10 @@
                 Align: =""
                 BasePaletteColor: =
                 BorderColor: =
+                BorderRadiusBottomLeft: =10
+                BorderRadiusBottomRight: =10
+                BorderRadiusTopLeft: =10
+                BorderRadiusTopRight: =10
                 BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -143,6 +155,10 @@
                 Align: =""
                 BasePaletteColor: =
                 BorderColor: =
+                BorderRadiusBottomLeft: =10
+                BorderRadiusBottomRight: =10
+                BorderRadiusTopLeft: =10
+                BorderRadiusTopRight: =10
                 BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
@@ -167,6 +183,10 @@
                 Align: =""
                 BasePaletteColor: =
                 BorderColor: =
+                BorderRadiusBottomLeft: =10
+                BorderRadiusBottomRight: =10
+                BorderRadiusTopLeft: =10
+                BorderRadiusTopRight: =10
                 BorderStyle: =""
                 DisplayMode: =DisplayMode.Edit
                 FontColor: =
