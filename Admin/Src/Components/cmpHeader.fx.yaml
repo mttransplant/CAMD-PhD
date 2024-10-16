@@ -25,9 +25,9 @@ cmpHeader As CanvasComponent:
         Text: ="CAMD PhD Database - "&cmpHeader.ScreenTitle
         Width: =cmpHeader.Width
         Y: =Parent.Y
-        ZIndex: =2
+        ZIndex: =1
 
-    labCurrentUser_2 As label:
+    labCurrentUserRole As label:
         Align: =Align.Right
         BorderColor: =RGBA(0, 0, 0, 0)
         BorderStyle: =BorderStyle.None
@@ -39,10 +39,28 @@ cmpHeader As CanvasComponent:
         Font: =Font.'Segoe UI'
         Height: =25
         Size: =13
-        Text: =CurrentUser.Name&" ("&CurrentUser.Role&")"
+        Text: =CurrentUser.Role
         Width: =300
         X: =Parent.Width-Self.Width
         Y: =Parent.Height-Self.Height
+        ZIndex: =2
+
+    labCurrentUserName As label:
+        Align: =Align.Right
+        BorderColor: =RGBA(0, 0, 0, 0)
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        Color: =RGBA(50, 49, 48, 1)
+        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+        DisabledColor: =RGBA(161, 159, 157, 1)
+        FocusedBorderThickness: =4
+        Font: =Font.'Segoe UI'
+        Height: =25
+        Size: =13
+        Text: =CurrentUser.Name
+        Width: =300
+        X: =Parent.Width-Self.Width
+        Y: =Parent.Height-Self.Height-labCurrentUserRole.Height
         ZIndex: =3
 
     icoHome_3 As icon.Home:

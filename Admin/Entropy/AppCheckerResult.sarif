@@ -3356,19 +3356,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.ctrNav.btnStudent.AccessibleLabel"
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnFunding.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.ctrNav.btnStudent.AccessibleLabel",
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnFunding.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAdminMenu",
-                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.ctrNav.btnStudent"
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnFunding"
               }
             }
           ],
@@ -3386,19 +3386,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.ctrNav.btnAdvisor.AccessibleLabel"
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAdvisor.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.ctrNav.btnAdvisor.AccessibleLabel",
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAdvisor.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAdminMenu",
-                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.ctrNav.btnAdvisor"
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAdvisor"
               }
             }
           ],
@@ -3416,19 +3416,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.ctrNav.btnTARA.AccessibleLabel"
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnStudent.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.ctrNav.btnTARA.AccessibleLabel",
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnStudent.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAdminMenu",
-                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.ctrNav.btnTARA"
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnStudent"
               }
             }
           ],
@@ -3446,19 +3446,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.ctrNav.btnFunding.AccessibleLabel"
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnSelfEval.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.ctrNav.btnFunding.AccessibleLabel",
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnSelfEval.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAdminMenu",
-                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.ctrNav.btnFunding"
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnSelfEval"
               }
             }
           ],
@@ -4040,6 +4040,36 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnTARA.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnTARA.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrAdminMenu",
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnTARA"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [

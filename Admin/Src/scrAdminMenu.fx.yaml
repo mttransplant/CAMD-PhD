@@ -6,7 +6,7 @@
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Advisors','Advisor Name',Name,'Advisor Email',Email),Name,Email),Role,"Advisor"));
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Students','Full Name',Name,'Student Email',Email),Name,Email),Role,"Student"));
         
-        UpdateContext({IsTesting:false, TestEmail:""}); //self
+         UpdateContext({IsTesting:false, TestEmail:""}); //self
         // UpdateContext({IsTesting:true, TestEmail:"c.pearce@northeastern.edu"}); //faculty
         // UpdateContext({IsTesting:true, TestEmail:"abdulhameed.r@northeastern.edu"}); //student
         Set(CurrentUser,First(Sort(Filter(colUserList,Email=If(IsTesting,TestEmail,User().Email)),Role,SortOrder.Ascending)));
@@ -53,111 +53,137 @@
         ctrMenuNav As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =5
             LayoutMinHeight: =100
             LayoutMinWidth: =250
             LayoutMode: =LayoutMode.Auto
-            RadiusBottomLeft: =4
-            RadiusBottomRight: =4
-            RadiusTopLeft: =4
-            RadiusTopRight: =4
+            PaddingLeft: =5
+            PaddingRight: |
+                =5
+            PaddingTop: =5
+            RadiusBottomLeft: =10
+            RadiusBottomRight: =10
+            RadiusTopLeft: =10
+            RadiusTopRight: =10
             ZIndex: =3
 
-            ctrNav As groupContainer.manualLayoutContainer:
-                DropShadow: =DropShadow.Light
-                Height: =Parent.Height
-                LayoutMinHeight: =100
-                LayoutMinWidth: =250
-                RadiusBottomLeft: =4
-                RadiusBottomRight: =4
-                RadiusTopLeft: =4
-                RadiusTopRight: =4
+            btnStudent As Button:
+                Align: =""
+                BasePaletteColor: =
+                BorderColor: =
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =56
+                Height: =Parent.Height/6-10
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrStudentList)
+                Text: ="Students"
+                VerticalAlign: =""
+                Visible: =CurrentUser.Role in ["Admin","Advisor"]
+                Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                X: =5
+                Y: =5
                 ZIndex: =1
 
-                btnFunding As Button:
-                    Align: =""
-                    BasePaletteColor: =
-                    BorderColor: =
-                    BorderStyle: =""
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    FontSize: =56
-                    Height: =Parent.Height/2-10
-                    Icon: =""
-                    IconRotation: =0
-                    IconStyle: ="Outline"
-                    Layout: ="Icon before"
-                    OnSelect: =Navigate(scrFunding)
-                    Text: ="Funding Sources"
-                    VerticalAlign: =""
-                    Visible: =CurrentUser.Role="Admin"
-                    Width: =Parent.Width/2-10
-                    X: =Parent.Width/2+5
-                    Y: =Parent.Height/2+5
-                    ZIndex: =1
+            btnAdvisor As Button:
+                Align: =""
+                BasePaletteColor: =
+                BorderColor: =
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =56
+                Height: =Parent.Height/6-10
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrAdvisors)
+                Text: ="Advisors"
+                VerticalAlign: =""
+                Visible: =CurrentUser.Role="Admin"
+                Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                X: =Parent.Width/2+5
+                Y: =5
+                ZIndex: =2
 
-                btnTARA As Button:
-                    Align: =""
-                    BasePaletteColor: =
-                    BorderColor: =
-                    BorderStyle: =""
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    FontSize: =56
-                    Height: =Parent.Height/2-10
-                    Icon: =""
-                    IconRotation: =0
-                    IconStyle: ="Outline"
-                    Layout: ="Icon before"
-                    OnSelect: =Navigate(scrPositions)  
-                    Text: ="TA/RA Positions"
-                    VerticalAlign: =""
-                    Visible: =CurrentUser.Role="Admin"
-                    Width: =Parent.Width/2-10
-                    X: =5
-                    Y: =Parent.Height/2+5
-                    ZIndex: =2
+            btnFunding As Button:
+                Align: =""
+                BasePaletteColor: =
+                BorderColor: =
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =56
+                Height: =Parent.Height/6-10
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrFunding)
+                Text: ="Funding Sources"
+                VerticalAlign: =""
+                Visible: =CurrentUser.Role="Admin"
+                Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                X: =Parent.Width/2+5
+                Y: =Parent.Height/6+5
+                ZIndex: =3
 
-                btnAdvisor As Button:
-                    Align: =""
-                    BasePaletteColor: =
-                    BorderColor: =
-                    BorderStyle: =""
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    FontSize: =56
-                    Height: =Parent.Height/2-10
-                    Icon: =""
-                    IconRotation: =0
-                    IconStyle: ="Outline"
-                    Layout: ="Icon before"
-                    OnSelect: =Navigate(scrAdvisors)
-                    Text: ="Advisors"
-                    VerticalAlign: =""
-                    Visible: =CurrentUser.Role="Admin"
-                    Width: =Parent.Width/2-10
-                    X: =Parent.Width/2+5
-                    Y: =5
-                    ZIndex: =3
+            btnTARA As Button:
+                Align: =""
+                BasePaletteColor: =
+                BorderColor: =
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =56
+                Height: =Parent.Height/6-10
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrPositions)  
+                Text: ="TA/RA Positions"
+                VerticalAlign: =""
+                Visible: =CurrentUser.Role="Admin"
+                Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                X: =5
+                Y: =Parent.Height/6+5
+                ZIndex: =4
 
-                btnStudent As Button:
-                    Align: =""
-                    BasePaletteColor: =
-                    BorderColor: =
-                    BorderStyle: =""
-                    DisplayMode: =DisplayMode.Edit
-                    FontColor: =
-                    FontSize: =56
-                    Height: =Parent.Height/2-10
-                    Icon: =""
-                    IconRotation: =0
-                    IconStyle: ="Outline"
-                    Layout: ="Icon before"
-                    OnSelect: =Navigate(scrStudentList)
-                    Text: ="Students"
-                    VerticalAlign: =""
-                    Visible: =CurrentUser.Role in ["Admin","Advisor"]
-                    Width: =Parent.Width/2-10
-                    X: =5
-                    Y: =5
-                    ZIndex: =4
+            btnSelfEval As Button:
+                Align: =""
+                BasePaletteColor: =
+                BorderColor: =
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =56
+                Height: =Parent.Height/6-10
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrFunding)
+                Text: ="Self Evaluation"
+                VerticalAlign: =""
+                Visible: =CurrentUser.Role="Student"
+                Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                X: =Parent.Width/2+5
+                Y: =Parent.Height/2+5
+                ZIndex: =5
 
