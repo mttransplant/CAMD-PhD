@@ -68,6 +68,13 @@
       }
     },
     {
+      "Kind": "default.cds_cr829_phdassessmentselfbrief_forms",
+      "Namespace": "PhD Assessment Self Brief (Forms)",
+      "Values": {
+        "Information": "1da8ec72-2477-46e0-b08d-79193f54448e"
+      }
+    },
+    {
       "Kind": "default.cds_cr829_studentinformation_forms",
       "Namespace": "PhD Students (Forms)1",
       "Values": {
@@ -126,13 +133,6 @@
       "Namespace": "PhD Enrollmentss (Forms)",
       "Values": {
         "Information": "b3a18b4d-10f5-410f-9f07-e6e673c3e886"
-      }
-    },
-    {
-      "Kind": "default.cds_cr829_phdassessmentselfbrief_forms",
-      "Namespace": "PhD Assessment Self Brief (Forms)",
-      "Values": {
-        "Information": "1da8ec72-2477-46e0-b08d-79193f54448e"
       }
     }
   ]
