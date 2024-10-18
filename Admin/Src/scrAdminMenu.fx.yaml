@@ -31,6 +31,7 @@
         ZIndex: =1
 
         cntMenuHeader As groupContainer.horizontalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             FillPortions: =0
             Height: =75
@@ -51,6 +52,7 @@
                 Width: =Parent.Width
 
         ctrMenuNav As groupContainer.verticalAutoLayoutContainer:
+            AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
             LayoutDirection: =LayoutDirection.Vertical
             LayoutGap: =5
