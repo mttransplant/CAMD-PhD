@@ -1,4 +1,5 @@
 "scrAdminMenu As screen.'autoLayout_HeaderFooter_ver1.0'":
+    LoadingSpinner: =LoadingSpinner.Data
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: =
     OnVisible: |-
@@ -54,6 +55,7 @@
         ctrMenuNav As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
             DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
             LayoutDirection: =LayoutDirection.Vertical
             LayoutGap: =5
             LayoutMinHeight: =100

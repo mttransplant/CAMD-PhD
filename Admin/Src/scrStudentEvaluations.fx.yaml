@@ -153,6 +153,7 @@
                 OnSelect: =Navigate(scrStudentHistory)
                 Text: ="Activity History"
                 VerticalAlign: =""
+                Visible: =CurrentUser.Role="Admin"
                 Width: =140
                 X: =0
                 Y: =0
