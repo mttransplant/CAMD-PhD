@@ -88,6 +88,7 @@
                 OnSelect: =Navigate(scrStudentList)
                 Text: ="Back to List"
                 VerticalAlign: =""
+                Visible: =If(CurrentUser.Role="Admin",true,false)
                 Width: =140
                 X: =0
                 Y: =0
@@ -398,10 +399,10 @@
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="Add Milestone"
-                    Visible: =CountRows(colUpdateMilestones)+CountRows(colDeleteMilestones)=0
+                    Visible: =CountRows(colUpdateMilestones)+CountRows(colDeleteMilestones)=0 And CurrentUser.Role="Admin"
                     Width: =30
                     X: =btnMilestonesEdit.X+btnMilestonesEdit.Width
-                    Y: =10
+                    Y: =5
                     ZIndex: =7
 
                 btnMilestonesEdit As icon.Edit:
@@ -422,7 +423,7 @@
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="Edit Milestones"
-                    Visible: =Not(IsEditing)
+                    Visible: =CurrentUser.Role="Admin"
                     Width: =30
                     X: =Parent.Width-btnMilestonesEdit.Width-btnMilestonesSave.Width-10
                     Y: =10
@@ -447,10 +448,9 @@
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="Discard Changes"
-                    Visible: =IsEditing
+                    Visible: =CurrentUser.Role="Admin"
                     Width: =30
                     X: =btnMilestonesEdit.X
-                    Y: =10
                     ZIndex: =9
 
             galMilestones As gallery.galleryVertical:
@@ -459,7 +459,7 @@
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Height: =Parent.Height
-                Items: =Sort(Filter('PhD Milestones',galStudentLlist.Selected.NUID=NUID),Date,SortOrder.Descending)
+                Items: =Sort(Filter('PhD Milestones',NUID=If(CurrentUser.Role="Admin",galStudentLlist.Selected.NUID,CurrentUser.ID)),Date,SortOrder.Descending)
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320

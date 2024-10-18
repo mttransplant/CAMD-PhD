@@ -83,6 +83,7 @@
                 OnSelect: =Navigate(scrStudentList)
                 Text: ="Back to List"
                 VerticalAlign: =""
+                Visible: =If(CurrentUser.Role="Admin",true,false)
                 Width: =140
                 X: =0
                 Y: =0
@@ -370,7 +371,7 @@
             galEnrollments As gallery.galleryVertical:
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
-                Items: =Sort(Sort(Sort(Filter('PhD Enrollments',NUID=galStudentLlist.Selected.NUID),'Term Code'),Subject),Course)
+                Items: =Sort(Sort(Sort(Filter('PhD Enrollments',NUID=If(CurrentUser.Role="Admin",galStudentLlist.Selected.NUID,CurrentUser.ID)),'Term Code'),Subject),Course)
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
