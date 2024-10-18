@@ -358,7 +358,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.NUID
-                    Width: =227
+                    Width: =350
                     X: =hType.X+hType.Width+5
                     ZIndex: =8
 
@@ -374,7 +374,7 @@
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: =ThisItem.To
-                    Width: =212
+                    Width: =hFrom.Width
                     X: =hFrom.X+hFrom.Width+5
                     ZIndex: =9
 
