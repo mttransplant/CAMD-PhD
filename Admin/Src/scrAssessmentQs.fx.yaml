@@ -239,7 +239,7 @@
                     Icon: =Icon.Save
                     OnSelect: |-
                         =// ForAll(galAssessmentQs.AllItems As galItems,Patch(LookUp('PhD Assessment Questions',QuestionID=galItems.QuestionID),{'Assessment Type':selAsssessmentType.Selected.Value,'Question Order':txtQuestionOrder,Question:txtQuestion}));
-                        Patch('PhD Assessment Questions',galAssessmentQs.AllItems);
+                        Patch('PhD Assessment Questions',galAssessmentQs.Selected,{'Assessment Type':selAsssessmentType.Selected.Value,'Question Order':txtQuestionOrder,Question:txtQuestion});
                         // Notify("Assessment Question Update Successful",NotificationType.Success,5000);
                         UpdateContext({IsEditing: false });
                         Refresh('PhD Assessment Questions');
