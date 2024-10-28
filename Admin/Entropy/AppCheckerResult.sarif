@@ -4826,19 +4826,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.labQuestion.AccessibleLabel"
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.txtQuestion.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.labQuestion.AccessibleLabel",
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.txtQuestion.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAssessmentQs",
-                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.labQuestion"
+                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.txtQuestion"
               }
             }
           ],

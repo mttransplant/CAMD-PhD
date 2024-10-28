@@ -6,6 +6,7 @@
     "IsSampleData": false,
     "IsWritable": true,
     "LogicalName": "cr829_phdassessmentquestions",
+    "MaxGetRowsCount": 500,
     "Name": "PhD Assessment Questions",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
@@ -16,7 +17,7 @@
       "cr829_phdassessmentquestions_PrincipalObjectAttributeAccesses": "Field Sharing",
       "cr829_phdassessmentquestions_ProcessSession": "Process Sessions",
       "cr829_phdassessmentquestions_SyncErrors": "Sync Errors",
-      "cr829_phdassessmentquestionsid": "PhD Assessment Questions",
+      "cr829_phdassessmentquestionsid": "QuestionID",
       "cr829_question": "Question",
       "cr829_question_order": "Question Order",
       "createdby": "Created By",

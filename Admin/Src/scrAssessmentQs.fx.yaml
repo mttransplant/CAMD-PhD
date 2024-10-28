@@ -3,7 +3,7 @@
     OnHidden: =
     OnVisible: |-
         =UpdateContext({IsEditing:false});
-        Refresh('PhD Assessment Questions')
+        Refresh('PhD Assessment Questions');
 
     ctrAssessmentQs As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -159,7 +159,7 @@
                     Size: =13
                     Text: ="Question"
                     Width: =Parent.Width-Self.X-5
-                    X: =labQuestion.X+Parent.PaddingLeft
+                    X: =txtQuestion.X+Parent.PaddingLeft
                     ZIndex: =1
 
                 colQuestionOrder As label:
@@ -212,7 +212,8 @@
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Edit
                     OnSelect: |-
-                        =UpdateContext({IsEditing: true})
+                        =UpdateContext({IsEditing: true});
+                        // ClearCollect(colAssessmentQs,Filter('PhD Assessment Questions',IsBlank('Question Order')));
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
@@ -237,17 +238,18 @@
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Save
                     OnSelect: |-
-                        =Patch('PhD Assessment Questions',galAssessmentQs.AllItems);
-                        Notify("Assessment Question Update Successful",NotificationType.Success,5000);
+                        =ForAll(galAssessmentQs.AllItems As galItems,Patch(LookUp('PhD Assessment Questions',QuestionID=galItems.QuestionID),{'Assessment Type':selAsssessmentType.Selected.Value,'Question Order':txtQuestionOrder,Question:txtQuestion}));
+                        // Patch('PhD Assessment Questions',galAssessmentQs.AllItems);
+                        // Notify("Assessment Question Update Successful",NotificationType.Success,5000);
                         UpdateContext({IsEditing: false });
-                        Refresh('PhD Assessment Questions')
+                        Refresh('PhD Assessment Questions');
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="Save Changes"
                     Visible: =CurrentUser.Role="Admin" And IsEditing
-                    Width: =Self.Height
-                    X: =btnAqEdit.X+btnAqEdit.Width
+                    Width: =28
+                    X: =1306
                     Y: =5
                     ZIndex: =5
 
@@ -333,7 +335,7 @@
                     Y: =39
                     ZIndex: =1
 
-                labQuestion As text:
+                txtQuestion As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =If(IsEditing,BorderStyle.Solid,BorderStyle.None)
                     BorderThickness: =5
