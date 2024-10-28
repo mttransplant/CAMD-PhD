@@ -127,6 +127,34 @@
                 Y: =5
                 ZIndex: =2
 
+            btnAssessmentQs As Button:
+                Align: =""
+                BasePaletteColor: =
+                BorderColor: =
+                BorderRadiusBottomLeft: =10
+                BorderRadiusBottomRight: =10
+                BorderRadiusTopLeft: =10
+                BorderRadiusTopRight: =10
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =56
+                Height: =Parent.Height/6-10
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrAdvisors)
+                Text: ="Assessment Questions"
+                VerticalAlign: =""
+                Visible: =CurrentUser.Role="Admin"
+                Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                X: =Parent.Width/2+5
+                Y: =5
+                ZIndex: =3
+
             btnFunding As Button:
                 Align: =""
                 BasePaletteColor: =
@@ -153,7 +181,7 @@
                 Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                 X: =Parent.Width/2+5
                 Y: =Parent.Height/6+5
-                ZIndex: =3
+                ZIndex: =4
 
             btnTARA As Button:
                 Align: =""
@@ -181,7 +209,7 @@
                 Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                 X: =5
                 Y: =Parent.Height/6+5
-                ZIndex: =4
+                ZIndex: =5
 
             btnMyInformation As Button:
                 Align: =""
@@ -209,5 +237,5 @@
                 Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                 X: =Parent.Width/2+5
                 Y: =Parent.Height/2+5
-                ZIndex: =5
+                ZIndex: =6
 
