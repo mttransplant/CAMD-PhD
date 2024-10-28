@@ -82,44 +82,7 @@
                 Width: =Parent.Width
                 ZIndex: =4
 
-                colProjTitle_1 As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(50, 49, 48, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
-                    DisplayMode: =DisplayMode.View
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =Parent.Height
-                    Size: =13
-                    Text: ="Assessment Type"
-                    Width: =labProjTitle_1.Width
-                    X: =labProjTitle_1.X
-                    ZIndex: =5
-
-                colFacultyLead_1 As label:
-                    Align: =Align.Center
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(50, 49, 48, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
-                    DisplayMode: =DisplayMode.View
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Height: =Parent.Height
-                    Size: =13
-                    Text: ="Order"
-                    Width: =labFacultyLead_1.Width
-                    X: =labFacultyLead_1.X
-                    ZIndex: =6
-
-                colPosType_1 As label:
+                colQuestion As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -134,8 +97,45 @@
                     Size: =13
                     Text: ="Question"
                     Width: =Parent.Width-Self.X-5
-                    X: =labPosType_1.X
-                    ZIndex: =7
+                    X: =labQuestion.X
+                    ZIndex: =1
+
+                colQuestionOrder As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Order"
+                    Width: =labQuestionOrder.Width
+                    X: =labQuestionOrder.X
+                    ZIndex: =2
+
+                colAssessmentType As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Assessment Type"
+                    Width: =labAsssessmentType.Width
+                    X: =labAsssessmentType.X
+                    ZIndex: =3
 
             galAssessmentQs As gallery.galleryVertical:
                 '#CopilotOverlayLabel': ="Filtered"
@@ -154,7 +154,7 @@
                 Width: =Parent.Width
                 ZIndex: =12
 
-                labProjTitle_1 As label:
+                labQuestion As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -165,11 +165,12 @@
                     Font: =Font.'Segoe UI'
                     OnSelect: =Select(Parent);Navigate(scrPositionsDetail)
                     Size: =13
-                    Text: =ThisItem.'Assessment Type'
-                    Width: =261
-                    ZIndex: =13
+                    Text: =ThisItem.Question
+                    Width: =Parent.Width-Self.X-5
+                    X: =labQuestionOrder.X+labQuestionOrder.Width
+                    ZIndex: =1
 
-                labFacultyLead_1 As label:
+                labQuestionOrder As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -183,10 +184,10 @@
                     Size: =13
                     Text: =ThisItem.'Question Order'
                     Width: =63
-                    X: =labProjTitle_1.X+labProjTitle_1.Width
-                    ZIndex: =14
+                    X: =labAsssessmentType.X+labAsssessmentType.Width
+                    ZIndex: =2
 
-                labPosType_1 As label:
+                labAsssessmentType As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -197,10 +198,9 @@
                     Font: =Font.'Segoe UI'
                     OnSelect: =Select(Parent);Navigate(scrPositionsDetail)
                     Size: =13
-                    Text: =ThisItem.Question
-                    Width: =Parent.Width-Self.X-5
-                    X: =labFacultyLead_1.X+labFacultyLead_1.Width
-                    ZIndex: =15
+                    Text: =ThisItem.'Assessment Type'
+                    Width: =261
+                    ZIndex: =3
 
                 SeparatorLine_3 As rectangle:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -216,5 +216,5 @@
                     PressedFill: =RGBA(0, 0, 0, 1)
                     Width: =Parent.TemplateWidth
                     Y: =39
-                    ZIndex: =20
+                    ZIndex: =4
 
