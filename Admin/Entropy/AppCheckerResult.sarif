@@ -7310,36 +7310,6 @@
           },
           "ruleId": "app-InefficientDelayLoading",
           "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave.DisplayMode"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave.DisplayMode",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "DisplayMode",
-                "module": "scrAssessmentQs",
-                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
         }
       ],
       "tool": {
