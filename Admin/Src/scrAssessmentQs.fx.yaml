@@ -1,10 +1,8 @@
 "scrAssessmentQs As screen.'autoLayout_HeaderFooter_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnHidden: |-
-        =Clear(colAdvisorUpdates);
-        Clear(colAdvisors);
-        Clear(colAdvisees)
-    OnVisible: =
+    OnHidden: =
+    OnVisible: |-
+        =UpdateContext({IsEditing:false});
 
     ctrAssessmentQs As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -198,6 +196,80 @@
                     Width: =labAsssessmentType.Width
                     X: =labAsssessmentType.X
                     ZIndex: =3
+
+                btnAqEdit As icon.Edit:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(0, 120, 212, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Edit
+                    OnSelect: |-
+                        =UpdateContext({IsEditing: true})
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Tooltip: ="Edit Student Info"
+                    Visible: =CurrentUser.Role="Admin" And Not(IsEditing)
+                    Width: =Self.Height
+                    X: =Parent.Width-(Self.Width*2)
+                    Y: =5
+                    ZIndex: =4
+
+                btnAqSave As icon.Save:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(0, 120, 212, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    DisplayMode: =If(EditStudentInfo.Unsaved,DisplayMode.Edit,DisplayMode.Disabled)
+                    FocusedBorderThickness: =4
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Save
+                    OnSelect: |-
+                        =Notify("Assessment Question Update Successful",NotificationType.Success,5000);
+                        UpdateContext({IsEditing: false });
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Tooltip: ="Save Changes"
+                    Visible: =CurrentUser.Role="Admin" And IsEditing
+                    Width: =Self.Height
+                    X: =btnAqEdit.X+btnAqEdit.Width
+                    Y: =5
+                    ZIndex: =5
+
+                btnAqCancel As icon.Cancel:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(0, 120, 212, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Cancel
+                    OnSelect: |-
+                        =UpdateContext({IsEditing:false})
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Tooltip: ="Discard Changes"
+                    Visible: =CurrentUser.Role="Admin" And IsEditing
+                    Width: =Self.Height
+                    X: =btnAqEdit.X
+                    Y: =5
+                    ZIndex: =6
 
             galAssessmentQs As gallery.galleryVertical:
                 '#CopilotOverlayLabel': ="Filtered"

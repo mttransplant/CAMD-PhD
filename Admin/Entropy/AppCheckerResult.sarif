@@ -4916,6 +4916,186 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqEdit.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqEdit.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrAssessmentQs",
+                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqEdit"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqEdit.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqEdit.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scrAssessmentQs",
+                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqEdit"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrAssessmentQs",
+                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scrAssessmentQs",
+                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqCancel.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqCancel.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrAssessmentQs",
+                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqCancel"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqCancel.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqCancel.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scrAssessmentQs",
+                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqCancel"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect"
                 }
               ],
@@ -7059,6 +7239,36 @@
                 "member": "Width",
                 "module": "scrAssessmentQs",
                 "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsHeader"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave.DisplayMode"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave.DisplayMode",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "DisplayMode",
+                "module": "scrAssessmentQs",
+                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave"
               }
             }
           ],
