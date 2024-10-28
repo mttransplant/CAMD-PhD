@@ -271,6 +271,28 @@
                     Y: =5
                     ZIndex: =6
 
+                btnAqAdd As icon.Add:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(0, 120, 212, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Add
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Tooltip: ="Add Milestone"
+                    Visible: =CurrentUser.Role="Admin" And Not(IsEditing)
+                    Width: =Self.Height
+                    X: =btnAqSave.X
+                    Y: =5
+                    ZIndex: =7
+
             galAssessmentQs As gallery.galleryVertical:
                 '#CopilotOverlayLabel': ="Filtered"
                 AlignInContainer: =AlignInContainer.SetByContainer
@@ -287,6 +309,22 @@
                 Width: =Parent.Width
                 ZIndex: =12
 
+                SeparatorLine_3 As rectangle:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    DisabledFill: =RGBA(0, 0, 0, 1)
+                    DisplayMode: =DisplayMode.View
+                    Fill: =RGBA(0, 0, 0, 1)
+                    FocusedBorderThickness: =4
+                    Height: =1
+                    HoverFill: =RGBA(0, 0, 0, 1)
+                    OnSelect: =Select(Parent)
+                    PressedFill: =RGBA(0, 0, 0, 1)
+                    Width: =Parent.TemplateWidth
+                    Y: =39
+                    ZIndex: =1
+
                 labQuestion As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -300,7 +338,7 @@
                     Text: =ThisItem.Question
                     Width: =Parent.Width-Self.X-5
                     X: =labQuestionOrder.X+labQuestionOrder.Width
-                    ZIndex: =1
+                    ZIndex: =2
 
                 labQuestionOrder As label:
                     Align: =Align.Center
@@ -316,35 +354,40 @@
                     Text: =ThisItem.'Question Order'
                     Width: =63
                     X: =labAsssessmentType.X+labAsssessmentType.Width
-                    ZIndex: =2
-
-                labAsssessmentType As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(50, 49, 48, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    Size: =13
-                    Text: =ThisItem.'Assessment Type'
-                    Width: =261
                     ZIndex: =3
 
-                SeparatorLine_3 As rectangle:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    DisabledFill: =RGBA(0, 0, 0, 1)
-                    DisplayMode: =DisplayMode.View
-                    Fill: =RGBA(0, 0, 0, 1)
-                    FocusedBorderThickness: =4
-                    Height: =1
-                    HoverFill: =RGBA(0, 0, 0, 1)
+                labAsssessmentType As dropdown:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    ChevronBackground: =RGBA(245, 245, 245, 1)
+                    ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                    ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                    ChevronFill: =RGBA(50, 49, 48, 1)
+                    ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                    ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =ThisItem.'Assessment Type'
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                    Fill: =If(IsEditing,RGBA(245, 245, 245, 1),Parent.Fill)
+                    Font: =Font.'Segoe UI'
+                    Height: =38
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(245, 245, 245, 1)
+                    Items: =Choices('Assessment Type (PhD Assessment Questions)')
                     OnSelect: =Select(Parent)
-                    PressedFill: =RGBA(0, 0, 0, 1)
-                    Width: =Parent.TemplateWidth
-                    Y: =39
+                    PaddingBottom: =5
+                    PaddingLeft: =12
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    PressedBorderColor: =RGBA(16, 110, 190, 1)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =RGBA(0, 120, 212, 1)
+                    SelectionColor: =RGBA(50, 49, 48, 1)
+                    SelectionFill: =RGBA(0, 120, 212, 1)
+                    Size: =13
+                    Width: =228
                     ZIndex: =4
 
