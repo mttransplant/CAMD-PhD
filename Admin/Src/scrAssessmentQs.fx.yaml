@@ -284,7 +284,6 @@
                 LoadingSpinner: =LoadingSpinner.Data
                 LoadingSpinnerColor: =Color.DarkGray
                 TemplateSize: =40
-                Transition: =Transition.Push
                 Width: =Parent.Width
                 ZIndex: =12
 
@@ -297,7 +296,6 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    OnSelect: =Select(Parent);Navigate(scrPositionsDetail)
                     Size: =13
                     Text: =ThisItem.Question
                     Width: =Parent.Width-Self.X-5
@@ -314,7 +312,6 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    OnSelect: =Select(Parent);Navigate(scrPositionsDetail)
                     Size: =13
                     Text: =ThisItem.'Question Order'
                     Width: =63
@@ -330,7 +327,6 @@
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
-                    OnSelect: =Select(Parent);Navigate(scrPositionsDetail)
                     Size: =13
                     Text: =ThisItem.'Assessment Type'
                     Width: =261
