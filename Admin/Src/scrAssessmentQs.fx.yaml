@@ -238,8 +238,8 @@
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Save
                     OnSelect: |-
-                        =ForAll(galAssessmentQs.AllItems As galItems,Patch(LookUp('PhD Assessment Questions',QuestionID=galItems.QuestionID),{'Assessment Type':selAsssessmentType.Selected.Value,'Question Order':txtQuestionOrder,Question:txtQuestion}));
-                        // Patch('PhD Assessment Questions',galAssessmentQs.AllItems);
+                        =// ForAll(galAssessmentQs.AllItems As galItems,Patch(LookUp('PhD Assessment Questions',QuestionID=galItems.QuestionID),{'Assessment Type':selAsssessmentType.Selected.Value,'Question Order':txtQuestionOrder,Question:txtQuestion}));
+                        Patch('PhD Assessment Questions',galAssessmentQs.AllItems);
                         // Notify("Assessment Question Update Successful",NotificationType.Success,5000);
                         UpdateContext({IsEditing: false });
                         Refresh('PhD Assessment Questions');
