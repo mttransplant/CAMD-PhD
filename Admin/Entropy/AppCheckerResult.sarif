@@ -4826,47 +4826,17 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.labQuestionOrder.TabIndex"
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.labQuestion.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.labQuestionOrder.TabIndex",
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.labQuestion.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "TabIndex",
-                "module": "scrAssessmentQs",
-                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.labQuestionOrder"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.labQuestion.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.labQuestion.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
+                "member": "AccessibleLabel",
                 "module": "scrAssessmentQs",
                 "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.labQuestion"
               }
@@ -4878,8 +4848,38 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.txtQuestionOrder.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.txtQuestionOrder.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrAssessmentQs",
+                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.txtQuestionOrder"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
@@ -5126,19 +5126,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.labAsssessmentType.AccessibleLabel"
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.selAsssessmentType.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.labAsssessmentType.AccessibleLabel",
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.selAsssessmentType.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAssessmentQs",
-                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.labAsssessmentType"
+                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.selAsssessmentType"
               }
             }
           ],
