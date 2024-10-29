@@ -46,6 +46,7 @@
       "enableexcelonlinebusinessv2connector": true,
       "enableideaspanel": true,
       "enablelegacybarcodescanner": false,
+      "enablelegacydatatable": false,
       "enableonstart": false,
       "enableonstartnavigate": false,
       "enablepcfmoderndatasets": true,
@@ -97,6 +98,7 @@
       "useguiddatatypes": true,
       "usenonblockingonstartrule": true,
       "userdefinedfunctions": false,
+      "userdefinedtypes": false,
       "webbarcodescanner": false,
       "zeroalltabindexes": true
     },

@@ -146,7 +146,7 @@
                 Layout: ="Icon before"
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
-                OnSelect: =Navigate(scrAdvisors)
+                OnSelect: =Navigate(scrAssessmentQs)
                 Text: ="Assessment Questions"
                 VerticalAlign: =""
                 Visible: =CurrentUser.Role="Admin"
