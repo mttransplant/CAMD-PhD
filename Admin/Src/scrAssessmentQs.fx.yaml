@@ -136,7 +136,7 @@
                 Height: =40
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
-                PaddingLeft: =galAssessmentQs.TemplatePadding
+                PaddingLeft: =5
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
@@ -158,7 +158,7 @@
                     Height: =Parent.Height
                     Size: =13
                     Text: ="Question"
-                    Width: =Parent.Width-Self.X-5
+                    Width: =txtQuestion.Width
                     X: =txtQuestion.X+Parent.PaddingLeft
                     ZIndex: =1
 
@@ -360,7 +360,7 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    Width: =Parent.Width-Self.X-50
+                    Width: =960
                     X: =txtQuestionOrder.X+txtQuestionOrder.Width
                     ZIndex: =3
 
