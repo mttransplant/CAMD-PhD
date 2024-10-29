@@ -403,7 +403,7 @@
                     Visible: =CountIf(colUpdateMilestones, true)+CountIf(colDeleteMilestones,true)=0 And CurrentUser.Role="Admin"
                     Width: =30
                     X: =1304
-                    Y: =5
+                    Y: =btnMilestonesEdit.Y
                     ZIndex: =7
 
                 btnMilestonesEdit As icon.Edit:
@@ -424,7 +424,7 @@
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="Edit Milestones"
-                    Visible: =CurrentUser.Role="Admin"
+                    Visible: =CurrentUser.Role="Admin" And !IsEditing
                     Width: =30
                     X: =Parent.Width-btnMilestonesEdit.Width-btnMilestonesSave.Width-10
                     Y: =10
@@ -449,9 +449,10 @@
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="Discard Changes"
-                    Visible: =CurrentUser.Role="Admin"
+                    Visible: =CurrentUser.Role="Admin" And IsEditing
                     Width: =30
                     X: =btnMilestonesEdit.X
+                    Y: =btnMilestonesEdit.Y
                     ZIndex: =9
 
             galMilestones As gallery.galleryVertical:

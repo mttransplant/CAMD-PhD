@@ -231,7 +231,7 @@
                     DisabledBorderColor: =RGBA(245, 245, 245, 1)
                     DisabledColor: =RGBA(225, 223, 221, 1)
                     DisabledFill: =RGBA(0, 0, 0, 0)
-                    DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.Disabled)
+                    DisplayMode: =If(IsEditing And (CountIf(colAssessmentQsUpdates, true)+CountIf(colAssessmentQsDeletes,true)>0),DisplayMode.Edit,DisplayMode.Disabled)
                     FocusedBorderThickness: =4
                     Height: =30
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
