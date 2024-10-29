@@ -353,6 +353,24 @@
                     HoverBorderColor: =RGBA(16, 110, 190, 1)
                     HoverColor: =RGBA(50, 49, 48, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
+                    OnChange: |-
+                        =If(
+                            IsBlank(
+                                LookUp(
+                                    colAssessmentQsUpdates,
+                                    QuestionID = ThisItem.QuestionID
+                                )
+                            ),
+                            Collect(
+                                colAssessmentQsUpdates,
+                                ThisItem
+                            )
+                        );
+                        UpdateIf(
+                            colAssessmentQsUpdates,
+                            QuestionID = ThisItem.QuestionID,
+                            {Question: txtQuestionOrder.Text}
+                        )
                     OnSelect: =Select(Parent)
                     PressedBorderColor: =RGBA(0, 120, 212, 1)
                     PressedColor: =RGBA(50, 49, 48, 1)
@@ -379,10 +397,29 @@
                     DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
+                    Format: =TextFormat.Number
                     Height: =selAsssessmentType.Height
                     HoverBorderColor: =RGBA(16, 110, 190, 1)
                     HoverColor: =RGBA(50, 49, 48, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
+                    OnChange: |-
+                        =If(
+                            IsBlank(
+                                LookUp(
+                                    colAssessmentQsUpdates,
+                                    QuestionID = ThisItem.QuestionID
+                                )
+                            ),
+                            Collect(
+                                colAssessmentQsUpdates,
+                                ThisItem
+                            )
+                        );
+                        UpdateIf(
+                            colAssessmentQsUpdates,
+                            QuestionID = ThisItem.QuestionID,
+                            {'Question Order': Value(txtQuestionOrder.Text)}
+                        )
                     OnSelect: =Select(Parent)
                     PressedBorderColor: =RGBA(0, 120, 212, 1)
                     PressedColor: =RGBA(50, 49, 48, 1)
