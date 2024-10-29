@@ -366,7 +366,7 @@
                     Icon: =Icon.Save
                     OnSelect: |-
                         =Patch('PhD Milestones',ShowColumns(colUpdateMilestones,NUID,Milestone,'Milestone Status',Notes, Date, MilestoneID));
-                        If(CountRows(colDeleteMilestones)>0,Remove('PhD Milestones',colDeleteMilestones));
+                        If(CountIf(colDeleteMilestones,true)>0,Remove('PhD Milestones',colDeleteMilestones));
                         Notify("Edits successfully saved",NotificationType.Success,5000);
                         UpdateContext({IsEditing:false});
                         Select(btnLoadMilestones)
@@ -374,9 +374,9 @@
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="Save Changes"
-                    Visible: =IsEditing And (CountRows(colUpdateMilestones)+CountRows(colDeleteMilestones)>0)
+                    Visible: =IsEditing And (CountIf(colUpdateMilestones, true)+CountIf(colDeleteMilestones,true)>0)
                     Width: =30
-                    X: =btnMilestonesEdit.X+btnMilestonesEdit.Width
+                    X: =1304
                     Y: =10
                     ZIndex: =6
 
@@ -400,9 +400,9 @@
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="Add Milestone"
-                    Visible: =CountRows(colUpdateMilestones)+CountRows(colDeleteMilestones)=0 And CurrentUser.Role="Admin"
+                    Visible: =CountIf(colUpdateMilestones, true)+CountIf(colDeleteMilestones,true)=0 And CurrentUser.Role="Admin"
                     Width: =30
-                    X: =btnMilestonesEdit.X+btnMilestonesEdit.Width
+                    X: =1304
                     Y: =5
                     ZIndex: =7
 

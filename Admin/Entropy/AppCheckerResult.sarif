@@ -14,80 +14,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 19,
-                  "charOffset": 25,
-                  "snippet": {
-                    "text": "colUpdateMilestones"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-WrnCountRowsMayReturnCachedValue",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd.Visible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd.Visible",
-                  "relativeAddress": 0
-                },
-                "region": {
-                  "charLength": 19,
-                  "charOffset": 10,
-                  "snippet": {
-                    "text": "colUpdateMilestones"
-                  }
-                }
-              },
-              "properties": {
-                "member": "Visible",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-WrnCountRowsMayReturnCachedValue",
-          "ruleIndex": 0
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btn_aSave.Visible"
                 }
               ],
@@ -2315,36 +2241,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqEdit.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqEdit.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrAssessmentQs",
-                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqEdit"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqEdit.TabIndex"
                 }
               ],
@@ -2375,19 +2271,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqCancel.AccessibleLabel"
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqEdit.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqCancel.AccessibleLabel",
+                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqEdit.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAssessmentQs",
-                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqCancel"
+                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqEdit"
               }
             }
           ],
@@ -2405,19 +2301,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqCancel.TabIndex"
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqCancel.TabIndex",
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
-                "module": "scrAssessmentQs",
-                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqCancel"
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave"
               }
             }
           ],
@@ -2435,19 +2331,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave.AccessibleLabel"
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave.AccessibleLabel",
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
-                "module": "scrAssessmentQs",
-                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave"
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave"
               }
             }
           ],
@@ -2459,36 +2355,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scrAssessmentQs",
-                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
         },
         {
           "locations": [
@@ -5039,66 +4905,6 @@
           },
           "ruleId": "acc-AccessibleLabelNeeded",
           "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.icoDelQuestion.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.icoDelQuestion.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrAssessmentQs",
-                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.icoDelQuestion"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.icoDelQuestion.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.icoDelQuestion.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scrAssessmentQs",
-                "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.galAssessmentQs.icoDelQuestion"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
         },
         {
           "locations": [

@@ -214,6 +214,7 @@
                     OnSelect: |-
                         =UpdateContext({IsEditing: true});
                         ClearCollect(colAssessmentQsUpdates,Filter('PhD Assessment Questions',IsBlank('Question Order')));
+                        ClearCollect(colAssessmentQsDeletes,Filter('PhD Assessment Questions',IsBlank('Question Order')));
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
@@ -240,6 +241,7 @@
                     OnSelect: |-
                         =
                         Patch('PhD Assessment Questions', ShowColumns(colAssessmentQsUpdates,QuestionID, 'Question Order', Question));
+                        If(CountIf(colAssessmentQsDeletes, true)>0,Remove('PhD Assessment Questions',colAssessmentQsDeletes));
                         Notify("Assessment Question Update Successful",NotificationType.Success,5000);
                         UpdateContext({IsEditing: false });
                         Refresh('PhD Assessment Questions');
@@ -269,6 +271,7 @@
                     OnSelect: |-
                         =UpdateContext({IsEditing:false});
                         ClearCollect(colAssessmentQsUpdates,Filter('PhD Assessment Questions',IsBlank('Question Order')));
+                        ClearCollect(colAssessmentQsDeletes,Filter('PhD Assessment Questions',IsBlank('Question Order')));
                         Refresh('PhD Assessment Questions')
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
@@ -349,7 +352,7 @@
                     HoverColor: =RGBA(16, 110, 190, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Trash
-                    OnSelect: =Collect(colDeleteMilestones,ThisItem);
+                    OnSelect: =Collect(colAssessmentQsDeletes,ThisItem);
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
@@ -368,7 +371,9 @@
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
-                    DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                    DisplayMode: |-
+                        =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                        // If(IsEditing,DisplayMode.Edit,If(CountIf(Filter(colAssessmentQsDeletes,'QuestionID'=ThisItem.QuestionID),true)>0,DisplayMode.Disabled,DisplayMode.View))
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     Height: =selAsssessmentType.Height
@@ -416,7 +421,9 @@
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
-                    DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                    DisplayMode: |-
+                        =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                        // If(IsEditing,DisplayMode.Edit,If(CountIf(Filter(colAssessmentQsDeletes,'QuestionID'=ThisItem.QuestionID),true)>0,DisplayMode.Disabled,DisplayMode.View))
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     Format: =TextFormat.Number
