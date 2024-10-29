@@ -213,7 +213,7 @@
                     Icon: =Icon.Edit
                     OnSelect: |-
                         =UpdateContext({IsEditing: true});
-                        // ClearCollect(colAssessmentQs,Filter('PhD Assessment Questions',IsBlank('Question Order')));
+                        ClearCollect(colAssessmentQsUpdates,Filter('PhD Assessment Questions',IsBlank('Question Order')));
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
@@ -238,8 +238,10 @@
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Save
                     OnSelect: |-
-                        =// ForAll(galAssessmentQs.AllItems As galItems,Patch(LookUp('PhD Assessment Questions',QuestionID=galItems.QuestionID),{'Assessment Type':selAsssessmentType.Selected.Value,'Question Order':txtQuestionOrder,Question:txtQuestion}));
-                        Patch('PhD Assessment Questions',{'Assessment Type':selAsssessmentType.Selected.Value,'Question Order':txtQuestionOrder,Question:txtQuestion});
+                        =
+                        // Patch('PhD Milestones',ShowColumns(colUpdateMilestones,NUID,Milestone,'Milestone Status',Notes, Date, MilestoneID));
+                        // ForAll(galAssessmentQs.AllItems As galItems,Patch(LookUp('PhD Assessment Questions',QuestionID=galItems.QuestionID),{'Assessment Type':selAsssessmentType.Selected.Value,'Question Order':txtQuestionOrder,Question:txtQuestion}));
+                        // Patch('PhD Assessment Questions',{'Assessment Type':selAsssessmentType.Selected.Value,'Question Order':txtQuestionOrder,Question:txtQuestion});
                         // Notify("Assessment Question Update Successful",NotificationType.Success,5000);
                         UpdateContext({IsEditing: false });
                         Refresh('PhD Assessment Questions');
@@ -407,10 +409,10 @@
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
-                    DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
-                    Fill: =If(IsEditing,RGBA(245, 245, 245, 1),Parent.Fill)
+                    DisplayMode: =DisplayMode.View
+                    Fill: =Parent.Fill
                     Font: =Font.'Segoe UI'
-                    Height: =38
+                    Height: =35
                     HoverBorderColor: =RGBA(16, 110, 190, 1)
                     HoverColor: =RGBA(50, 49, 48, 1)
                     HoverFill: =RGBA(245, 245, 245, 1)
