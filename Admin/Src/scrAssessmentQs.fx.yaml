@@ -3,6 +3,7 @@
     OnHidden: =
     OnVisible: |-
         =UpdateContext({IsEditing:false});
+        Select(btnClear);
         Refresh('PhD Assessment Questions');
 
     ctrAssessmentQs As groupContainer.verticalAutoLayoutContainer:
@@ -64,6 +65,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
+            Width: =Min(galStudentLlist.Width,Parent.Width-32)
             ZIndex: =2
 
             labAssessmentTypeFilter As label:
@@ -111,6 +113,29 @@
                 Size: =13
                 Width: =230
                 ZIndex: =2
+
+            btnClear As icon.Edit:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Color: =RGBA(0, 120, 212, 1)
+                DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                DisabledColor: =RGBA(225, 223, 221, 1)
+                DisabledFill: =RGBA(0, 0, 0, 0)
+                FocusedBorderThickness: =4
+                Height: =Parent.Height
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(16, 110, 190, 1)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                Icon: =Icon.Edit
+                OnSelect: |-
+                    =ClearCollect(colAssessmentQsUpdates,Filter('PhD Assessment Questions',IsBlank('Question Order')));
+                    ClearCollect(colAssessmentQsDeletes,Filter('PhD Assessment Questions',IsBlank('Question Order')));
+                PressedBorderColor: =RGBA(0, 0, 0, 0)
+                PressedColor: =RGBA(16, 110, 190, 1)
+                PressedFill: =RGBA(0, 0, 0, 0)
+                Tooltip: ="Edit Student Info"
+                Visible: =false
+                Width: =Self.Height
+                ZIndex: =3
 
         ctrAssessmentQsMain As groupContainer.verticalAutoLayoutContainer:
             AlignInContainer: =AlignInContainer.SetByContainer
@@ -213,8 +238,7 @@
                     Icon: =Icon.Edit
                     OnSelect: |-
                         =UpdateContext({IsEditing: true});
-                        ClearCollect(colAssessmentQsUpdates,Filter('PhD Assessment Questions',IsBlank('Question Order')));
-                        ClearCollect(colAssessmentQsDeletes,Filter('PhD Assessment Questions',IsBlank('Question Order')));
+                        Select(btnClear);
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
@@ -239,13 +263,12 @@
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Save
                     OnSelect: |-
-                        =
-                        Patch('PhD Assessment Questions', ShowColumns(colAssessmentQsUpdates,QuestionID, 'Question Order', Question));
+                        =Patch('PhD Assessment Questions', ShowColumns(colAssessmentQsUpdates,QuestionID, 'Question Order', Question));
                         If(CountIf(colAssessmentQsDeletes, true)>0,Remove('PhD Assessment Questions',colAssessmentQsDeletes));
                         Notify("Assessment Question Update Successful",NotificationType.Success,5000);
                         UpdateContext({IsEditing: false });
                         Refresh('PhD Assessment Questions');
-                        ClearCollect(colAssessmentQsUpdates,Filter('PhD Assessment Questions',IsBlank('Question Order')));
+                        Select(btnClear);
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
@@ -270,9 +293,8 @@
                     Icon: =Icon.Cancel
                     OnSelect: |-
                         =UpdateContext({IsEditing:false});
-                        ClearCollect(colAssessmentQsUpdates,Filter('PhD Assessment Questions',IsBlank('Question Order')));
-                        ClearCollect(colAssessmentQsDeletes,Filter('PhD Assessment Questions',IsBlank('Question Order')));
-                        Refresh('PhD Assessment Questions')
+                        Select(btnClear);
+                        Refresh('PhD Assessment Questions');
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
