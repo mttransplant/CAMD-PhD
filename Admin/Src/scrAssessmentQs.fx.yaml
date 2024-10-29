@@ -220,7 +220,7 @@
                     Tooltip: ="Edit Student Info"
                     Visible: =CurrentUser.Role="Admin" And Not(IsEditing)
                     Width: =Self.Height
-                    X: =Parent.Width-(Self.Width*2)
+                    X: =Parent.Width-(Self.Width*2)-10
                     Y: =5
                     ZIndex: =4
 
@@ -239,19 +239,18 @@
                     Icon: =Icon.Save
                     OnSelect: |-
                         =
-                        // Patch('PhD Milestones',ShowColumns(colUpdateMilestones,NUID,Milestone,'Milestone Status',Notes, Date, MilestoneID));
-                        // ForAll(galAssessmentQs.AllItems As galItems,Patch(LookUp('PhD Assessment Questions',QuestionID=galItems.QuestionID),{'Assessment Type':selAsssessmentType.Selected.Value,'Question Order':txtQuestionOrder,Question:txtQuestion}));
-                        // Patch('PhD Assessment Questions',{'Assessment Type':selAsssessmentType.Selected.Value,'Question Order':txtQuestionOrder,Question:txtQuestion});
-                        // Notify("Assessment Question Update Successful",NotificationType.Success,5000);
+                        Patch('PhD Assessment Questions', ShowColumns(colAssessmentQsUpdates,QuestionID, 'Question Order', Question));
+                        Notify("Assessment Question Update Successful",NotificationType.Success,5000);
                         UpdateContext({IsEditing: false });
                         Refresh('PhD Assessment Questions');
+                        ClearCollect(colAssessmentQsUpdates,Filter('PhD Assessment Questions',IsBlank('Question Order')));
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
                     Tooltip: ="Save Changes"
                     Visible: =CurrentUser.Role="Admin" And IsEditing
                     Width: =28
-                    X: =1306
+                    X: =btnAqEdit.X+btn_aEdit.Width
                     Y: =5
                     ZIndex: =5
 
@@ -269,6 +268,7 @@
                     Icon: =Icon.Cancel
                     OnSelect: |-
                         =UpdateContext({IsEditing:false});
+                        ClearCollect(colAssessmentQsUpdates,Filter('PhD Assessment Questions',IsBlank('Question Order')));
                         Refresh('PhD Assessment Questions')
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
@@ -337,6 +337,28 @@
                     Y: =39
                     ZIndex: =1
 
+                icoDelQuestion As icon.Trash:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    Color: =RGBA(0, 120, 212, 1)
+                    DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                    DisabledColor: =RGBA(225, 223, 221, 1)
+                    DisabledFill: =RGBA(0, 0, 0, 0)
+                    FocusedBorderThickness: =4
+                    Height: =30
+                    HoverBorderColor: =RGBA(0, 0, 0, 0)
+                    HoverColor: =RGBA(16, 110, 190, 1)
+                    HoverFill: =RGBA(0, 0, 0, 0)
+                    Icon: =Icon.Trash
+                    OnSelect: =Collect(colDeleteMilestones,ThisItem);
+                    PressedBorderColor: =RGBA(0, 0, 0, 0)
+                    PressedColor: =RGBA(16, 110, 190, 1)
+                    PressedFill: =RGBA(0, 0, 0, 0)
+                    Visible: =IsEditing
+                    Width: =Self.Height
+                    X: =btnAqSave.X-5
+                    Y: =5
+                    ZIndex: =2
+
                 txtQuestion As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =If(IsEditing,BorderStyle.Solid,BorderStyle.None)
@@ -369,7 +391,7 @@
                         UpdateIf(
                             colAssessmentQsUpdates,
                             QuestionID = ThisItem.QuestionID,
-                            {Question: txtQuestionOrder.Text}
+                            {Question: txtQuestion.Text}
                         )
                     OnSelect: =Select(Parent)
                     PressedBorderColor: =RGBA(0, 120, 212, 1)
