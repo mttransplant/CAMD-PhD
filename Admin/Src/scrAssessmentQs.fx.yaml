@@ -318,7 +318,7 @@
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Add
                     OnSelect: |-
-                        =Patch('PhD Assessment Questions',Defaults('PhD Assessment Questions'),{'Assessment Type':drpAssessmentTypeFilter.Selected.Value,'Question Order':5,Question:"Enter Question"});
+                        =Patch('PhD Assessment Questions',Defaults('PhD Assessment Questions'),{'Assessment Type':drpAssessmentTypeFilter.Selected.Value,'Question Order':First(Sort(Filter('PhD Assessment Questions','Assessment Type'=drpAssessmentTypeFilter.Selected.Value),'Question Order',SortOrder.Descending)).'Question Order'+1,Question:"Enter Question"});
                         Refresh('PhD Assessment Questions');
                         UpdateContext({IsEditing:true});
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
