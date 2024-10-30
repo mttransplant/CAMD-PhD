@@ -1,0 +1,118 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr829_phdassessmentquestionses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr829_phdassessmentquestions",
+    "Name": "PhD Assessment Questions",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr829_assessment_type": "Assessment Type",
+      "cr829_phdassessmentquestions_AsyncOperations": "System Jobs",
+      "cr829_phdassessmentquestions_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr829_phdassessmentquestions_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr829_phdassessmentquestions_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr829_phdassessmentquestions_ProcessSession": "Process Sessions",
+      "cr829_phdassessmentquestions_SyncErrors": "Sync Errors",
+      "cr829_phdassessmentquestionsid": "QuestionID",
+      "cr829_question": "Question",
+      "cr829_question_order": "Question Order",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PhD Assessment Questions",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PhD Assessment Questions (Views)",
+    "Name": "_cr829_phdassessmentquestions_views",
+    "RelatedEntityName": "PhD Assessment Questions",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "2ec7246e-109a-402c-9c9f-0abfcf5e402d": "PhD Assessment Questions Advanced Find View",
+      "5e0d81b2-c9e3-4d48-99b5-101729ac93b7": "Inactive PhD Assessment Questions",
+      "63ab8893-3e45-46fd-8fc1-775b5f621f44": "Active PhD Assessment Questions",
+      "8e9c8e25-0415-491b-a388-a2b56e2dd04d": "PhD Assessment Questions Lookup View",
+      "d72ffad2-3d46-45c7-bc58-2a7bf74f7d12": "PhD Assessment Questions Associated View"
+    }
+  },
+  {
+    "DisplayName": "Assessment Type (PhD Assessment Questions)",
+    "Name": "cr829_phdassessmentquestions_cr829_assessment_type",
+    "OptionSetInfoNameMapping": {
+      "1": "Self-Brief",
+      "2": "Self-Comprehensive",
+      "3": "Advisor-Brief",
+      "4": "Advisor-Comprehensive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr829_assessment_type",
+        "OptionSetReferenceEntityName": "PhD Assessment Questions"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr829_assessment_type",
+    "RelatedEntityName": "PhD Assessment Questions",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (PhD Assessment Questions)",
+    "Name": "cr829_phdassessmentquestions_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PhD Assessment Questions"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PhD Assessment Questions",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PhD Assessment Questions)",
+    "Name": "cr829_phdassessmentquestions_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PhD Assessment Questions"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PhD Assessment Questions",
+    "Type": "OptionSetInfo"
+  }
+]

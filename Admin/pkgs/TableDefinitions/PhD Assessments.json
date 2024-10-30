@@ -3,10 +3,6 @@
   "EntityName": "PhD Assessments",
   "environmentVariableName": "",
   "InstanceUrl": "https://orgfd48bb1a.crm.dynamics.com/",
-  "LocalReferenceDSJson": {
-    "entitySetName": "cr829_phdassessmentses",
-    "logicalName": "cr829_phdassessments"
-  },
   "state": "Configured",
   "TableDefinition": {
     "BooleanOptionSetAttribute": "{\"@odata.context\":\"https://orgfd48bb1a.crm.dynamics.com/api/data/v9.0/$metadata#EntityDefinitions('cr829_phdassessments')/Attributes/Microsoft.Dynamics.CRM.BooleanAttributeMetadata(MetadataId,LogicalName,SchemaName,DisplayName,OptionSet())\",\"value\":[]}",
