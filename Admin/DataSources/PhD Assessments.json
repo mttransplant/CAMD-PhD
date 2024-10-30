@@ -1,0 +1,125 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr829_phdassessmentses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr829_phdassessments",
+    "Name": "PhD Assessments",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr829_assessment_type": "Assessment Type",
+      "cr829_date_requested": "Date Requested",
+      "cr829_date_submitted": "Date Submitted",
+      "cr829_phdassessments_AsyncOperations": "System Jobs",
+      "cr829_phdassessments_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr829_phdassessments_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr829_phdassessments_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr829_phdassessments_ProcessSession": "Process Sessions",
+      "cr829_phdassessments_SyncErrors": "Sync Errors",
+      "cr829_phdassessmentsid": "AssessmentID",
+      "cr829_question_order": "Question Order",
+      "cr829_question_text": "Question Text",
+      "cr829_response": "Response",
+      "cr829_student_nuid": "Student NUID",
+      "cr829_submitter_nuid": "Submitter NUID",
+      "cr829_term_code": "Term Code",
+      "cr829_term_name": "Term Name",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PhD Assessments",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PhD Assessments (Views)",
+    "Name": "_cr829_phdassessments_views",
+    "RelatedEntityName": "PhD Assessments",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "356a0943-f156-4e3f-987b-f6c1a1686cc3": "Active PhD Assessments",
+      "6a6aa00a-a46a-4ace-90cc-5f84f9bdce07": "PhD Assessments Lookup View",
+      "8594a518-a2df-4e4d-8a09-7dbab5c55717": "PhD Assessments Advanced Find View",
+      "d00917b2-2fda-4171-a63d-6248908691be": "PhD Assessments Associated View",
+      "ef74ac30-5e1e-4815-b532-77e67fd27d8e": "Inactive PhD Assessments"
+    }
+  },
+  {
+    "DisplayName": "Assessment Type (PhD Assessments)",
+    "Name": "cr829_phdassessments_cr829_assessment_type",
+    "OptionSetInfoNameMapping": {
+      "1": "Self-Brief",
+      "2": "Self-Comprehensive",
+      "3": "Advisor-Brief",
+      "4": "Advisor-Comprehensive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr829_assessment_type",
+        "OptionSetReferenceEntityName": "PhD Assessments"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr829_assessment_type",
+    "RelatedEntityName": "PhD Assessments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status (PhD Assessments)",
+    "Name": "cr829_phdassessments_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PhD Assessments"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PhD Assessments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PhD Assessments)",
+    "Name": "cr829_phdassessments_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PhD Assessments"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PhD Assessments",
+    "Type": "OptionSetInfo"
+  }
+]
