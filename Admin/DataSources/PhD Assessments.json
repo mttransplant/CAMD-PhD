@@ -1,24 +1,31 @@
 [
   {
     "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
-    "EntitySetName": "cr829_phdassessmentquestionses",
+    "EntitySetName": "cr829_phdassessmentses",
     "IsHidden": false,
     "IsSampleData": false,
     "IsWritable": true,
-    "LogicalName": "cr829_phdassessmentquestions",
-    "Name": "PhD Assessment Questions",
+    "LogicalName": "cr829_phdassessments",
+    "Name": "PhD Assessments",
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "cr829_assessment_type": "Assessment Type",
-      "cr829_phdassessmentquestions_AsyncOperations": "System Jobs",
-      "cr829_phdassessmentquestions_BulkDeleteFailures": "Bulk Delete Failures",
-      "cr829_phdassessmentquestions_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
-      "cr829_phdassessmentquestions_PrincipalObjectAttributeAccesses": "Field Sharing",
-      "cr829_phdassessmentquestions_ProcessSession": "Process Sessions",
-      "cr829_phdassessmentquestions_SyncErrors": "Sync Errors",
-      "cr829_phdassessmentquestionsid": "QuestionID",
-      "cr829_question": "Question",
+      "cr829_date_requested": "Date Requested",
+      "cr829_date_submitted": "Date Submitted",
+      "cr829_phdassessments_AsyncOperations": "System Jobs",
+      "cr829_phdassessments_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr829_phdassessments_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr829_phdassessments_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr829_phdassessments_ProcessSession": "Process Sessions",
+      "cr829_phdassessments_SyncErrors": "Sync Errors",
+      "cr829_phdassessmentsid": "AssessmentID",
       "cr829_question_order": "Question Order",
+      "cr829_question_text": "Question Text",
+      "cr829_response": "Response",
+      "cr829_student_nuid": "Student NUID",
+      "cr829_submitter_nuid": "Submitter NUID",
+      "cr829_term_code": "Term Code",
+      "cr829_term_name": "Term Name",
       "createdby": "Created By",
       "createdon": "Created On",
       "createdonbehalfby": "Created By (Delegate)",
@@ -36,26 +43,26 @@
       "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
       "versionnumber": "Version Number"
     },
-    "PreferredName": "PhD Assessment Questions",
+    "PreferredName": "PhD Assessments",
     "Type": "NativeCDSDataSourceInfo"
   },
   {
-    "DisplayName": "PhD Assessment Questions (Views)",
-    "Name": "_cr829_phdassessmentquestions_views",
-    "RelatedEntityName": "PhD Assessment Questions",
+    "DisplayName": "PhD Assessments (Views)",
+    "Name": "_cr829_phdassessments_views",
+    "RelatedEntityName": "PhD Assessments",
     "TrimmedViewName": true,
     "Type": "ViewInfo",
     "ViewInfoNameMapping": {
-      "2ec7246e-109a-402c-9c9f-0abfcf5e402d": "PhD Assessment Questions Advanced Find View",
-      "5e0d81b2-c9e3-4d48-99b5-101729ac93b7": "Inactive PhD Assessment Questions",
-      "63ab8893-3e45-46fd-8fc1-775b5f621f44": "Active PhD Assessment Questions",
-      "8e9c8e25-0415-491b-a388-a2b56e2dd04d": "PhD Assessment Questions Lookup View",
-      "d72ffad2-3d46-45c7-bc58-2a7bf74f7d12": "PhD Assessment Questions Associated View"
+      "356a0943-f156-4e3f-987b-f6c1a1686cc3": "Active PhD Assessments",
+      "6a6aa00a-a46a-4ace-90cc-5f84f9bdce07": "PhD Assessments Lookup View",
+      "8594a518-a2df-4e4d-8a09-7dbab5c55717": "PhD Assessments Advanced Find View",
+      "d00917b2-2fda-4171-a63d-6248908691be": "PhD Assessments Associated View",
+      "ef74ac30-5e1e-4815-b532-77e67fd27d8e": "Inactive PhD Assessments"
     }
   },
   {
-    "DisplayName": "Assessment Type (PhD Assessment Questions)",
-    "Name": "cr829_phdassessmentquestions_cr829_assessment_type",
+    "DisplayName": "Assessment Type (PhD Assessments)",
+    "Name": "cr829_phdassessments_cr829_assessment_type",
     "OptionSetInfoNameMapping": {
       "1": "Self-Brief",
       "2": "Self-Comprehensive",
@@ -67,17 +74,17 @@
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
         "OptionSetReferenceColumnName": "cr829_assessment_type",
-        "OptionSetReferenceEntityName": "PhD Assessment Questions"
+        "OptionSetReferenceEntityName": "PhD Assessments"
       }
     },
     "OptionSetTypeKey": "PicklistType",
     "RelatedColumnInvariantName": "cr829_assessment_type",
-    "RelatedEntityName": "PhD Assessment Questions",
+    "RelatedEntityName": "PhD Assessments",
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "Status (PhD Assessment Questions)",
-    "Name": "cr829_phdassessmentquestions_statecode",
+    "DisplayName": "Status (PhD Assessments)",
+    "Name": "cr829_phdassessments_statecode",
     "OptionSetInfoNameMapping": {
       "0": "Active",
       "1": "Inactive"
@@ -87,17 +94,17 @@
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
         "OptionSetReferenceColumnName": "statecode",
-        "OptionSetReferenceEntityName": "PhD Assessment Questions"
+        "OptionSetReferenceEntityName": "PhD Assessments"
       }
     },
     "OptionSetTypeKey": "StateType",
     "RelatedColumnInvariantName": "statecode",
-    "RelatedEntityName": "PhD Assessment Questions",
+    "RelatedEntityName": "PhD Assessments",
     "Type": "OptionSetInfo"
   },
   {
-    "DisplayName": "Status Reason (PhD Assessment Questions)",
-    "Name": "cr829_phdassessmentquestions_statuscode",
+    "DisplayName": "Status Reason (PhD Assessments)",
+    "Name": "cr829_phdassessments_statuscode",
     "OptionSetInfoNameMapping": {
       "1": "Active",
       "2": "Inactive"
@@ -107,12 +114,12 @@
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
         "OptionSetReferenceColumnName": "statuscode",
-        "OptionSetReferenceEntityName": "PhD Assessment Questions"
+        "OptionSetReferenceEntityName": "PhD Assessments"
       }
     },
     "OptionSetTypeKey": "StatusType",
     "RelatedColumnInvariantName": "statuscode",
-    "RelatedEntityName": "PhD Assessment Questions",
+    "RelatedEntityName": "PhD Assessments",
     "Type": "OptionSetInfo"
   }
 ]

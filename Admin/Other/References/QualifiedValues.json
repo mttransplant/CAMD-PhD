@@ -68,17 +68,17 @@
       }
     },
     {
-      "Kind": "default.cds_cr829_phdassessments_forms",
-      "Namespace": "PhD Assessments (Forms)",
-      "Values": {
-        "Information": "369f585a-3ede-4542-b35f-4a38fa25d765"
-      }
-    },
-    {
       "Kind": "default.cds_cr829_phdassessmentquestions_forms",
       "Namespace": "PhD Assessment Questions (Forms)",
       "Values": {
         "Information": "b908b025-e3f2-4a17-9e9c-af64f13c3cb5"
+      }
+    },
+    {
+      "Kind": "default.cds_cr829_phdassessments_forms",
+      "Namespace": "PhD Assessments (Forms)",
+      "Values": {
+        "Information": "369f585a-3ede-4542-b35f-4a38fa25d765"
       }
     },
     {
