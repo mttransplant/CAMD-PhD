@@ -17,7 +17,7 @@
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Min(App.Height, App.DesignHeight)
-        LayoutAlignItems: =LayoutAlignItems.Stretch
+        LayoutAlignItems: =LayoutAlignItems.Center
         LayoutDirection: =LayoutDirection.Vertical
         LayoutGap: =16
         LayoutMode: =LayoutMode.Auto
@@ -44,6 +44,7 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
+            Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
             ZIndex: =1
 
             cmpMenuHeader As cmpHeader:
@@ -70,6 +71,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
+            Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
             ZIndex: =3
 
             btnStudent As Button:
