@@ -111,1176 +111,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewBack_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewBack_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewBack_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewOverview_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewOverview_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewOverview_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewMilestones_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewMilestones_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewMilestones_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewHistory_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewHistory_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewHistory_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewEvaluations_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewEvaluations_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewEvaluations_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewCourses_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewCourses_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewCourses_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oEdit_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oEdit_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oEdit_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oEdit_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oEdit_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oEdit_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oCancel_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oCancel_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oCancel_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oCancel_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oCancel_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oCancel_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oSave_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oSave_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oSave_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oSave_1.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oSave_1.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oSave_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Status (cr829_status)_DataCard4_1'.frmStatus_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Status (cr829_status)_DataCard4_1'.frmStatus_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Status (cr829_status)_DataCard4_1'.frmStatus_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.Advisor_DataCard1_1.frmAdvisor_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.Advisor_DataCard1_1.frmAdvisor_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.Advisor_DataCard1_1.frmAdvisor_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Individual Path_DataCard5_1'.frmPath_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Individual Path_DataCard5_1'.frmPath_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Individual Path_DataCard5_1'.frmPath_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Co-Advisor_DataCard1_1'.frmCoAdvisor_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Co-Advisor_DataCard1_1'.frmCoAdvisor_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Co-Advisor_DataCard1_1'.frmCoAdvisor_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Dissertation Committee_DataCard5_1'.frmCommittee_1.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Dissertation Committee_DataCard5_1'.frmCommittee_1.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Dissertation Committee_DataCard5_1'.frmCommittee_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesBack.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesBack.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesBack"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesOverview.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesOverview.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesOverview"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesMilestones.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesMilestones.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesMilestones"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesHistory.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesHistory.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesHistory"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesEvaluations.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesEvaluations.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesEvaluations"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesCourses.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesCourses.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesCourses"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesEdit.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesEdit.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesEdit"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesEdit.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesEdit.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesEdit"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesCancel.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesCancel.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesCancel"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesCancel.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesCancel.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesCancel"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mMilestone.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mMilestone.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mMilestone"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mStatus.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mStatus.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mStatus"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mNote.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mNote.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mNote"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDate.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDate.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDate"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDel.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDel.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDel"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDel.TabIndex"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDel.TabIndex",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "TabIndex",
-                "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDel"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsFilter.drpAssessmentTypeFilter.AccessibleLabel"
                 }
               ],
@@ -2325,186 +1155,6 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnMyInformation.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnMyInformation.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrAdminMenu",
-                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnMyInformation"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnTARA.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnTARA.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrAdminMenu",
-                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnTARA"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnFunding.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnFunding.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrAdminMenu",
-                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnFunding"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAssessmentQs.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAssessmentQs.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrAdminMenu",
-                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAssessmentQs"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAdvisor.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAdvisor.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrAdminMenu",
-                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAdvisor"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnStudent.AccessibleLabel"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnStudent.AccessibleLabel",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AccessibleLabel",
-                "module": "scrAdminMenu",
-                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnStudent"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 1
         },
         {
           "locations": [
@@ -5271,19 +3921,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect"
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnStudent.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect",
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnStudent.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "OnSelect",
-                "module": "scrAdvisors",
-                "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors"
+                "member": "AccessibleLabel",
+                "module": "scrAdminMenu",
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnStudent"
               }
             }
           ],
@@ -5293,27 +3943,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 3
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect"
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAdvisor.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect",
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAdvisor.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "OnSelect",
-                "module": "scrAdvisors",
-                "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors"
+                "member": "AccessibleLabel",
+                "module": "scrAdminMenu",
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAdvisor"
               }
             }
           ],
@@ -5323,27 +3973,147 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 3
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewHeader_1.cmpOverviewHeader_1.ScreenTitle"
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAssessmentQs.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewHeader_1.cmpOverviewHeader_1.ScreenTitle",
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAssessmentQs.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "ScreenTitle",
+                "member": "AccessibleLabel",
+                "module": "scrAdminMenu",
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAssessmentQs"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnTARA.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnTARA.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrAdminMenu",
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnTARA"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnFunding.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnFunding.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrAdminMenu",
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnFunding"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnMyInformation.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnMyInformation.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrAdminMenu",
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnMyInformation"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewBack_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewBack_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewHeader_1.cmpOverviewHeader_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewBack_1"
               }
             }
           ],
@@ -5353,27 +4123,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ReadOnlyStudentInfo_1.Item"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewOverview_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ReadOnlyStudentInfo_1.Item",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewOverview_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Item",
+                "member": "AccessibleLabel",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ReadOnlyStudentInfo_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewOverview_1"
               }
             }
           ],
@@ -5383,27 +4153,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.Item"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewMilestones_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.Item",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewMilestones_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Item",
+                "member": "AccessibleLabel",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewMilestones_1"
               }
             }
           ],
@@ -5413,27 +4183,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneCourse_1.X"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewHistory_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneCourse_1.X",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewHistory_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "X",
+                "member": "AccessibleLabel",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneCourse_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewHistory_1"
               }
             }
           ],
@@ -5443,27 +4213,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestonePaper_1.X"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewEvaluations_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestonePaper_1.X",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewEvaluations_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "X",
+                "member": "AccessibleLabel",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestonePaper_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewEvaluations_1"
               }
             }
           ],
@@ -5473,27 +4243,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneQual_1.X"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewCourses_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneQual_1.X",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewCourses_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "X",
+                "member": "AccessibleLabel",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneQual_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewNav_1.btnOverviewCourses_1"
               }
             }
           ],
@@ -5503,27 +4273,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneProposal_1.X"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oEdit_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneProposal_1.X",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oEdit_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "X",
+                "member": "AccessibleLabel",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneProposal_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oEdit_1"
               }
             }
           ],
@@ -5533,27 +4303,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneTA_1.X"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oEdit_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneTA_1.X",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oEdit_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "X",
+                "member": "TabIndex",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneTA_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oEdit_1"
               }
             }
           ],
@@ -5563,27 +4333,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneDefense_1.X"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oCancel_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneDefense_1.X",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oCancel_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "X",
+                "member": "AccessibleLabel",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneDefense_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oCancel_1"
               }
             }
           ],
@@ -5593,27 +4363,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.Icon"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oCancel_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.Icon",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oCancel_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Icon",
+                "member": "TabIndex",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oCancel_1"
               }
             }
           ],
@@ -5623,27 +4393,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.Color"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oSave_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.Color",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oSave_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Color",
+                "member": "AccessibleLabel",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oSave_1"
               }
             }
           ],
@@ -5653,27 +4423,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.HoverColor"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oSave_1.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.HoverColor",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oSave_1.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "HoverColor",
+                "member": "TabIndex",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrEdit_1.btn_oSave_1"
               }
             }
           ],
@@ -5683,27 +4453,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.X"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Status (cr829_status)_DataCard4_1'.frmStatus_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.X",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Status (cr829_status)_DataCard4_1'.frmStatus_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "X",
+                "member": "AccessibleLabel",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Status (cr829_status)_DataCard4_1'.frmStatus_1"
               }
             }
           ],
@@ -5713,27 +4483,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1.Icon"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.Advisor_DataCard1_1.frmAdvisor_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1.Icon",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.Advisor_DataCard1_1.frmAdvisor_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Icon",
+                "member": "AccessibleLabel",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.Advisor_DataCard1_1.frmAdvisor_1"
               }
             }
           ],
@@ -5743,27 +4513,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1.Color"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Individual Path_DataCard5_1'.frmPath_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1.Color",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Individual Path_DataCard5_1'.frmPath_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Color",
+                "member": "AccessibleLabel",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Individual Path_DataCard5_1'.frmPath_1"
               }
             }
           ],
@@ -5773,27 +4543,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1.HoverColor"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Co-Advisor_DataCard1_1'.frmCoAdvisor_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1.HoverColor",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Co-Advisor_DataCard1_1'.frmCoAdvisor_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "HoverColor",
+                "member": "AccessibleLabel",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Co-Advisor_DataCard1_1'.frmCoAdvisor_1"
               }
             }
           ],
@@ -5803,27 +4573,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1.Icon"
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Dissertation Committee_DataCard5_1'.frmCommittee_1.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1.Icon",
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Dissertation Committee_DataCard5_1'.frmCommittee_1.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Icon",
+                "member": "AccessibleLabel",
                 "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1"
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.'Dissertation Committee_DataCard5_1'.frmCommittee_1"
               }
             }
           ],
@@ -5833,357 +4603,27 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1.Color"
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesBack.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1.Color",
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesBack.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Color",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1.HoverColor"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1.HoverColor",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "HoverColor",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1.Icon"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1.Icon",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Icon",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1.Color"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1.Color",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Color",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1.HoverColor"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1.HoverColor",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "HoverColor",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1.Icon"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1.Icon",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Icon",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1.Color"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1.Color",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Color",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1.HoverColor"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1.HoverColor",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "HoverColor",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1.Icon"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1.Icon",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Icon",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1.Color"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1.Color",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Color",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1.HoverColor"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1.HoverColor",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "HoverColor",
-                "module": "scrStudentHome_Delete?",
-                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesHeader.cmpMilestonesHeader.ScreenTitle"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesHeader.cmpMilestonesHeader.ScreenTitle",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "ScreenTitle",
+                "member": "AccessibleLabel",
                 "module": "scrStudentMilestones",
-                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesHeader.cmpMilestonesHeader"
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesBack"
               }
             }
           ],
@@ -6193,25 +4633,415 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
         },
         {
           "locations": [
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.Items"
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesOverview.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.Items",
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesOverview.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
-                "member": "Items",
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesOverview"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesMilestones.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesMilestones.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesMilestones"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesHistory.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesHistory.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesHistory"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesEvaluations.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesEvaluations.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesEvaluations"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesCourses.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesCourses.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesNav.btnMilestonesCourses"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesEdit.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesEdit.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesEdit"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesEdit.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesEdit.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesEdit"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesCancel.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesCancel.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesCancel"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesCancel.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesCancel.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesCancel"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesSave"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.ctrMilestonesColumns.btnMilestonesAdd"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
                 "module": "scrStudentMilestones",
                 "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones"
               }
@@ -6223,8 +5053,278 @@
           "properties": {
             "level": "Medium"
           },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 4
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mMilestone.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mMilestone.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mMilestone"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mStatus.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mStatus.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mStatus"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mNote.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mNote.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mNote"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDate.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDate.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDate"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDel.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDel.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDel"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDel.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDel.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.mDel"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrAdvisors",
+                "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrAdvisors",
+                "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-CollectDelegatableDataSource",
+          "ruleIndex": 3
         },
         {
           "locations": [
@@ -7504,6 +6604,906 @@
                 "member": "Item",
                 "module": "scrPositionsDetail",
                 "type": "scrPositionsDetail.ctrPositionsDetail.ctrPositionsDetailMain.frmEditPosition"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewHeader_1.cmpOverviewHeader_1.ScreenTitle"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewHeader_1.cmpOverviewHeader_1.ScreenTitle",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ScreenTitle",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewHeader_1.cmpOverviewHeader_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ReadOnlyStudentInfo_1.Item"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ReadOnlyStudentInfo_1.Item",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Item",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ReadOnlyStudentInfo_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.Item"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1.Item",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Item",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.EditStudentInfo_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneCourse_1.X"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneCourse_1.X",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "X",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneCourse_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestonePaper_1.X"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestonePaper_1.X",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "X",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestonePaper_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneQual_1.X"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneQual_1.X",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "X",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneQual_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneProposal_1.X"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneProposal_1.X",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "X",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneProposal_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneTA_1.X"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneTA_1.X",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "X",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneTA_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneDefense_1.X"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneDefense_1.X",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "X",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneLabels_1.labOverviewMilestoneDefense_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.Icon"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.Icon",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Icon",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.Color",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.HoverColor"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.HoverColor",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "HoverColor",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.X"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1.X",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "X",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneCourse_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1.Icon"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1.Icon",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Icon",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1.Color",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1.HoverColor"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1.HoverColor",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "HoverColor",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestonePaper_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1.Icon"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1.Icon",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Icon",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1.Color",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1.HoverColor"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1.HoverColor",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "HoverColor",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneQual_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1.Icon"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1.Icon",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Icon",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1.Color",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1.HoverColor"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1.HoverColor",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "HoverColor",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneProposal_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1.Icon"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1.Icon",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Icon",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1.Color",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1.HoverColor"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1.HoverColor",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "HoverColor",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneTA_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1.Icon"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1.Icon",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Icon",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1.Color"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1.Color",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Color",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1.HoverColor"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1.HoverColor",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "HoverColor",
+                "module": "scrStudentHome_Delete?",
+                "type": "'scrStudentHome_Delete?'.ctrStudentOverview_1.ctrOverviewMain_1.ctrMilestones_1.ctrMilestoneIcons_1.icoOverviewMilestoneDefense_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesHeader.cmpMilestonesHeader.ScreenTitle"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesHeader.cmpMilestonesHeader.ScreenTitle",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "ScreenTitle",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesHeader.cmpMilestonesHeader"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.Items"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones.Items",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Items",
+                "module": "scrStudentMilestones",
+                "type": "scrStudentMilestones.ctrStudentMilestones.ctrMilestonesMain.galMilestones"
               }
             }
           ],
