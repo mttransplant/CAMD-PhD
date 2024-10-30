@@ -121,11 +121,11 @@
                 DisabledColor: =RGBA(225, 223, 221, 1)
                 DisabledFill: =RGBA(0, 0, 0, 0)
                 FocusedBorderThickness: =4
-                Height: =Parent.Height
+                Height: =Parent.Height-Parent.PaddingTop-Parent.PaddingBottom
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(16, 110, 190, 1)
                 HoverFill: =RGBA(0, 0, 0, 0)
-                Icon: =Icon.Edit
+                Icon: =Icon.Database
                 OnSelect: |-
                     =ClearCollect(colAssessmentQsUpdates,Filter('PhD Assessment Questions',IsBlank('Question Order')));
                     ClearCollect(colAssessmentQsDeletes,Filter('PhD Assessment Questions',IsBlank('Question Order')));
@@ -135,6 +135,7 @@
                 Tooltip: ="Edit Student Info"
                 Visible: =false
                 Width: =Self.Height
+                X: =Parent.Width-Self.Width
                 ZIndex: =3
 
         ctrAssessmentQsMain As groupContainer.verticalAutoLayoutContainer:
@@ -317,10 +318,27 @@
                     HoverColor: =RGBA(16, 110, 190, 1)
                     HoverFill: =RGBA(0, 0, 0, 0)
                     Icon: =Icon.Add
-                    OnSelect: |-
-                        =Patch('PhD Assessment Questions',Defaults('PhD Assessment Questions'),{'Assessment Type':drpAssessmentTypeFilter.Selected.Value,'Question Order':First(Sort(Filter('PhD Assessment Questions','Assessment Type'=drpAssessmentTypeFilter.Selected.Value),'Question Order',SortOrder.Descending)).'Question Order'+1,Question:"Enter Question"});
+                    OnSelect: |
+                        =Patch(
+                            'PhD Assessment Questions',
+                            Defaults('PhD Assessment Questions'),
+                            {
+                                'Assessment Type': drpAssessmentTypeFilter.Selected.Value,
+                                'Question Order': First(
+                                    Sort(
+                                        Filter(
+                                            'PhD Assessment Questions',
+                                            'Assessment Type' = drpAssessmentTypeFilter.Selected.Value
+                                        ),
+                                        'Question Order',
+                                        SortOrder.Descending
+                                    )
+                                ).'Question Order' + 1,
+                                Question: "Enter Question"
+                            }
+                        );
                         Refresh('PhD Assessment Questions');
-                        UpdateContext({IsEditing:true});
+                        UpdateContext({IsEditing: true});
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)

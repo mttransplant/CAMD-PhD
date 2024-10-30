@@ -918,7 +918,14 @@
     "btnClear": {
       "AllowAccessToGlobals": true,
       "ControlPropertyState": [
-        "Icon",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "Icon.Edit",
+          "InvariantPropertyName": "Icon",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "Color",
         "DisabledColor",
         "PressedColor",
@@ -1089,7 +1096,7 @@
         {
           "Category": "Design",
           "PropertyName": "Icon",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -1169,7 +1176,7 @@
         {
           "Category": "Design",
           "PropertyName": "X",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Behavior",
@@ -2894,7 +2901,7 @@
         {
           "Category": "Design",
           "PropertyName": "LayoutDirection",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
