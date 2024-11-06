@@ -730,7 +730,7 @@
                         LayoutMinHeight: =32
                         LayoutMinWidth: =96
                         OnSelect: |-
-                            =Collect('PhD Advisors',{'Advisor Name':txtNewAdvisorName.Text,'Advisor Email':txtNewAdvisorEmail.Text});
+                            =Collect('PhD Advisors',{'Advisor Name':txtNewAdvisorName.Text,'Advisor NUID':txtNewAdvisorNUID.Text,'Advisor Email':txtNewAdvisorEmail.Text});
                             Select(btnLoadAdvisors)
                         Text: ="Add New Advisor"
                         VerticalAlign: =""
