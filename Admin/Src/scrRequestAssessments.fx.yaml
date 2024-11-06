@@ -1,9 +1,9 @@
-"scrAssignAssessments As screen.'autoLayout_Sidebar_ver1.0'":
+"scrRequestAssessments As screen.'autoLayout_Sidebar_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: =Clear(colAssignStudentAssessments);
     OnVisible: =ClearCollect(colAssignStudentAssessments,AddColumns(Sort(Filter('PhD Students','Student Status'="Active"),'Full Name'),StudentSelected,false));
 
-    ctrAssignAssessments As groupContainer.verticalAutoLayoutContainer:
+    ctrRequestAssessments As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -22,7 +22,7 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        ctrAssignAssessmentsHeader As groupContainer.horizontalAutoLayoutContainer:
+        ctrRequestAssessmentsHeader As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
@@ -36,14 +36,14 @@
             RadiusTopRight: =8
             ZIndex: =2
 
-            cmpAssessmentQsHeader_1 As cmpHeader:
+            cmpRequestAssessmentsHeader As cmpHeader:
                 LayoutMinHeight: =640
                 LayoutMinWidth: =640
                 MenuScreen: =scrAdminMenu
-                ScreenTitle: ="Assign Assessments"
+                ScreenTitle: ="Request Assessments"
                 Width: =Parent.Width
 
-        ctrAssignAssessmentsMain As groupContainer.horizontalAutoLayoutContainer:
+        ctrRequestAssessmentsMain As groupContainer.horizontalAutoLayoutContainer:
             Fill: =RGBA(245, 245, 245, 1)
             LayoutAlignItems: =LayoutAlignItems.Stretch
             LayoutGap: =16
@@ -61,7 +61,7 @@
             RadiusTopRight: =4
             ZIndex: =3
 
-            ctrAssignAssessmentsStudents As groupContainer.verticalAutoLayoutContainer:
+            ctrRequestAssessmentsStudents As groupContainer.verticalAutoLayoutContainer:
                 BorderStyle: =BorderStyle.None
                 Fill: =RGBA(245, 245, 245, 1)
                 LayoutDirection: =LayoutDirection.Vertical
@@ -76,7 +76,7 @@
                 Width: =600
                 ZIndex: =4
 
-                ctrAssignStudentsOptions As groupContainer.horizontalAutoLayoutContainer:
+                ctrRequestStudentsOptions As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Fill: =RGBA(255, 255, 255, 1)
                     FillPortions: =0
@@ -90,7 +90,7 @@
                     RadiusTopRight: =4
                     ZIndex: =1
 
-                ctrAssignStudentsList As groupContainer.verticalAutoLayoutContainer:
+                ctrRequestStudentsList As groupContainer.verticalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Fill: =RGBA(255, 255, 255, 1)
                     LayoutDirection: =LayoutDirection.Vertical
@@ -103,7 +103,7 @@
                     RadiusTopRight: =4
                     ZIndex: =2
 
-                    ctrAssignStudentsListColumns As groupContainer.manualLayoutContainer:
+                    ctrRequestStudentsListColumns As groupContainer.manualLayoutContainer:
                         AlignInContainer: =AlignInContainer.SetByContainer
                         DropShadow: =DropShadow.Light
                         Fill: =RGBA(180, 214, 250, 1)
@@ -120,7 +120,7 @@
                         Y: =40
                         ZIndex: =1
 
-                        labAssignStudentName As label:
+                        labRequestStudentName As label:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
@@ -132,12 +132,12 @@
                             FontWeight: =FontWeight.Bold
                             PaddingLeft: =10
                             Size: =13
-                            Text: ="Student Name"
-                            Width: =190
-                            X: =chkAssignStudentsAll.X+chkAssignStudentsAll.Width
+                            Text: ="Active Student Names"
+                            Width: =Parent.Width-Self.X-Parent.PaddingRight
+                            X: =chkSelectAllStudents.X+chkSelectAllStudents.Width
                             ZIndex: =1
 
-                        chkAssignStudentsAll As checkbox:
+                        chkSelectAllStudents As checkbox:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
@@ -165,7 +165,7 @@
                             X: =Parent.PaddingLeft
                             ZIndex: =2
 
-                    galAssignStudentsList As gallery.galleryVertical:
+                    galRequestStudentsList As gallery.galleryVertical:
                         BorderColor: =RGBA(245, 245, 245, 1)
                         DelayItemLoading: =true
                         Items: =colAssignStudentAssessments
@@ -173,11 +173,12 @@
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
                         LoadingSpinner: =LoadingSpinner.Data
+                        LoadingSpinnerColor: =Color.DarkGray
                         TemplateSize: |
                             =40
                         ZIndex: =2
 
-                        txtAssignStudentName As text:
+                        txtRequestStudentName As text:
                             BorderColor: =RGBA(245, 245, 245, 1)
                             BorderThickness: =2
                             Color: =RGBA(50, 49, 48, 1)
@@ -202,10 +203,10 @@
                             RadiusTopRight: =0
                             Size: =13
                             Width: =Parent.Width-Self.X-(Parent.TemplatePadding*2)
-                            X: =chkAssignThisStudent.X+chkAssignThisStudent.Width
+                            X: =chkSelectThisStudent.X+chkSelectThisStudent.Width
                             ZIndex: =1
 
-                        chkAssignThisStudent As checkbox:
+                        chkSelectThisStudent As checkbox:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             BorderStyle: =BorderStyle.None
                             BorderThickness: =2
@@ -234,7 +235,7 @@
                             Width: =40
                             ZIndex: =2
 
-            ctrAssignAssessmentsAdvisors As groupContainer.verticalAutoLayoutContainer:
+            ctrRequestAssessmentsAdvisors As groupContainer.verticalAutoLayoutContainer:
                 BorderStyle: =BorderStyle.None
                 Fill: =RGBA(245, 245, 245, 1)
                 LayoutDirection: =LayoutDirection.Vertical
@@ -249,7 +250,7 @@
                 Width: =600
                 ZIndex: =5
 
-                ctrAssignAdvisorsOptions As groupContainer.horizontalAutoLayoutContainer:
+                ctrRequestAdvisorsOptions As groupContainer.horizontalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Fill: =RGBA(255, 255, 255, 1)
                     FillPortions: =0
@@ -263,7 +264,7 @@
                     RadiusTopRight: =4
                     ZIndex: =1
 
-                ctrAssignAdvisorsList As groupContainer.verticalAutoLayoutContainer:
+                ctrRequestAdvisorsList As groupContainer.verticalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Fill: =RGBA(255, 255, 255, 1)
                     LayoutDirection: =LayoutDirection.Vertical
