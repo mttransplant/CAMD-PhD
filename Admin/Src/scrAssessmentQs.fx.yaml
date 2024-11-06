@@ -375,7 +375,7 @@
                             }
                         );
                         Refresh('PhD Assessment Questions');
-                        UpdateContext({IsEditing: true});
+                        // UpdateContext({IsEditing: true});
                     PressedBorderColor: =RGBA(0, 0, 0, 0)
                     PressedColor: =RGBA(16, 110, 190, 1)
                     PressedFill: =RGBA(0, 0, 0, 0)
@@ -444,7 +444,7 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =If(IsEditing,BorderStyle.Solid,BorderStyle.None)
                     BorderThickness: =5
-                    Color: =RGBA(50, 49, 48, 1)
+                    Color: =If(IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID)),RGBA(50, 49, 48, 1),Color.Red)
                     Default: =ThisItem.'Choice Options'
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
@@ -486,6 +486,7 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
+                    Strikethrough: =!IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID))
                     Visible: =selQuestionType.Selected.Value='Question Type (PhD Assessment Questions)'.Choice
                     Width: =200
                     X: =txtQuestion.X+txtQuestion.Width+Parent.TemplatePadding
@@ -496,7 +497,7 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =If(IsEditing,BorderStyle.Solid,BorderStyle.None)
                     BorderThickness: =5
-                    Color: =RGBA(50, 49, 48, 1)
+                    Color: =If(IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID)),RGBA(50, 49, 48, 1),Color.Red)
                     Default: =ThisItem.Question
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
@@ -538,6 +539,7 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
+                    Strikethrough: =!IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID))
                     Width: =650
                     X: =selQuestionType.X+selQuestionType.Width+Parent.TemplatePadding
                     ZIndex: =4
@@ -552,7 +554,7 @@
                     ChevronFill: =RGBA(50, 49, 48, 1)
                     ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                     ChevronHoverFill: =RGBA(50, 49, 48, 1)
-                    Color: =RGBA(50, 49, 48, 1)
+                    Color: =If(IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID)),RGBA(50, 49, 48, 1),Color.Red)
                     Default: =ThisItem.'Question Type'
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
@@ -593,6 +595,7 @@
                     SelectionColor: =RGBA(50, 49, 48, 1)
                     SelectionFill: =RGBA(0, 120, 212, 1)
                     Size: =13
+                    Strikethrough: =!IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID))
                     Width: =100
                     X: =txtQuestionOrder.X+txtQuestionOrder.Width+Parent.TemplatePadding
                     ZIndex: =5
@@ -602,7 +605,7 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderStyle: =If(IsEditing,BorderStyle.Solid,BorderStyle.None)
                     BorderThickness: =5
-                    Color: =RGBA(50, 49, 48, 1)
+                    Color: =If(IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID)),RGBA(50, 49, 48, 1),Color.Red)
                     Default: =ThisItem.'Question Order'
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
@@ -644,6 +647,7 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
+                    Strikethrough: =!IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID))
                     Width: =77
                     X: =selAsssessmentType.X+selAsssessmentType.Width
                     ZIndex: =6
@@ -656,7 +660,7 @@
                     ChevronFill: =RGBA(50, 49, 48, 1)
                     ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                     ChevronHoverFill: =RGBA(50, 49, 48, 1)
-                    Color: =RGBA(50, 49, 48, 1)
+                    Color: =If(IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID)),RGBA(50, 49, 48, 1),Color.Red)
                     Default: =ThisItem.'Assessment Type'
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
@@ -680,6 +684,7 @@
                     SelectionColor: =RGBA(50, 49, 48, 1)
                     SelectionFill: =RGBA(0, 120, 212, 1)
                     Size: =13
+                    Strikethrough: =!IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID))
                     Width: =228
                     ZIndex: =7
 
