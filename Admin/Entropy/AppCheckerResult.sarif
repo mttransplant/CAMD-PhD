@@ -5624,6 +5624,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfType.drpRequestSelfType.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfType.drpRequestSelfType.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfType.drpRequestSelfType"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfTerm.drpRequestSelfTerm.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfTerm.drpRequestSelfTerm.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfTerm.drpRequestSelfTerm"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect"
                 }
               ],
