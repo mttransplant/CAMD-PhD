@@ -188,8 +188,7 @@
                         Icon: =Icon.Reload
                         OnSelect: |-
                             =Select(btnClearForm);
-                            //ClearCollect(colAdvisors,'PhD Advisors');
-                            //ClearCollect(colAdvisorUpdates,AddColumns(Filter(colAdvisors,'Advisor Email'="nothing"),Error,"No"));
+                            Refresh('PhD Advisors');
                             ClearCollect(colAdvisorUpdates,AddColumns(Filter('PhD Advisors','Advisor Email'="nothing"),Error,"No"));
                             ClearCollect(colAdvisees,'PhD Students');
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
@@ -412,7 +411,7 @@
                             UpdateIf(
                                 colAdvisorUpdates,
                                 AdvisorID = ThisItem.AdvisorID,
-                                {'Advisor Name': txtAdvisorNUID.Text,
+                                {'Advisor NUID': txtAdvisorNUID.Text,
                                 Error:If(Len(txtAdvisorNUID.Text)=9 And IsNumeric(txtAdvisorNUID.Text),"No","Yes")}
                             );
                         OnSelect: =Select(Parent)
