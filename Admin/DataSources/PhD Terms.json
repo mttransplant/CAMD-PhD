@@ -1,0 +1,97 @@
+[
+  {
+    "CdsFCBContext": "{\"FileType\":true,\"ImageExternalStorage\":true}",
+    "EntitySetName": "cr829_phdtermses",
+    "IsHidden": false,
+    "IsSampleData": false,
+    "IsWritable": true,
+    "LogicalName": "cr829_phdterms",
+    "Name": "PhD Terms",
+    "NativeCDSDataSourceInfoNameMapping": {
+      "_ownerid_value": "Owner",
+      "cr829_phdterms_AsyncOperations": "System Jobs",
+      "cr829_phdterms_BulkDeleteFailures": "Bulk Delete Failures",
+      "cr829_phdterms_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
+      "cr829_phdterms_PrincipalObjectAttributeAccesses": "Field Sharing",
+      "cr829_phdterms_ProcessSession": "Process Sessions",
+      "cr829_phdterms_SyncErrors": "Sync Errors",
+      "cr829_phdtermsid": "PhD Terms",
+      "cr829_stvterm_code": "STVTERM_CODE",
+      "cr829_stvterm_desc": "STVTERM_DESC",
+      "cr829_stvterm_end_date": "STVTERM_END_DATE",
+      "cr829_stvterm_start_date": "STVTERM_START_DATE",
+      "createdby": "Created By",
+      "createdon": "Created On",
+      "createdonbehalfby": "Created By (Delegate)",
+      "importsequencenumber": "Import Sequence Number",
+      "modifiedby": "Modified By",
+      "modifiedon": "Modified On",
+      "modifiedonbehalfby": "Modified By (Delegate)",
+      "overriddencreatedon": "Record Created On",
+      "owningbusinessunit": "Owning Business Unit",
+      "owningteam": "Owning Team",
+      "owninguser": "Owning User",
+      "statecode": "Status",
+      "statuscode": "Status Reason",
+      "timezoneruleversionnumber": "Time Zone Rule Version Number",
+      "utcconversiontimezonecode": "UTC Conversion Time Zone Code",
+      "versionnumber": "Version Number"
+    },
+    "PreferredName": "PhD Terms",
+    "Type": "NativeCDSDataSourceInfo"
+  },
+  {
+    "DisplayName": "PhD Terms (Views)",
+    "Name": "_cr829_phdterms_views",
+    "RelatedEntityName": "PhD Terms",
+    "TrimmedViewName": true,
+    "Type": "ViewInfo",
+    "ViewInfoNameMapping": {
+      "18dea4ab-ccc4-4ce1-8fde-eb312796183b": "Inactive PhD Termss",
+      "6bfa0881-630d-4c97-848e-defdf25347f0": "Active PhD Termss",
+      "7fadbddf-232d-4399-8208-4b968e127f84": "PhD Terms Advanced Find View",
+      "a102723a-673f-44a4-9d8f-c97f28d14920": "PhD Terms Lookup View",
+      "fba03c57-9715-43c1-be92-7b2be607bd6c": "PhD Terms Associated View"
+    }
+  },
+  {
+    "DisplayName": "Status (PhD Terms)",
+    "Name": "cr829_phdterms_statecode",
+    "OptionSetInfoNameMapping": {
+      "0": "Active",
+      "1": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statecode",
+        "OptionSetReferenceEntityName": "PhD Terms"
+      }
+    },
+    "OptionSetTypeKey": "StateType",
+    "RelatedColumnInvariantName": "statecode",
+    "RelatedEntityName": "PhD Terms",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Status Reason (PhD Terms)",
+    "Name": "cr829_phdterms_statuscode",
+    "OptionSetInfoNameMapping": {
+      "1": "Active",
+      "2": "Inactive"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "statuscode",
+        "OptionSetReferenceEntityName": "PhD Terms"
+      }
+    },
+    "OptionSetTypeKey": "StatusType",
+    "RelatedColumnInvariantName": "statuscode",
+    "RelatedEntityName": "PhD Terms",
+    "Type": "OptionSetInfo"
+  }
+]

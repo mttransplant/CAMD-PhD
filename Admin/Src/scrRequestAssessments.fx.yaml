@@ -6,6 +6,7 @@
     OnVisible: |-
         =ClearCollect(colRequestStudentAssessments,AddColumns(Sort(Filter('PhD Students','Student Status'="Active"),'Full Name'),StudentSelected,false));
         ClearCollect(colRequestAdvisorAssessments,Filter(AddColumns('PhD Advisors',AdvisorSelected,false,Advisees,CountRows(Filter(colRequestStudentAssessments,'Advisor NUID'=Advisor.'Advisor NUID')),CoAdvisees,CountRows(Filter(colRequestStudentAssessments,'Advisor NUID'='Co-Advisor'.'Advisor NUID'))),Advisees>0 Or CoAdvisees >0));
+        ClearCollect(colCurrentTerm,ShowColumns(Filter('PhD Terms',STVTERM_START_DATE<=Today() And STVTERM_END_DATE>=Today()),STVTERM_CODE,STVTERM_DESC));
 
     ctrRequestAssessments As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -179,40 +180,33 @@
                             Font: =Font.'Segoe UI'
                             FontWeight: =FontWeight.Bold
                             Size: =13
-                            Text: ="Select Term"
+                            Text: |-
+                                ="Requesting for term:"
                             Width: =Parent.Width
                             ZIndex: =1
 
-                        drpRequestSelfTerm As dropdown:
+                        TextInput3 As text:
                             BorderColor: =RGBA(245, 245, 245, 1)
-                            ChevronBackground: =RGBA(245, 245, 245, 1)
-                            ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
-                            ChevronDisabledFill: =RGBA(161, 159, 157, 1)
-                            ChevronFill: =RGBA(50, 49, 48, 1)
-                            ChevronHoverBackground: =RGBA(245, 245, 245, 1)
-                            ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                            BorderThickness: =2
                             Color: =RGBA(50, 49, 48, 1)
-                            Default: ='Assessment Type (PhD Assessment Questions)'.'Self-Brief'
+                            Default: =First(colCurrentTerm).cr829_stvterm_desc
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledColor: =RGBA(161, 159, 157, 1)
                             DisabledFill: =RGBA(242, 242, 241, 0)
-                            Fill: =RGBA(245, 245, 245, 1)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
                             Font: =Font.'Segoe UI'
                             HoverBorderColor: =RGBA(16, 110, 190, 1)
                             HoverColor: =RGBA(50, 49, 48, 1)
-                            HoverFill: =RGBA(245, 245, 245, 1)
-                            Items: =['Assessment Type (PhD Assessment Questions)'.'Self-Brief','Assessment Type (PhD Assessment Questions)'.'Self-Comprehensive']
-                            PaddingBottom: =5
-                            PaddingLeft: =12
-                            PaddingRight: =5
-                            PaddingTop: =5
-                            PressedBorderColor: =RGBA(16, 110, 190, 1)
-                            PressedColor: =RGBA(255, 255, 255, 1)
-                            PressedFill: =RGBA(0, 120, 212, 1)
-                            SelectionColor: =RGBA(50, 49, 48, 1)
-                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(50, 49, 48, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
                             Size: =13
-                            Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                             ZIndex: =2
 
                 ctrRequestStudentsList As groupContainer.verticalAutoLayoutContainer:
