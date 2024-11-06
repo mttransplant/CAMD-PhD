@@ -370,6 +370,7 @@
                                         SortOrder.Descending
                                     )
                                 ).'Question Order' + 1,
+                                'Question Type':'Question Type (PhD Assessment Questions)'.Text,
                                 Question: "Enter Question"
                             }
                         );
