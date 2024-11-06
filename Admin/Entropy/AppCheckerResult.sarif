@@ -5354,6 +5354,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrAssignAssessments.ctrAssignAssessments.ctrAssignAssessmentsMain.ctrAssignAssessmentsStudents.ctrAssignStudentsList.galAssignStudentsList.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAssignAssessments.ctrAssignAssessments.ctrAssignAssessmentsMain.ctrAssignAssessmentsStudents.ctrAssignStudentsList.galAssignStudentsList.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrAssignAssessments",
+                "type": "scrAssignAssessments.ctrAssignAssessments.ctrAssignAssessmentsMain.ctrAssignAssessmentsStudents.ctrAssignStudentsList.galAssignStudentsList"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAssignAssessments.ctrAssignAssessments.ctrAssignAssessmentsMain.ctrAssignAssessmentsStudents.ctrAssignStudentsList.galAssignStudentsList.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAssignAssessments.ctrAssignAssessments.ctrAssignAssessmentsMain.ctrAssignAssessmentsStudents.ctrAssignStudentsList.galAssignStudentsList.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scrAssignAssessments",
+                "type": "scrAssignAssessments.ctrAssignAssessments.ctrAssignAssessmentsMain.ctrAssignAssessmentsStudents.ctrAssignStudentsList.galAssignStudentsList"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAssignAssessment.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAssignAssessment.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrAdminMenu",
+                "type": "scrAdminMenu.ctrAdminMenu.ctrMenuNav.btnAssignAssessment"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAssignAssessments.ctrAssignAssessments.ctrAssignAssessmentsMain.ctrAssignAssessmentsStudents.ctrAssignStudentsList.galAssignStudentsList.txtAssignStudentName.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAssignAssessments.ctrAssignAssessments.ctrAssignAssessmentsMain.ctrAssignAssessmentsStudents.ctrAssignStudentsList.galAssignStudentsList.txtAssignStudentName.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrAssignAssessments",
+                "type": "scrAssignAssessments.ctrAssignAssessments.ctrAssignAssessmentsMain.ctrAssignAssessmentsStudents.ctrAssignStudentsList.galAssignStudentsList.txtAssignStudentName"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect"
                 }
               ],
@@ -7557,6 +7677,36 @@
                 "member": "X",
                 "module": "scrAssessmentQs",
                 "type": "scrAssessmentQs.ctrAssessmentQs.ctrAssessmentQsMain.ctrAssessmentQsColumns.btnAqSave"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAssignAssessments.ctrAssignAssessments.ctrAssignAssessmentsMain.ctrAssignAssessmentsStudents.ctrAssignStudentsList.ctrAssignStudentsListColumns.Height"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAssignAssessments.ctrAssignAssessments.ctrAssignAssessmentsMain.ctrAssignAssessmentsStudents.ctrAssignStudentsList.ctrAssignStudentsListColumns.Height",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Height",
+                "module": "scrAssignAssessments",
+                "type": "scrAssignAssessments.ctrAssignAssessments.ctrAssignAssessmentsMain.ctrAssignAssessmentsStudents.ctrAssignStudentsList.ctrAssignStudentsListColumns"
               }
             }
           ],
