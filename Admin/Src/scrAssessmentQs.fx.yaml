@@ -188,6 +188,24 @@
                     X: =txtQuestion.X+Parent.PaddingLeft
                     ZIndex: =1
 
+                colQustionType As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Height: =Parent.Height
+                    Size: =13
+                    Text: ="Type"
+                    Width: =selQuestionType.Width
+                    X: =selQuestionType.X+Parent.PaddingLeft
+                    ZIndex: =2
+
                 colQuestionOrder As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -205,7 +223,7 @@
                     Text: ="Order"
                     Width: =txtQuestionOrder.Width
                     X: =txtQuestionOrder.X+Parent.PaddingLeft
-                    ZIndex: =2
+                    ZIndex: =3
 
                 colAssessmentType As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -223,7 +241,7 @@
                     Text: ="Assessment Type"
                     Width: =selAsssessmentType.Width
                     X: =selAsssessmentType.X+Parent.PaddingLeft
-                    ZIndex: =3
+                    ZIndex: =4
 
                 btnAqEdit As icon.Edit:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -248,7 +266,7 @@
                     Width: =Self.Height
                     X: =Parent.Width-(Self.Width*2)-10
                     Y: =5
-                    ZIndex: =4
+                    ZIndex: =5
 
                 btnAqSave As icon.Save:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -278,7 +296,7 @@
                     Width: =28
                     X: =btnAqEdit.X+btn_aEdit.Width
                     Y: =5
-                    ZIndex: =5
+                    ZIndex: =6
 
                 btnAqCancel As icon.Cancel:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -304,7 +322,7 @@
                     Width: =Self.Height
                     X: =btnAqEdit.X
                     Y: =5
-                    ZIndex: =6
+                    ZIndex: =7
 
                 btnAqAdd As icon.Add:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -347,7 +365,7 @@
                     Width: =Self.Height
                     X: =btnAqSave.X
                     Y: =5
-                    ZIndex: =7
+                    ZIndex: =8
 
             galAssessmentQs As gallery.galleryVertical:
                 '#CopilotOverlayLabel': ="Filtered"
@@ -361,7 +379,7 @@
                 LayoutMinWidth: =320
                 LoadingSpinner: =LoadingSpinner.Data
                 LoadingSpinnerColor: =Color.DarkGray
-                TemplateSize: =40
+                TemplateSize: =120
                 Width: =Parent.Width
                 ZIndex: =12
 
@@ -448,9 +466,64 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    Width: =960
-                    X: =txtQuestionOrder.X+txtQuestionOrder.Width
+                    Width: =700
+                    X: =selQuestionType.X+selQuestionType.Width
                     ZIndex: =3
+
+                selQuestionType As dropdown:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderStyle: =If(IsEditing,BorderStyle.Solid,BorderStyle.None)
+                    BorderThickness: =5
+                    ChevronBackground: =RGBA(245, 245, 245, 1)
+                    ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                    ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                    ChevronFill: =RGBA(50, 49, 48, 1)
+                    ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                    ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =ThisItem.'Question Type'
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                    Fill: =selAsssessmentType.Fill
+                    Font: =Font.'Segoe UI'
+                    Height: =selAsssessmentType.Height
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(245, 245, 245, 1)
+                    Items: =Choices('Question Type (PhD Assessment Questions)')
+                    OnChange: |-
+                        =If(
+                            IsBlank(
+                                LookUp(
+                                    colAssessmentQsUpdates,
+                                    QuestionID = ThisItem.QuestionID
+                                )
+                            ),
+                            Collect(
+                                colAssessmentQsUpdates,
+                                ThisItem
+                            )
+                        );
+                        UpdateIf(
+                            colAssessmentQsUpdates,
+                            QuestionID = ThisItem.QuestionID,
+                            {'Question Type': selQuestionType.Selected.Value}
+                        )
+                    PaddingBottom: =5
+                    PaddingLeft: =12
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    PressedBorderColor: =RGBA(16, 110, 190, 1)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =RGBA(0, 120, 212, 1)
+                    SelectionColor: =RGBA(50, 49, 48, 1)
+                    SelectionFill: =RGBA(0, 120, 212, 1)
+                    Size: =13
+                    Width: =100
+                    X: =txtQuestionOrder.X+txtQuestionOrder.Width
+                    ZIndex: =4
 
                 txtQuestionOrder As text:
                     Align: =Align.Center
@@ -501,7 +574,7 @@
                     Size: =13
                     Width: =77
                     X: =selAsssessmentType.X+selAsssessmentType.Width
-                    ZIndex: =4
+                    ZIndex: =5
 
                 selAsssessmentType As dropdown:
                     BorderColor: =RGBA(245, 245, 245, 1)
@@ -536,5 +609,5 @@
                     SelectionFill: =RGBA(0, 120, 212, 1)
                     Size: =13
                     Width: =228
-                    ZIndex: =5
+                    ZIndex: =6
 

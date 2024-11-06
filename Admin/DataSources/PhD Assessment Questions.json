@@ -11,6 +11,7 @@
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "cr829_assessment_type": "Assessment Type",
+      "cr829_choice_options": "Choice Options",
       "cr829_phdassessmentquestions_AsyncOperations": "System Jobs",
       "cr829_phdassessmentquestions_BulkDeleteFailures": "Bulk Delete Failures",
       "cr829_phdassessmentquestions_MailboxTrackingFolders": "Mailbox Auto Tracking Folders",
@@ -20,6 +21,7 @@
       "cr829_phdassessmentquestionsid": "QuestionID",
       "cr829_question": "Question",
       "cr829_question_order": "Question Order",
+      "cr829_question_type": "Question Type",
       "createdby": "Created By",
       "createdon": "Created On",
       "createdonbehalfby": "Created By (Delegate)",
@@ -73,6 +75,26 @@
     },
     "OptionSetTypeKey": "PicklistType",
     "RelatedColumnInvariantName": "cr829_assessment_type",
+    "RelatedEntityName": "PhD Assessment Questions",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Question Type (PhD Assessment Questions)",
+    "Name": "cr829_phdassessmentquestions_cr829_question_type",
+    "OptionSetInfoNameMapping": {
+      "1": "Text",
+      "2": "Choice"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr829_question_type",
+        "OptionSetReferenceEntityName": "PhD Assessment Questions"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr829_question_type",
     "RelatedEntityName": "PhD Assessment Questions",
     "Type": "OptionSetInfo"
   },
