@@ -764,19 +764,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.ctrNewAdvisorDetails.txtNewAdvisorName.AccessibleLabel"
+                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.btnClearForm.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.ctrNewAdvisorDetails.txtNewAdvisorName.AccessibleLabel",
+                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.btnClearForm.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAdvisors",
-                "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.ctrNewAdvisorDetails.txtNewAdvisorName"
+                "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.btnClearForm"
               }
             }
           ],
@@ -794,19 +794,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.ctrNewAdvisorDetails.txtNewAdvisorEmail.AccessibleLabel"
+                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.btnAddNewAdvisor.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.ctrNewAdvisorDetails.txtNewAdvisorEmail.AccessibleLabel",
+                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.btnAddNewAdvisor.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAdvisors",
-                "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.ctrNewAdvisorDetails.txtNewAdvisorEmail"
+                "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.btnAddNewAdvisor"
               }
             }
           ],
@@ -824,19 +824,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.ctrSubmitNewAdvisor.btnAddNewAdvisor.AccessibleLabel"
+                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.ctrNewAdvisorEmail.txtNewAdvisorEmail.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.ctrSubmitNewAdvisor.btnAddNewAdvisor.AccessibleLabel",
+                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.ctrNewAdvisorEmail.txtNewAdvisorEmail.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAdvisors",
-                "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.ctrSubmitNewAdvisor.btnAddNewAdvisor"
+                "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.ctrNewAdvisorEmail.txtNewAdvisorEmail"
               }
             }
           ],
@@ -854,19 +854,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.ctrSubmitNewAdvisor.btnClearForm.AccessibleLabel"
+                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.ctrNewAdvisorName.txtNewAdvisorName.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.ctrSubmitNewAdvisor.btnClearForm.AccessibleLabel",
+                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.ctrNewAdvisorName.txtNewAdvisorName.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrAdvisors",
-                "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.ctrSubmitNewAdvisor.btnClearForm"
+                "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.ctrNewAdvisorName.txtNewAdvisorName"
               }
             }
           ],
@@ -5307,6 +5307,36 @@
                 "member": "AccessibleLabel",
                 "module": "scrAdvisors",
                 "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.galAdvisors.txtAdvisorName"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.ctrNewAdvisorNUID.txtNewAdvisorNUID.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.ctrNewAdvisorNUID.txtNewAdvisorNUID.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrAdvisors",
+                "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.cntNewAdvisor.'ctrNewAdvisor Form'.ctrNewAdvisorNUID.txtNewAdvisorNUID"
               }
             }
           ],

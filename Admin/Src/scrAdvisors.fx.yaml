@@ -521,118 +521,197 @@
                         Width: =334
                         ZIndex: =1
 
-                ctrNewAdvisorDetails As groupContainer.manualLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
+                "'ctrNewAdvisor Form' As groupContainer.verticalAutoLayoutContainer":
                     DropShadow: =DropShadow.Light
-                    FillPortions: =0
+                    LayoutDirection: =LayoutDirection.Vertical
+                    LayoutGap: =10
                     LayoutMinHeight: =100
                     LayoutMinWidth: =250
+                    LayoutMode: =LayoutMode.Auto
+                    PaddingBottom: =5
+                    PaddingLeft: =Self.PaddingRight
+                    PaddingRight: =5
+                    PaddingTop: =5
                     RadiusBottomLeft: =4
                     RadiusBottomRight: =4
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
-                    Width: =Parent.Width
-                    ZIndex: =2
+                    ZIndex: =5
 
-                    labNewAdvisorName As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Size: =13
-                        Text: ="New Advisor Name"
-                        Width: |
-                            =Parent.Width-(2*Self.X)
-                        X: =10
-                        Y: =10  
+                    ctrNewAdvisorName As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        FillPortions: =0   
+                        Height: =85
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =Parent.PaddingLeft
+                        PaddingRight: =Parent.PaddingRight
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                         ZIndex: =1
 
-                    labNewAdvisorEmail As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Semibold
-                        Size: =13
-                        Text: ="New Advisor Email"
-                        Width: |
-                            =Parent.Width-(2*Self.X)
-                        X: =labNewAdvisorName.X
-                        Y: =txtNewAdvisorName.Y+txtNewAdvisorName.Height+20
+                        labNewAdvisorName As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Size: =13
+                            Text: ="New Advisor Name"
+                            Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                            Y: =10  
+                            ZIndex: =1
+
+                        txtNewAdvisorName As text:
+                            BorderColor: =RGBA(245, 245, 245, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            Default: =""
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            DisabledFill: =RGBA(242, 242, 241, 0)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =RGBA(16, 110, 190, 1)
+                            HoverColor: =RGBA(50, 49, 48, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(50, 49, 48, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                            X: =labNewAdvisorName.X
+                            Y: =labNewAdvisorName.Y+labNewAdvisorName.Height
+                            ZIndex: =2
+
+                    ctrNewAdvisorNUID As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        FillPortions: =0   
+                        Height: =85
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =Parent.PaddingLeft
+                        PaddingRight: =Parent.PaddingRight
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                         ZIndex: =2
 
-                    txtNewAdvisorName As text:
-                        BorderColor: =RGBA(245, 245, 245, 1)
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        Default: =""
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        HoverBorderColor: =RGBA(16, 110, 190, 1)
-                        HoverColor: =RGBA(50, 49, 48, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        PressedBorderColor: =RGBA(0, 120, 212, 1)
-                        PressedColor: =RGBA(50, 49, 48, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Width: =Parent.Width-(Self.X*2)
-                        X: =labNewAdvisorName.X
-                        Y: =labNewAdvisorName.Y+labNewAdvisorName.Height
+                        labNewAdvisorNUID As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Size: =13
+                            Text: ="New Advisor NUID"
+                            Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                            Y: =10  
+                            ZIndex: =1
+
+                        txtNewAdvisorNUID As text:
+                            BorderColor: =RGBA(245, 245, 245, 1)
+                            BorderThickness: =2
+                            Color: =If(Len(txtAdvisorNUID.Text)=9 And IsNumeric(txtAdvisorNUID.Text),RGBA(50, 49, 48, 1),Color.DarkRed)
+                            Default: =""
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            DisabledFill: =RGBA(242, 242, 241, 0)
+                            Fill: =If(Len(txtAdvisorNUID.Text)=9 And IsNumeric(txtAdvisorNUID.Text),RGBA(255, 255, 255, 1),Color.Pink)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =RGBA(16, 110, 190, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(50, 49, 48, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                            Y: =labNewAdvisorNUID.Y+labNewAdvisorNUID.Height
+                            ZIndex: =2
+
+                    ctrNewAdvisorEmail As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        FillPortions: =0
+                        Height: =85
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =100
+                        LayoutMinWidth: =250
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =Parent.PaddingLeft
+                        PaddingRight: =Parent.PaddingRight
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                         ZIndex: =3
 
-                    txtNewAdvisorEmail As text:
-                        BorderColor: =RGBA(245, 245, 245, 1)
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        Default: =""
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        DisabledFill: =RGBA(242, 242, 241, 0)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        HoverBorderColor: =RGBA(16, 110, 190, 1)
-                        HoverColor: =RGBA(50, 49, 48, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
-                        PressedBorderColor: =RGBA(0, 120, 212, 1)
-                        PressedColor: =RGBA(50, 49, 48, 1)
-                        PressedFill: =RGBA(255, 255, 255, 1)
-                        RadiusBottomLeft: =0
-                        RadiusBottomRight: =0
-                        RadiusTopLeft: =0
-                        RadiusTopRight: =0
-                        Size: =13
-                        Width: =Parent.Width-(2*Self.X)
-                        X: =labNewAdvisorName.X
-                        Y: =labNewAdvisorEmail.Y+labNewAdvisorEmail.Height
-                        ZIndex: =4
+                        labNewAdvisorEmail As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Size: =13
+                            Text: ="New Advisor Email"
+                            Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                            Y: =txtNewAdvisorName.Y+txtNewAdvisorName.Height+20
+                            ZIndex: =1
 
-                ctrSubmitNewAdvisor As groupContainer.manualLayoutContainer:
-                    AlignInContainer: =AlignInContainer.SetByContainer
-                    DropShadow: =DropShadow.Light
-                    LayoutMinHeight: =100
-                    LayoutMinWidth: =250
-                    RadiusBottomLeft: =4
-                    RadiusBottomRight: =4
-                    RadiusTopLeft: =4
-                    RadiusTopRight: =4
-                    Width: =Parent.Width
-                    ZIndex: =4
+                        txtNewAdvisorEmail As text:
+                            BorderColor: =RGBA(245, 245, 245, 1)
+                            BorderThickness: =2
+                            Color: |-
+                                =If(IsMatch(txtAdvisorEmail.Text,"(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*)@{1}(?:([a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9]{2,})"),RGBA(50, 49, 48, 1),Color.DarkRed)
+                            Default: =""
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            DisabledFill: =RGBA(242, 242, 241, 0)
+                            Fill: |-
+                                =If(IsMatch(txtAdvisorEmail.Text,"(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*)@{1}(?:([a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9]{2,})"),RGBA(255, 255, 255, 1),Color.Pink)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =RGBA(16, 110, 190, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(50, 49, 48, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                            Y: =labNewAdvisorEmail.Y+labNewAdvisorEmail.Height
+                            ZIndex: =2
 
                     btnAddNewAdvisor As Button:
                         Align: =""
@@ -648,15 +727,17 @@
                         IconRotation: =0
                         IconStyle: ="Outline"
                         Layout: ="Icon before"
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
                         OnSelect: |-
                             =Collect('PhD Advisors',{'Advisor Name':txtNewAdvisorName.Text,'Advisor Email':txtNewAdvisorEmail.Text});
                             Select(btnLoadAdvisors)
                         Text: ="Add New Advisor"
                         VerticalAlign: =""
-                        Width: =Parent.Width-(2*Self.X)
-                        X: =10
+                        Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                        X: =0
                         Y: =10  
-                        ZIndex: =2
+                        ZIndex: =4
 
                     btnClearForm As Button:
                         Align: =""
@@ -673,13 +754,15 @@
                         IconRotation: =0
                         IconStyle: ="Outline"
                         Layout: ="Icon before"
+                        LayoutMinHeight: =32
+                        LayoutMinWidth: =96
                         OnSelect: |-
                             =Reset(txtNewAdvisorName);
                             Reset(txtNewAdvisorEmail);
                         Text: ="Clear Form"
                         VerticalAlign: =""
-                        Width: =Parent.Width-(2*Self.X)
-                        X: =btnAddNewAdvisor.X
+                        Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                        X: =0
                         Y: =btnAddNewAdvisor.Y+btnAddNewAdvisor.Height+10
-                        ZIndex: =3
+                        ZIndex: =5
 
