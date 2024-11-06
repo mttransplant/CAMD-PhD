@@ -87,7 +87,7 @@
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
                 OnSelect: =Navigate(scrStudentList)
-                Text: ="Students"
+                Text: =If(CurrentUser.Role="Admin","Students","My Students")
                 VerticalAlign: =""
                 Visible: =CurrentUser.Role in ["Admin","Advisor"]
                 Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight

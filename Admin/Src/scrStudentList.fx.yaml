@@ -374,7 +374,10 @@
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(16, 110, 190, 1)
-                    OnSelect: =ClearCollect(colCompletedMilestones,Filter('PhD Milestones','Milestone Status' in ['Milestone Status (PhD Milestones)'.Yes,'Milestone Status (PhD Milestones)'.Waived]));
+                    OnSelect: |-
+                        =Set(IsLoading, true );
+                        ClearCollect(colStudentList,Sort(If(CurrentUser.Role="Admin",'PhD Students',Filter('PhD Students',Advisor.'Advisor Email'=CurrentUser.Email)),'Full Name',SortOrder.Ascending));
+                        Set(IsLoading, false );
                     PressedBorderColor: =RGBA(0, 69, 120, 1)
                     PressedColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(16, 110, 190, 1)
@@ -404,6 +407,7 @@
                 TemplateFill: =
                 TemplateSize: =If(Self.Layout = Layout.Horizontal, Min(280, Self.Width - 60), Min(50, Self.Height - 60))
                 Transition: =Transition.Push
+                Visible: =!IsLoading
                 Width: =IndividualPath.X+IndividualPath.Width+20
                 ZIndex: =3
 

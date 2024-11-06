@@ -3140,7 +3140,14 @@
           "NameMapSourceSchema": "?"
         },
         "ZIndex",
-        "Visible",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "true",
+          "InvariantPropertyName": "Visible",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "#CopilotOverlayLabel",
         "#CopilotOverlayVisible"
       ],
