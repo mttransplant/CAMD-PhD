@@ -152,6 +152,10 @@
                             HoverBorderColor: =RGBA(0, 0, 0, 0)
                             HoverColor: =RGBA(50, 49, 48, 1)
                             HoverFill: =RGBA(0, 0, 0, 0)
+                            OnCheck: |-
+                                =UpdateIf(colAssignStudentAssessments, true, {StudentSelected:true});
+                            OnUncheck: |-
+                                =UpdateIf(colAssignStudentAssessments, true, {StudentSelected:false});
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =RGBA(50, 49, 48, 1)
                             PressedFill: =RGBA(0, 0, 0, 0)
