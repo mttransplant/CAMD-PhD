@@ -398,7 +398,7 @@
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Height: =90
-                Items: =Sort(If(CurrentUser.Role="Admin",'PhD Students',Filter('PhD Students',Advisor.'Advisor Email'=CurrentUser.Email)),'Full Name',SortOrder.Ascending)
+                Items: =colStudentList
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
