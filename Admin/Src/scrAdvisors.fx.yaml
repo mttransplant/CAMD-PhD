@@ -340,16 +340,17 @@
                         BorderColor: =RGBA(245, 245, 245, 1)
                         BorderThickness: =2
                         Color: |-
-                            =If(IsMatch(txtAdvisorEmail.Text,"(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*)@{1}(?:([a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9]{2,})"),RGBA(50, 49, 48, 1),Color.Red)
+                            =If(IsMatch(txtAdvisorEmail.Text,"(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*)@{1}(?:([a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9]{2,})"),RGBA(50, 49, 48, 1),Color.DarkRed)
                         Default: =ThisItem.'Advisor Email'
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                        Fill: |-
+                            =If(IsMatch(txtAdvisorEmail.Text,"(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*)@{1}(?:([a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9]{2,})"),RGBA(255, 255, 255, 1),Color.Pink)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
                         OnChange: |-
                             =If(
                                 IsBlank(
@@ -384,16 +385,16 @@
                     txtAdvisorNUID As text:
                         BorderColor: =RGBA(245, 245, 245, 1)
                         BorderThickness: =2
-                        Color: =If(Len(txtAdvisorNUID.Text)=9 And IsNumeric(txtAdvisorNUID.Text),RGBA(50, 49, 48, 1),Color.Red)
+                        Color: =If(Len(txtAdvisorNUID.Text)=9 And IsNumeric(txtAdvisorNUID.Text),RGBA(50, 49, 48, 1),Color.DarkRed)
                         Default: =ThisItem.'Advisor NUID'
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
                         DisabledFill: =RGBA(242, 242, 241, 0)
                         DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                        Fill: =If(Len(txtAdvisorNUID.Text)=9 And IsNumeric(txtAdvisorNUID.Text),RGBA(255, 255, 255, 1),Color.Pink)
                         FocusedBorderThickness: =4
                         Font: =Font.'Segoe UI'
                         HoverBorderColor: =RGBA(16, 110, 190, 1)
-                        HoverFill: =RGBA(255, 255, 255, 1)
                         OnChange: |-
                             =If(
                                 IsBlank(
