@@ -7,6 +7,7 @@
         =ClearCollect(colRequestStudentAssessments,AddColumns(Sort(Filter('PhD Students','Student Status'="Active"),'Full Name'),StudentSelected,false));
         ClearCollect(colRequestAdvisorAssessments,Filter(AddColumns('PhD Advisors',AdvisorSelected,false,Advisees,CountRows(Filter(colRequestStudentAssessments,'Advisor NUID'=Advisor.'Advisor NUID')),CoAdvisees,CountRows(Filter(colRequestStudentAssessments,'Advisor NUID'='Co-Advisor'.'Advisor NUID'))),Advisees>0 Or CoAdvisees >0));
         ClearCollect(colCurrentTerm,ShowColumns(Filter('PhD Terms',STVTERM_START_DATE<=Today() And STVTERM_END_DATE>=Today()),STVTERM_CODE,STVTERM_DESC));
+    Width: =Min(App.Width,App.DesignWidth)
 
     ctrRequestAssessments As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
