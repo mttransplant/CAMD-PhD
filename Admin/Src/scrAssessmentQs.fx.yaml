@@ -485,6 +485,7 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
+                    Visible: =selQuestionType.Selected.Value='Question Type (PhD Assessment Questions)'.Choice
                     Width: =200
                     X: =txtQuestion.X+txtQuestion.Width+Parent.TemplatePadding
                     Y: =0   
