@@ -1,9 +1,6 @@
 "scrPositions As screen.'autoLayout_HeaderFooter_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnHidden: |-
-        =Clear(colAdvisorUpdates);
-        Clear(colAdvisors);
-        Clear(colAdvisees)
+    OnHidden: =
     OnVisible: =
 
     ctrPositions As groupContainer.verticalAutoLayoutContainer:

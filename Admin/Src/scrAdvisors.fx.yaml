@@ -2,8 +2,8 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: |-
         =Clear(colAdvisorUpdates);
-        Clear(colAdvisors);
-        Clear(colAdvisees)
+        //Clear(colAdvisors);
+        Clear(colAdvisees);
     OnVisible: =Select(btnLoadAdvisors)
 
     ctrAdvisorScreen As groupContainer.verticalAutoLayoutContainer:
@@ -103,7 +103,7 @@
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
-                        DisplayMode: =If(CountIf(colAdvisorUpdates, true)>0,DisplayMode.Edit,DisplayMode.Disabled)
+                        DisplayMode: =If(CountIf(colAdvisorUpdates, true)>0 And CountIf(Filter(colAdvisorUpdates,Error="Yes"),true)=0,DisplayMode.Edit,DisplayMode.Disabled)
                         FocusedBorderThickness: =4
                         Height: =20
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -163,7 +163,7 @@
                         Icon: =Icon.Cancel
                         OnSelect: |-
                             =UpdateContext({IsEditing:false});
-                            Select(btnLoadAdvisors)
+                            Select(btnLoadAdvisors);
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
@@ -188,8 +188,9 @@
                         Icon: =Icon.Reload
                         OnSelect: |-
                             =Select(btnClearForm);
-                            ClearCollect(colAdvisors,'PhD Advisors');
-                            ClearCollect(colAdvisorUpdates,Filter(colAdvisors,'Advisor Email'="nothing"));
+                            //ClearCollect(colAdvisors,'PhD Advisors');
+                            //ClearCollect(colAdvisorUpdates,AddColumns(Filter(colAdvisors,'Advisor Email'="nothing"),Error,"No"));
+                            ClearCollect(colAdvisorUpdates,AddColumns(Filter('PhD Advisors','Advisor Email'="nothing"),Error,"No"));
                             ClearCollect(colAdvisees,'PhD Students');
                         PressedBorderColor: =RGBA(0, 0, 0, 0)
                         PressedColor: =RGBA(16, 110, 190, 1)
@@ -294,7 +295,7 @@
                     BorderColor: =RGBA(245, 245, 245, 1)
                     DelayItemLoading: =true
                     Height: =Parent.Height
-                    Items: =Sort(colAdvisors,'Advisor Name')
+                    Items: =Sort('PhD Advisors','Advisor Name')
                     Layout: =Layout.Vertical
                     LayoutMinHeight: =287
                     LayoutMinWidth: =320
@@ -384,7 +385,7 @@
                     txtAdvisorNUID As text:
                         BorderColor: =RGBA(245, 245, 245, 1)
                         BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
+                        Color: =If(Len(txtAdvisorNUID.Text)=9 And IsNumeric(txtAdvisorNUID.Text),RGBA(50, 49, 48, 1),Color.Red)
                         Default: =ThisItem.'Advisor NUID'
                         DisabledBorderColor: =RGBA(0, 0, 0, 0)
                         DisabledColor: =RGBA(161, 159, 157, 1)
@@ -411,8 +412,9 @@
                             UpdateIf(
                                 colAdvisorUpdates,
                                 AdvisorID = ThisItem.AdvisorID,
-                                {'Advisor Name': txtAdvisorNUID.Text}
-                            )
+                                {'Advisor Name': txtAdvisorNUID.Text,
+                                Error:If(Len(txtAdvisorNUID.Text)=9 And IsNumeric(txtAdvisorNUID.Text),"No","Yes")}
+                            );
                         OnSelect: =Select(Parent)
                         PressedBorderColor: =RGBA(0, 120, 212, 1)
                         PressedColor: =RGBA(50, 49, 48, 1)
