@@ -1,9 +1,11 @@
 "scrRequestAssessments As screen.'autoLayout_Sidebar_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnHidden: =Clear(colRequestStudentAssessments);
+    OnHidden: |-
+        =Clear(colRequestStudentAssessments);
+        Clear(colRequestAdvisorAssessments);
     OnVisible: |-
         =ClearCollect(colRequestStudentAssessments,AddColumns(Sort(Filter('PhD Students','Student Status'="Active"),'Full Name'),StudentSelected,false));
-        ClearCollect(colAssignAdvisorAssessments,'PhD Advisors');
+        ClearCollect(colRequestAdvisorAssessments,Filter(AddColumns('PhD Advisors',AdvisorSelected,false,Advisees,CountRows(Filter(colRequestStudentAssessments,'Advisor NUID'=Advisor.'Advisor NUID')),CoAdvisees,CountRows(Filter(colRequestStudentAssessments,'Advisor NUID'='Co-Advisor'.'Advisor NUID'))),Advisees>0 Or CoAdvisees >0));
 
     ctrRequestAssessments As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -278,4 +280,224 @@
                     RadiusTopLeft: =4
                     RadiusTopRight: =4
                     ZIndex: =2
+
+                    ctrRequestAdvisorListColumns As groupContainer.manualLayoutContainer:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        DropShadow: =DropShadow.Light
+                        Fill: =RGBA(180, 214, 250, 1)
+                        FillPortions: =0
+                        Height: =ctrAdvColumns.Height
+                        LayoutMinHeight: =30
+                        LayoutMinWidth: =250
+                        PaddingLeft: =5
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        Width: =Parent.Width
+                        Y: =40
+                        ZIndex: =1
+
+                        labRequestCoAdviseeCount As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            PaddingLeft: =10
+                            Size: =13
+                            Text: ="Co-Advisees"
+                            Width: =txtRequestCoAdviseeCount.Width
+                            X: =txtRequestCoAdviseeCount.X
+                            ZIndex: =1
+
+                        labRequestAdviseeCount As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            PaddingLeft: =10
+                            Size: =13
+                            Text: ="Advisees"
+                            Width: =txtRequestAdviseeCount.Width
+                            X: =txtRequestAdviseeCount.X
+                            ZIndex: =2
+
+                        labRequestAdvisorName As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            PaddingLeft: =10
+                            Size: =13
+                            Text: ="Active Advisors"
+                            Width: =txtRequestAdvisorName.Width
+                            X: =txtRequestAdvisorName.X
+                            ZIndex: =3
+
+                        chkSelectAllAdvisors As checkbox:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            CheckboxBorderColor: =RGBA(96, 94, 92, 1)
+                            CheckmarkFill: =RGBA(0, 120, 212, 1)
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =40
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(50, 49, 48, 1)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            OnCheck: |-
+                                =UpdateIf(colRequestAdvisorAssessments, true, {AdvisorSelected:true});
+                            OnUncheck: |-
+                                =UpdateIf(colRequestAdvisorAssessments, true, {AdvisorSelected:false});
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedColor: =RGBA(50, 49, 48, 1)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Size: =13
+                            Text: =""
+                            Width: =40
+                            X: =Parent.PaddingLeft
+                            ZIndex: =4
+
+                    galRequestAdvisorsList As gallery.galleryVertical:
+                        BorderColor: =RGBA(245, 245, 245, 1)
+                        DelayItemLoading: =true
+                        Items: =colRequestAdvisorAssessments
+                        Layout: =Layout.Vertical
+                        LayoutMinHeight: =287
+                        LayoutMinWidth: =320
+                        LoadingSpinner: =LoadingSpinner.Data
+                        LoadingSpinnerColor: =Color.DarkGray
+                        TemplateSize: |
+                            =40
+                        ZIndex: =2
+
+                        txtRequestCoAdviseeCount As text:
+                            BorderColor: =RGBA(245, 245, 245, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            Default: =ThisItem.CoAdvisees
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            DisabledFill: =RGBA(242, 242, 241, 0)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =RGBA(16, 110, 190, 1)
+                            HoverColor: =RGBA(50, 49, 48, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            OnSelect: =Select(Parent)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(50, 49, 48, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =118
+                            X: =txtRequestAdviseeCount.X+txtRequestAdviseeCount.Width
+                            ZIndex: =1
+
+                        txtRequestAdviseeCount As text:
+                            BorderColor: =RGBA(245, 245, 245, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            Default: =ThisItem.Advisees
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            DisabledFill: =RGBA(242, 242, 241, 0)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =RGBA(16, 110, 190, 1)
+                            HoverColor: =RGBA(50, 49, 48, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            OnSelect: =Select(Parent)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(50, 49, 48, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =100
+                            X: =txtRequestAdvisorName.X+txtRequestAdvisorName.Width
+                            ZIndex: =2
+
+                        txtRequestAdvisorName As text:
+                            BorderColor: =RGBA(245, 245, 245, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            Default: =ThisItem.'Advisor Name'
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            DisabledFill: =RGBA(242, 242, 241, 0)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =RGBA(16, 110, 190, 1)
+                            HoverColor: =RGBA(50, 49, 48, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            OnSelect: =Select(Parent)
+                            PaddingLeft: =10
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(50, 49, 48, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =361
+                            X: =chkSelectThisAdvisor.X+chkSelectThisAdvisor.Width
+                            ZIndex: =3
+
+                        chkSelectThisAdvisor As checkbox:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            CheckboxBorderColor: =RGBA(96, 94, 92, 1)
+                            CheckmarkFill: =RGBA(0, 120, 212, 1)
+                            Color: =RGBA(50, 49, 48, 1)
+                            Default: =ThisItem.AdvisorSelected
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            Height: =40
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(50, 49, 48, 1)
+                            HoverFill: =RGBA(0, 0, 0, 0)
+                            OnCheck: |-
+                                =UpdateIf(colRequestAdvisorAssessments,ThisItem.AdvisorID=AdvisorID,{AdvisorSelected:true});
+                            OnSelect: =Select(Parent)
+                            OnUncheck: |-
+                                =UpdateIf(colRequestAdvisorAssessments,ThisItem.AdvisorID=AdvisorID,{AdvisorSelected:false});
+                            PressedBorderColor: =RGBA(0, 0, 0, 0)
+                            PressedColor: =RGBA(50, 49, 48, 1)
+                            PressedFill: =RGBA(0, 0, 0, 0)
+                            Size: =13
+                            Text: =""
+                            Width: =40
+                            ZIndex: =4
 

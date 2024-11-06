@@ -5474,6 +5474,156 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList.txtRequestAdvisorName.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList.txtRequestAdvisorName.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList.txtRequestAdvisorName"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList.txtRequestAdviseeCount.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList.txtRequestAdviseeCount.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList.txtRequestAdviseeCount"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList.txtRequestCoAdviseeCount.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList.txtRequestCoAdviseeCount.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.galRequestAdvisorsList.txtRequestCoAdviseeCount"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect"
                 }
               ],
@@ -5487,36 +5637,6 @@
                 "member": "OnSelect",
                 "module": "scrAdvisors",
                 "type": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 2
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrRequestAssessments.OnVisible"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.OnVisible",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "OnVisible",
-                "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments"
               }
             }
           ],
@@ -7737,6 +7857,36 @@
                 "member": "Height",
                 "module": "scrRequestAssessments",
                 "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsList.ctrRequestStudentsListColumns"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.ctrRequestAdvisorListColumns.Height"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.ctrRequestAdvisorListColumns.Height",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Height",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsList.ctrRequestAdvisorListColumns"
               }
             }
           ],
