@@ -97,64 +97,13 @@
                     Width: =Parent.Width
                     ZIndex: =1
 
-                    labAdvisorName As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Bold
-                        PaddingLeft: =15
-                        Size: =13
-                        Text: ="Advisor Name"
-                        Width: =txtAdvisorName.Width
-                        X: =txtAdvisorName.X
-                        ZIndex: =1
-
-                    labAdvisorEmail As label:
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Bold
-                        PaddingLeft: =15
-                        Size: =13
-                        Text: ="Advisor Email"
-                        Width: =txtAdvisorEmail.Width
-                        X: =txtAdvisorEmail.X
-                        ZIndex: =2
-
-                    labAdviseeCount As label:
-                        Align: =Align.Center
-                        BorderColor: =RGBA(0, 0, 0, 0)
-                        BorderStyle: =BorderStyle.None
-                        BorderThickness: =2
-                        Color: =RGBA(50, 49, 48, 1)
-                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                        DisabledColor: =RGBA(161, 159, 157, 1)
-                        FocusedBorderThickness: =4
-                        Font: =Font.'Segoe UI'
-                        FontWeight: =FontWeight.Bold
-                        PaddingLeft: =15
-                        Size: =13
-                        Text: ="Advisees"
-                        Width: =txtAdviseeCount.Width
-                        X: =txtAdviseeCount.X
-                        ZIndex: =3
-
                     btn_aSave As icon.Save:
                         BorderColor: =RGBA(0, 0, 0, 0)
                         Color: =RGBA(0, 120, 212, 1)
                         DisabledBorderColor: =RGBA(245, 245, 245, 1)
                         DisabledColor: =RGBA(225, 223, 221, 1)
                         DisabledFill: =RGBA(0, 0, 0, 0)
+                        DisplayMode: =If(CountIf(colAdvisorUpdates, true)>0,DisplayMode.Edit,DisplayMode.Disabled)
                         FocusedBorderThickness: =4
                         Height: =20
                         HoverBorderColor: =RGBA(0, 0, 0, 0)
@@ -170,11 +119,11 @@
                         PressedColor: =RGBA(16, 110, 190, 1)
                         PressedFill: =RGBA(0, 0, 0, 0)
                         Tooltip: ="Save Changes"
-                        Visible: =IsEditing And CountIf(colAdvisorUpdates, true)>0
+                        Visible: =IsEditing
                         Width: =30
                         X: =btn_aEdit.X+btn_aEdit.Width
                         Y: =10
-                        ZIndex: =4
+                        ZIndex: =1
 
                     btn_aEdit As icon.Edit:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -198,7 +147,7 @@
                         Width: =30
                         X: =Parent.Width-btn_aEdit.Width-btn_aSave.Width-10
                         Y: =10
-                        ZIndex: =5
+                        ZIndex: =2
 
                     btn_aCancel As icon.Cancel:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -223,7 +172,7 @@
                         Width: =30
                         X: =btn_aEdit.X
                         Y: =10
-                        ZIndex: =6
+                        ZIndex: =3
 
                     btnLoadAdvisors As icon.Reload:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -250,7 +199,7 @@
                         Width: =btn_aSave.Width
                         X: =btn_aSave.X
                         Y: =10
-                        ZIndex: =8
+                        ZIndex: =4
 
                     labCoAdviseeCount As label:
                         Align: =Align.Center
@@ -268,7 +217,42 @@
                         Text: ="Co-Advisees"
                         Width: =txtCoAdviseeCount.Width
                         X: =txtCoAdviseeCount.X
-                        ZIndex: =9
+                        ZIndex: =5
+
+                    labAdviseeCount As label:
+                        Align: =Align.Center
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        PaddingLeft: =15
+                        Size: =13
+                        Text: ="Advisees"
+                        Width: =txtAdviseeCount.Width
+                        X: =txtAdviseeCount.X
+                        ZIndex: =6
+
+                    labAdvisorEmail As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        PaddingLeft: =15
+                        Size: =13
+                        Text: ="Advisor Email"
+                        Width: =txtAdvisorEmail.Width
+                        X: =txtAdvisorEmail.X
+                        ZIndex: =7
 
                     labAdvisorNUID As label:
                         BorderColor: =RGBA(0, 0, 0, 0)
@@ -285,7 +269,24 @@
                         Text: ="NUID"
                         Width: =txtAdvisorNUID.Width
                         X: =txtAdvisorNUID.X
-                        ZIndex: =10
+                        ZIndex: =8
+
+                    labAdvisorName As label:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Bold
+                        PaddingLeft: =15
+                        Size: =13
+                        Text: ="Advisor Name"
+                        Width: =txtAdvisorName.Width
+                        X: =txtAdvisorName.X
+                        ZIndex: =9
 
                 galAdvisors As gallery.galleryVertical:
                     '#CopilotOverlayLabel': ="Filtered"
@@ -331,7 +332,7 @@
                         Font: =Font.'Segoe UI'
                         Size: =13
                         Text: =CountRows(Filter(colAdvisees,Advisor.'Advisor Email'=ThisItem.'Advisor Email'))
-                        Width: =123
+                        Width: =120
                         X: =txtAdvisorEmail.X+txtAdvisorEmail.Width+Parent.TemplatePadding
                         ZIndex: =2
 
