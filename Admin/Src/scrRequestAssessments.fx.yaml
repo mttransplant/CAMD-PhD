@@ -1,7 +1,9 @@
 "scrRequestAssessments As screen.'autoLayout_Sidebar_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
-    OnHidden: =Clear(colAssignStudentAssessments);
-    OnVisible: =ClearCollect(colAssignStudentAssessments,AddColumns(Sort(Filter('PhD Students','Student Status'="Active"),'Full Name'),StudentSelected,false));
+    OnHidden: =Clear(colRequestStudentAssessments);
+    OnVisible: |-
+        =ClearCollect(colRequestStudentAssessments,AddColumns(Sort(Filter('PhD Students','Student Status'="Active"),'Full Name'),StudentSelected,false));
+        ClearCollect(colAssignAdvisorAssessments,'PhD Advisors');
 
     ctrRequestAssessments As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
@@ -132,7 +134,7 @@
                             FontWeight: =FontWeight.Bold
                             PaddingLeft: =10
                             Size: =13
-                            Text: ="Active Student Names"
+                            Text: ="Active Students"
                             Width: =Parent.Width-Self.X-Parent.PaddingRight
                             X: =chkSelectAllStudents.X+chkSelectAllStudents.Width
                             ZIndex: =1
@@ -153,9 +155,9 @@
                             HoverColor: =RGBA(50, 49, 48, 1)
                             HoverFill: =RGBA(0, 0, 0, 0)
                             OnCheck: |-
-                                =UpdateIf(colAssignStudentAssessments, true, {StudentSelected:true});
+                                =UpdateIf(colRequestStudentAssessments, true, {StudentSelected:true});
                             OnUncheck: |-
-                                =UpdateIf(colAssignStudentAssessments, true, {StudentSelected:false});
+                                =UpdateIf(colRequestStudentAssessments, true, {StudentSelected:false});
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =RGBA(50, 49, 48, 1)
                             PressedFill: =RGBA(0, 0, 0, 0)
@@ -168,7 +170,7 @@
                     galRequestStudentsList As gallery.galleryVertical:
                         BorderColor: =RGBA(245, 245, 245, 1)
                         DelayItemLoading: =true
-                        Items: =colAssignStudentAssessments
+                        Items: =colRequestStudentAssessments
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
@@ -223,10 +225,10 @@
                             HoverColor: =RGBA(50, 49, 48, 1)
                             HoverFill: =RGBA(0, 0, 0, 0)
                             OnCheck: |-
-                                =UpdateIf(colAssignStudentAssessments,ThisItem.NUID=NUID,{StudentSelected:true});
+                                =UpdateIf(colRequestStudentAssessments,ThisItem.NUID=NUID,{StudentSelected:true});
                             OnSelect: =Select(Parent)
                             OnUncheck: |-
-                                =UpdateIf(colAssignStudentAssessments,ThisItem.NUID=NUID,{StudentSelected:false});
+                                =UpdateIf(colRequestStudentAssessments,ThisItem.NUID=NUID,{StudentSelected:false});
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =RGBA(50, 49, 48, 1)
                             PressedFill: =RGBA(0, 0, 0, 0)
