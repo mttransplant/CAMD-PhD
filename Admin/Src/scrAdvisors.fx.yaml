@@ -188,6 +188,8 @@
                         Icon: =Icon.Reload
                         OnSelect: |-
                             =Select(btnClearForm);
+                            Set(NewNUidIsValid, true);
+                            Set(NewEmailIsValid, true);
                             Refresh('PhD Advisors');
                             ClearCollect(colAdvisorUpdates,AddColumns(Filter('PhD Advisors','Advisor Email'="nothing"),Error,"No"));
                             ClearCollect(colAdvisees,'PhD Students');
@@ -633,15 +635,16 @@
                         txtNewAdvisorNUID As text:
                             BorderColor: =RGBA(245, 245, 245, 1)
                             BorderThickness: =2
-                            Color: =If(IsBlank(txtNewAdvisorNUID.Text) Or (Len(txtNewAdvisorNUID.Text) = 9 And IsNumeric(txtNewAdvisorNUID.Text)),RGBA(50, 49, 48, 1),Color.DarkRed)
+                            Color: =If(NewNUidIsValid,RGBA(50, 49, 48, 1),Color.DarkRed)
                             Default: =""
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledColor: =RGBA(161, 159, 157, 1)
                             DisabledFill: =RGBA(242, 242, 241, 0)
-                            Fill: =If(IsBlank(txtNewAdvisorNUID.Text) Or (Len(txtNewAdvisorNUID.Text) = 9 And IsNumeric(txtNewAdvisorNUID.Text)),RGBA(255, 255, 255, 1),Color.Pink)
+                            Fill: =If(NewNUidIsValid,RGBA(255, 255, 255, 1),Color.Pink)
                             FocusedBorderThickness: =4
                             Font: =Font.'Segoe UI'
                             HoverBorderColor: =RGBA(16, 110, 190, 1)
+                            OnChange: =Set(NewNUidIsValid,IsBlank(txtNewAdvisorNUID.Text) Or (Len(txtNewAdvisorNUID.Text) = 9 And IsNumeric(txtNewAdvisorNUID.Text)));
                             PressedBorderColor: =RGBA(0, 120, 212, 1)
                             PressedColor: =RGBA(50, 49, 48, 1)
                             PressedFill: =RGBA(255, 255, 255, 1)
@@ -690,17 +693,17 @@
                         txtNewAdvisorEmail As text:
                             BorderColor: =RGBA(245, 245, 245, 1)
                             BorderThickness: =2
-                            Color: |-
-                                =If(IsBlank(txtNewAdvisorEmail.Text) Or IsMatch(txtNewAdvisorEmail.Text,"(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*)@{1}(?:([a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9]{2,})"),RGBA(50, 49, 48, 1),Color.DarkRed)
+                            Color: =If(NewEmailIsValid,RGBA(50, 49, 48, 1),Color.DarkRed)
                             Default: =""
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
                             DisabledColor: =RGBA(161, 159, 157, 1)
                             DisabledFill: =RGBA(242, 242, 241, 0)
-                            Fill: |-
-                                =If(IsBlank(txtNewAdvisorEmail.Text) Or IsMatch(txtNewAdvisorEmail.Text,"(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*)@{1}(?:([a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9]{2,})"),RGBA(255, 255, 255, 1),Color.Pink)
+                            Fill: =If(NewEmailIsValid,RGBA(255, 255, 255, 1),Color.Pink)
                             FocusedBorderThickness: =4
                             Font: =Font.'Segoe UI'
                             HoverBorderColor: =RGBA(16, 110, 190, 1)
+                            OnChange: |-
+                                =Set(NewEmailIsValid,IsBlank(txtNewAdvisorEmail.Text) Or IsMatch(txtNewAdvisorEmail.Text,"(?:[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*)@{1}(?:([a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9]{2,})"));
                             PressedBorderColor: =RGBA(0, 120, 212, 1)
                             PressedColor: =RGBA(50, 49, 48, 1)
                             PressedFill: =RGBA(255, 255, 255, 1)
@@ -718,7 +721,7 @@
                         BasePaletteColor: =
                         BorderColor: =
                         BorderStyle: =""
-                        DisplayMode: =DisplayMode.Edit
+                        DisplayMode: =If(NewEmailIsValid And NewNUidIsValid And !IsBlank(txtNewAdvisorName.Text) And !IsBlank(txtNewAdvisorNUID.Text) And !IsBlank(txtNewAdvisorEmail.Text),DisplayMode.Edit,DisplayMode.Disabled)
                         FontColor: =
                         FontSize: =18
                         FontWeight: =FontWeight.Bold
