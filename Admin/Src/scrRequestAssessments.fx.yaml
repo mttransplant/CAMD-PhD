@@ -587,11 +587,11 @@
                                         If(drpRequestAdvisorType.Selected.Value='Assessment Type (PhD Assessment Questions)'.'Advisor-Comprehensive',
                                             // Comprehensive assessment also sent for co-advisees
                                             ForAll(Filter('PhD Students',Advisor.'Advisor NUID'='Advisor NUID' Or 'Co-Advisor'.'Advisor NUID'='Advisor NUID'),
-                                                Collect(colAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestAdvisorType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
+                                                Collect(colAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestAdvisorType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
                                             ),
                                             // Brief assessment only sent to primary advisees
                                             ForAll(Filter('PhD Students',Advisor.'Advisor NUID'='Advisor NUID' Or 'Co-Advisor'.'Advisor NUID'=""),
-                                                Collect(colAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestAdvisorType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
+                                                Collect(colAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestAdvisorType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
                                             )
                                         )
                                     )
@@ -612,8 +612,8 @@
                             Text: ="Request "&AdvisorsSelcted&" Advisor Assessment"&If(AdvisorsSelcted=1,"","s")
                             Tooltip: =If(StudentsSelected=0,"Must select at least one student.","")
                             Width: =190
-                            X: =15
-                            Y: =15
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
                             ZIndex: =1
 
                 ctrRequestAdvisorsList As groupContainer.verticalAutoLayoutContainer:
