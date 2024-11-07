@@ -1,5 +1,6 @@
 "scrRequestedAssessments As screen.'autoLayout_HeaderFooter_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    OnVisible: =ClearCollect(colRequestedAssessments,Filter('PhD Assessments','Student NUID'=""))
     Width: =Min(App.Width,App.DesignWidth)
 
     cntRequestedAssessments As groupContainer.verticalAutoLayoutContainer:
@@ -113,7 +114,7 @@
                 TemplateSize: =200
                 ZIndex: =2
 
-                drpAssessmentQuestionType As dropdown:
+                drpAssessmentResponse As dropdown:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     ChevronBackground: =RGBA(245, 245, 245, 1)
                     ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
@@ -132,6 +133,25 @@
                     HoverColor: =RGBA(50, 49, 48, 1)
                     HoverFill: =RGBA(245, 245, 245, 1)
                     Items: =Split(Char(10)&ThisItem.'Q Options',Char(10))
+                    OnChange: |-
+                        =If(
+                            IsBlank(
+                                LookUp(
+                                    colRequestedAssessments,
+                                    AssessmentID = ThisItem.AssessmentID
+                                )
+                            ),
+                            Collect(
+                                colRequestedAssessments,
+                                ThisItem
+                            )
+                        );
+                        UpdateIf(
+                            colRequestedAssessments,
+                            AssessmentID = ThisItem.AssessmentID,
+                            {Response: drpAssessmentResponse.Selected.Value,'Date Submitted':Today()}
+                        );
+                        RemoveIf(colRequestedAssessments,Len(drpAssessmentResponse.Selected.Value)=0);
                     OnSelect: =Select(Parent)
                     PaddingBottom: =5
                     PaddingLeft: =12
@@ -144,11 +164,11 @@
                     SelectionFill: =RGBA(0, 120, 212, 1)
                     Size: =13
                     Visible: =ThisItem.'Q Type'='Q Type (PhD Assessments)'.Choice
-                    X: =txtAssessmentQuestionText.X
-                    Y: =txtAssessmentQuestionText.Y
+                    X: =txtAssessmentResponse.X
+                    Y: =txtAssessmentResponse.Y
                     ZIndex: =1
 
-                txtAssessmentQuestionText As text:
+                txtAssessmentResponse As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderThickness: =2
                     Color: =RGBA(50, 49, 48, 1)
@@ -163,6 +183,25 @@
                     HoverColor: =RGBA(50, 49, 48, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
                     Mode: =TextMode.MultiLine
+                    OnChange: |-
+                        =If(
+                            IsBlank(
+                                LookUp(
+                                    colRequestedAssessments,
+                                    AssessmentID = ThisItem.AssessmentID
+                                )
+                            ),
+                            Collect(
+                                colRequestedAssessments,
+                                ThisItem
+                            )
+                        );
+                        UpdateIf(
+                            colRequestedAssessments,
+                            AssessmentID = ThisItem.AssessmentID,
+                            {Response: txtAssessmentResponse.Text,'Date Submitted':Today()}
+                        );
+                        RemoveIf(colRequestedAssessments,Len(txtAssessmentResponse.Text)=0);
                     OnSelect: =Select(Parent)
                     PressedBorderColor: =RGBA(0, 120, 212, 1)
                     PressedColor: =RGBA(50, 49, 48, 1)
@@ -313,10 +352,8 @@
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =Color.Gray
                 OnSelect: |-
-                    =Reset(SEA1);
-                    Reset(SEA2);
-                    Reset(SEA3);
-                    Reset(SEA4);
+                    =Reset(galRequestedAssessments);
+                    Clear(colRequestedAssessments);
                 PressedBorderColor: =RGBA(0, 69, 120, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(16, 110, 190, 1)
@@ -330,7 +367,7 @@
                 DisabledBorderColor: =RGBA(0, 0, 0, 0)
                 DisabledColor: =RGBA(161, 159, 157, 1)
                 DisabledFill: =RGBA(242, 242, 241, 0)
-                DisplayMode: =If(Or(SEA1.Text="",SEA2.Text="",SEA3.Text="",SEA4.Text=""),DisplayMode.Disabled,DisplayMode.Edit)
+                DisplayMode: =If(CountIf(colRequestedAssessments,true)=0,DisplayMode.Disabled,DisplayMode.Edit)
                 Fill: =RGBA(0, 120, 212, 1)
                 Font: =Font.'Segoe UI'
                 FontWeight: =FontWeight.Semibold
