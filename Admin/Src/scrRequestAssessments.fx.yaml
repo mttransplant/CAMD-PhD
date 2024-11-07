@@ -1,11 +1,11 @@
 "scrRequestAssessments As screen.'autoLayout_Sidebar_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: |-
-        =Clear(colRequestStudentAssessments);
-        Clear(colRequestAdvisorAssessments);
+        =Clear(colRequestAssessmentsStudentList);
+        Clear(colRequestAssessmentsAdvisorList);
     OnVisible: |-
-        =ClearCollect(colRequestStudentAssessments,AddColumns(Sort(Filter('PhD Students','Student Status'="Active"),'Full Name'),StudentSelected,false));
-        ClearCollect(colRequestAdvisorAssessments,Filter(AddColumns('PhD Advisors',AdvisorSelected,false,Advisees,CountRows(Filter(colRequestStudentAssessments,'Advisor NUID'=Advisor.'Advisor NUID')),CoAdvisees,CountRows(Filter(colRequestStudentAssessments,'Advisor NUID'='Co-Advisor'.'Advisor NUID'))),Advisees>0 Or CoAdvisees >0));
+        =ClearCollect(colRequestAssessmentsStudentList,AddColumns(Sort(Filter('PhD Students','Student Status'="Active"),'Full Name'),StudentSelected,false));
+        ClearCollect(colRequestAssessmentsAdvisorList,Filter(AddColumns('PhD Advisors',AdvisorSelected,false,Advisees,CountRows(Filter(colRequestAssessmentsStudentList,'Advisor NUID'=Advisor.'Advisor NUID')),CoAdvisees,CountRows(Filter(colRequestAssessmentsStudentList,'Advisor NUID'='Co-Advisor'.'Advisor NUID'))),Advisees>0 Or CoAdvisees >0));
         ClearCollect(colCurrentTerm,ShowColumns(Filter('PhD Terms',STVTERM_START_DATE<=Today() And STVTERM_END_DATE>=Today()),STVTERM_CODE,STVTERM_DESC));
         UpdateContext({StudentsSelected:0,AdvisorsSelcted:0});
     Width: =Min(App.Width,App.DesignWidth)
@@ -236,6 +236,10 @@
                             HoverBorderColor: =RGBA(0, 0, 0, 0)
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =RGBA(16, 110, 190, 1)
+                            OnSelect: |-
+                                =ClearCollect(colSelfAssessmentQs,Filter('PhD Assessment Questions','Assessment Type'=drpRequestSelfType.Selected.Value));
+                                ClearCollect(colSelfAssessmentRequests,Filter('PhD Assessments','Student NUID'=""));
+                                ForAll();
                             PressedBorderColor: =RGBA(0, 69, 120, 1)
                             PressedColor: =RGBA(255, 255, 255, 1)
                             PressedFill: =RGBA(16, 110, 190, 1)
@@ -244,7 +248,7 @@
                             RadiusTopLeft: =5
                             RadiusTopRight: =Self.RadiusTopLeft
                             Size: =15
-                            Text: ="Request "&StudentsSelected&" Self Assessments"
+                            Text: ="Request "&StudentsSelected&" Self Assessment"&If(StudentsSelected=1,"","s")
                             Tooltip: =If(StudentsSelected=0,"Must select at least one student.","")
                             Width: =180
                             X: =(Parent.Width-Self.Width)/2
@@ -314,11 +318,11 @@
                             HoverColor: =RGBA(50, 49, 48, 1)
                             HoverFill: =RGBA(0, 0, 0, 0)
                             OnCheck: |-
-                                =UpdateIf(colRequestStudentAssessments, true, {StudentSelected:true});
-                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestStudentAssessments,StudentSelected=true))});
+                                =UpdateIf(colRequestAssessmentsStudentList, true, {StudentSelected:true});
+                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
                             OnUncheck: |-
-                                =UpdateIf(colRequestStudentAssessments, true, {StudentSelected:false});
-                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestStudentAssessments,StudentSelected=true))});
+                                =UpdateIf(colRequestAssessmentsStudentList, true, {StudentSelected:false});
+                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =RGBA(50, 49, 48, 1)
                             PressedFill: =RGBA(0, 0, 0, 0)
@@ -331,7 +335,7 @@
                     galRequestStudentsList As gallery.galleryVertical:
                         BorderColor: =RGBA(245, 245, 245, 1)
                         DelayItemLoading: =true
-                        Items: =colRequestStudentAssessments
+                        Items: =colRequestAssessmentsStudentList
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
@@ -386,12 +390,12 @@
                             HoverColor: =RGBA(50, 49, 48, 1)
                             HoverFill: =RGBA(0, 0, 0, 0)
                             OnCheck: |-
-                                =UpdateIf(colRequestStudentAssessments,ThisItem.NUID=NUID,{StudentSelected:true});
-                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestStudentAssessments,StudentSelected=true))});
+                                =UpdateIf(colRequestAssessmentsStudentList,ThisItem.NUID=NUID,{StudentSelected:true});
+                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
                             OnSelect: =Select(Parent)
                             OnUncheck: |-
-                                =UpdateIf(colRequestStudentAssessments,ThisItem.NUID=NUID,{StudentSelected:false});
-                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestStudentAssessments,StudentSelected=true))});
+                                =UpdateIf(colRequestAssessmentsStudentList,ThisItem.NUID=NUID,{StudentSelected:false});
+                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =RGBA(50, 49, 48, 1)
                             PressedFill: =RGBA(0, 0, 0, 0)
@@ -576,7 +580,7 @@
                             RadiusTopLeft: =5
                             RadiusTopRight: =Self.RadiusTopLeft
                             Size: =15
-                            Text: ="Request "&AdvisorsSelcted&" Advisor Assessments"
+                            Text: ="Request "&AdvisorsSelcted&" Advisor Assessment"&If(AdvisorsSelcted=1,"","s")
                             Tooltip: =If(StudentsSelected=0,"Must select at least one student.","")
                             Width: =180
                             X: =(Parent.Width-Self.Width)/2
@@ -680,11 +684,11 @@
                             HoverColor: =RGBA(50, 49, 48, 1)
                             HoverFill: =RGBA(0, 0, 0, 0)
                             OnCheck: |-
-                                =UpdateIf(colRequestAdvisorAssessments, true, {AdvisorSelected:true});
-                                UpdateContext({AdvisorsSelcted:CountRows(Filter(colRequestAdvisorAssessments,AdvisorSelected=true))});
+                                =UpdateIf(colRequestAssessmentsAdvisorList, true, {AdvisorSelected:true});
+                                UpdateContext({AdvisorsSelcted:CountRows(Filter(colRequestAssessmentsAdvisorList,AdvisorSelected=true))});
                             OnUncheck: |-
-                                =UpdateIf(colRequestAdvisorAssessments, true, {AdvisorSelected:false});
-                                UpdateContext({AdvisorsSelcted:CountRows(Filter(colRequestAdvisorAssessments,AdvisorSelected=true))});
+                                =UpdateIf(colRequestAssessmentsAdvisorList, true, {AdvisorSelected:false});
+                                UpdateContext({AdvisorsSelcted:CountRows(Filter(colRequestAssessmentsAdvisorList,AdvisorSelected=true))});
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =RGBA(50, 49, 48, 1)
                             PressedFill: =RGBA(0, 0, 0, 0)
@@ -697,7 +701,7 @@
                     galRequestAdvisorsList As gallery.galleryVertical:
                         BorderColor: =RGBA(245, 245, 245, 1)
                         DelayItemLoading: =true
-                        Items: =colRequestAdvisorAssessments
+                        Items: =colRequestAssessmentsAdvisorList
                         Layout: =Layout.Vertical
                         LayoutMinHeight: =287
                         LayoutMinWidth: =320
@@ -806,12 +810,12 @@
                             HoverColor: =RGBA(50, 49, 48, 1)
                             HoverFill: =RGBA(0, 0, 0, 0)
                             OnCheck: |-
-                                =UpdateIf(colRequestAdvisorAssessments,ThisItem.AdvisorID=AdvisorID,{AdvisorSelected:true});
-                                UpdateContext({AdvisorsSelcted:CountRows(Filter(colRequestAdvisorAssessments,AdvisorSelected=true))});
+                                =UpdateIf(colRequestAssessmentsAdvisorList,ThisItem.AdvisorID=AdvisorID,{AdvisorSelected:true});
+                                UpdateContext({AdvisorsSelcted:CountRows(Filter(colRequestAssessmentsAdvisorList,AdvisorSelected=true))});
                             OnSelect: =Select(Parent)
                             OnUncheck: |-
-                                =UpdateIf(colRequestAdvisorAssessments,ThisItem.AdvisorID=AdvisorID,{AdvisorSelected:false});
-                                UpdateContext({AdvisorsSelcted:CountRows(Filter(colRequestAdvisorAssessments,AdvisorSelected=true))});
+                                =UpdateIf(colRequestAssessmentsAdvisorList,ThisItem.AdvisorID=AdvisorID,{AdvisorSelected:false});
+                                UpdateContext({AdvisorsSelcted:CountRows(Filter(colRequestAssessmentsAdvisorList,AdvisorSelected=true))});
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =RGBA(50, 49, 48, 1)
                             PressedFill: =RGBA(0, 0, 0, 0)
