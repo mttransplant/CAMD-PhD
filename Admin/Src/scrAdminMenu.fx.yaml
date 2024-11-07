@@ -5,10 +5,11 @@
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Advisors','Advisor Name',Name,'Advisor Email',Email,'Advisor NUID',ID),Name,Email,ID),Role,"Advisor"));
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Students','Full Name',Name,'Student Email',Email,NUID,ID),Name,Email,ID),Role,"Student"));
         
-         UpdateContext({IsTesting:false, TestEmail:""}); //self
-         UpdateContext({IsTesting:true, TestEmail:"c.pearce@northeastern.edu"}); //faculty
-        // UpdateContext({IsTesting:true, TestEmail:"abdulhameed.r@northeastern.edu"}); //student 1
-        // UpdateContext({IsTesting:true, TestEmail:"amgalan.b@northeastern.edu"}); //student 2
+        UpdateContext({IsTesting:false, TestEmail:""}); //self
+        //UpdateContext({IsTesting:true, TestEmail:"c.pearce@northeastern.edu"}); //faculty 1
+        //UpdateContext({IsTesting:true, TestEmail:"c.harteveld@northeastern.edu"}); //faculty 2
+        UpdateContext({IsTesting:true, TestEmail:"abdulhameed.r@northeastern.edu"}); //student 1
+        //UpdateContext({IsTesting:true, TestEmail:"amgalan.b@northeastern.edu"}); //student 2
         Set(CurrentUser,First(Sort(Filter(colUserList,Email=If(IsTesting,TestEmail,User().Email)),Role,SortOrder.Ascending)));
     Width: =Min(App.Width,App.DesignWidth)
 
@@ -67,6 +68,35 @@
             RadiusTopRight: =8
             ZIndex: =2
 
+            btnRespondReqAssessments As Button:
+                Align: =""
+                Appearance: ="Primary"
+                BasePaletteColor: =Color.Green
+                BorderColor: =
+                BorderRadiusBottomLeft: =10
+                BorderRadiusBottomRight: =10
+                BorderRadiusTopLeft: =10
+                BorderRadiusTopRight: =10
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =56
+                Height: =90
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrRequestedAssessments)
+                Text: ="Respond to Requested Assessments"
+                VerticalAlign: =""
+                Visible: =CountRows(Filter('PhD Assessments','Submitter NUID'=CurrentUser.ID And IsBlank('Date Submitted')))>0
+                Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                X: =Parent.Width/2+5
+                Y: =5
+                ZIndex: =1
+
             btnStudent As Button:
                 Align: =""
                 BasePaletteColor: =
@@ -93,7 +123,7 @@
                 Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                 X: =5
                 Y: =5
-                ZIndex: =1
+                ZIndex: =2
 
             btnAdvisor As Button:
                 Align: =""
@@ -121,7 +151,7 @@
                 Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                 X: =Parent.Width/2+5
                 Y: =5
-                ZIndex: =2
+                ZIndex: =3
 
             btnAssessmentQs As Button:
                 Align: =""
@@ -149,7 +179,7 @@
                 Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                 X: =Parent.Width/2+5
                 Y: =5
-                ZIndex: =3
+                ZIndex: =4
 
             btnRequestAssessments As Button:
                 Align: =""
@@ -174,35 +204,6 @@
                 Text: ="Request Assessments"
                 VerticalAlign: =""
                 Visible: =CurrentUser.Role="Admin"
-                Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
-                X: =Parent.Width/2+5
-                Y: =5
-                ZIndex: =4
-
-            btnRespondReqAssessments As Button:
-                Align: =""
-                Appearance: ="Primary"
-                BasePaletteColor: =Color.Green
-                BorderColor: =
-                BorderRadiusBottomLeft: =10
-                BorderRadiusBottomRight: =10
-                BorderRadiusTopLeft: =10
-                BorderRadiusTopRight: =10
-                BorderStyle: =""
-                DisplayMode: =DisplayMode.Edit
-                FontColor: =
-                FontSize: =56
-                Height: =90
-                Icon: =""
-                IconRotation: =0
-                IconStyle: ="Outline"
-                Layout: ="Icon before"
-                LayoutMinHeight: =32
-                LayoutMinWidth: =96
-                OnSelect: =Navigate(scrRequestedAssessments)
-                Text: ="Respond to Requested Assessments"
-                VerticalAlign: =""
-                Visible: =CountRows(Filter('PhD Assessments','Submitter NUID'=CurrentUser.ID And IsBlank('Date Submitted')))>0
                 Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                 X: =Parent.Width/2+5
                 Y: =5

@@ -240,7 +240,7 @@
                                 =ClearCollect(colAssessmentRequests,Filter('PhD Assessments','Student NUID'=""));
                                 ForAll(Filter(colRequestAssessmentsStudentList,StudentSelected),
                                     ForAll(Filter('PhD Assessment Questions','Assessment Type'=drpRequestSelfType.Selected.Value),
-                                        Collect(colSelfAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
+                                        Collect(colAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
                                     )
                                 );
                                 Patch('PhD Assessments',colAssessmentRequests);
