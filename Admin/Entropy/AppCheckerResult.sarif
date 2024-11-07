@@ -7454,66 +7454,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneCourse.Icon"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneCourse.Icon",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Icon",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneCourse"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneCourse.Color"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneCourse.Color",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Color",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneCourse"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneCourse.HoverColor"
                 }
               ],
@@ -7574,66 +7514,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestonePaper.Icon"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestonePaper.Icon",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Icon",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestonePaper"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestonePaper.Color"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestonePaper.Color",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Color",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestonePaper"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestonePaper.HoverColor"
                 }
               ],
@@ -7647,66 +7527,6 @@
                 "member": "HoverColor",
                 "module": "scrStudentOverview",
                 "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestonePaper"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneQual.Icon"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneQual.Icon",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Icon",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneQual"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneQual.Color"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneQual.Color",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Color",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneQual"
               }
             }
           ],
@@ -7754,66 +7574,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneProposal.Icon"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneProposal.Icon",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Icon",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneProposal"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneProposal.Color"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneProposal.Color",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Color",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneProposal"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneProposal.HoverColor"
                 }
               ],
@@ -7844,66 +7604,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneTA.Icon"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneTA.Icon",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Icon",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneTA"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneTA.Color"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneTA.Color",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Color",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneTA"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneTA.HoverColor"
                 }
               ],
@@ -7917,66 +7617,6 @@
                 "member": "HoverColor",
                 "module": "scrStudentOverview",
                 "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneTA"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneDefense.Icon"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneDefense.Icon",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Icon",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneDefense"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneDefense.Color"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneDefense.Color",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "Color",
-                "module": "scrStudentOverview",
-                "type": "scrStudentOverview.ctrStudentOverview.ctrOverviewMain.ctrMilestones.ctrMilestoneIcons.icoOverviewMilestoneDefense"
               }
             }
           ],
