@@ -187,7 +187,7 @@
                             Width: =Parent.Width
                             ZIndex: =1
 
-                        TextInput3 As text:
+                        txtRequestSelfTerm As text:
                             BorderColor: =RGBA(245, 245, 245, 1)
                             BorderThickness: =2
                             Color: =RGBA(50, 49, 48, 1)
@@ -209,6 +209,7 @@
                             RadiusTopLeft: =0
                             RadiusTopRight: =0
                             Size: =13
+                            Width: =Parent.Width
                             ZIndex: =2
 
                     cntRequestSelfButton As groupContainer.manualLayoutContainer:
@@ -221,7 +222,7 @@
                         RadiusTopRight: =4
                         ZIndex: =4
 
-                        Button1 As button:
+                        btnRequestSelfAssessments As button:
                             BorderColor: =RGBA(0, 0, 0, 0)
                             BorderStyle: =BorderStyle.None
                             DisabledBorderColor: =RGBA(0, 0, 0, 0)
@@ -243,9 +244,9 @@
                             RadiusTopLeft: =5
                             RadiusTopRight: =Self.RadiusTopLeft
                             Size: =15
-                            Text: ="Submit Student Requests"
+                            Text: ="Request "&StudentsSelected&" Self Assessments"
                             Tooltip: =If(StudentsSelected=0,"Must select at least one student.","")
-                            Width: =170
+                            Width: =180
                             X: =(Parent.Width-Self.Width)/2
                             Y: =(Parent.Height-Self.Height)/2
                             ZIndex: =1
@@ -428,6 +429,160 @@
                     RadiusTopRight: =4
                     ZIndex: =1
 
+                    cntRequestAdvisorType As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =80
+                        LayoutMinWidth: =200
+                        LayoutMode: =LayoutMode.Auto
+                        PaddingLeft: =5
+                        PaddingRight: =Self.PaddingLeft
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =1
+
+                        labRequestAdvisorType As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Size: =13
+                            Text: ="Select Assessment Type"
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                        drpRequestAdvisorType As dropdown:
+                            BorderColor: =RGBA(245, 245, 245, 1)
+                            ChevronBackground: =RGBA(245, 245, 245, 1)
+                            ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                            ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                            ChevronFill: =RGBA(50, 49, 48, 1)
+                            ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                            ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                            Color: =RGBA(50, 49, 48, 1)
+                            Default: ='Assessment Type (PhD Assessment Questions)'.'Advisor-Brief'
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            DisabledFill: =RGBA(242, 242, 241, 0)
+                            Fill: =RGBA(245, 245, 245, 1)
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =RGBA(16, 110, 190, 1)
+                            HoverColor: =RGBA(50, 49, 48, 1)
+                            HoverFill: =RGBA(245, 245, 245, 1)
+                            Items: =['Assessment Type (PhD Assessment Questions)'.'Advisor-Brief','Assessment Type (PhD Assessment Questions)'.'Advisor-Comprehensive']
+                            PaddingBottom: =5
+                            PaddingLeft: =12
+                            PaddingRight: =5
+                            PaddingTop: =5
+                            PressedBorderColor: =RGBA(16, 110, 190, 1)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(0, 120, 212, 1)
+                            SelectionColor: =RGBA(50, 49, 48, 1)
+                            SelectionFill: =RGBA(0, 120, 212, 1)
+                            Size: =13
+                            Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                            ZIndex: =2
+
+                    cntRequestAdvisorTerm As groupContainer.verticalAutoLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =80
+                        LayoutMinWidth: =200
+                        LayoutMode: =LayoutMode.Auto
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =2
+
+                        labRequestAdvisorTerm As label:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Bold
+                            Size: =13
+                            Text: |-
+                                ="Requesting for term:"
+                            Width: =Parent.Width
+                            ZIndex: =1
+
+                        txtRequestAdvisorTerm As text:
+                            BorderColor: =RGBA(245, 245, 245, 1)
+                            BorderThickness: =2
+                            Color: =RGBA(50, 49, 48, 1)
+                            Default: =First(colCurrentTerm).cr829_stvterm_desc
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            DisabledFill: =RGBA(242, 242, 241, 0)
+                            DisplayMode: =DisplayMode.View
+                            FocusedBorderThickness: =4
+                            Font: =Font.'Segoe UI'
+                            HoverBorderColor: =RGBA(16, 110, 190, 1)
+                            HoverColor: =RGBA(50, 49, 48, 1)
+                            HoverFill: =RGBA(255, 255, 255, 1)
+                            PressedBorderColor: =RGBA(0, 120, 212, 1)
+                            PressedColor: =RGBA(50, 49, 48, 1)
+                            PressedFill: =RGBA(255, 255, 255, 1)
+                            RadiusBottomLeft: =0
+                            RadiusBottomRight: =0
+                            RadiusTopLeft: =0
+                            RadiusTopRight: =0
+                            Size: =13
+                            Width: =Parent.Width
+                            ZIndex: =2
+
+                    cntRequestAdvisorButton As groupContainer.manualLayoutContainer:
+                        DropShadow: =DropShadow.Light
+                        LayoutMinHeight: =80
+                        LayoutMinWidth: =200
+                        RadiusBottomLeft: =4
+                        RadiusBottomRight: =4
+                        RadiusTopLeft: =4
+                        RadiusTopRight: =4
+                        ZIndex: =3
+
+                        btnRequestAdvisorAssessments As button:
+                            BorderColor: =RGBA(0, 0, 0, 0)
+                            BorderStyle: =BorderStyle.None
+                            DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                            DisabledColor: =RGBA(161, 159, 157, 1)
+                            DisabledFill: =RGBA(242, 242, 241, 0)
+                            DisplayMode: =If(AdvisorsSelcted=0,DisplayMode.Disabled,DisplayMode.Edit)
+                            Fill: =RGBA(0, 120, 212, 1)
+                            Font: =Font.'Segoe UI'
+                            FontWeight: =FontWeight.Semibold
+                            Height: =60
+                            HoverBorderColor: =RGBA(0, 0, 0, 0)
+                            HoverColor: =RGBA(255, 255, 255, 1)
+                            HoverFill: =RGBA(16, 110, 190, 1)
+                            PressedBorderColor: =RGBA(0, 69, 120, 1)
+                            PressedColor: =RGBA(255, 255, 255, 1)
+                            PressedFill: =RGBA(16, 110, 190, 1)
+                            RadiusBottomLeft: =Self.RadiusTopLeft
+                            RadiusBottomRight: =Self.RadiusTopLeft
+                            RadiusTopLeft: =5
+                            RadiusTopRight: =Self.RadiusTopLeft
+                            Size: =15
+                            Text: ="Request "&AdvisorsSelcted&" Advisor Assessments"
+                            Tooltip: =If(StudentsSelected=0,"Must select at least one student.","")
+                            Width: =180
+                            X: =(Parent.Width-Self.Width)/2
+                            Y: =(Parent.Height-Self.Height)/2
+                            ZIndex: =1
+
                 ctrRequestAdvisorsList As groupContainer.verticalAutoLayoutContainer:
                     DropShadow: =DropShadow.Light
                     Fill: =RGBA(255, 255, 255, 1)
@@ -504,7 +659,7 @@
                             FontWeight: =FontWeight.Bold
                             PaddingLeft: =10
                             Size: =13
-                            Text: ="Active Advisors"
+                            Text: ="Active Advisors ("&AdvisorsSelcted&" advisor"&If(AdvisorsSelcted = 1,"","s")&" selected)"
                             Width: =txtRequestAdvisorName.Width
                             X: =txtRequestAdvisorName.X
                             ZIndex: =3
@@ -526,8 +681,10 @@
                             HoverFill: =RGBA(0, 0, 0, 0)
                             OnCheck: |-
                                 =UpdateIf(colRequestAdvisorAssessments, true, {AdvisorSelected:true});
+                                UpdateContext({AdvisorsSelcted:CountRows(Filter(colRequestAdvisorAssessments,AdvisorSelected=true))});
                             OnUncheck: |-
                                 =UpdateIf(colRequestAdvisorAssessments, true, {AdvisorSelected:false});
+                                UpdateContext({AdvisorsSelcted:CountRows(Filter(colRequestAdvisorAssessments,AdvisorSelected=true))});
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =RGBA(50, 49, 48, 1)
                             PressedFill: =RGBA(0, 0, 0, 0)
@@ -650,9 +807,11 @@
                             HoverFill: =RGBA(0, 0, 0, 0)
                             OnCheck: |-
                                 =UpdateIf(colRequestAdvisorAssessments,ThisItem.AdvisorID=AdvisorID,{AdvisorSelected:true});
+                                UpdateContext({AdvisorsSelcted:CountRows(Filter(colRequestAdvisorAssessments,AdvisorSelected=true))});
                             OnSelect: =Select(Parent)
                             OnUncheck: |-
                                 =UpdateIf(colRequestAdvisorAssessments,ThisItem.AdvisorID=AdvisorID,{AdvisorSelected:false});
+                                UpdateContext({AdvisorsSelcted:CountRows(Filter(colRequestAdvisorAssessments,AdvisorSelected=true))});
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =RGBA(50, 49, 48, 1)
                             PressedFill: =RGBA(0, 0, 0, 0)

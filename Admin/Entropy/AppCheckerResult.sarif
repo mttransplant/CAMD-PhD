@@ -4544,19 +4544,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfTerm.TextInput3.AccessibleLabel"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfTerm.txtRequestSelfTerm.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfTerm.TextInput3.AccessibleLabel",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfTerm.txtRequestSelfTerm.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfTerm.TextInput3"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfTerm.txtRequestSelfTerm"
               }
             }
           ],
@@ -5678,6 +5678,66 @@
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
           "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorType.drpRequestAdvisorType.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorType.drpRequestAdvisorType.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorType.drpRequestAdvisorType"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorTerm.txtRequestAdvisorTerm.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorTerm.txtRequestAdvisorTerm.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorTerm.txtRequestAdvisorTerm"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
         },
         {
           "locations": [
@@ -7064,36 +7124,6 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.AdvisorsSelcted"
-                }
-              ],
-              "physicalLocation": {
-                "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.AdvisorsSelcted",
-                  "relativeAddress": 0
-                }
-              },
-              "properties": {
-                "member": "AdvisorsSelcted",
-                "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments"
-              }
-            }
-          ],
-          "message": {
-            "id": "issue"
-          },
-          "properties": {
-            "level": "Medium"
-          },
-          "ruleId": "app-UnusedVariables",
-          "ruleIndex": 4
-        },
-        {
-          "locations": [
-            {
-              "logicalLocations": [
-                {
                   "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsList.ctrRequestStudentsListColumns.Height"
                 }
               ],
@@ -8061,23 +8091,6 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
-              }
-            },
-            {
-              "id": "app-UnusedVariables",
-              "messageStrings": {
-                "issue": {
-                  "text": "Unused variable"
-                }
-              },
-              "properties": {
-                "componentType": "app",
-                "howToFix": [
-                  "Remove the unused variable."
-                ],
-                "level": "Medium",
-                "primaryCategory": "performance",
-                "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
               }
             }
           ],
