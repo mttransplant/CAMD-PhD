@@ -659,6 +659,7 @@
                             PaddingLeft: =10
                             Size: =13
                             Text: ="Co-Advisees"
+                            Tooltip: ="Advisor-Brief will only be sent to primary advisor. Advisor-Comprihensive will be sent to both advisor and co-advisor."
                             Width: =txtRequestCoAdviseeCount.Width
                             X: =txtRequestCoAdviseeCount.X
                             ZIndex: =1
@@ -676,6 +677,7 @@
                             PaddingLeft: =10
                             Size: =13
                             Text: ="Advisees"
+                            Tooltip: ="Advisor-Brief will only be sent to primary advisor. Advisor-Comprihensive will be sent to both advisor and co-advisor."
                             Width: =txtRequestAdviseeCount.Width
                             X: =txtRequestAdviseeCount.X
                             ZIndex: =2

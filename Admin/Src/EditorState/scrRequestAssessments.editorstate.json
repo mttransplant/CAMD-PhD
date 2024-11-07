@@ -237,7 +237,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -500,7 +500,7 @@
         {
           "Category": "Design",
           "PropertyName": "Width",
-          "RuleProviderType": "User"
+          "RuleProviderType": "Unknown"
         },
         {
           "Category": "Design",
@@ -2748,7 +2748,7 @@
           "Property": {
             "Category": "Design",
             "PropertyName": "LayoutMinHeight",
-            "RuleProviderType": "User"
+            "RuleProviderType": "Unknown"
           },
           "PropertyName": "LayoutMinHeight"
         }
@@ -2939,7 +2939,7 @@
           "Property": {
             "Category": "Design",
             "PropertyName": "LayoutMinWidth",
-            "RuleProviderType": "User"
+            "RuleProviderType": "Unknown"
           },
           "PropertyName": "LayoutMinWidth"
         },
@@ -2955,7 +2955,7 @@
           "Property": {
             "Category": "Design",
             "PropertyName": "LayoutMinHeight",
-            "RuleProviderType": "User"
+            "RuleProviderType": "Unknown"
           },
           "PropertyName": "LayoutMinHeight"
         }
@@ -3174,7 +3174,7 @@
           "Property": {
             "Category": "Design",
             "PropertyName": "LayoutMinWidth",
-            "RuleProviderType": "User"
+            "RuleProviderType": "Unknown"
           },
           "PropertyName": "LayoutMinWidth"
         },
@@ -3190,7 +3190,7 @@
           "Property": {
             "Category": "Design",
             "PropertyName": "LayoutMinHeight",
-            "RuleProviderType": "User"
+            "RuleProviderType": "Unknown"
           },
           "PropertyName": "LayoutMinHeight"
         }
@@ -7014,6 +7014,14 @@
           "InvariantPropertyName": "PaddingLeft",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"\"",
+          "InvariantPropertyName": "Tooltip",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -7044,6 +7052,11 @@
           "Category": "Data",
           "PropertyName": "Role",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Tooltip",
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
@@ -8226,6 +8239,14 @@
           "InvariantPropertyName": "PaddingLeft",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
+        },
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "\"\"",
+          "InvariantPropertyName": "Tooltip",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
         }
       ],
       "HasDynamicProperties": false,
@@ -8256,6 +8277,11 @@
           "Category": "Data",
           "PropertyName": "Role",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Tooltip",
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",
