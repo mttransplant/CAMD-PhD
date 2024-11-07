@@ -1493,7 +1493,14 @@
           "IsLockable": false,
           "NameMapSourceSchema": "?"
         },
-        "BasePaletteColor",
+        {
+          "AFDDataSourceName": "",
+          "AutoRuleBindingEnabled": false,
+          "AutoRuleBindingString": "",
+          "InvariantPropertyName": "BasePaletteColor",
+          "IsLockable": false,
+          "NameMapSourceSchema": "?"
+        },
         "FontColor",
         {
           "AFDDataSourceName": "",
@@ -1550,7 +1557,8 @@
           "InvariantPropertyName": "BorderRadiusTopRight",
           "IsLockable": false,
           "NameMapSourceSchema": "?"
-        }
+        },
+        "Appearance"
       ],
       "DynamicProperties": [
         {
@@ -1677,12 +1685,17 @@
         {
           "Category": "Data",
           "PropertyName": "BasePaletteColor",
-          "RuleProviderType": "Unknown"
+          "RuleProviderType": "User"
         },
         {
           "Category": "Data",
           "PropertyName": "FontColor",
           "RuleProviderType": "Unknown"
+        },
+        {
+          "Category": "Data",
+          "PropertyName": "Appearance",
+          "RuleProviderType": "User"
         },
         {
           "Category": "Design",

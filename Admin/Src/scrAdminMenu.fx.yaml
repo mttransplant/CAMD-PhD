@@ -181,7 +181,8 @@
 
             btnRespondReqAssessments As Button:
                 Align: =""
-                BasePaletteColor: =
+                Appearance: ="Primary"
+                BasePaletteColor: =Color.Green
                 BorderColor: =
                 BorderRadiusBottomLeft: =10
                 BorderRadiusBottomRight: =10
