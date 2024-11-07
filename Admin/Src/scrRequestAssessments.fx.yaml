@@ -590,7 +590,7 @@
                                                 Collect(colAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestAdvisorType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
                                             ),
                                             // Brief assessment only sent to primary advisees
-                                            ForAll(Filter('PhD Students',Advisor.'Advisor NUID'='Advisor NUID' Or 'Co-Advisor'.'Advisor NUID'=""),
+                                            ForAll(Filter('PhD Students',Advisor.'Advisor NUID'='Advisor NUID'),
                                                 Collect(colAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestAdvisorType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
                                             )
                                         )
