@@ -247,6 +247,7 @@
                                 UpdateIf(colRequestAssessmentsStudentList, true, {StudentSelected:false});
                                 UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
                                 Clear(colAssessmentRequests);
+                                Reset(chkSelectAllStudents);
                             PressedBorderColor: =RGBA(0, 69, 120, 1)
                             PressedColor: =RGBA(255, 255, 255, 1)
                             PressedFill: =RGBA(16, 110, 190, 1)
@@ -581,15 +582,18 @@
                             HoverFill: =RGBA(16, 110, 190, 1)
                             OnSelect: |-
                                 =ClearCollect(colAssessmentRequests,Filter('PhD Assessments','Student NUID'=""));
-                                ForAll(Filter(colRequestAssessmentsStudentList,StudentSelected),
-                                    ForAll(Filter('PhD Assessment Questions','Assessment Type'=drpRequestSelfType.Selected.Value),
-                                        Collect(colSelfAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
+                                ForAll(Filter(colRequestAssessmentsAdvisorList,AdvisorSelected),
+                                    ForAll(Filter('PhD Assessment Questions','Assessment Type'=drpRequestAdvisorType.Selected.Value),
+                                        ForAll(Filter('PhD Students',Advisor.'Advisor NUID'='Advisor NUID'),
+                                            Collect(colAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestAdvisorType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
+                                        )
                                     )
                                 );
                                 Patch('PhD Assessments',colAssessmentRequests);
-                                UpdateIf(colRequestAssessmentsStudentList, true, {StudentSelected:false});
-                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
+                                UpdateIf(colRequestAssessmentsAdvisorList, true, {AdvisorSelected:false});
+                                UpdateContext({AdvisorsSelcted:CountRows(Filter(colRequestAssessmentsAdvisorList,AdvisorSelected=true))});
                                 Clear(colAssessmentRequests);
+                                Reset(chkSelectAllAdvisors);
                             PressedBorderColor: =RGBA(0, 69, 120, 1)
                             PressedColor: =RGBA(255, 255, 255, 1)
                             PressedFill: =RGBA(16, 110, 190, 1)
