@@ -5,8 +5,8 @@
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Advisors','Advisor Name',Name,'Advisor Email',Email,'Advisor NUID',ID),Name,Email,ID),Role,"Advisor"));
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Students','Full Name',Name,'Student Email',Email,NUID,ID),Name,Email,ID),Role,"Student"));
         
-         UpdateContext({IsTesting:false, TestEmail:""}); //self
-        // UpdateContext({IsTesting:true, TestEmail:"c.pearce@northeastern.edu"}); //faculty
+        // UpdateContext({IsTesting:false, TestEmail:""}); //self
+         UpdateContext({IsTesting:true, TestEmail:"c.pearce@northeastern.edu"}); //faculty
         // UpdateContext({IsTesting:true, TestEmail:"abdulhameed.r@northeastern.edu"}); //student 1
         // UpdateContext({IsTesting:true, TestEmail:"amgalan.b@northeastern.edu"}); //student 2
         Set(CurrentUser,First(Sort(Filter(colUserList,Email=If(IsTesting,TestEmail,User().Email)),Role,SortOrder.Ascending)));
@@ -179,6 +179,34 @@
                 Y: =5
                 ZIndex: =4
 
+            btnRespondReqAssessments As Button:
+                Align: =""
+                BasePaletteColor: =
+                BorderColor: =
+                BorderRadiusBottomLeft: =10
+                BorderRadiusBottomRight: =10
+                BorderRadiusTopLeft: =10
+                BorderRadiusTopRight: =10
+                BorderStyle: =""
+                DisplayMode: =DisplayMode.Edit
+                FontColor: =
+                FontSize: =56
+                Height: =90
+                Icon: =""
+                IconRotation: =0
+                IconStyle: ="Outline"
+                Layout: ="Icon before"
+                LayoutMinHeight: =32
+                LayoutMinWidth: =96
+                OnSelect: =Navigate(scrRequestedAssessments)
+                Text: ="Respond to Requested Assessments"
+                VerticalAlign: =""
+                Visible: =CountRows(Filter('PhD Assessments','Submitter NUID'=CurrentUser.ID And IsBlank('Date Submitted')))>0
+                Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                X: =Parent.Width/2+5
+                Y: =5
+                ZIndex: =5
+
             btnFunding As Button:
                 Align: =""
                 BasePaletteColor: =
@@ -205,7 +233,7 @@
                 Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                 X: =Parent.Width/2+5
                 Y: =Parent.Height/6+5
-                ZIndex: =5
+                ZIndex: =6
 
             btnTARA As Button:
                 Align: =""
@@ -233,7 +261,7 @@
                 Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                 X: =5
                 Y: =Parent.Height/6+5
-                ZIndex: =6
+                ZIndex: =7
 
             btnMyInformation As Button:
                 Align: =""
@@ -261,5 +289,5 @@
                 Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                 X: =Parent.Width/2+5
                 Y: =Parent.Height/2+5
-                ZIndex: =7
+                ZIndex: =8
 

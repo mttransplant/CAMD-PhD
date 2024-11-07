@@ -82,7 +82,7 @@
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
                     Size: =13
-                    Text: ="Question"
+                    Text: ="Questions"
                     X: =labAssessmentQuestionText.X+Parent.PaddingLeft
                     ZIndex: =1
 
@@ -113,6 +113,41 @@
                 TemplateSize: =200
                 ZIndex: =2
 
+                drpAssessmentQuestionType As dropdown:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    ChevronBackground: =RGBA(245, 245, 245, 1)
+                    ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                    ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                    ChevronFill: =RGBA(50, 49, 48, 1)
+                    ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                    ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =1
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    Fill: =RGBA(245, 245, 245, 1)
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(245, 245, 245, 1)
+                    Items: =Split(Char(10)&ThisItem.'Q Options',Char(10))
+                    OnSelect: =Select(Parent)
+                    PaddingBottom: =5
+                    PaddingLeft: =12
+                    PaddingRight: =5
+                    PaddingTop: =5
+                    PressedBorderColor: =RGBA(16, 110, 190, 1)
+                    PressedColor: =RGBA(255, 255, 255, 1)
+                    PressedFill: =RGBA(0, 120, 212, 1)
+                    SelectionColor: =RGBA(50, 49, 48, 1)
+                    SelectionFill: =RGBA(0, 120, 212, 1)
+                    Size: =13
+                    Visible: =ThisItem.'Q Type'='Q Type (PhD Assessments)'.Choice
+                    X: =txtAssessmentQuestionText.X
+                    Y: =txtAssessmentQuestionText.Y
+                    ZIndex: =1
+
                 txtAssessmentQuestionText As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderThickness: =2
@@ -137,10 +172,11 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
+                    Visible: =ThisItem.'Q Type'='Q Type (PhD Assessments)'.Text
                     Width: =Parent.Width-Self.X-(Parent.TemplatePadding*2)
                     X: =labAssessmentQuestionText.X
                     Y: =labAssessmentQuestionText.Y+labAssessmentQuestionText.Height
-                    ZIndex: =1
+                    ZIndex: =2
 
                 labAssessmentQuestionText As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -157,7 +193,7 @@
                     Text: =ThisItem.'Question Text'
                     Width: =Parent.Width-Self.X-(Parent.TemplatePadding*2)
                     X: =labAssessmentStudentName.X+labAssessmentStudentName.Width+Parent.TemplatePadding
-                    ZIndex: =2
+                    ZIndex: =3
 
                 txtAssessmentEvaluationTerm As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
@@ -167,6 +203,7 @@
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayMode: =DisplayMode.View
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -184,7 +221,7 @@
                     Width: =txtAsseessmentStudentName.Width
                     X: =labAssessmentEvaluationTerm.X
                     Y: =labAssessmentEvaluationTerm.Y+labAssessmentEvaluationTerm.Height
-                    ZIndex: =3
+                    ZIndex: =4
 
                 labAssessmentEvaluationTerm As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -201,7 +238,7 @@
                     Text: ="Evaluation Term"
                     Width: =txtAssessmentEvaluationTerm.Width
                     Y: =txtAsseessmentStudentName.Y+txtAsseessmentStudentName.Height
-                    ZIndex: =4
+                    ZIndex: =5
 
                 txtAsseessmentStudentName As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
@@ -211,6 +248,7 @@
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayMode: =DisplayMode.View
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     HoverBorderColor: =RGBA(16, 110, 190, 1)
@@ -228,7 +266,7 @@
                     Width: =242
                     X: =labAssessmentStudentName.X
                     Y: =labAssessmentStudentName.Y+labAssessmentStudentName.Height
-                    ZIndex: =5
+                    ZIndex: =6
 
                 labAssessmentStudentName As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -244,7 +282,7 @@
                     Size: =13
                     Text: ="Student Name"
                     Width: =txtAsseessmentStudentName.Width
-                    ZIndex: =6
+                    ZIndex: =7
 
         cntRequestedAssessmentsFooter As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
