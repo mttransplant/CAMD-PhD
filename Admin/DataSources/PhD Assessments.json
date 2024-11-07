@@ -20,7 +20,9 @@
       "cr829_phdassessments_ProcessSession": "Process Sessions",
       "cr829_phdassessments_SyncErrors": "Sync Errors",
       "cr829_phdassessmentsid": "AssessmentID",
-      "cr829_question_order": "Question Order",
+      "cr829_q_options": "Q Options",
+      "cr829_q_type": "Q Type",
+      "cr829_question_order": "Q Order",
       "cr829_question_text": "Question Text",
       "cr829_response": "Response",
       "cr829_student_nuid": "Student NUID",
@@ -80,6 +82,26 @@
     },
     "OptionSetTypeKey": "PicklistType",
     "RelatedColumnInvariantName": "cr829_assessment_type",
+    "RelatedEntityName": "PhD Assessments",
+    "Type": "OptionSetInfo"
+  },
+  {
+    "DisplayName": "Q Type (PhD Assessments)",
+    "Name": "cr829_phdassessments_cr829_q_type",
+    "OptionSetInfoNameMapping": {
+      "1": "Text",
+      "2": "Choice"
+    },
+    "OptionSetIsBooleanValued": false,
+    "OptionSetIsGlobal": false,
+    "OptionSetReference": {
+      "OptionSetReferenceItem0": {
+        "OptionSetReferenceColumnName": "cr829_q_type",
+        "OptionSetReferenceEntityName": "PhD Assessments"
+      }
+    },
+    "OptionSetTypeKey": "PicklistType",
+    "RelatedColumnInvariantName": "cr829_q_type",
     "RelatedEntityName": "PhD Assessments",
     "Type": "OptionSetInfo"
   },

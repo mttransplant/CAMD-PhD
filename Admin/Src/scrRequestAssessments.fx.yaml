@@ -237,9 +237,16 @@
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =RGBA(16, 110, 190, 1)
                             OnSelect: |-
-                                =ClearCollect(colSelfAssessmentQs,Filter('PhD Assessment Questions','Assessment Type'=drpRequestSelfType.Selected.Value));
-                                ClearCollect(colSelfAssessmentRequests,Filter('PhD Assessments','Student NUID'=""));
-                                ForAll();
+                                =ClearCollect(colAssessmentRequests,Filter('PhD Assessments','Student NUID'=""));
+                                ForAll(Filter(colRequestAssessmentsStudentList,StudentSelected),
+                                    ForAll(Filter('PhD Assessment Questions','Assessment Type'=drpRequestSelfType.Selected.Value),
+                                        Collect(colSelfAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
+                                    )
+                                );
+                                Patch('PhD Assessments',colAssessmentRequests);
+                                UpdateIf(colRequestAssessmentsStudentList, true, {StudentSelected:false});
+                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
+                                Clear(colAssessmentRequests);
                             PressedBorderColor: =RGBA(0, 69, 120, 1)
                             PressedColor: =RGBA(255, 255, 255, 1)
                             PressedFill: =RGBA(16, 110, 190, 1)
@@ -322,7 +329,7 @@
                                 UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
                             OnUncheck: |-
                                 =UpdateIf(colRequestAssessmentsStudentList, true, {StudentSelected:false});
-                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
+                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected))});
                             PressedBorderColor: =RGBA(0, 0, 0, 0)
                             PressedColor: =RGBA(50, 49, 48, 1)
                             PressedFill: =RGBA(0, 0, 0, 0)
@@ -572,6 +579,17 @@
                             HoverBorderColor: =RGBA(0, 0, 0, 0)
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =RGBA(16, 110, 190, 1)
+                            OnSelect: |-
+                                =ClearCollect(colAssessmentRequests,Filter('PhD Assessments','Student NUID'=""));
+                                ForAll(Filter(colRequestAssessmentsStudentList,StudentSelected),
+                                    ForAll(Filter('PhD Assessment Questions','Assessment Type'=drpRequestSelfType.Selected.Value),
+                                        Collect(colSelfAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
+                                    )
+                                );
+                                Patch('PhD Assessments',colAssessmentRequests);
+                                UpdateIf(colRequestAssessmentsStudentList, true, {StudentSelected:false});
+                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
+                                Clear(colAssessmentRequests);
                             PressedBorderColor: =RGBA(0, 69, 120, 1)
                             PressedColor: =RGBA(255, 255, 255, 1)
                             PressedFill: =RGBA(16, 110, 190, 1)
