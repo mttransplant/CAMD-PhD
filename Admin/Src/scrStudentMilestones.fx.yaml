@@ -461,7 +461,7 @@
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Height: =Parent.Height
-                Items: =Sort(Filter('PhD Milestones',NUID=If(CurrentUser.Role="Admin",galStudentLlist.Selected.NUID,CurrentUser.ID)),Date,SortOrder.Descending)
+                Items: =Sort(Filter('PhD Milestones',NUID=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID)),Date,SortOrder.Descending)
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320

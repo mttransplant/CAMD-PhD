@@ -331,7 +331,7 @@
                 DataSource: ='PhD Students'
                 FillPortions: =0
                 Height: =210
-                Item: =LookUp('PhD Students',NUID=If(CurrentUser.Role="Admin",galStudentLlist.Selected.NUID,CurrentUser.ID))
+                Item: =LookUp('PhD Students',NUID=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID))
                 LayoutMinHeight: =250
                 LayoutMinWidth: =ReadOnlyStudentInfo.Width
                 NumberOfColumns: =2
@@ -924,7 +924,7 @@
                 DefaultMode: =If(IsEditing,FormMode.Edit,FormMode.View)
                 FillPortions: =0
                 Height: =170
-                Item: =LookUp('PhD Students',NUID=If(CurrentUser.Role="Admin",galStudentLlist.Selected.NUID,CurrentUser.ID))
+                Item: =LookUp('PhD Students',NUID=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID))
                 LayoutMinHeight: =150
                 LayoutMinWidth: =EditStudentInfo.Width
                 NumberOfColumns: =2

@@ -106,7 +106,7 @@
             galRequestedAssessments As gallery.galleryVertical:
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
-                Items: =Sort(Sort(Filter('PhD Assessments','Submitter NUID'=CurrentUser.ID),'Student NUID'),'Q Order')
+                Items: =Sort(Sort(Filter('PhD Assessments','Submitter NUID'=CurrentUser.ID And IsBlank('Date Submitted')),'Student NUID'),'Q Order')
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
@@ -123,7 +123,7 @@
                     ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                     ChevronHoverFill: =RGBA(50, 49, 48, 1)
                     Color: =RGBA(50, 49, 48, 1)
-                    Default: =1
+                    Default: =ThisItem.Response
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
@@ -374,6 +374,10 @@
                 HoverBorderColor: =RGBA(0, 0, 0, 0)
                 HoverColor: =RGBA(255, 255, 255, 1)
                 HoverFill: =RGBA(16, 110, 190, 1)
+                OnSelect: |-
+                    =Patch('PhD Assessments',colRequestedAssessments);
+                    Clear(colRequestedAssessments);
+                    Reset(galRequestedAssessments);
                 PressedBorderColor: =RGBA(0, 69, 120, 1)
                 PressedColor: =RGBA(255, 255, 255, 1)
                 PressedFill: =RGBA(16, 110, 190, 1)

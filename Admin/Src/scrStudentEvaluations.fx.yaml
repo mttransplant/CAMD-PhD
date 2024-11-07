@@ -345,7 +345,7 @@
                 Height: =Parent.Height
                 Items: |
                     =//Distinct(Filter('PhD Assessments','Student NUID'=If(CurrentUser.Role="Admin",galStudentLlist.Selected.NUID,CurrentUser.ID)),['Term Code','Term Name','Assessment Type','Date Submitted'])
-                    Sort(Sort(Filter('PhD Assessments','Student NUID'=If(CurrentUser.Role="Admin",galStudentLlist.Selected.NUID,CurrentUser.ID)),'Term Code',SortOrder.Descending),'Q Order')
+                    Sort(Sort(Filter('PhD Assessments','Student NUID'=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID) And !IsBlank('Date Submitted')),'Term Code',SortOrder.Descending),'Q Order')
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
