@@ -103,7 +103,7 @@
       "zeroalltabindexes": true
     },
     "Author": "",
-    "BindingErrorCount": 0,
+    "BindingErrorCount": 16,
     "ContainsThirdPartyPcfControls": false,
     "DefaultConnectedDataSourceMaxGetRowsCount": 500,
     "DocumentAppType": "DesktopOrTablet",
@@ -149,7 +149,7 @@
     "scrPositionsDetail",
     "scrFunding",
     "scrStudentHome_Delete?",
-    "scrSelfEvalQuestions",
-    "scrRequestAssessments"
+    "scrRequestAssessments",
+    "scrAnswerAssessments"
   ]
 }
