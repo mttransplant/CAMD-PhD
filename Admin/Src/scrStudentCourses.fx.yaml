@@ -83,7 +83,7 @@
                 OnSelect: =Navigate(scrStudentList)
                 Text: ="Back to List"
                 VerticalAlign: =""
-                Visible: =CurrentUser.Role="Admin"
+                Visible: =CurrentUser.Role in ["Admin","Advisor"]
                 Width: =140
                 X: =0
                 Y: =0
@@ -219,18 +219,19 @@
             Width: =Parent.Width
             ZIndex: =4
 
-            ctrCoursesColumns As groupContainer.manualLayoutContainer:
+            ctrCoursesColumns As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(180, 214, 250, 1)
                 FillPortions: =0
                 Height: =40
-                LayoutMinHeight: =50
+                LayoutGap: =1
+                LayoutMinHeight: =100
                 LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =Parent.Width
                 ZIndex: =1
 
                 labTerm As label:
@@ -372,7 +373,7 @@
             galEnrollments As gallery.galleryVertical:
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
-                Items: =Sort(Sort(Sort(Filter('PhD Enrollments',NUID=If(CurrentUser.Role="Admin",galStudentLlist.Selected.NUID,CurrentUser.ID)),'Term Code'),Subject),Course)
+                Items: =Sort(Sort(Sort(Filter('PhD Enrollments',NUID=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID)),'Term Code'),Subject),Course)
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320

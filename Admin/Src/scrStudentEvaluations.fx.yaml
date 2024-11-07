@@ -83,7 +83,7 @@
                 OnSelect: =Navigate(scrStudentList)
                 Text: ="Back to List"
                 VerticalAlign: =""
-                Visible: =CurrentUser.Role="Admin"
+                Visible: =CurrentUser.Role in ["Admin","Advisor"]
                 Width: =140
                 X: =0
                 Y: =0
@@ -220,22 +220,22 @@
             Width: =Parent.Width
             ZIndex: =4
 
-            ctrMilestonesColumns_1 As groupContainer.manualLayoutContainer:
-                AlignInContainer: =AlignInContainer.SetByContainer
+            ctrEvaluationsColumns As groupContainer.horizontalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Fill: =RGBA(180, 214, 250, 1)
                 FillPortions: =0
                 Height: =40
+                LayoutGap: =5
                 LayoutMinHeight: =100
                 LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
                 RadiusBottomLeft: =4
                 RadiusBottomRight: =4
                 RadiusTopLeft: =4
                 RadiusTopRight: =4
-                Width: =Parent.Width
                 ZIndex: =1
 
-                labColEvalResponse As label:
+                labColEvalTerm As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -247,12 +247,12 @@
                     FontWeight: =FontWeight.Bold
                     PaddingLeft: =15
                     Size: =13
-                    Text: ="Response"
-                    Width: =evalQuestion.Width
-                    X: =evalResponse.X
+                    Text: ="Semester"
+                    Width: =labEvalTerm.Width
+                    X: =labEvalTerm.X
                     ZIndex: =1
 
-                labColEvalQuestion As label:
+                labColEvalSubDate As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -264,10 +264,26 @@
                     FontWeight: =FontWeight.Bold
                     PaddingLeft: =15
                     Size: =13
-                    Text: ="Question"
-                    Width: =evalQuestion.Width
-                    X: =evalQuestion.X
+                    Text: ="Date"
+                    Width: =evalDate.Width
+                    X: =evalDate.X
                     ZIndex: =2
+
+                labColEvalSubBy As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Size: =13
+                    Text: ="Submitted by"
+                    Width: =evalSubmitter.Width
+                    X: =evalSubmitter.X
+                    ZIndex: =3
 
                 labColEvalQuestOrder As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -285,25 +301,9 @@
                         ="Q#"
                     Width: =evalQuestOrder.Width
                     X: =evalQuestOrder.X
-                    ZIndex: =3
-
-                labColEvalSubBy As label:
-                    BorderColor: =RGBA(0, 0, 0, 0)
-                    BorderStyle: =BorderStyle.None
-                    BorderThickness: =2
-                    Color: =RGBA(50, 49, 48, 1)
-                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                    DisabledColor: =RGBA(161, 159, 157, 1)
-                    FocusedBorderThickness: =4
-                    Font: =Font.'Segoe UI'
-                    FontWeight: =FontWeight.Bold
-                    Size: =13
-                    Text: ="Submitted by"
-                    Width: =evalSubmitter.Width
-                    X: =evalSubmitter.X
                     ZIndex: =4
 
-                labColEvalSubDate As label:
+                labColEvalQuestion As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -315,12 +315,12 @@
                     FontWeight: =FontWeight.Bold
                     PaddingLeft: =15
                     Size: =13
-                    Text: ="Date"
-                    Width: =evalDate.Width
-                    X: =evalDate.X
+                    Text: ="Question"
+                    Width: =evalQuestion.Width
+                    X: =600
                     ZIndex: =5
 
-                labColEvalTerm As label:
+                labColEvalResponse As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -332,9 +332,9 @@
                     FontWeight: =FontWeight.Bold
                     PaddingLeft: =15
                     Size: =13
-                    Text: ="Semester"
-                    Width: =labEvalTerm.Width
-                    X: =labEvalTerm.X
+                    Text: ="Response"
+                    Width: =evalResponse.Width
+                    X: =298
                     ZIndex: =6
 
             galEvaluations As gallery.galleryVertical:
@@ -353,7 +353,7 @@
                 LoadingSpinnerColor: =Color.DarkGray
                 TemplateSize: =80
                 Width: =Parent.Width
-                ZIndex: =2
+                ZIndex: =3
 
                 evalResponse As label:
                     BorderColor: =RGBA(0, 0, 0, 0)

@@ -88,7 +88,7 @@
                 OnSelect: =Navigate(scrStudentList)
                 Text: ="Back to List"
                 VerticalAlign: =""
-                Visible: =CurrentUser.Role="Admin"
+                Visible: =CurrentUser.Role in ["Admin","Advisor"]
                 Width: =140
                 X: =0
                 Y: =0
