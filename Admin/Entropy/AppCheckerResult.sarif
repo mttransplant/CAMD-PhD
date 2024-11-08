@@ -14,6 +14,889 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 12,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ClearCollect"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ClearCollect"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 21,
+                  "charOffset": 13,
+                  "snippet": {
+                    "text": "colAssessmentRequests"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrTableDoesNotAcceptThisType",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 253,
+                  "snippet": {
+                    "text": "Collect"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Collect"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 332,
+                  "charOffset": 283,
+                  "snippet": {
+                    "text": "{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()}"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "'Assessment Type'",
+              "OptionSetValue (Assessment Type (PhD Assessments))",
+              "OptionSetValue (Assessment Type (PhD Assessment Questions))"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColumnTypeMismatch-ColName-ExpectedType-ActualType",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 626,
+                  "snippet": {
+                    "text": "Patch"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Patch"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 21,
+                  "charOffset": 650,
+                  "snippet": {
+                    "text": "colAssessmentRequests"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsStudents.ctrRequestStudentsOptions.cntRequestSelfButton.btnRequestSelfAssessments"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Record",
+              "Table"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 12,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ClearCollect"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ClearCollect"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 21,
+                  "charOffset": 13,
+                  "snippet": {
+                    "text": "colAssessmentRequests"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrTableDoesNotAcceptThisType",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 575,
+                  "snippet": {
+                    "text": "Collect"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Collect"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 345,
+                  "charOffset": 605,
+                  "snippet": {
+                    "text": "{'Student NUID':NUID,'Submitter NUID':'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestAdvisorType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()}"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "'Assessment Type'",
+              "OptionSetValue (Assessment Type (PhD Assessments))",
+              "OptionSetValue (Assessment Type (PhD Assessment Questions))"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColumnTypeMismatch-ColName-ExpectedType-ActualType",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 1126,
+                  "snippet": {
+                    "text": "Collect"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Collect"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 345,
+                  "charOffset": 1156,
+                  "snippet": {
+                    "text": "{'Student NUID':NUID,'Submitter NUID':'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestAdvisorType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()}"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "'Assessment Type'",
+              "OptionSetValue (Assessment Type (PhD Assessments))",
+              "OptionSetValue (Assessment Type (PhD Assessment Questions))"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColumnTypeMismatch-ColName-ExpectedType-ActualType",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 1536,
+                  "snippet": {
+                    "text": "Patch"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Patch"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 21,
+                  "charOffset": 1560,
+                  "snippet": {
+                    "text": "colAssessmentRequests"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsMain.ctrRequestAssessmentsAdvisors.ctrRequestAdvisorsOptions.cntRequestAdvisorButton.btnRequestAdvisorAssessments"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Record",
+              "Table"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 12,
+                  "charOffset": 0,
+                  "snippet": {
+                    "text": "ClearCollect"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "ClearCollect"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 21,
+                  "charOffset": 13,
+                  "snippet": {
+                    "text": "colAssessmentRequests"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrTableDoesNotAcceptThisType",
+          "ruleIndex": 1
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 7,
+                  "charOffset": 436,
+                  "snippet": {
+                    "text": "Collect"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Collect"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 334,
+                  "charOffset": 466,
+                  "snippet": {
+                    "text": "{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType_3.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()}"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "'Assessment Type'",
+              "OptionSetValue (Assessment Type (PhD Assessments))",
+              "OptionSetValue (Assessment Type (PhD Assessment Questions))"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrColumnTypeMismatch-ColName-ExpectedType-ActualType",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 6,
+                  "charOffset": 853,
+                  "snippet": {
+                    "text": ".Value"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "OptionSetValue (Assessment Type (PhD Assessment Questions))",
+              "OptionSetValue (Assessment Type (PhD Assessments))"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrCannotCoerce-SourceType-TargetType",
+          "ruleIndex": 4
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 14,
+                  "charOffset": 1058,
+                  "snippet": {
+                    "text": "'Advisor NUID'"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Advisor NUID"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidName",
+          "ruleIndex": 5
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 5,
+                  "charOffset": 1386,
+                  "snippet": {
+                    "text": "Patch"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Patch"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrInvalidArgs-Func",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3.OnSelect",
+                  "relativeAddress": 0
+                },
+                "region": {
+                  "charLength": 21,
+                  "charOffset": 1410,
+                  "snippet": {
+                    "text": "colAssessmentRequests"
+                  }
+                }
+              },
+              "properties": {
+                "member": "OnSelect",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfButton_3.btnRequestSelfAssessments_3"
+              }
+            }
+          ],
+          "message": {
+            "arguments": [
+              "Record",
+              "Table"
+            ],
+            "id": "issue"
+          },
+          "properties": {
+            "level": "High"
+          },
+          "ruleId": "app-ErrBadType-ExpectedType-ProvidedType",
+          "ruleIndex": 3
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "cmpHeader.icoHome_3.AccessibleLabel"
                 }
               ],
@@ -37,7 +920,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -67,7 +950,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -97,7 +980,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -127,7 +1010,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -157,7 +1040,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -187,7 +1070,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -217,7 +1100,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -247,7 +1130,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -277,7 +1160,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -307,7 +1190,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -337,7 +1220,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -367,7 +1250,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -397,7 +1280,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -427,7 +1310,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -457,7 +1340,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -487,7 +1370,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -517,7 +1400,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -547,7 +1430,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -577,7 +1460,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -607,7 +1490,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -637,7 +1520,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -667,7 +1550,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -697,7 +1580,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -727,7 +1610,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -757,7 +1640,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -787,7 +1670,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -817,7 +1700,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -847,7 +1730,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -877,7 +1760,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -907,7 +1790,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -937,7 +1820,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -967,7 +1850,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -997,7 +1880,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1027,7 +1910,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1057,7 +1940,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1087,7 +1970,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1117,7 +2000,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1147,7 +2030,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1177,7 +2060,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1207,7 +2090,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1237,7 +2120,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1267,7 +2150,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1297,7 +2180,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1327,7 +2210,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1357,7 +2240,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1387,7 +2270,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1417,7 +2300,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1447,7 +2330,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1477,7 +2360,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1507,7 +2390,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1537,7 +2420,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1567,7 +2450,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1597,7 +2480,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1627,7 +2510,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1657,7 +2540,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1687,7 +2570,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1717,7 +2600,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1747,7 +2630,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1777,7 +2660,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -1807,7 +2690,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1837,7 +2720,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1867,7 +2750,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1897,7 +2780,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1927,7 +2810,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1957,7 +2840,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -1987,7 +2870,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2017,7 +2900,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2047,7 +2930,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2077,7 +2960,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2107,7 +2990,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2137,7 +3020,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2167,7 +3050,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2197,7 +3080,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2227,7 +3110,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2257,7 +3140,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2287,7 +3170,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2317,7 +3200,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2347,7 +3230,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2377,7 +3260,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2407,7 +3290,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2437,7 +3320,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2467,7 +3350,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2497,7 +3380,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2527,7 +3410,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2557,7 +3440,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2587,7 +3470,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2617,7 +3500,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2647,7 +3530,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2677,7 +3560,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -2707,7 +3590,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2737,7 +3620,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2767,7 +3650,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2797,7 +3680,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2827,7 +3710,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2857,7 +3740,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2887,7 +3770,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2917,7 +3800,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2947,7 +3830,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -2977,7 +3860,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3007,7 +3890,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3037,7 +3920,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3067,7 +3950,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3097,7 +3980,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3127,7 +4010,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3157,7 +4040,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3187,7 +4070,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3217,7 +4100,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3247,7 +4130,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3277,7 +4160,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3307,7 +4190,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3337,7 +4220,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3367,7 +4250,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3397,7 +4280,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3427,7 +4310,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3457,7 +4340,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3487,7 +4370,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3517,7 +4400,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3547,7 +4430,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3577,7 +4460,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3607,7 +4490,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3637,7 +4520,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3667,7 +4550,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3697,7 +4580,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3727,7 +4610,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3757,7 +4640,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3787,7 +4670,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -3817,7 +4700,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3847,7 +4730,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3877,7 +4760,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3907,7 +4790,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3937,7 +4820,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3967,7 +4850,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -3997,7 +4880,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4027,7 +4910,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4057,7 +4940,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4087,7 +4970,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4117,7 +5000,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4147,7 +5030,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4177,7 +5060,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4207,7 +5090,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4237,7 +5120,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4267,7 +5150,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4297,7 +5180,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4327,7 +5210,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4357,7 +5240,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4387,7 +5270,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4417,7 +5300,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4447,7 +5330,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4477,7 +5360,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4507,7 +5390,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4537,7 +5420,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4567,7 +5450,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4597,7 +5480,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4627,7 +5510,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -4657,7 +5540,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4687,7 +5570,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4717,7 +5600,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4747,7 +5630,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4777,7 +5660,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4807,7 +5690,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4837,7 +5720,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4867,7 +5750,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4897,7 +5780,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4927,7 +5810,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4957,7 +5840,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -4987,7 +5870,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5017,7 +5900,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5047,7 +5930,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5077,7 +5960,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5107,7 +5990,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5137,7 +6020,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5167,7 +6050,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5197,7 +6080,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5227,7 +6110,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5257,7 +6140,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5287,7 +6170,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5317,7 +6200,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5347,7 +6230,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5377,7 +6260,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5407,7 +6290,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5437,7 +6320,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5467,7 +6350,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5497,7 +6380,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5527,7 +6410,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5557,7 +6440,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5587,7 +6470,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5617,7 +6500,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5647,7 +6530,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5677,7 +6560,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
-          "ruleIndex": 1
+          "ruleIndex": 7
         },
         {
           "locations": [
@@ -5707,7 +6590,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5737,7 +6620,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5767,7 +6650,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5797,7 +6680,7 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5827,7 +6710,157 @@
             "level": "Medium"
           },
           "ruleId": "acc-AccessibleLabelNeeded",
-          "ruleIndex": 0
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.TabIndex"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.TabIndex",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "TabIndex",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-TabIndexShouldBeDefinedForInteractiveControl",
+          "ruleIndex": 7
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentName_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentName_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentName_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfType_3.drpRequestSelfType_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfType_3.drpRequestSelfType_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfType_3.drpRequestSelfType_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfTerm_3.txtRequestSelfTerm_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfTerm_3.txtRequestSelfTerm_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfTerm_3.txtRequestSelfTerm_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 6
         },
         {
           "locations": [
@@ -5857,7 +6890,7 @@
             "level": "Medium"
           },
           "ruleId": "app-CollectDelegatableDataSource",
-          "ruleIndex": 2
+          "ruleIndex": 8
         },
         {
           "locations": [
@@ -5887,7 +6920,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -5917,7 +6950,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -5947,7 +6980,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -5977,7 +7010,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6007,7 +7040,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6037,7 +7070,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6067,7 +7100,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6097,7 +7130,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6127,7 +7160,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6157,7 +7190,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6187,7 +7220,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6217,7 +7250,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6247,7 +7280,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6277,7 +7310,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6307,7 +7340,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6337,7 +7370,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6367,7 +7400,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6397,7 +7430,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6427,7 +7460,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6457,7 +7490,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6487,7 +7520,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6517,7 +7550,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6547,7 +7580,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6577,7 +7610,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6607,7 +7640,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6637,7 +7670,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6667,7 +7700,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6697,7 +7730,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6727,7 +7760,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6757,7 +7790,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6787,7 +7820,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6817,7 +7850,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6847,7 +7880,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6877,7 +7910,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6907,7 +7940,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6937,7 +7970,37 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.ctrRequestStudentsListColumns_3.Height"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.ctrRequestStudentsListColumns_3.Height",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "Height",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.ctrRequestStudentsListColumns_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-InefficientDelayLoading",
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6967,7 +8030,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -6997,7 +8060,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7027,7 +8090,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7057,7 +8120,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7087,7 +8150,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7117,7 +8180,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7147,7 +8210,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7177,7 +8240,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7207,7 +8270,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7237,7 +8300,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7267,7 +8330,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7297,7 +8360,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7327,7 +8390,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7357,7 +8420,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7387,7 +8450,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7417,7 +8480,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7447,7 +8510,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7477,7 +8540,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7507,7 +8570,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7537,7 +8600,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7567,7 +8630,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7597,7 +8660,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7627,7 +8690,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7657,7 +8720,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7687,7 +8750,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7717,7 +8780,37 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.AdvisorsSelcted"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.AdvisorsSelcted",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AdvisorsSelcted",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "app-UnusedVariables",
+          "ruleIndex": 10
         },
         {
           "locations": [
@@ -7747,7 +8840,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         },
         {
           "locations": [
@@ -7777,7 +8870,7 @@
             "level": "Medium"
           },
           "ruleId": "app-InefficientDelayLoading",
-          "ruleIndex": 3
+          "ruleIndex": 9
         }
       ],
       "tool": {
@@ -7785,6 +8878,102 @@
           "fullName": "PowerApps app checker",
           "name": "PowerApps app checker",
           "rules": [
+            {
+              "id": "app-ErrInvalidArgs-Func",
+              "messageStrings": {
+                "issue": {
+                  "text": "The function '{0}' has some invalid arguments."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrTableDoesNotAcceptThisType",
+              "messageStrings": {
+                "issue": {
+                  "text": "Incompatible type. The item you are trying to put into a table has a type that is not compatible with the table."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Ensure that the type of the item you want to push into the table is compatible with the table. You may need to convert the type of the item, for instance, to a record."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrColumnTypeMismatch-ColName-ExpectedType-ActualType",
+              "messageStrings": {
+                "issue": {
+                  "text": "Incompatible type. The '{0}' column in the data source you’re updating expects a '{1}' type and you’re using a '{2}' type."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "You might need to convert the value to the same type, such as converting a date string (e.g., \"12/31/2018\") to a date value or a string to a number."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrBadType-ExpectedType-ProvidedType",
+              "messageStrings": {
+                "issue": {
+                  "text": "Invalid argument type ({1}). Expecting a {0} value instead."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrCannotCoerce-SourceType-TargetType",
+              "messageStrings": {
+                "issue": {
+                  "text": "Can't convert this data type. Power Apps can't convert this {0} to a {1}."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Edit your formula so that you convert the data in question to the expected type."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
+            {
+              "id": "app-ErrInvalidName",
+              "messageStrings": {
+                "issue": {
+                  "text": "Name isn't valid. '{0}' isn't recognized."
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove or correct the reference to the name that isn't valid."
+                ],
+                "level": "High",
+                "primaryCategory": "formula",
+                "whyFix": ""
+              }
+            },
             {
               "id": "acc-AccessibleLabelNeeded",
               "messageStrings": {
@@ -7851,6 +9040,23 @@
                 "level": "Medium",
                 "primaryCategory": "performance",
                 "whyFix": "Controls that reference controls on other screens can slow down app loading and navigation. Doing this may force the app to load the other screens immediately, rather than waiting until the user navigates to that screen."
+              }
+            },
+            {
+              "id": "app-UnusedVariables",
+              "messageStrings": {
+                "issue": {
+                  "text": "Unused variable"
+                }
+              },
+              "properties": {
+                "componentType": "app",
+                "howToFix": [
+                  "Remove the unused variable."
+                ],
+                "level": "Medium",
+                "primaryCategory": "performance",
+                "whyFix": "This variable is declared but is not referenced by any control, so it is not needed."
               }
             }
           ],
