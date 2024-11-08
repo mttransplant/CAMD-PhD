@@ -3764,19 +3764,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfTerm_3.txtRequestSelfTerm_3.AccessibleLabel"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsOptions.cntRequestSelfTerm_3.txtRequestSelfTerm_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfTerm_3.txtRequestSelfTerm_3.AccessibleLabel",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsOptions.cntRequestSelfTerm_3.txtRequestSelfTerm_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfTerm_3.txtRequestSelfTerm_3"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsOptions.cntRequestSelfTerm_3.txtRequestSelfTerm_3"
               }
             }
           ],
@@ -3794,19 +3794,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfType_3.drpRequestSelfType_3.AccessibleLabel"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsOptions.cntRequestSelfType_3.drpRequestSelfType_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfType_3.drpRequestSelfType_3.AccessibleLabel",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsOptions.cntRequestSelfType_3.drpRequestSelfType_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsOptions_3.cntRequestSelfType_3.drpRequestSelfType_3"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestAssessmentsOptions.cntRequestSelfType_3.drpRequestSelfType_3"
               }
             }
           ],
@@ -3824,19 +3824,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.AccessibleLabel"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.AccessibleLabel",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3"
               }
             }
           ],
@@ -3854,19 +3854,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.TabIndex"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.TabIndex",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3"
               }
             }
           ],
@@ -3884,19 +3884,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentName_3.AccessibleLabel"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentName_3.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentName_3.AccessibleLabel",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentName_3.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentName_3"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentName_3"
               }
             }
           ],
@@ -3914,19 +3914,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentAdvisor.AccessibleLabel"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentAdvisor.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentAdvisor.AccessibleLabel",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentAdvisor.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentAdvisor"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentAdvisor"
               }
             }
           ],
@@ -3944,19 +3944,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentCoAdvisor.AccessibleLabel"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentCoAdvisor.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentCoAdvisor.AccessibleLabel",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentCoAdvisor.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentCoAdvisor"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentCoAdvisor"
               }
             }
           ],
@@ -7364,19 +7364,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.ctrRequestStudentsListColumns_3.Height"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.ctrRequestStudentsListColumns_3.Height"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.ctrRequestStudentsListColumns_3.Height",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.ctrRequestStudentsListColumns_3.Height",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "Height",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments_1.ctrRequestStudentsList_3.ctrRequestStudentsListColumns_3"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.ctrRequestStudentsListColumns_3"
               }
             }
           ],

@@ -10,7 +10,7 @@
         UpdateContext({StudentsSelected:0,AdvisorsSelcted:0});
     Width: =Min(App.Width,App.DesignWidth)
 
-    ctrRequestAssessments_1 As groupContainer.verticalAutoLayoutContainer:
+    ctrRequestAssessments As groupContainer.verticalAutoLayoutContainer:
         DropShadow: =DropShadow.Light
         Fill: =RGBA(245, 245, 245, 1)
         Height: =Parent.Height
@@ -29,7 +29,7 @@
         Width: =Parent.Width
         ZIndex: =1
 
-        ctrRequestAssessmentsHeader_1 As groupContainer.horizontalAutoLayoutContainer:
+        ctrRequestAssessmentsHeader As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
@@ -41,7 +41,7 @@
             RadiusBottomRight: =8
             RadiusTopLeft: =8
             RadiusTopRight: =8
-            ZIndex: =2
+            ZIndex: =1
 
             cmpRequestAssessmentsHeader_1 As cmpHeader:
                 LayoutMinHeight: =640
@@ -50,7 +50,7 @@
                 ScreenTitle: ="Request Assessments"
                 Width: =Parent.Width
 
-        ctrRequestStudentsOptions_3 As groupContainer.horizontalAutoLayoutContainer:
+        ctrRequestAssessmentsOptions As groupContainer.horizontalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             FillPortions: =0
@@ -62,7 +62,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            ZIndex: =5
+            ZIndex: =2
 
             cntRequestSelfTerm_3 As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
@@ -242,7 +242,21 @@
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =13
 
-        ctrRequestStudentsList_3 As groupContainer.verticalAutoLayoutContainer:
+        ctrRequesetAssessmentsStatus As groupContainer.horizontalAutoLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(255, 255, 255, 1)
+            FillPortions: =0
+            Height: =80
+            LayoutMinHeight: =100
+            LayoutMinWidth: =250
+            LayoutMode: =LayoutMode.Auto
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            ZIndex: =3
+
+        ctrRequestStudentsList As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light
             Fill: =RGBA(255, 255, 255, 1)
             LayoutDirection: =LayoutDirection.Vertical
@@ -253,7 +267,7 @@
             RadiusBottomRight: =4
             RadiusTopLeft: =4
             RadiusTopRight: =4
-            ZIndex: =6
+            ZIndex: =4
 
             ctrRequestStudentsListColumns_3 As groupContainer.manualLayoutContainer:
                 AlignInContainer: =AlignInContainer.SetByContainer
