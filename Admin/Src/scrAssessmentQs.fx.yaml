@@ -185,7 +185,9 @@
                     Size: =13
                     Text: ="Choice Options"
                     Width: =txtChoiceOptions.Width
-                    X: =txtChoiceOptions.X+Parent.PaddingLeft
+                    X: |-
+                        =//txtChoiceOptions.X+Parent.PaddingLeft
+                        1070
                     ZIndex: =1
 
                 colQuestion As label:
@@ -203,7 +205,9 @@
                     Size: =13
                     Text: ="Question"
                     Width: =txtQuestion.Width
-                    X: =txtQuestion.X+Parent.PaddingLeft
+                    X: |-
+                        =//txtQuestion.X+Parent.PaddingLeft
+                        415
                     ZIndex: =2
 
                 colQustionType As label:
