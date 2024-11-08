@@ -7,7 +7,7 @@
         =ClearCollect(colRequestAssessmentsStudentList,AddColumns(Sort(Filter('PhD Students','Student Status'="Active"),'Full Name'),StudentSelected,false));
         ClearCollect(colCurrentTerm,ShowColumns(Filter('PhD Terms',STVTERM_START_DATE<=Today() And STVTERM_END_DATE>=Today()),STVTERM_CODE,STVTERM_DESC));
         UpdateContext({StudentsSelected:0,AdvisorsSelcted:0});
-        ClearCollect(colOpenAssessmentCounts,GroupBy(Filter('PhD Assessments',IsBlank('Date Submitted')),'Term Code','Assessment Type','Submitter NUID','Student NUID',RecLeftovers));
+        ClearCollect(colOpenAssessmentCounts,AddColumns(GroupBy(Filter('PhD Assessments',IsBlank('Date Submitted')),'Term Code','Assessment Type','Submitter NUID','Student NUID',RecLeftovers),Email,LookUp(colUserList,ID=cr829_submitter_nuid).Email,Name,LookUp(colUserList,ID=cr829_submitter_nuid).Name));
     Width: =Min(App.Width,App.DesignWidth)
 
     ctrRequestAssessments As groupContainer.verticalAutoLayoutContainer:
@@ -308,6 +308,16 @@
                     HoverBorderColor: =RGBA(0, 0, 0, 0)
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(16, 110, 190, 1)
+                    OnSelect: |
+                        =ForAll(
+                            colOpenAssessmentCounts,
+                            Office365Outlook.SendEmailV2(
+                                CurrentUser.Email, //To: email address. Use this one for testing.
+                                //Email, //To: email address. Use this one for production.
+                                "Reminder to submit PhD Assessments",
+                                "<p>"&Name&",</p><p>Please log into the CAMD PhD database and submit the requested PhD Assessments.</p><p>Best,</p><p>"&CurrentUser.Name&"</p>"
+                            )
+                        );
                     PressedBorderColor: =RGBA(0, 69, 120, 1)
                     PressedColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(16, 110, 190, 1)
