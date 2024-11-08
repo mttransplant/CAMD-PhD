@@ -290,6 +290,7 @@
                     DisplayMode: =DisplayMode.View
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
+                    Height: =If(CurrentUser.Role="Student",0,40)
                     HoverBorderColor: =RGBA(16, 110, 190, 1)
                     HoverColor: =RGBA(50, 49, 48, 1)
                     HoverFill: =RGBA(255, 255, 255, 1)
@@ -317,6 +318,7 @@
                     FocusedBorderThickness: =4
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
+                    Height: =If(CurrentUser.Role="Student",0,40)
                     OnSelect: =Select(Parent)
                     Size: =13
                     Text: ="Student Name"

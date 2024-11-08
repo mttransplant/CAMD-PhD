@@ -343,9 +343,7 @@
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Height: =Parent.Height
-                Items: |
-                    =//Distinct(Filter('PhD Assessments','Student NUID'=If(CurrentUser.Role="Admin",galStudentLlist.Selected.NUID,CurrentUser.ID)),['Term Code','Term Name','Assessment Type','Date Submitted'])
-                    Sort(Sort(Filter('PhD Assessments','Student NUID'=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID) And !IsBlank('Date Submitted')),'Term Code',SortOrder.Descending),'Q Order')
+                Items: =SortByColumns(Filter('PhD Assessments','Student NUID'=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID) And !IsBlank('Date Submitted') And ((CurrentUser.Role="Student" And 'Assessment Type' <> 'Assessment Type (PhD Assessments)'.'Advisor-Brief')Or CurrentUser.Role  in ["Admin","Advisor"])),"cr829_submitteddatesort",SortOrder.Descending,"cr829_submitter_nuid",SortOrder.Ascending,"cr829_question_order",SortOrder.Ascending)
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
