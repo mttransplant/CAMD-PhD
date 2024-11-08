@@ -176,6 +176,9 @@
                     SelectionColor: =RGBA(50, 49, 48, 1)
                     SelectionFill: =RGBA(0, 120, 212, 1)
                     Size: =13
+                    Tooltip: |-
+                        ="Advisor-Brief will only go to the listed Advisor.
+                        Advisor-Comprehensive will go to both Advisor and Co-Advisor."
                     Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                     ZIndex: =11
 
