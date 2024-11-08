@@ -2,7 +2,8 @@
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: |-
         =Clear(colRequestAssessmentsStudentList);
-        //Clear(colRequestAssessmentsAdvisorList);
+        Clear(colCurrentTerm);
+        Clear(colOpenAssessmentCounts);
     OnVisible: |-
         =Select(btnLoadRequestAssessmentsData); //in: ctrRequestAssessmentsStatus
     Width: =Min(App.Width,App.DesignWidth)
