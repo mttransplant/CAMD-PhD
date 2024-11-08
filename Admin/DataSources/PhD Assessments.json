@@ -11,6 +11,7 @@
     "NativeCDSDataSourceInfoNameMapping": {
       "_ownerid_value": "Owner",
       "cr829_assessment_type": "Assessment Type",
+      "cr829_assessmenttypetext": "Assessment Type Text",
       "cr829_date_requested": "Date Requested",
       "cr829_date_submitted": "Date Submitted",
       "cr829_phdassessments_AsyncOperations": "System Jobs",
@@ -78,6 +79,10 @@
     "OptionSetReference": {
       "OptionSetReferenceItem0": {
         "OptionSetReferenceColumnName": "cr829_assessment_type",
+        "OptionSetReferenceEntityName": "PhD Assessments"
+      },
+      "OptionSetReferenceItem1": {
+        "OptionSetReferenceColumnName": "cr829_assessmenttypetext",
         "OptionSetReferenceEntityName": "PhD Assessments"
       }
     },
