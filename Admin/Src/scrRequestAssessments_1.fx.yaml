@@ -156,7 +156,7 @@
                     ChevronHoverBackground: =RGBA(245, 245, 245, 1)
                     ChevronHoverFill: =RGBA(50, 49, 48, 1)
                     Color: =RGBA(50, 49, 48, 1)
-                    Default: ='Assessment Type (PhD Assessment Questions)'.'Self-Brief'
+                    Default: =1
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
@@ -204,21 +204,21 @@
                     HoverColor: =RGBA(255, 255, 255, 1)
                     HoverFill: =RGBA(16, 110, 190, 1)
                     OnSelect: |-
-                        =ClearCollect(colAssessmentRequests,Filter('PhD Assessments','Student NUID'=""));
+                        =ClearCollect(colAssessmentRequests1,Filter('PhD Assessments','Student NUID'=""));
                         ForAll(Filter(colRequestAssessmentsStudentList,StudentSelected),
                             ForAll(Filter('PhD Assessment Questions','Assessment Type'=drpRequestSelfType_3.Selected.Value),
                                 If(drpRequestSelfType_3.Selected.Value in ['Assessment Type (PhD Assessment Questions)'.'Self-Brief','Assessment Type (PhD Assessment Questions)'.'Self-Comprehensive'],
-                                    Collect(colAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType_3.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
+                                    Collect(colAssessmentRequests1,{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType_3.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
                                 );
-                                If(drpRequestSelfType_3.Selected.Value in ['Assessment Type (PhD Assessments)'.'Advisor-Brief','Assessment Type (PhD Assessments)'.'Advisor-Comprehensive'],
-                                    Collect(colAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType_3.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
+                                If(drpRequestSelfType_3.Selected.Value in ['Assessment Type (PhD Assessment Questions)'.'Advisor-Brief','Assessment Type (PhD Assessment Questions)'.'Advisor-Comprehensive'],
+                                    Collect(colAssessmentRequests1,{'Student NUID':NUID,'Submitter NUID':Advisor.'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType_3.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
                                 );
                             )
                         );
-                        Patch('PhD Assessments',colAssessmentRequests);
+                        Patch('PhD Assessments',colAssessmentRequests1);
                         UpdateIf(colRequestAssessmentsStudentList, true, {StudentSelected:false});
                         UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
-                        Clear(colAssessmentRequests);
+                        Clear(colAssessmentRequests1);
                         Reset(chkSelectAllStudents_3);
                     PressedBorderColor: =RGBA(0, 69, 120, 1)
                     PressedColor: =RGBA(255, 255, 255, 1)
@@ -231,7 +231,7 @@
                     Text: ="Request Asessment"&If(StudentsSelected=1,"","s")&" for "&StudentsSelected&" Students"
                     Tooltip: =If(StudentsSelected=0,"Must select at least one student.","")
                     Width: =220
-                    X: =(Parent.Width-Self.Width)/2
+                    X: =118
                     Y: =(Parent.Height-Self.Height)/2
                     ZIndex: =13
 
