@@ -6146,6 +6146,66 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentAdvisor.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentAdvisor.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentAdvisor"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentCoAdvisor.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentCoAdvisor.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments_1",
+                "type": "scrRequestAssessments_1.ctrRequestAssessments_1.ctrRequestStudentsList_3.galRequestStudentsList_3.txtRequestStudentCoAdvisor"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 2
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect"
                 }
               ],
