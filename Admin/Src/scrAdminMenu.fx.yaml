@@ -8,7 +8,7 @@
         UpdateContext({IsTesting:false, TestEmail:""}); //self
         //UpdateContext({IsTesting:true, TestEmail:"c.pearce@northeastern.edu"}); //faculty 1
         //UpdateContext({IsTesting:true, TestEmail:"c.harteveld@northeastern.edu"}); //faculty 2
-        //UpdateContext({IsTesting:true, TestEmail:"mer.clark@northeastern.edu"}); //faculty 2
+        UpdateContext({IsTesting:true, TestEmail:"mer.clark@northeastern.edu"}); //faculty 2
         //UpdateContext({IsTesting:true, TestEmail:"abdulhameed.r@northeastern.edu"}); //student 1
         //UpdateContext({IsTesting:true, TestEmail:"amgalan.b@northeastern.edu"}); //student 2
         Set(CurrentUser,First(Sort(Filter(colUserList,Email=If(IsTesting,TestEmail,User().Email)),Role,SortOrder.Ascending)));
