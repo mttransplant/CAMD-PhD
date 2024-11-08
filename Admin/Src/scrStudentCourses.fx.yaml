@@ -373,7 +373,9 @@
             galEnrollments As gallery.galleryVertical:
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
-                Items: =Sort(Sort(Sort(Filter('PhD Enrollments',NUID=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID)),'Term Code'),Subject),Course)
+                Items: |-
+                    =//Sort(Sort(Sort(Filter('PhD Enrollments',NUID=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID)),'Term Code'),Subject),Course)
+                    SortByColumns(Filter('PhD Enrollments',NUID=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID)),"cr829_term",SortOrder.Descending,"cr829_subject",SortOrder.Ascending,"cr829_course",SortOrder.Ascending)
                 Layout: =Layout.Vertical
                 LayoutMinHeight: =287
                 LayoutMinWidth: =320
