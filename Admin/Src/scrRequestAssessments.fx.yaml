@@ -311,7 +311,7 @@
                     Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                     ZIndex: =2
 
-            cntSelfBriefCount_1 As groupContainer.verticalAutoLayoutContainer:
+            cntSelfCompCount As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
                 LayoutDirection: =LayoutDirection.Vertical
@@ -324,7 +324,7 @@
                 RadiusTopRight: =4
                 ZIndex: =3
 
-                labSelfBriefCount_1 As label:
+                labSelfCompCount As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -337,11 +337,11 @@
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
                     Size: =13
-                    Text: ="Open Self-Comprehensive Requests"
+                    Text: ="Open Self-Comp Requests"
                     Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                     ZIndex: =1
 
-                txtSelfBriefCount_1 As text:
+                txtSelfCompCount As text:
                     Align: =Align.Center
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderThickness: =2
@@ -366,7 +366,7 @@
                     Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                     ZIndex: =2
 
-            cntSelfBriefCount_2 As groupContainer.verticalAutoLayoutContainer:
+            cntAdvisorBriefCount As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
                 LayoutDirection: =LayoutDirection.Vertical
@@ -379,7 +379,7 @@
                 RadiusTopRight: =4
                 ZIndex: =4
 
-                labSelfBriefCount_2 As label:
+                labAdvisorBriefCount As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -396,7 +396,7 @@
                     Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                     ZIndex: =1
 
-                txtSelfBriefCount_2 As text:
+                txtAdvisorBriefCount As text:
                     Align: =Align.Center
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderThickness: =2
@@ -421,7 +421,7 @@
                     Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                     ZIndex: =2
 
-            cntSelfBriefCount_3 As groupContainer.verticalAutoLayoutContainer:
+            cntAdvisorCompCount As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
                 Height: =Parent.Height
                 LayoutDirection: =LayoutDirection.Vertical
@@ -434,7 +434,7 @@
                 RadiusTopRight: =4
                 ZIndex: =5
 
-                labSelfBriefCount_3 As label:
+                labAdvisorCompCount As label:
                     Align: =Align.Center
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
@@ -447,11 +447,11 @@
                     Font: =Font.'Segoe UI'
                     FontWeight: =FontWeight.Bold
                     Size: =13
-                    Text: ="Open Advisor-Comprehensive Requests"
+                    Text: ="Open Advisor-Comp Requests"
                     Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                     ZIndex: =1
 
-                txtSelfBriefCount_3 As text:
+                txtAdvisorCompCount As text:
                     Align: =Align.Center
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderThickness: =2

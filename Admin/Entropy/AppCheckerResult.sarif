@@ -5714,19 +5714,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_1.txtSelfBriefCount_1.AccessibleLabel"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfCompCount.txtSelfCompCount.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_1.txtSelfBriefCount_1.AccessibleLabel",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfCompCount.txtSelfCompCount.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_1.txtSelfBriefCount_1"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfCompCount.txtSelfCompCount"
               }
             }
           ],
@@ -5744,19 +5744,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_2.txtSelfBriefCount_2.AccessibleLabel"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntAdvisorBriefCount.txtAdvisorBriefCount.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_2.txtSelfBriefCount_2.AccessibleLabel",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntAdvisorBriefCount.txtAdvisorBriefCount.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_2.txtSelfBriefCount_2"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntAdvisorBriefCount.txtAdvisorBriefCount"
               }
             }
           ],
@@ -5774,19 +5774,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_3.txtSelfBriefCount_3.AccessibleLabel"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntAdvisorCompCount.txtAdvisorCompCount.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_3.txtSelfBriefCount_3.AccessibleLabel",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntAdvisorCompCount.txtAdvisorCompCount.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_3.txtSelfBriefCount_3"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntAdvisorCompCount.txtAdvisorCompCount"
               }
             }
           ],
