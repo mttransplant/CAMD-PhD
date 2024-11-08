@@ -201,7 +201,7 @@
                 Layout: ="Icon before"
                 LayoutMinHeight: =32
                 LayoutMinWidth: =96
-                OnSelect: =Navigate(scrRequestAssessments)
+                OnSelect: =Navigate(scrRequestAssessments_1)
                 Text: ="Request Assessments"
                 VerticalAlign: =""
                 Visible: =CurrentUser.Role="Admin"
