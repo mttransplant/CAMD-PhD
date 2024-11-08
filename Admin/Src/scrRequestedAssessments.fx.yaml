@@ -163,7 +163,7 @@
                     SelectionColor: =RGBA(50, 49, 48, 1)
                     SelectionFill: =RGBA(0, 120, 212, 1)
                     Size: =13
-                    Visible: =ThisItem.'Q Type'='Q Type (PhD Assessments)'.Choice
+                    Visible: =ThisItem.'Q Type'="Choice"
                     X: =txtAssessmentResponse.X
                     Y: =txtAssessmentResponse.Y
                     ZIndex: =1
@@ -211,7 +211,7 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    Visible: =ThisItem.'Q Type'='Q Type (PhD Assessments)'.Text
+                    Visible: =ThisItem.'Q Type'="Text"
                     Width: =Parent.Width-Self.X-(Parent.TemplatePadding*2)
                     X: =labAssessmentQuestionText.X
                     Y: =labAssessmentQuestionText.Y+labAssessmentQuestionText.Height
