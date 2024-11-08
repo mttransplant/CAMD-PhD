@@ -237,16 +237,16 @@
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =RGBA(16, 110, 190, 1)
                             OnSelect: |-
-                                =ClearCollect(colAssessmentRequests,Filter('PhD Assessments','Student NUID'=""));
+                                =ClearCollect(colAssessmentRequests2,Filter('PhD Assessments','Student NUID'=""));
                                 ForAll(Filter(colRequestAssessmentsStudentList,StudentSelected),
                                     ForAll(Filter('PhD Assessment Questions','Assessment Type'=drpRequestSelfType.Selected.Value),
-                                        Collect(colAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
+                                        Collect(colAssessmentRequests2,{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
                                     )
                                 );
-                                Patch('PhD Assessments',colAssessmentRequests);
+                                Patch('PhD Assessments',colAssessmentRequests2);
                                 UpdateIf(colRequestAssessmentsStudentList, true, {StudentSelected:false});
                                 UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
-                                Clear(colAssessmentRequests);
+                                Clear(colAssessmentRequests2);
                                 Reset(chkSelectAllStudents);
                             PressedBorderColor: =RGBA(0, 69, 120, 1)
                             PressedColor: =RGBA(255, 255, 255, 1)
@@ -581,25 +581,25 @@
                             HoverColor: =RGBA(255, 255, 255, 1)
                             HoverFill: =RGBA(16, 110, 190, 1)
                             OnSelect: |-
-                                =ClearCollect(colAssessmentRequests,Filter('PhD Assessments','Student NUID'=""));
+                                =ClearCollect(colAssessmentRequests3,Filter('PhD Assessments','Student NUID'=""));
                                 ForAll(Filter(colRequestAssessmentsAdvisorList,AdvisorSelected),
                                     ForAll(Filter('PhD Assessment Questions','Assessment Type'=drpRequestAdvisorType.Selected.Value),
                                         If(drpRequestAdvisorType.Selected.Value='Assessment Type (PhD Assessment Questions)'.'Advisor-Comprehensive',
                                             // Comprehensive assessment also sent for co-advisees
                                             ForAll(Filter('PhD Students',Advisor.'Advisor NUID'='Advisor NUID' Or 'Co-Advisor'.'Advisor NUID'='Advisor NUID'),
-                                                Collect(colAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestAdvisorType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
+                                                Collect(colAssessmentRequests3,{'Student NUID':NUID,'Submitter NUID':'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestAdvisorType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
                                             ),
                                             // Brief assessment only sent to primary advisees
                                             ForAll(Filter('PhD Students',Advisor.'Advisor NUID'='Advisor NUID'),
-                                                Collect(colAssessmentRequests,{'Student NUID':NUID,'Submitter NUID':'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestAdvisorType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
+                                                Collect(colAssessmentRequests3,{'Student NUID':NUID,'Submitter NUID':'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestAdvisorType.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
                                             )
                                         )
                                     )
                                 );
-                                Patch('PhD Assessments',colAssessmentRequests);
+                                Patch('PhD Assessments',colAssessmentRequests3);
                                 UpdateIf(colRequestAssessmentsAdvisorList, true, {AdvisorSelected:false});
                                 UpdateContext({AdvisorsSelcted:CountRows(Filter(colRequestAssessmentsAdvisorList,AdvisorSelected=true))});
-                                Clear(colAssessmentRequests);
+                                Clear(colAssessmentRequests3);
                                 Reset(chkSelectAllAdvisors);
                             PressedBorderColor: =RGBA(0, 69, 120, 1)
                             PressedColor: =RGBA(255, 255, 255, 1)
