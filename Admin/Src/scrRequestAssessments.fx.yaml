@@ -1,4 +1,4 @@
-"scrRequestAssessments_1 As screen.'autoLayout_Sidebar_ver1.0'":
+"scrRequestAssessments As screen.'autoLayout_Sidebar_ver1.0'":
     LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
     OnHidden: |-
         =Clear(colRequestAssessmentsStudentList);
@@ -190,8 +190,8 @@
                 ZIndex: =12
 
                 btnRequestSelfAssessments_3 As button:
-                    BorderColor: =Color.Gray
-                    BorderThickness: =5
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
                     DisabledBorderColor: =RGBA(0, 0, 0, 0)
                     DisabledColor: =RGBA(161, 159, 157, 1)
                     DisabledFill: =RGBA(242, 242, 241, 0)
