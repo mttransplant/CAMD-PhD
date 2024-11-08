@@ -3824,19 +3824,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.AccessibleLabel"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.AccessibleLabel",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList"
               }
             }
           ],
@@ -3854,19 +3854,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.TabIndex"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.TabIndex"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.TabIndex",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.TabIndex",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "TabIndex",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList"
               }
             }
           ],
@@ -3884,19 +3884,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentName_3.AccessibleLabel"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.txtRequestStudentName.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentName_3.AccessibleLabel",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.txtRequestStudentName.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentName_3"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.txtRequestStudentName"
               }
             }
           ],
@@ -3914,19 +3914,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentAdvisor.AccessibleLabel"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.txtRequestStudentAdvisor.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentAdvisor.AccessibleLabel",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.txtRequestStudentAdvisor.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentAdvisor"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.txtRequestStudentAdvisor"
               }
             }
           ],
@@ -3944,19 +3944,19 @@
             {
               "logicalLocations": [
                 {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentCoAdvisor.AccessibleLabel"
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.txtRequestStudentCoAdvisor.AccessibleLabel"
                 }
               ],
               "physicalLocation": {
                 "address": {
-                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentCoAdvisor.AccessibleLabel",
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.txtRequestStudentCoAdvisor.AccessibleLabel",
                   "relativeAddress": 0
                 }
               },
               "properties": {
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
-                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList_3.txtRequestStudentCoAdvisor"
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.txtRequestStudentCoAdvisor"
               }
             }
           ],
@@ -5787,6 +5787,36 @@
                 "member": "AccessibleLabel",
                 "module": "scrRequestAssessments",
                 "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntAdvisorCompCount.txtAdvisorCompCount"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.txtRequestStudentNUID.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.txtRequestStudentNUID.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequestStudentsList.galRequestStudentsList.txtRequestStudentNUID"
               }
             }
           ],

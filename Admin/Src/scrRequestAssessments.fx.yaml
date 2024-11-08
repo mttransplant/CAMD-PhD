@@ -4,10 +4,7 @@
         =Clear(colRequestAssessmentsStudentList);
         //Clear(colRequestAssessmentsAdvisorList);
     OnVisible: |-
-        =ClearCollect(colRequestAssessmentsStudentList,AddColumns(Sort(Filter('PhD Students','Student Status'="Active"),'Full Name'),StudentSelected,false));
-        ClearCollect(colCurrentTerm,ShowColumns(Filter('PhD Terms',STVTERM_START_DATE<=Today() And STVTERM_END_DATE>=Today()),STVTERM_CODE,STVTERM_DESC));
-        UpdateContext({StudentsSelected:0,AdvisorsSelcted:0});
-        ClearCollect(colOpenAssessmentCounts,AddColumns(GroupBy(Filter('PhD Assessments',IsBlank('Date Submitted')),'Term Code','Assessment Type','Submitter NUID','Student NUID',RecLeftovers),Email,LookUp(colUserList,ID=cr829_submitter_nuid).Email,Name,LookUp(colUserList,ID=cr829_submitter_nuid).Name));
+        =Select(btnLoadRequestAssessmentsData); //in: ctrRequestAssessmentsStatus
     Width: =Min(App.Width,App.DesignWidth)
 
     ctrRequestAssessments As groupContainer.verticalAutoLayoutContainer:
@@ -63,6 +60,35 @@
             RadiusTopLeft: =4
             RadiusTopRight: =4
             ZIndex: =2
+
+            btnLoadRequestAssessmentsData As button:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderStyle: =BorderStyle.None
+                DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                DisabledColor: =RGBA(161, 159, 157, 1)
+                DisabledFill: =RGBA(242, 242, 241, 0)
+                Fill: =RGBA(0, 120, 212, 1)
+                Font: =Font.'Segoe UI'
+                FontWeight: =FontWeight.Semibold
+                HoverBorderColor: =RGBA(0, 0, 0, 0)
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(16, 110, 190, 1)
+                OnSelect: |-
+                    =ClearCollect(colRequestAssessmentsStudentList,AddColumns(Sort(Filter('PhD Students','Student Status'="Active"),'Full Name'),StudentSelected,false));
+                    ClearCollect(colCurrentTerm,ShowColumns(Filter('PhD Terms',STVTERM_START_DATE<=Today() And STVTERM_END_DATE>=Today()),STVTERM_CODE,STVTERM_DESC));
+                    UpdateContext({StudentsSelected:0,AdvisorsSelcted:0});
+                    ClearCollect(colOpenAssessmentCounts,AddColumns(GroupBy(Filter('PhD Assessments',IsBlank('Date Submitted')),'Term Code','Assessment Type','Submitter NUID','Student NUID',RecLeftovers),Email,LookUp(colUserList,ID=cr829_submitter_nuid).Email,Name,LookUp(colUserList,ID=cr829_submitter_nuid).Name));
+                PressedBorderColor: =RGBA(0, 69, 120, 1)
+                PressedColor: =RGBA(255, 255, 255, 1)
+                PressedFill: =RGBA(16, 110, 190, 1)
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =15
+                Text: ="Button"
+                Visible: =false
+                ZIndex: =1
 
             cntSelfBriefCount As groupContainer.verticalAutoLayoutContainer:
                 DropShadow: =DropShadow.Light
@@ -509,6 +535,7 @@
                         UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
                         Clear(colAssessmentRequests1);
                         Reset(chkSelectAllStudents_3);
+                        Select(btnLoadRequestAssessmentsData);
                     PressedBorderColor: =RGBA(0, 69, 120, 1)
                     PressedColor: =RGBA(255, 255, 255, 1)
                     PressedFill: =RGBA(16, 110, 190, 1)
@@ -568,7 +595,7 @@
                     Size: =13
                     Text: ="Co-Advisor"
                     Width: =txtRequestStudentCoAdvisor.Width
-                    X: =txtRequestStudentCoAdvisor.X
+                    X: =txtRequestStudentCoAdvisor.X+Parent.PaddingLeft
                     ZIndex: =1
 
                 labRequestStudentAdvisor As label:
@@ -585,8 +612,24 @@
                     Size: =13
                     Text: ="Advisor"
                     Width: =txtRequestStudentAdvisor.Width
-                    X: =txtRequestStudentAdvisor.X
+                    X: =txtRequestStudentAdvisor.X+Parent.PaddingLeft
                     ZIndex: =2
+
+                labRequestStudentNUID As label:
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Size: =13
+                    Text: ="NUID"
+                    Width: =txtRequestStudentNUID.Width
+                    X: =txtRequestStudentNUID.X+Parent.PaddingLeft
+                    ZIndex: =3
 
                 labRequestStudentName_3 As label:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -601,9 +644,9 @@
                     PaddingLeft: =10
                     Size: =13
                     Text: ="Active Students ("&StudentsSelected&" student"&If(StudentsSelected=1,"","s")&" selected)"
-                    Width: =txtRequestStudentName_3.Width
-                    X: =chkSelectAllStudents_3.X+chkSelectAllStudents_3.Width
-                    ZIndex: =3
+                    Width: =txtRequestStudentName.Width
+                    X: =txtRequestStudentName.X
+                    ZIndex: =4
 
                 chkSelectAllStudents_3 As checkbox:
                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -633,9 +676,9 @@
                     Text: =""
                     Width: =40
                     X: =Parent.PaddingLeft
-                    ZIndex: =4
+                    ZIndex: =5
 
-            galRequestStudentsList_3 As gallery.galleryVertical:
+            galRequestStudentsList As gallery.galleryVertical:
                 BorderColor: =RGBA(245, 245, 245, 1)
                 DelayItemLoading: =true
                 Items: =colRequestAssessmentsStudentList
@@ -697,10 +740,37 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    X: =txtRequestStudentName_3.X+txtRequestStudentName_3.Width
+                    X: =txtRequestStudentNUID.X+txtRequestStudentNUID.Width
                     ZIndex: =2
 
-                txtRequestStudentName_3 As text:
+                txtRequestStudentNUID As text:
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =ThisItem.NUID
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    DisplayMode: =DisplayMode.View
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    OnSelect: =Select(Parent)
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedColor: =RGBA(50, 49, 48, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Width: =178
+                    X: =txtRequestStudentName.X+txtRequestStudentName.Width
+                    ZIndex: =3
+
+                txtRequestStudentName As text:
                     BorderColor: =RGBA(245, 245, 245, 1)
                     BorderThickness: =2
                     Color: =RGBA(50, 49, 48, 1)
@@ -724,11 +794,11 @@
                     RadiusTopLeft: =0
                     RadiusTopRight: =0
                     Size: =13
-                    Width: =500
-                    X: =chkSelectThisStudent_3.X+chkSelectThisStudent_3.Width
-                    ZIndex: =3
+                    Width: =347
+                    X: =chkSelectThisStudent.X+chkSelectThisStudent.Width
+                    ZIndex: =4
 
-                chkSelectThisStudent_3 As checkbox:
+                chkSelectThisStudent As checkbox:
                     BorderColor: =RGBA(0, 0, 0, 0)
                     BorderStyle: =BorderStyle.None
                     BorderThickness: =2
@@ -757,5 +827,5 @@
                     Size: =13
                     Text: =""
                     Width: =40
-                    ZIndex: =4
+                    ZIndex: =5
 
