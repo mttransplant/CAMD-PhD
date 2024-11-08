@@ -207,10 +207,10 @@
                         =ClearCollect(colAssessmentRequests1,Filter('PhD Assessments','Student NUID'=""));
                         ForAll(Filter(colRequestAssessmentsStudentList,StudentSelected),
                             ForAll(Filter('PhD Assessment Questions','Assessment Type'=drpRequestSelfType_3.Selected.Value),
-                                If(drpRequestSelfType_3.Selected.Value in ['Assessment Type (PhD Assessment Questions)'.'Self-Brief','Assessment Type (PhD Assessment Questions)'.'Self-Comprehensive'] And !IsBlank(Advisor.'Advisor NUID'),
+                                If(drpRequestSelfType_3.Selected.Value in ['Assessment Type (PhD Assessment Questions)'.'Self-Brief','Assessment Type (PhD Assessment Questions)'.'Self-Comprehensive'],
                                     Collect(colAssessmentRequests1,{'Student NUID':NUID,'Submitter NUID':NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType_3.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
                                 );
-                                If(drpRequestSelfType_3.Selected.Value in ['Assessment Type (PhD Assessment Questions)'.'Advisor-Brief','Assessment Type (PhD Assessment Questions)'.'Advisor-Comprehensive'],
+                                If(drpRequestSelfType_3.Selected.Value in ['Assessment Type (PhD Assessment Questions)'.'Advisor-Brief','Assessment Type (PhD Assessment Questions)'.'Advisor-Comprehensive'] And !IsBlank(Advisor.'Advisor NUID'),
                                     Collect(colAssessmentRequests1,{'Student NUID':NUID,'Submitter NUID':Advisor.'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':drpRequestSelfType_3.Selected.Value,'Q Order':'Question Order','Question Text':Question,'Q Type':'Question Type','Q Options':'Choice Options','Date Requested':Today()})
                                 );
                                  If(drpRequestSelfType_3.Selected.Value ='Assessment Type (PhD Assessment Questions)'.'Advisor-Comprehensive' And !IsBlank('Co-Advisor'.'Advisor NUID'),
