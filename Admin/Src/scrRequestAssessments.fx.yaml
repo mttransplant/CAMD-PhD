@@ -5,9 +5,9 @@
         //Clear(colRequestAssessmentsAdvisorList);
     OnVisible: |-
         =ClearCollect(colRequestAssessmentsStudentList,AddColumns(Sort(Filter('PhD Students','Student Status'="Active"),'Full Name'),StudentSelected,false));
-        //ClearCollect(colRequestAssessmentsAdvisorList,Filter(AddColumns('PhD Advisors',AdvisorSelected,false,Advisees,CountRows(Filter(colRequestAssessmentsStudentList,'Advisor NUID'=Advisor.'Advisor NUID')),CoAdvisees,CountRows(Filter(colRequestAssessmentsStudentList,'Advisor NUID'='Co-Advisor'.'Advisor NUID'))),Advisees>0 Or CoAdvisees >0));
         ClearCollect(colCurrentTerm,ShowColumns(Filter('PhD Terms',STVTERM_START_DATE<=Today() And STVTERM_END_DATE>=Today()),STVTERM_CODE,STVTERM_DESC));
         UpdateContext({StudentsSelected:0,AdvisorsSelcted:0});
+        ClearCollect(colOpenAssessmentCounts,GroupBy(Filter('PhD Assessments',IsBlank('Date Submitted')),'Term Code','Assessment Type','Submitter NUID','Student NUID',RecLeftovers));
     Width: =Min(App.Width,App.DesignWidth)
 
     ctrRequestAssessments As groupContainer.verticalAutoLayoutContainer:
@@ -256,19 +256,225 @@
             RadiusTopRight: =4
             ZIndex: =3
 
-            Label1 As label:
-                BorderColor: =RGBA(0, 0, 0, 0)
-                BorderStyle: =BorderStyle.None
-                BorderThickness: =2
-                Color: =RGBA(50, 49, 48, 1)
-                DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                DisabledColor: =RGBA(161, 159, 157, 1)
-                FocusedBorderThickness: =4
-                Font: =Font.'Segoe UI'
-                Size: =13
-                Text: |-
-                    ="Open Requests: "
-                ZIndex: =1
+            cntSelfBriefCount As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =80
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =2
+
+                labSelfBriefCount As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    Fill: =RGBA(180, 214, 250, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Size: =13
+                    Text: ="Open Self-Brief Requests"
+                    Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                    ZIndex: =1
+
+                txtSelfBriefCount As text:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =CountIf(Filter(colOpenAssessmentCounts,cr829_assessment_type='Assessment Type (PhD Assessments)'.'Self-Brief'),true)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedColor: =RGBA(50, 49, 48, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                    ZIndex: =2
+
+            cntSelfBriefCount_1 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =80
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =3
+
+                labSelfBriefCount_1 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    Fill: =RGBA(180, 214, 250, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Size: =13
+                    Text: ="Open Self-Comprehensive Requests"
+                    Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                    ZIndex: =1
+
+                txtSelfBriefCount_1 As text:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =CountIf(Filter(colOpenAssessmentCounts,cr829_assessment_type='Assessment Type (PhD Assessments)'.'Self-Comprehensive'),true)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedColor: =RGBA(50, 49, 48, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                    ZIndex: =2
+
+            cntSelfBriefCount_2 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =80
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =4
+
+                labSelfBriefCount_2 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    Fill: =RGBA(180, 214, 250, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Size: =13
+                    Text: ="Open Advisor-Brief Requests"
+                    Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                    ZIndex: =1
+
+                txtSelfBriefCount_2 As text:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =CountIf(Filter(colOpenAssessmentCounts,cr829_assessment_type='Assessment Type (PhD Assessments)'.'Advisor-Brief'),true)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedColor: =RGBA(50, 49, 48, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                    ZIndex: =2
+
+            cntSelfBriefCount_3 As groupContainer.verticalAutoLayoutContainer:
+                DropShadow: =DropShadow.Light
+                Height: =Parent.Height
+                LayoutDirection: =LayoutDirection.Vertical
+                LayoutMinHeight: =80
+                LayoutMinWidth: =250
+                LayoutMode: =LayoutMode.Auto
+                RadiusBottomLeft: =4
+                RadiusBottomRight: =4
+                RadiusTopLeft: =4
+                RadiusTopRight: =4
+                ZIndex: =5
+
+                labSelfBriefCount_3 As label:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(0, 0, 0, 0)
+                    BorderStyle: =BorderStyle.None
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    Fill: =RGBA(180, 214, 250, 1)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    FontWeight: =FontWeight.Bold
+                    Size: =13
+                    Text: ="Open Advisor-Comprehensive Requests"
+                    Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                    ZIndex: =1
+
+                txtSelfBriefCount_3 As text:
+                    Align: =Align.Center
+                    BorderColor: =RGBA(245, 245, 245, 1)
+                    BorderThickness: =2
+                    Color: =RGBA(50, 49, 48, 1)
+                    Default: =CountIf(Filter(colOpenAssessmentCounts,cr829_assessment_type='Assessment Type (PhD Assessments)'.'Advisor-Comprehensive'),true)
+                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                    DisabledColor: =RGBA(161, 159, 157, 1)
+                    DisabledFill: =RGBA(242, 242, 241, 0)
+                    FocusedBorderThickness: =4
+                    Font: =Font.'Segoe UI'
+                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                    HoverColor: =RGBA(50, 49, 48, 1)
+                    HoverFill: =RGBA(255, 255, 255, 1)
+                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                    PressedColor: =RGBA(50, 49, 48, 1)
+                    PressedFill: =RGBA(255, 255, 255, 1)
+                    RadiusBottomLeft: =0
+                    RadiusBottomRight: =0
+                    RadiusTopLeft: =0
+                    RadiusTopRight: =0
+                    Size: =13
+                    Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                    ZIndex: =2
 
         ctrRequestStudentsList As groupContainer.verticalAutoLayoutContainer:
             DropShadow: =DropShadow.Light

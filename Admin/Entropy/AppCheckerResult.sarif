@@ -5684,6 +5684,126 @@
             {
               "logicalLocations": [
                 {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount.txtSelfBriefCount.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount.txtSelfBriefCount.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount.txtSelfBriefCount"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_1.txtSelfBriefCount_1.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_1.txtSelfBriefCount_1.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_1.txtSelfBriefCount_1"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_2.txtSelfBriefCount_2.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_2.txtSelfBriefCount_2.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_2.txtSelfBriefCount_2"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_3.txtSelfBriefCount_3.AccessibleLabel"
+                }
+              ],
+              "physicalLocation": {
+                "address": {
+                  "fullyQualifiedName": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_3.txtSelfBriefCount_3.AccessibleLabel",
+                  "relativeAddress": 0
+                }
+              },
+              "properties": {
+                "member": "AccessibleLabel",
+                "module": "scrRequestAssessments",
+                "type": "scrRequestAssessments.ctrRequestAssessments.ctrRequesetAssessmentsStatus.cntSelfBriefCount_3.txtSelfBriefCount_3"
+              }
+            }
+          ],
+          "message": {
+            "id": "issue"
+          },
+          "properties": {
+            "level": "Medium"
+          },
+          "ruleId": "acc-AccessibleLabelNeeded",
+          "ruleIndex": 0
+        },
+        {
+          "locations": [
+            {
+              "logicalLocations": [
+                {
                   "fullyQualifiedName": "scrAdvisors.ctrAdvisorScreen.ctrAdvisorsMain.ctrAdvisorsList.ctrAdvColumns.btnLoadAdvisors.OnSelect"
                 }
               ],
