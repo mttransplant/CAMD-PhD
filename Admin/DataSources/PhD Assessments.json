@@ -65,48 +65,6 @@
     }
   },
   {
-    "DisplayName": "Assessment Type (PhD Assessments)",
-    "Name": "cr829_phdassessments_cr829_assessment_type",
-    "OptionSetInfoNameMapping": {
-      "1": "Self-Brief",
-      "2": "Self-Comprehensive",
-      "3": "Advisor-Brief",
-      "4": "Advisor-Comprehensive"
-    },
-    "OptionSetIsBooleanValued": false,
-    "OptionSetIsGlobal": false,
-    "OptionSetReference": {
-      "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "cr829_assessment_type",
-        "OptionSetReferenceEntityName": "PhD Assessments"
-      }
-    },
-    "OptionSetTypeKey": "PicklistType",
-    "RelatedColumnInvariantName": "cr829_assessment_type",
-    "RelatedEntityName": "PhD Assessments",
-    "Type": "OptionSetInfo"
-  },
-  {
-    "DisplayName": "Q Type (PhD Assessments)",
-    "Name": "cr829_phdassessments_cr829_q_type",
-    "OptionSetInfoNameMapping": {
-      "1": "Text",
-      "2": "Choice"
-    },
-    "OptionSetIsBooleanValued": false,
-    "OptionSetIsGlobal": false,
-    "OptionSetReference": {
-      "OptionSetReferenceItem0": {
-        "OptionSetReferenceColumnName": "cr829_q_type",
-        "OptionSetReferenceEntityName": "PhD Assessments"
-      }
-    },
-    "OptionSetTypeKey": "PicklistType",
-    "RelatedColumnInvariantName": "cr829_q_type",
-    "RelatedEntityName": "PhD Assessments",
-    "Type": "OptionSetInfo"
-  },
-  {
     "DisplayName": "Status (PhD Assessments)",
     "Name": "cr829_phdassessments_statecode",
     "OptionSetInfoNameMapping": {
