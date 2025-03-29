@@ -1,0 +1,355 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  scrStudentEvaluations:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    Children:
+      - ctrStudentEvaluations:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            Fill: =RGBA(245, 245, 245, 1)
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =16
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Width: =Min(App.Width,App.DesignWidth)
+            X: =(Parent.Width-Self.Width)/2
+          Children:
+            - ctrEvaluationsHeader:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  Fill: =RGBA(255, 255, 255, 1)
+                  FillPortions: =0
+                  Height: =75
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =Parent.Width
+                Children:
+                  - cmpEvaluationsHeader:
+                      Control: CanvasComponent
+                      ComponentName: cmpHeader
+                      Properties:
+                        Fill: =RGBA(71, 158, 245, 1)
+                        Height: =75
+                        MenuScreen: =scrAdminMenu
+                        ScreenTitle: =galStudentLlist.Selected.'First Name'&" "&galStudentLlist.Selected.'Last Name'
+                        Width: =Parent.Width
+            - ctrEvaluationsNav:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  Fill: =RGBA(255, 255, 255, 1)
+                  FillPortions: =0
+                  Height: =75
+                  LayoutAlignItems: =LayoutAlignItems.Center
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  LayoutGap: =10
+                  LayoutJustifyContent: =LayoutJustifyContent.Center
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =Parent.Width
+                Children:
+                  - btnEvaluationsBack:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        OnSelect: =Navigate(scrStudentList)
+                        Text: ="Back to List"
+                        Visible: =CurrentUser.Role in ["Admin","Advisor"]
+                        Width: =140
+                  - btnEvaluationsOverview:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        OnSelect: =Navigate(scrStudentOverview)
+                        Text: ="Overview"
+                        Width: =140
+                  - btnEvaluationsMilestones:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        OnSelect: =Navigate(scrStudentMilestones)
+                        Text: ="Milestones"
+                        Width: =140
+                  - btnEvaluationsHistory:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        OnSelect: =Navigate(scrStudentHistory)
+                        Text: ="Activity History"
+                        Visible: =CurrentUser.Role="Admin"
+                        Width: =140
+                  - btnEvaluationsEvaluations:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Primary
+                        OnSelect: =Navigate(scrStudentEvaluations)
+                        Text: ="Evaluations"
+                        Width: =140
+                  - btnEvaluationsCourses:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        OnSelect: =Navigate(scrStudentCourses)
+                        Text: ="Courses"
+                        Width: =140
+            - ctrEvaluationsMain:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  Fill: =RGBA(255, 255, 255, 1)
+                  LayoutDirection: =LayoutDirection.Vertical
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =Parent.Width
+                Children:
+                  - ctrEvaluationsColumns:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        Fill: =RGBA(180, 214, 250, 1)
+                        FillPortions: =0
+                        Height: =40
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        LayoutGap: =5
+                      Children:
+                        - labColEvalTerm:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              PaddingLeft: =15
+                              Text: ="Semester"
+                              Width: =labEvalTerm.Width
+                              X: =labEvalTerm.X
+                        - labColEvalSubDate:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              PaddingLeft: =15
+                              Text: ="Date"
+                              Width: =evalDate.Width
+                              X: =evalDate.X
+                        - labColEvalSubBy:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Text: ="Submitted by"
+                              Width: =evalSubmitter.Width
+                              X: =evalSubmitter.X
+                        - labColEvalQuestOrder:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              PaddingLeft: =15
+                              Text: ="Q#"
+                              Width: =evalQuestOrder.Width
+                              X: =evalQuestOrder.X
+                        - labColEvalQuestion:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              PaddingLeft: =15
+                              Text: ="Question"
+                              Width: =evalQuestion.Width
+                              X: =600
+                        - labColEvalResponse:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              PaddingLeft: =15
+                              Text: ="Response"
+                              Width: =evalResponse.Width
+                              X: =298
+                  - galEvaluations:
+                      Control: Gallery@2.15.0
+                      Variant: Vertical
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(245, 245, 245, 1)
+                        Height: =Parent.Height
+                        Items: =SortByColumns(Filter('PhD Assessments','Student NUID'=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID) And !IsBlank('Date Submitted') And ((CurrentUser.Role="Student" And 'Assessment Type' <> "Advisor-Brief")Or CurrentUser.Role  in ["Admin","Advisor"])),"cr829_submitteddatesort",SortOrder.Descending,"cr829_submitter_nuid",SortOrder.Ascending,"cr829_question_order",SortOrder.Ascending)
+                        LoadingSpinnerColor: =Color.DarkGray
+                        TemplateSize: =80
+                        Width: =Parent.Width
+                      Children:
+                        - evalResponse:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              Height: =Parent.TemplateHeight
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.Response
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =412
+                              X: =evalQuestion.X+evalQuestion.Width+5
+                        - evalQuestion:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              Height: =Parent.TemplateHeight
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.'Question Text'
+                              VerticalAlign: =VerticalAlign.Top
+                              Width: =293
+                              X: =evalQuestOrder.X+evalQuestOrder.Width+5
+                        - evalQuestOrder:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =ThisItem.'Q Order'
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =DisplayMode.View
+                              Font: =Font.'Segoe UI'
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(255, 255, 255, 1)
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 120, 212, 1)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(255, 255, 255, 1)
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =60
+                              X: =evalSubmitter.X+evalSubmitter.Width+5
+                        - evalSubmitter:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              OnSelect: =Select(Parent)
+                              Text: =LookUp(colUserList,ThisItem.'Submitter NUID'=ID).Name
+                              Width: =224
+                              X: =evalDate.X+evalDate.Width+5
+                        - evalDate:
+                            Control: Classic/DatePicker@2.6.0
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              DefaultDate: =ThisItem.'Date Submitted'
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =DisplayMode.View
+                              Fill: =Color.White
+                              Font: =Font.'Segoe UI'
+                              IconBackground: =RGBA(0, 120, 212, 1)
+                              IconFill: =RGBA(255, 255, 255, 1)
+                              InputTextPlaceholder: =
+                              OnSelect: =Select(Parent)
+                              PaddingTop: =5
+                              Size: =13
+                              Width: =132
+                              X: =labEvalTerm.X+labEvalTerm.Width+5
+                        - labEvalTerm:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.'Term Name'
+                              Width: =159
+                              X: =5

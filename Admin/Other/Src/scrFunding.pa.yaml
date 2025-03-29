@@ -1,0 +1,295 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  scrFunding:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    Children:
+      - ctrFunding:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            Fill: =RGBA(245, 245, 245, 1)
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =16
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Width: =Min(App.Width,App.DesignWidth)
+            X: =(Parent.Width-Self.Width)/2
+          Children:
+            - ctrPositionsDetailHeader_1:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  Fill: =RGBA(255, 255, 255, 1)
+                  FillPortions: =0
+                  Height: =75
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =Parent.Width
+                Children:
+                  - cmpPositionHeader_1:
+                      Control: CanvasComponent
+                      ComponentName: cmpHeader
+                      Properties:
+                        Fill: =RGBA(71, 158, 245, 1)
+                        Height: =75
+                        MenuScreen: =scrAdminMenu
+                        ScreenTitle: ="Funding"
+                        Width: =Parent.Width
+            - ctrFundingMain:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  Fill: =RGBA(255, 255, 255, 1)
+                  Height: =Parent.Height
+                  LayoutDirection: =LayoutDirection.Vertical
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =Parent.Width
+                Children:
+                  - ctrFundingColumns:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Fill: =RGBA(180, 214, 250, 1)
+                        FillPortions: =0
+                        Height: =40
+                        Width: =Parent.Width
+                      Children:
+                        - colFundingTitle:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisplayMode: =DisplayMode.View
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Funding Source Name"
+                              Width: =labFundingTitle.Width
+                              X: =labFundingTitle.X
+                        - colFundingOrg:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisplayMode: =DisplayMode.View
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Banner Org"
+                              Width: =labFundingOrg.Width
+                              X: =labFundingOrg.X
+                        - colFundingIndex:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisplayMode: =DisplayMode.View
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Banner Index"
+                              Width: =labFundingIndex.Width
+                              X: =labFundingIndex.X
+                        - colFundingAcct:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisplayMode: =DisplayMode.View
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Banner Account"
+                              Width: =labFundingAcct.Width
+                              X: =labFundingAcct.X
+                        - colFundingContact:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisplayMode: =DisplayMode.View
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Contact Name"
+                              Width: =labFundingContact.Width
+                              X: =labFundingContact.X
+                        - colFundingEmail:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisplayMode: =DisplayMode.View
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Contact Email"
+                              Width: =Parent.Width-Self.X-10
+                              X: =labFundingEmail.X
+                  - galFunding:
+                      Control: Gallery@2.15.0
+                      Variant: Vertical
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(245, 245, 245, 1)
+                        Height: =Parent.Height
+                        Items: ='PhD Funding Sources'
+                        LoadingSpinnerColor: =Color.DarkGray
+                        TemplateSize: =40
+                        Transition: =Transition.Push
+                        Width: =Parent.Width
+                      Children:
+                        - SeparatorLine_2:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              DisabledFill: =RGBA(0, 0, 0, 1)
+                              DisplayMode: =DisplayMode.View
+                              Fill: =RGBA(0, 0, 0, 1)
+                              FocusedBorderThickness: =4
+                              Height: =1
+                              HoverFill: =RGBA(0, 0, 0, 1)
+                              OnSelect: =Select(Parent)
+                              PressedFill: =RGBA(0, 0, 0, 1)
+                              Width: =Parent.TemplateWidth
+                              Y: =39
+                        - labFundingTitle:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.'Funding Source Name'
+                              Width: =264
+                              X: =5
+                        - labFundingOrg:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.'Banner Organization'
+                              Width: =116
+                              X: =labFundingTitle.X+labFundingTitle.Width
+                        - labFundingIndex:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.'Banner Index'
+                              Width: =131
+                              X: =labFundingOrg.X+labFundingOrg.Width
+                        - labFundingAcct:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.'Banner Account'
+                              Width: =147
+                              X: =labFundingIndex.X+labFundingIndex.Width
+                        - labFundingContact:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.'Contact Name'
+                              Width: =238
+                              X: =labFundingAcct.X+labFundingAcct.Width
+                        - labFundingEmail:
+                            Control: HtmlViewer@2.1.0
+                            Properties:
+                              Color: =RGBA(15, 108, 189, 1)
+                              DisabledBorderColor: =RGBA(56, 56, 56, 1)
+                              Font: =Font.'Segoe UI'
+                              HtmlText: ="<a href=mailto:"&ThisItem.'Contact Email'&">"&ThisItem.'Contact Email'&"</a"
+                              OnSelect: =Select(Parent)
+                              Width: =Parent.Width-Self.X-10
+                              X: =labFundingContact.X+labFundingContact.Width

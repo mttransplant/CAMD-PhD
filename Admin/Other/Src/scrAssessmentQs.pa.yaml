@@ -1,0 +1,669 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  scrAssessmentQs:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+      OnVisible: |-
+        =UpdateContext({IsEditing:false});
+        Select(btnClear);
+        Refresh('PhD Assessment Questions');
+    Children:
+      - ctrAssessmentQs:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            Fill: =RGBA(245, 245, 245, 1)
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =16
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Width: =Min(App.Width,App.DesignWidth)
+            X: =(Parent.Width-Self.Width)/2
+          Children:
+            - ctrAssessmentQsHeader:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  Fill: =RGBA(255, 255, 255, 1)
+                  FillPortions: =0
+                  Height: =75
+                  LayoutDirection: =LayoutDirection.Vertical
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =Min(galStudentLlist.Width,Parent.Width-32)
+                  X: =ctrListMain.X
+                Children:
+                  - cmpAssessmentQsHeader:
+                      Control: CanvasComponent
+                      ComponentName: cmpHeader
+                      Properties:
+                        Fill: =RGBA(71, 158, 245, 1)
+                        Height: =75
+                        MenuScreen: =scrAdminMenu
+                        ScreenTitle: ="Assessment Questions"
+                        Width: =Parent.Width
+            - ctrAssessmentQsFilter:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Fill: =Color.White
+                  FillPortions: =0
+                  Height: =50
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  LayoutGap: =5
+                  PaddingTop: =5
+                  Width: =Min(galStudentLlist.Width,Parent.Width-32)
+                Children:
+                  - labAssessmentTypeFilter:
+                      Control: Label@2.5.1
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        BorderThickness: =2
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        FocusedBorderThickness: =4
+                        Font: =Font.'Segoe UI'
+                        FontWeight: =FontWeight.Semibold
+                        Text: ="Assessment Type:"
+                  - drpAssessmentTypeFilter:
+                      Control: Classic/DropDown@2.3.1
+                      Properties:
+                        BorderColor: =RGBA(245, 245, 245, 1)
+                        ChevronBackground: =RGBA(245, 245, 245, 1)
+                        ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                        ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                        ChevronFill: =RGBA(50, 49, 48, 1)
+                        ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                        ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                        Color: =RGBA(50, 49, 48, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(245, 245, 245, 1)
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =RGBA(16, 110, 190, 1)
+                        HoverColor: =RGBA(50, 49, 48, 1)
+                        HoverFill: =RGBA(245, 245, 245, 1)
+                        Items: =Choices('Assessment Type (PhD Assessment Questions)')
+                        PaddingBottom: =5
+                        PaddingLeft: =12
+                        PaddingRight: =5
+                        PaddingTop: =5
+                        PressedBorderColor: =RGBA(16, 110, 190, 1)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(0, 120, 212, 1)
+                        SelectionColor: =RGBA(50, 49, 48, 1)
+                        SelectionFill: =RGBA(0, 120, 212, 1)
+                        Width: =230
+                  - btnClear:
+                      Control: Classic/Icon@2.5.0
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        Color: =RGBA(0, 120, 212, 1)
+                        DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                        DisabledColor: =RGBA(225, 223, 221, 1)
+                        DisabledFill: =RGBA(0, 0, 0, 0)
+                        FocusedBorderThickness: =4
+                        Height: =Parent.Height-Parent.PaddingTop-Parent.PaddingBottom
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(16, 110, 190, 1)
+                        HoverFill: =RGBA(0, 0, 0, 0)
+                        Icon: =Icon.Database
+                        OnSelect: |-
+                          =ClearCollect(colAssessmentQsUpdates,Filter('PhD Assessment Questions',IsBlank('Question Order')));
+                          ClearCollect(colAssessmentQsDeletes,Filter('PhD Assessment Questions',IsBlank('Question Order')));
+                        PressedBorderColor: =RGBA(0, 0, 0, 0)
+                        PressedColor: =RGBA(16, 110, 190, 1)
+                        PressedFill: =RGBA(0, 0, 0, 0)
+                        Tooltip: ="Edit Student Info"
+                        Visible: =false
+                        Width: =Self.Height
+                        X: =Parent.Width-Self.Width
+            - ctrAssessmentQsMain:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  Fill: =RGBA(255, 255, 255, 1)
+                  Height: =Parent.Height
+                  LayoutDirection: =LayoutDirection.Vertical
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =Parent.Width
+                Children:
+                  - ctrAssessmentQsColumns:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Fill: =RGBA(180, 214, 250, 1)
+                        FillPortions: =0
+                        Height: =40
+                        PaddingLeft: =5
+                        Width: =Parent.Width
+                      Children:
+                        - colChoiceOptions:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisplayMode: =DisplayMode.View
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Choice Options"
+                              Width: =txtChoiceOptions.Width
+                              X: |-
+                                =//txtChoiceOptions.X+Parent.PaddingLeft
+                                1070
+                        - colQuestion:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisplayMode: =DisplayMode.View
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Question"
+                              Width: =txtQuestion.Width
+                              X: |-
+                                =//txtQuestion.X+Parent.PaddingLeft
+                                415
+                        - colQustionType:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisplayMode: =DisplayMode.View
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Type"
+                              Width: =selQuestionType.Width
+                              X: =selQuestionType.X+Parent.PaddingLeft
+                        - colQuestionOrder:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisplayMode: =DisplayMode.View
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Order"
+                              Width: =txtQuestionOrder.Width
+                              X: =txtQuestionOrder.X+Parent.PaddingLeft
+                        - colAssessmentType:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisplayMode: =DisplayMode.View
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Assessment Type"
+                              Width: =selAsssessmentType.Width
+                              X: =selAsssessmentType.X+Parent.PaddingLeft
+                        - btnAqEdit:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              Color: =RGBA(0, 120, 212, 1)
+                              DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                              DisabledColor: =RGBA(225, 223, 221, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderThickness: =4
+                              Height: =30
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =RGBA(16, 110, 190, 1)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Edit
+                              OnSelect: |-
+                                =UpdateContext({IsEditing: true});
+                                Select(btnClear);
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =RGBA(16, 110, 190, 1)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Tooltip: ="Edit Student Info"
+                              Visible: =CurrentUser.Role="Admin" And Not(IsEditing)
+                              Width: =Self.Height
+                              X: =Parent.Width-(Self.Width*2)-10
+                              Y: =5
+                        - btnAqSave:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              Color: =RGBA(0, 120, 212, 1)
+                              DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                              DisabledColor: =RGBA(225, 223, 221, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              DisplayMode: =If(IsEditing And ((CountIf(colAssessmentQsUpdates, true)+CountIf(colAssessmentQsDeletes,true))>0),DisplayMode.Edit,DisplayMode.Disabled)
+                              FocusedBorderThickness: =4
+                              Height: =30
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =RGBA(16, 110, 190, 1)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Save
+                              OnSelect: |-
+                                =Patch('PhD Assessment Questions', ShowColumns(colAssessmentQsUpdates,QuestionID, 'Question Order', 'Question Type',Question, 'Choice Options'));
+                                If(CountIf(colAssessmentQsDeletes, true)>0,Remove('PhD Assessment Questions',colAssessmentQsDeletes));
+                                Notify("Assessment Question Update Successful",NotificationType.Success,5000);
+                                UpdateContext({IsEditing: false });
+                                Refresh('PhD Assessment Questions');
+                                Select(btnClear);
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =RGBA(16, 110, 190, 1)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Tooltip: ="Save Changes"
+                              Visible: =CurrentUser.Role="Admin" And IsEditing
+                              Width: =28
+                              X: =btnAqEdit.X+btn_aEdit.Width
+                              Y: =5
+                        - btnAqCancel:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              Color: =RGBA(0, 120, 212, 1)
+                              DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                              DisabledColor: =RGBA(225, 223, 221, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderThickness: =4
+                              Height: =30
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =RGBA(16, 110, 190, 1)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Cancel
+                              OnSelect: |-
+                                =UpdateContext({IsEditing:false});
+                                Select(btnClear);
+                                Refresh('PhD Assessment Questions');
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =RGBA(16, 110, 190, 1)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Tooltip: ="Discard Changes"
+                              Visible: =CurrentUser.Role="Admin" And IsEditing
+                              Width: =Self.Height
+                              X: =btnAqEdit.X
+                              Y: =5
+                        - btnAqAdd:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              Color: =RGBA(0, 120, 212, 1)
+                              DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                              DisabledColor: =RGBA(225, 223, 221, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderThickness: =4
+                              Height: =30
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =RGBA(16, 110, 190, 1)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Add
+                              OnSelect: |
+                                =Patch(
+                                    'PhD Assessment Questions',
+                                    Defaults('PhD Assessment Questions'),
+                                    {
+                                        'Assessment Type': drpAssessmentTypeFilter.Selected.Value,
+                                        'Question Order': First(
+                                            Sort(
+                                                Filter(
+                                                    'PhD Assessment Questions',
+                                                    'Assessment Type' = drpAssessmentTypeFilter.Selected.Value
+                                                ),
+                                                'Question Order',
+                                                SortOrder.Descending
+                                            )
+                                        ).'Question Order' + 1,
+                                        'Question Type':'Question Type (PhD Assessment Questions)'.Text,
+                                        Question: "Enter Question"
+                                    }
+                                );
+                                Refresh('PhD Assessment Questions');
+                                // UpdateContext({IsEditing: true});
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =RGBA(16, 110, 190, 1)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Tooltip: ="Add Milestone"
+                              Visible: =CurrentUser.Role="Admin" And Not(IsEditing)
+                              Width: =Self.Height
+                              X: =btnAqSave.X
+                              Y: =5
+                  - galAssessmentQs:
+                      Control: Gallery@2.15.0
+                      Variant: Vertical
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(245, 245, 245, 1)
+                        Height: =Parent.Height
+                        Items: =Sort(Filter('PhD Assessment Questions','Assessment Type'=drpAssessmentTypeFilter.Selected.Value),'Question Order')
+                        LoadingSpinnerColor: =Color.DarkGray
+                        TemplateSize: =120
+                        Width: =Parent.Width
+                      Children:
+                        - SeparatorLine_3:
+                            Control: Rectangle@2.3.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              DisabledFill: =RGBA(0, 0, 0, 1)
+                              DisplayMode: =DisplayMode.View
+                              Fill: =RGBA(0, 0, 0, 1)
+                              FocusedBorderThickness: =4
+                              Height: =1
+                              HoverFill: =RGBA(0, 0, 0, 1)
+                              OnSelect: =Select(Parent)
+                              PressedFill: =RGBA(0, 0, 0, 1)
+                              Width: =Parent.TemplateWidth
+                              Y: =Parent.TemplateHeight-1
+                        - icoDelQuestion:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              Color: =RGBA(0, 120, 212, 1)
+                              DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                              DisabledColor: =RGBA(225, 223, 221, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderThickness: =4
+                              Height: =30
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =RGBA(16, 110, 190, 1)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Trash
+                              OnSelect: =Collect(colAssessmentQsDeletes,ThisItem);
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =RGBA(16, 110, 190, 1)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =IsEditing
+                              Width: =Self.Height
+                              X: =btnAqSave.X-5
+                              Y: =5
+                        - txtChoiceOptions:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              BorderStyle: =If(IsEditing,BorderStyle.Solid,BorderStyle.None)
+                              BorderThickness: =5
+                              Color: =If(IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID)),RGBA(50, 49, 48, 1),Color.Red)
+                              Default: =ThisItem.'Choice Options'
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: |-
+                                =If(IsEditing And selQuestionType.Selected.Value='Question Type (PhD Assessment Questions)'.Choice,DisplayMode.Edit,DisplayMode.View)
+                                // If(IsEditing,DisplayMode.Edit,If(CountIf(Filter(colAssessmentQsDeletes,'QuestionID'=ThisItem.QuestionID),true)>0,DisplayMode.Disabled,DisplayMode.View))
+                              Font: =Font.'Segoe UI'
+                              Height: =Parent.TemplateHeight-4
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(255, 255, 255, 1)
+                              Mode: =TextMode.MultiLine
+                              OnChange: |-
+                                =If(
+                                    IsBlank(
+                                        LookUp(
+                                            colAssessmentQsUpdates,
+                                            QuestionID = ThisItem.QuestionID
+                                        )
+                                    ),
+                                    Collect(
+                                        colAssessmentQsUpdates,
+                                        ThisItem
+                                    )
+                                );
+                                UpdateIf(
+                                    colAssessmentQsUpdates,
+                                    QuestionID = ThisItem.QuestionID,
+                                    {'Choice Options': txtChoiceOptions.Text}
+                                )
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 120, 212, 1)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(255, 255, 255, 1)
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Strikethrough: =!IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID))
+                              Visible: =selQuestionType.Selected.Value='Question Type (PhD Assessment Questions)'.Choice
+                              Width: =200
+                              X: =txtQuestion.X+txtQuestion.Width+Parent.TemplatePadding
+                              Y: '=0   '
+                        - txtQuestion:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              BorderStyle: =If(IsEditing,BorderStyle.Solid,BorderStyle.None)
+                              BorderThickness: =5
+                              Color: =If(IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID)),RGBA(50, 49, 48, 1),Color.Red)
+                              Default: =ThisItem.Question
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: |-
+                                =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                                // If(IsEditing,DisplayMode.Edit,If(CountIf(Filter(colAssessmentQsDeletes,'QuestionID'=ThisItem.QuestionID),true)>0,DisplayMode.Disabled,DisplayMode.View))
+                              Font: =Font.'Segoe UI'
+                              Height: =Parent.TemplateHeight-4
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(255, 255, 255, 1)
+                              Mode: =TextMode.MultiLine
+                              OnChange: |-
+                                =If(
+                                    IsBlank(
+                                        LookUp(
+                                            colAssessmentQsUpdates,
+                                            QuestionID = ThisItem.QuestionID
+                                        )
+                                    ),
+                                    Collect(
+                                        colAssessmentQsUpdates,
+                                        ThisItem
+                                    )
+                                );
+                                UpdateIf(
+                                    colAssessmentQsUpdates,
+                                    QuestionID = ThisItem.QuestionID,
+                                    {Question: txtQuestion.Text}
+                                )
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 120, 212, 1)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(255, 255, 255, 1)
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Strikethrough: =!IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID))
+                              Width: =650
+                              X: =selQuestionType.X+selQuestionType.Width+Parent.TemplatePadding
+                        - selQuestionType:
+                            Control: Classic/DropDown@2.3.1
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              BorderStyle: =If(IsEditing,BorderStyle.Solid,BorderStyle.None)
+                              BorderThickness: =5
+                              ChevronBackground: =RGBA(245, 245, 245, 1)
+                              ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                              ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                              ChevronFill: =RGBA(50, 49, 48, 1)
+                              ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                              ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                              Color: =If(IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID)),RGBA(50, 49, 48, 1),Color.Red)
+                              Default: =ThisItem.'Question Type'
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                              Fill: =selAsssessmentType.Fill
+                              Font: =Font.'Segoe UI'
+                              Height: =selAsssessmentType.Height
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(245, 245, 245, 1)
+                              Items: =Choices('Question Type (PhD Assessment Questions)')
+                              OnChange: |-
+                                =If(
+                                    IsBlank(
+                                        LookUp(
+                                            colAssessmentQsUpdates,
+                                            QuestionID = ThisItem.QuestionID
+                                        )
+                                    ),
+                                    Collect(
+                                        colAssessmentQsUpdates,
+                                        ThisItem
+                                    )
+                                );
+                                UpdateIf(
+                                    colAssessmentQsUpdates,
+                                    QuestionID = ThisItem.QuestionID,
+                                    {'Question Type': selQuestionType.Selected.Value}
+                                )
+                              PaddingBottom: =5
+                              PaddingLeft: =12
+                              PaddingRight: =5
+                              PaddingTop: =5
+                              PressedBorderColor: =RGBA(16, 110, 190, 1)
+                              PressedColor: =RGBA(255, 255, 255, 1)
+                              PressedFill: =RGBA(0, 120, 212, 1)
+                              SelectionColor: =RGBA(50, 49, 48, 1)
+                              SelectionFill: =RGBA(0, 120, 212, 1)
+                              Strikethrough: =!IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID))
+                              Width: =100
+                              X: =txtQuestionOrder.X+txtQuestionOrder.Width+Parent.TemplatePadding
+                        - txtQuestionOrder:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              BorderStyle: =If(IsEditing,BorderStyle.Solid,BorderStyle.None)
+                              BorderThickness: =5
+                              Color: =If(IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID)),RGBA(50, 49, 48, 1),Color.Red)
+                              Default: =ThisItem.'Question Order'
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: |-
+                                =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                                // If(IsEditing,DisplayMode.Edit,If(CountIf(Filter(colAssessmentQsDeletes,'QuestionID'=ThisItem.QuestionID),true)>0,DisplayMode.Disabled,DisplayMode.View))
+                              Font: =Font.'Segoe UI'
+                              Format: =TextFormat.Number
+                              Height: =selAsssessmentType.Height
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(255, 255, 255, 1)
+                              OnChange: |-
+                                =If(
+                                    IsBlank(
+                                        LookUp(
+                                            colAssessmentQsUpdates,
+                                            QuestionID = ThisItem.QuestionID
+                                        )
+                                    ),
+                                    Collect(
+                                        colAssessmentQsUpdates,
+                                        ThisItem
+                                    )
+                                );
+                                UpdateIf(
+                                    colAssessmentQsUpdates,
+                                    QuestionID = ThisItem.QuestionID,
+                                    {'Question Order': Value(txtQuestionOrder.Text)}
+                                )
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 120, 212, 1)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(255, 255, 255, 1)
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Strikethrough: =!IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID))
+                              Width: =77
+                              X: =selAsssessmentType.X+selAsssessmentType.Width
+                        - selAsssessmentType:
+                            Control: Classic/DropDown@2.3.1
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              ChevronBackground: =RGBA(245, 245, 245, 1)
+                              ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                              ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                              ChevronFill: =RGBA(50, 49, 48, 1)
+                              ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                              ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                              Color: =If(IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID)),RGBA(50, 49, 48, 1),Color.Red)
+                              Default: =ThisItem.'Assessment Type'
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =DisplayMode.View
+                              Fill: =Parent.Fill
+                              Font: =Font.'Segoe UI'
+                              Height: =35
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(245, 245, 245, 1)
+                              Items: =Choices('Assessment Type (PhD Assessment Questions)')
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =5
+                              PaddingLeft: =12
+                              PaddingRight: =5
+                              PaddingTop: =5
+                              PressedBorderColor: =RGBA(16, 110, 190, 1)
+                              PressedColor: =RGBA(255, 255, 255, 1)
+                              PressedFill: =RGBA(0, 120, 212, 1)
+                              SelectionColor: =RGBA(50, 49, 48, 1)
+                              SelectionFill: =RGBA(0, 120, 212, 1)
+                              Strikethrough: =!IsBlank(LookUp(colAssessmentQsDeletes,QuestionID=ThisItem.QuestionID))
+                              Width: =228

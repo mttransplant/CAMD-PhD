@@ -1,0 +1,745 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  scrRequestAssessments:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+      OnHidden: |-
+        =Clear(colRequestAssessmentsStudentList);
+        Clear(colCurrentTerm);
+        Clear(colOpenAssessmentCounts);
+      OnVisible: |-
+        =Select(btnLoadRequestAssessmentsData); //in: ctrRequestAssessmentsStatus
+      Width: =Min(App.Width,App.DesignWidth)
+    Children:
+      - ctrRequestAssessments:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            Fill: =RGBA(245, 245, 245, 1)
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =16
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Width: =Parent.Width
+          Children:
+            - ctrRequestAssessmentsHeader:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Fill: =RGBA(255, 255, 255, 1)
+                  FillPortions: =0
+                  Height: =75
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                Children:
+                  - cmpRequestAssessmentsHeader_1:
+                      Control: CanvasComponent
+                      ComponentName: cmpHeader
+                      Properties:
+                        Fill: =RGBA(71, 158, 245, 1)
+                        Height: =75
+                        MenuScreen: =scrAdminMenu
+                        ScreenTitle: ="Request Assessments"
+                        Width: =Parent.Width
+            - ctrRequesetAssessmentsStatus:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Fill: =RGBA(255, 255, 255, 1)
+                  FillPortions: =0
+                  Height: =80
+                  LayoutDirection: =LayoutDirection.Horizontal
+                Children:
+                  - btnLoadRequestAssessmentsData:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(0, 120, 212, 1)
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(16, 110, 190, 1)
+                        OnSelect: |-
+                          =ClearCollect(colRequestAssessmentsStudentList,AddColumns(Sort(Filter('PhD Students','Student Status'="Active"),'Full Name'),StudentSelected,false));
+                          ClearCollect(colCurrentTerm,ShowColumns(Filter('PhD Terms',STVTERM_START_DATE<=Today() And STVTERM_END_DATE>=Today()),STVTERM_CODE,STVTERM_DESC));
+                          UpdateContext({StudentsSelected:0,AdvisorsSelcted:0});
+                          ClearCollect(colOpenAssessmentCounts,AddColumns(GroupBy(Filter('PhD Assessments',IsBlank('Date Submitted')),'Term Code','Assessment Type','Submitter NUID','Student NUID',RecLeftovers),Email,LookUp(colUserList,ID=cr829_submitter_nuid).Email,Name,LookUp(colUserList,ID=cr829_submitter_nuid).Name));
+                        PressedBorderColor: =RGBA(0, 69, 120, 1)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(16, 110, 190, 1)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Visible: =false
+                  - cntSelfBriefCount:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =80
+                      Children:
+                        - labSelfBriefCount:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              Fill: =RGBA(180, 214, 250, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Text: ="Open Self-Brief Requests"
+                              Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                        - txtSelfBriefCount:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =CountIf(Filter(colOpenAssessmentCounts,cr829_assessment_type="Self-Brief"),true)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              Font: =Font.'Segoe UI'
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(255, 255, 255, 1)
+                              PressedBorderColor: =RGBA(0, 120, 212, 1)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(255, 255, 255, 1)
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                  - cntSelfCompCount:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =80
+                      Children:
+                        - labSelfCompCount:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              Fill: =RGBA(180, 214, 250, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Text: ="Open Self-Comp Requests"
+                              Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                        - txtSelfCompCount:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =CountIf(Filter(colOpenAssessmentCounts,cr829_assessment_type="Self-Comprehensive"),true)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              Font: =Font.'Segoe UI'
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(255, 255, 255, 1)
+                              PressedBorderColor: =RGBA(0, 120, 212, 1)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(255, 255, 255, 1)
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                  - cntAdvisorBriefCount:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =80
+                      Children:
+                        - labAdvisorBriefCount:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              Fill: =RGBA(180, 214, 250, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Text: ="Open Advisor-Brief Requests"
+                              Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                        - txtAdvisorBriefCount:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =CountIf(Filter(colOpenAssessmentCounts,cr829_assessment_type="Advisor-Brief"),true)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              Font: =Font.'Segoe UI'
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(255, 255, 255, 1)
+                              PressedBorderColor: =RGBA(0, 120, 212, 1)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(255, 255, 255, 1)
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                  - cntAdvisorCompCount:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =80
+                      Children:
+                        - labAdvisorCompCount:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              Fill: =RGBA(180, 214, 250, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Text: ="Open Advisor-Comp Requests"
+                              Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                        - txtAdvisorCompCount:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =CountIf(Filter(colOpenAssessmentCounts,cr829_assessment_type="Advisor-Comprehensive"),true)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              Font: =Font.'Segoe UI'
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(255, 255, 255, 1)
+                              PressedBorderColor: =RGBA(0, 120, 212, 1)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(255, 255, 255, 1)
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                  - cntSendReminderEmails:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        LayoutMinHeight: =80
+                        LayoutMinWidth: =200
+                      Children:
+                        - btnSendReminderEmails:
+                            Control: Classic/Button@2.2.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              Color: =RGBA(255, 255, 255, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =If(CountIf(colOpenAssessmentCounts,true)=0,DisplayMode.Disabled,DisplayMode.Edit)
+                              Fill: =RGBA(0, 120, 212, 1)
+                              Font: =Font.'Segoe UI'
+                              Height: =60
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =RGBA(255, 255, 255, 1)
+                              HoverFill: =RGBA(16, 110, 190, 1)
+                              OnSelect: |
+                                =ForAll(
+                                    colOpenAssessmentCounts,
+                                    Office365Outlook.SendEmailV2(
+                                        CurrentUser.Email, //To: email address. Use this one for testing.
+                                        //Email, //To: email address. Use this one for production.
+                                        "Reminder to submit PhD Assessments",
+                                        "<p>"&Name&",</p><p>Please log into the CAMD PhD database and submit the requested PhD Assessments.</p><p>Best,</p><p>"&CurrentUser.Name&"</p>"
+                                    )
+                                );
+                              PressedBorderColor: =RGBA(0, 69, 120, 1)
+                              PressedColor: =RGBA(255, 255, 255, 1)
+                              PressedFill: =RGBA(16, 110, 190, 1)
+                              RadiusBottomLeft: =Self.RadiusTopLeft
+                              RadiusBottomRight: =Self.RadiusTopLeft
+                              RadiusTopLeft: =5
+                              RadiusTopRight: =Self.RadiusTopLeft
+                              Text: ="Send Email Reminder for Open Requests"
+                              Width: =220
+                              X: =(Parent.Width-Self.Width)/2
+                              Y: =(Parent.Height-Self.Height)/2
+            - ctrRequestAssessmentsOptions:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Fill: =RGBA(255, 255, 255, 1)
+                  FillPortions: =0
+                  Height: =80
+                  LayoutDirection: =LayoutDirection.Horizontal
+                Children:
+                  - cntRequestSelfTerm_3:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =80
+                        LayoutMinWidth: =200
+                      Children:
+                        - labRequestSelfTerm_3:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Text: ="Requesting for term:"
+                              Width: =Parent.Width
+                        - txtRequestSelfTerm_3:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =First(colCurrentTerm).cr829_stvterm_desc
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =DisplayMode.View
+                              Font: =Font.'Segoe UI'
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(255, 255, 255, 1)
+                              PressedBorderColor: =RGBA(0, 120, 212, 1)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(255, 255, 255, 1)
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =Parent.Width
+                  - cntRequestSelfType_3:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        Height: =Parent.Height
+                        LayoutDirection: =LayoutDirection.Vertical
+                        LayoutMinHeight: =80
+                        LayoutMinWidth: =200
+                        PaddingLeft: =5
+                        PaddingRight: =Self.PaddingLeft
+                      Children:
+                        - labRequestSelfType_3:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Text: ="Select Assessment Type"
+                              Width: =Parent.Width
+                        - drpRequestSelfType_3:
+                            Control: Classic/DropDown@2.3.1
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              ChevronBackground: =RGBA(245, 245, 245, 1)
+                              ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                              ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                              ChevronFill: =RGBA(50, 49, 48, 1)
+                              ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                              ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =1
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              Fill: =RGBA(245, 245, 245, 1)
+                              Font: =Font.'Segoe UI'
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(245, 245, 245, 1)
+                              Items: =Choices('Assessment Type (PhD Assessment Questions)')
+                              PaddingBottom: =5
+                              PaddingLeft: =12
+                              PaddingRight: =5
+                              PaddingTop: =5
+                              PressedBorderColor: =RGBA(16, 110, 190, 1)
+                              PressedColor: =RGBA(255, 255, 255, 1)
+                              PressedFill: =RGBA(0, 120, 212, 1)
+                              SelectionColor: =RGBA(50, 49, 48, 1)
+                              SelectionFill: =RGBA(0, 120, 212, 1)
+                              Tooltip: |-
+                                ="Advisor-Brief will only go to the listed Advisor.
+                                Advisor-Comprehensive will go to both Advisor and Co-Advisor."
+                              Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                  - cntRequestSelfButton_3:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        LayoutMinHeight: =80
+                        LayoutMinWidth: =200
+                      Children:
+                        - btnRequestSelfAssessments_3:
+                            Control: Classic/Button@2.2.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              Color: =RGBA(255, 255, 255, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =If(StudentsSelected=0,DisplayMode.Disabled,DisplayMode.Edit)
+                              Fill: =RGBA(0, 120, 212, 1)
+                              Font: =Font.'Segoe UI'
+                              Height: =60
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =RGBA(255, 255, 255, 1)
+                              HoverFill: =RGBA(16, 110, 190, 1)
+                              OnSelect: |-
+                                =ClearCollect(colAssessmentRequests,Filter('PhD Assessments','Student NUID'=""));
+                                ForAll(Filter(colRequestAssessmentsStudentList,StudentSelected) As ThisStudent,
+                                    ForAll(Filter('PhD Assessment Questions','Assessment Type'=drpRequestSelfType_3.Selected.Value),
+                                        If(drpRequestSelfType_3.Selected.Value in ['Assessment Type (PhD Assessment Questions)'.'Self-Brief','Assessment Type (PhD Assessment Questions)'.'Self-Comprehensive'],
+                                            If(CountRows(Filter('PhD Assessments','Student NUID'=ThisStudent.NUID,'Submitter NUID'=ThisStudent.NUID,'Term Code'=First(colCurrentTerm).cr829_stvterm_code,'Assessment Type'=Text(drpRequestSelfType_3.Selected.Value)))=0,
+                                                Collect(colAssessmentRequests,{'Student NUID':ThisStudent.NUID,'Submitter NUID':ThisStudent.NUID,'Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':Text(drpRequestSelfType_3.Selected.Value),'Q Order':'Question Order','Question Text':Question,'Q Type':Text('Question Type'),'Q Options':'Choice Options','Date Requested':Today()})
+                                            );
+                                        );
+                                        If(drpRequestSelfType_3.Selected.Value in ['Assessment Type (PhD Assessment Questions)'.'Advisor-Brief','Assessment Type (PhD Assessment Questions)'.'Advisor-Comprehensive'] And !IsBlank(ThisStudent.Advisor.'Advisor NUID'),
+                                            If(CountRows(Filter('PhD Assessments','Student NUID'=ThisStudent.NUID,'Submitter NUID'=ThisStudent.Advisor.'Advisor NUID','Term Code'=First(colCurrentTerm).cr829_stvterm_code,'Assessment Type'=Text(drpRequestSelfType_3.Selected.Value)))=0,
+                                                Collect(colAssessmentRequests,{'Student NUID':ThisStudent.NUID,'Submitter NUID':ThisStudent.Advisor.'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':Text(drpRequestSelfType_3.Selected.Value),'Q Order':'Question Order','Question Text':Question,'Q Type':Text('Question Type'),'Q Options':'Choice Options','Date Requested':Today()})
+                                            );
+                                        );
+                                         If(drpRequestSelfType_3.Selected.Value ='Assessment Type (PhD Assessment Questions)'.'Advisor-Comprehensive' And !IsBlank(ThisStudent.'Co-Advisor'.'Advisor NUID'),
+                                            // Comprehensive assessment also sent for co-advisees
+                                            If(CountRows(Filter('PhD Assessments','Student NUID'=ThisStudent.NUID,'Submitter NUID'=ThisStudent.'Co-Advisor'.'Advisor NUID','Term Code'=First(colCurrentTerm).cr829_stvterm_code,'Assessment Type'=Text(drpRequestSelfType_3.Selected.Value)))=0,
+                                                Collect(colAssessmentRequests,{'Student NUID':ThisStudent.NUID,'Submitter NUID':ThisStudent.'Co-Advisor'.'Advisor NUID','Term Code':First(colCurrentTerm).cr829_stvterm_code,'Term Name':First(colCurrentTerm).cr829_stvterm_desc,'Assessment Type':Text(drpRequestSelfType_3.Selected.Value),'Q Order':'Question Order','Question Text':Question,'Q Type':Text('Question Type'),'Q Options':'Choice Options','Date Requested':Today()})
+                                            );
+                                        );
+                                    )
+                                );
+                                Patch('PhD Assessments',colAssessmentRequests);
+                                UpdateIf(colRequestAssessmentsStudentList, true, {StudentSelected:false});
+                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
+                                Clear(colAssessmentRequests);
+                                Reset(chkSelectAllStudents_3);
+                                Select(btnLoadRequestAssessmentsData);
+                              PressedBorderColor: =RGBA(0, 69, 120, 1)
+                              PressedColor: =RGBA(255, 255, 255, 1)
+                              PressedFill: =RGBA(16, 110, 190, 1)
+                              RadiusBottomLeft: =Self.RadiusTopLeft
+                              RadiusBottomRight: =Self.RadiusTopLeft
+                              RadiusTopLeft: =5
+                              RadiusTopRight: =Self.RadiusTopLeft
+                              Text: ="Request Asessment"&If(StudentsSelected=1,"","s")&" for "&StudentsSelected&" Students"
+                              Tooltip: =If(StudentsSelected=0,"Must select at least one student.","")
+                              Width: =220
+                              X: =118
+                              Y: =6
+            - ctrRequestStudentsList:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Fill: =RGBA(255, 255, 255, 1)
+                  LayoutDirection: =LayoutDirection.Vertical
+                Children:
+                  - ctrRequestStudentsListColumns_3:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Fill: =RGBA(180, 214, 250, 1)
+                        FillPortions: =0
+                        Height: =ctrAdvColumns.Height
+                        LayoutMinHeight: =30
+                        PaddingLeft: =5
+                        Width: =Parent.Width
+                        Y: =40
+                      Children:
+                        - labRequestStudentCoAdvisor:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              PaddingLeft: =10
+                              Text: ="Co-Advisor"
+                              Width: =txtRequestStudentCoAdvisor.Width
+                              X: =txtRequestStudentCoAdvisor.X+Parent.PaddingLeft
+                        - labRequestStudentAdvisor:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              PaddingLeft: =10
+                              Text: ="Advisor"
+                              Width: =txtRequestStudentAdvisor.Width
+                              X: =txtRequestStudentAdvisor.X+Parent.PaddingLeft
+                        - labRequestStudentNUID:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Text: ="NUID"
+                              Width: =txtRequestStudentNUID.Width
+                              X: =txtRequestStudentNUID.X+Parent.PaddingLeft
+                        - labRequestStudentName_3:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              PaddingLeft: =10
+                              Text: ="Active Students ("&StudentsSelected&" student"&If(StudentsSelected=1,"","s")&" selected)"
+                              Width: =txtRequestStudentName.Width
+                              X: =txtRequestStudentName.X
+                        - chkSelectAllStudents_3:
+                            Control: Classic/CheckBox@2.1.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              CheckboxBorderColor: =RGBA(96, 94, 92, 1)
+                              CheckmarkFill: =RGBA(0, 120, 212, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              Height: =40
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              OnCheck: |-
+                                =UpdateIf(colRequestAssessmentsStudentList, true, {StudentSelected:true});
+                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
+                              OnUncheck: |-
+                                =UpdateIf(colRequestAssessmentsStudentList, true, {StudentSelected:false});
+                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected))});
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Text: =""
+                              Width: =40
+                              X: =Parent.PaddingLeft
+                  - galRequestStudentsList:
+                      Control: Gallery@2.15.0
+                      Variant: Vertical
+                      Properties:
+                        BorderColor: =RGBA(245, 245, 245, 1)
+                        Items: =colRequestAssessmentsStudentList
+                        LoadingSpinnerColor: =Color.DarkGray
+                        TemplateSize: |
+                          =40
+                      Children:
+                        - txtRequestStudentCoAdvisor:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =ThisItem.'Co-Advisor'.'Advisor Name'
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =DisplayMode.View
+                              Font: =Font.'Segoe UI'
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(255, 255, 255, 1)
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 120, 212, 1)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(255, 255, 255, 1)
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              X: =txtRequestStudentAdvisor.X+txtRequestStudentAdvisor.Width
+                        - txtRequestStudentAdvisor:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =ThisItem.Advisor.'Advisor Name'
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =DisplayMode.View
+                              Font: =Font.'Segoe UI'
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(255, 255, 255, 1)
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 120, 212, 1)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(255, 255, 255, 1)
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              X: =txtRequestStudentNUID.X+txtRequestStudentNUID.Width
+                        - txtRequestStudentNUID:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =ThisItem.NUID
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =DisplayMode.View
+                              Font: =Font.'Segoe UI'
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(255, 255, 255, 1)
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 120, 212, 1)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(255, 255, 255, 1)
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =178
+                              X: =txtRequestStudentName.X+txtRequestStudentName.Width
+                        - txtRequestStudentName:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =ThisItem.'Full Name'
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =DisplayMode.View
+                              Font: =Font.'Segoe UI'
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(255, 255, 255, 1)
+                              OnSelect: =Select(Parent)
+                              PaddingLeft: =10
+                              PressedBorderColor: =RGBA(0, 120, 212, 1)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(255, 255, 255, 1)
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =347
+                              X: =chkSelectThisStudent.X+chkSelectThisStudent.Width
+                        - chkSelectThisStudent:
+                            Control: Classic/CheckBox@2.1.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              CheckboxBorderColor: =RGBA(96, 94, 92, 1)
+                              CheckmarkFill: =RGBA(0, 120, 212, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =ThisItem.StudentSelected
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              Height: =40
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              OnCheck: |-
+                                =UpdateIf(colRequestAssessmentsStudentList,ThisItem.NUID=NUID,{StudentSelected:true});
+                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
+                              OnSelect: =Select(Parent)
+                              OnUncheck: |-
+                                =UpdateIf(colRequestAssessmentsStudentList,ThisItem.NUID=NUID,{StudentSelected:false});
+                                UpdateContext({StudentsSelected:CountRows(Filter(colRequestAssessmentsStudentList,StudentSelected=true))});
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Text: =""
+                              Width: =40

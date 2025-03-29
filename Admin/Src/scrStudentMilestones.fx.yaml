@@ -632,7 +632,7 @@
                     Height: =40
                     Size: =16
                     Text: =ThisItem.'Modified By'.'First Name'&" "&ThisItem.'Modified By'.'Last Name'
-                    VerticalAlign: ='TextCanvas.VerticalAlign'.Middle
+                    VerticalAlign: =VerticalAlign.Middle
                     Width: =164
                     X: =mDate.X+mDate.Width+5
                     Y: =0

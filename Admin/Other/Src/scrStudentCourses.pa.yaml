@@ -1,0 +1,409 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  scrStudentCourses:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+    Children:
+      - ctrStudentCourses:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            Fill: =RGBA(245, 245, 245, 1)
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =16
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Width: =Min(App.Width,App.DesignWidth)
+            X: =(Parent.Width-Self.Width)/2
+          Children:
+            - ctrStudentCoursesHeader:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  Fill: =RGBA(255, 255, 255, 1)
+                  FillPortions: =0
+                  Height: =75
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =Parent.Width
+                Children:
+                  - cmpStudentCoursesHeader:
+                      Control: CanvasComponent
+                      ComponentName: cmpHeader
+                      Properties:
+                        Fill: =RGBA(71, 158, 245, 1)
+                        Height: =75
+                        MenuScreen: =scrAdminMenu
+                        ScreenTitle: =galStudentLlist.Selected.'First Name'&" "&galStudentLlist.Selected.'Last Name'
+                        Width: =Parent.Width
+            - ctrCoursesNav:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  Fill: =RGBA(255, 255, 255, 1)
+                  FillPortions: =0
+                  Height: =75
+                  LayoutAlignItems: =LayoutAlignItems.Center
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  LayoutGap: =10
+                  LayoutJustifyContent: =LayoutJustifyContent.Center
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =Parent.Width
+                Children:
+                  - btnCoursesBack:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        OnSelect: =Navigate(scrStudentList)
+                        Text: ="Back to List"
+                        Visible: =CurrentUser.Role in ["Admin","Advisor"]
+                        Width: =140
+                  - btnCoursesOverview:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        OnSelect: =Navigate(scrStudentOverview)
+                        Text: ="Overview"
+                        Width: =140
+                  - btnCoursesMilestones:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        OnSelect: =Navigate(scrStudentMilestones)
+                        Text: ="Milestones"
+                        Width: =140
+                  - btnCoursesHistory:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        OnSelect: =Navigate(scrStudentHistory)
+                        Text: ="Activity History"
+                        Visible: =CurrentUser.Role="Admin"
+                        Width: =140
+                  - btnCoursesEvaluations:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        OnSelect: =Navigate(scrStudentEvaluations)
+                        Text: ="Evaluations"
+                        Width: =140
+                  - btnCoursesCourses:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Primary
+                        Text: ="Courses"
+                        Width: =140
+            - ctrCoursesMain:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  Fill: =RGBA(255, 255, 255, 1)
+                  LayoutDirection: =LayoutDirection.Vertical
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =Parent.Width
+                Children:
+                  - ctrCoursesColumns:
+                      Control: GroupContainer@1.3.0
+                      Variant: AutoLayout
+                      Properties:
+                        Fill: =RGBA(180, 214, 250, 1)
+                        FillPortions: =0
+                        Height: =40
+                        LayoutDirection: =LayoutDirection.Horizontal
+                        LayoutGap: =1
+                      Children:
+                        - labTerm:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Term"
+                              Width: =txtTerm.Width
+                              X: =txtTerm.X
+                        - labColl:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Coll"
+                              Width: =txtCollege.Width
+                              X: =txtCollege.X
+                        - labSubj:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Subj"
+                              Width: =txtSubject.Width
+                              X: =txtSubject.X
+                        - labCrse:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Course"
+                              Width: =txtCourse.Width
+                              X: =txtCourse.X
+                        - labTitle:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Title"
+                              Width: =txtTitle.Width
+                              X: =txtTitle.X
+                        - labCredits:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Credits"
+                              Width: =txtCredits.Width
+                              X: =txtCredits.X
+                        - labInstructor:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Text: ="Instructor"
+                              Width: =txtInstructor.Width
+                              X: =txtInstructor.X
+                        - labRegStatus:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Height: =Parent.Height
+                              Text: ="Registration Status"
+                              Width: =txtRegStatus.Width
+                              X: =txtRegStatus.X
+                  - galEnrollments:
+                      Control: Gallery@2.15.0
+                      Variant: Vertical
+                      Properties:
+                        BorderColor: =RGBA(245, 245, 245, 1)
+                        Items: |-
+                          =//Sort(Sort(Sort(Filter('PhD Enrollments',NUID=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID)),'Term Code'),Subject),Course)
+                          SortByColumns(Filter('PhD Enrollments',NUID=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID)),"cr829_term",SortOrder.Descending,"cr829_subject",SortOrder.Ascending,"cr829_course",SortOrder.Ascending)
+                        LoadingSpinnerColor: =Color.DarkGray
+                        TemplateSize: =40
+                        Width: =Parent.Width
+                        Y: =ctrCoursesColumns.Y+ctrCoursesColumns.Height
+                      Children:
+                        - txtTerm:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              Height: =Parent.TemplateHeight
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.Term
+                              Width: =163
+                              X: =5
+                        - txtCollege:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              Height: =Parent.TemplateHeight
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.College
+                              Width: =76
+                              X: =txtTerm.X+txtTerm.Width
+                        - txtSubject:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              Height: =Parent.TemplateHeight
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.Subject
+                              Width: =95
+                              X: =txtCollege.X+txtCollege.Width
+                        - txtCourse:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              Height: =Parent.TemplateHeight
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.Course
+                              Width: =txtSubject.Width
+                              X: =txtSubject.X+txtSubject.Width
+                        - txtTitle:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              Height: =Parent.TemplateHeight
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.Title
+                              Width: =320
+                              X: =txtCourse.X+txtCourse.Width
+                        - txtCredits:
+                            Control: Label@2.5.1
+                            Properties:
+                              Align: =Align.Center
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              Height: =Parent.TemplateHeight
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.'Credit Hours'
+                              Width: =86
+                              X: =txtTitle.X+txtTitle.Width
+                        - txtInstructor:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              Height: =Parent.TemplateHeight
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.'Instructor Name'
+                              Width: =236
+                              X: =txtCredits.X+txtCredits.Width
+                        - txtRegStatus:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              Height: =Parent.TemplateHeight
+                              OnSelect: =Select(Parent)
+                              Text: =ThisItem.'Reg Status'
+                              Width: =195
+                              X: =txtInstructor.X+txtInstructor.Width

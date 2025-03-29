@@ -1,0 +1,199 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  scrAdminMenu:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+      OnVisible: |-
+        =ClearCollect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Admins','Admin Name',Name,'Admin Email',Email,'Admin NUID',ID),Name,Email,ID),Role,"Admin"));
+        Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Advisors','Advisor Name',Name,'Advisor Email',Email,'Advisor NUID',ID),Name,Email,ID),Role,"Advisor"));
+        Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Students','Full Name',Name,'Student Email',Email,NUID,ID),Name,Email,ID),Role,"Student"));
+
+        UpdateContext({IsTesting:false, TestEmail:""}); //self
+        //UpdateContext({IsTesting:true, TestEmail:"c.pearce@northeastern.edu"}); //faculty 1
+        //UpdateContext({IsTesting:true, TestEmail:"c.harteveld@northeastern.edu"}); //faculty 2
+        //UpdateContext({IsTesting:true, TestEmail:"mer.clark@northeastern.edu"}); //faculty 2
+        //UpdateContext({IsTesting:true, TestEmail:"abdulhameed.r@northeastern.edu"}); //student 1
+        //UpdateContext({IsTesting:true, TestEmail:"amgalan.b@northeastern.edu"}); //student 2
+        Set(CurrentUser,First(Sort(Filter(colUserList,Email=If(IsTesting,TestEmail,User().Email)),Role,SortOrder.Ascending)));
+      Width: =Min(App.Width,App.DesignWidth)
+    Children:
+      - ctrAdminMenu:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            Fill: =RGBA(245, 245, 245, 1)
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =16
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Width: =Parent.Width
+          Children:
+            - ctrMenuHeader:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Fill: =RGBA(255, 255, 255, 1)
+                  FillPortions: =0
+                  Height: =75
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                Children:
+                  - cmpMenuHeader:
+                      Control: CanvasComponent
+                      ComponentName: cmpHeader
+                      Properties:
+                        Fill: =RGBA(71, 158, 245, 1)
+                        Height: =75
+                        MenuScreen: =scrAdminMenu
+                        ScreenTitle: ="Menu"
+                        Width: =Parent.Width
+            - ctrMenuNav:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  Fill: =RGBA(255, 255, 255, 1)
+                  LayoutDirection: =LayoutDirection.Vertical
+                  LayoutGap: =5
+                  LayoutOverflowY: =LayoutOverflow.Scroll
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                Children:
+                  - btnRespondReqAssessments:
+                      Control: Button@0.0.44
+                      Properties:
+                        BasePaletteColor: =Color.Green
+                        BorderRadiusBottomLeft: =10
+                        BorderRadiusBottomRight: =10
+                        BorderRadiusTopLeft: =10
+                        BorderRadiusTopRight: =10
+                        FontSize: =56
+                        Height: =90
+                        OnSelect: =Navigate(scrRequestedAssessments)
+                        Text: ="Respond to Requested Assessments"
+                        Visible: =CountRows(Filter('PhD Assessments','Submitter NUID'=CurrentUser.ID And IsBlank('Date Submitted')))>0
+                        Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                        X: =Parent.Width/2+5
+                        Y: =5
+                  - btnStudent:
+                      Control: Button@0.0.44
+                      Properties:
+                        BorderRadiusBottomLeft: =10
+                        BorderRadiusBottomRight: =10
+                        BorderRadiusTopLeft: =10
+                        BorderRadiusTopRight: =10
+                        FontSize: =56
+                        Height: =90
+                        OnSelect: =Navigate(scrStudentList)
+                        Text: =If(CurrentUser.Role="Admin","Students2","My Students")
+                        Visible: =CurrentUser.Role in ["Admin","Advisor"]
+                        Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                        X: =5
+                        Y: =5
+                  - btnAdvisor:
+                      Control: Button@0.0.44
+                      Properties:
+                        BorderRadiusBottomLeft: =10
+                        BorderRadiusBottomRight: =10
+                        BorderRadiusTopLeft: =10
+                        BorderRadiusTopRight: =10
+                        FontSize: =56
+                        Height: =90
+                        OnSelect: =Navigate(scrAdvisors)
+                        Text: ="Advisors"
+                        Visible: =CurrentUser.Role="Admin"
+                        Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                        X: =Parent.Width/2+5
+                        Y: =5
+                  - btnAssessmentQs:
+                      Control: Button@0.0.44
+                      Properties:
+                        BorderRadiusBottomLeft: =10
+                        BorderRadiusBottomRight: =10
+                        BorderRadiusTopLeft: =10
+                        BorderRadiusTopRight: =10
+                        FontSize: =56
+                        Height: =90
+                        OnSelect: =Navigate(scrAssessmentQs)
+                        Text: ="Assessment Questions"
+                        Visible: =CurrentUser.Role="Admin"
+                        Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                        X: =Parent.Width/2+5
+                        Y: =5
+                  - btnRequestAssessments:
+                      Control: Button@0.0.44
+                      Properties:
+                        BorderRadiusBottomLeft: =10
+                        BorderRadiusBottomRight: =10
+                        BorderRadiusTopLeft: =10
+                        BorderRadiusTopRight: =10
+                        FontSize: =56
+                        Height: =90
+                        OnSelect: =Navigate(scrRequestAssessments)
+                        Text: ="Request Assessments"
+                        Visible: =CurrentUser.Role="Admin"
+                        Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                        X: =Parent.Width/2+5
+                        Y: =5
+                  - btnFunding:
+                      Control: Button@0.0.44
+                      Properties:
+                        BorderRadiusBottomLeft: =10
+                        BorderRadiusBottomRight: =10
+                        BorderRadiusTopLeft: =10
+                        BorderRadiusTopRight: =10
+                        FontSize: =56
+                        Height: =90
+                        OnSelect: =Navigate(scrFunding)
+                        Text: ="Funding Sources"
+                        Visible: =CurrentUser.Role="Admin"
+                        Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                        X: =Parent.Width/2+5
+                        Y: =Parent.Height/6+5
+                  - btnTARA:
+                      Control: Button@0.0.44
+                      Properties:
+                        BorderRadiusBottomLeft: =10
+                        BorderRadiusBottomRight: =10
+                        BorderRadiusTopLeft: =10
+                        BorderRadiusTopRight: =10
+                        FontSize: =56
+                        Height: =90
+                        OnSelect: '=Navigate(scrPositions)  '
+                        Text: ="TA/RA Positions"
+                        Visible: =CurrentUser.Role="Admin"
+                        Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                        X: =5
+                        Y: =Parent.Height/6+5
+                  - btnMyInformation:
+                      Control: Button@0.0.44
+                      Properties:
+                        BorderRadiusBottomLeft: =10
+                        BorderRadiusBottomRight: =10
+                        BorderRadiusTopLeft: =10
+                        BorderRadiusTopRight: =10
+                        FontSize: =56
+                        Height: =90
+                        OnSelect: =Navigate(scrStudentOverview)
+                        Text: ="My Information"
+                        Visible: =CurrentUser.Role="Student"
+                        Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
+                        X: =Parent.Width/2+5
+                        Y: =Parent.Height/2+5

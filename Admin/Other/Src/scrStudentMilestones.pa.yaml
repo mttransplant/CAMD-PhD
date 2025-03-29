@@ -1,0 +1,588 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  scrStudentMilestones:
+    Properties:
+      Fill: =RGBA(255, 255, 255, 1)
+      LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
+      OnHidden: |-
+        =Clear(colDeleteMilestones);
+        Clear(colUpdateMilestones)
+      OnVisible: |-
+        =Select(btnLoadMilestones);
+        UpdateContext({IsEditing:false})
+    Children:
+      - ctrStudentMilestones:
+          Control: GroupContainer@1.3.0
+          Variant: AutoLayout
+          Properties:
+            Fill: =RGBA(245, 245, 245, 1)
+            Height: =Parent.Height
+            LayoutAlignItems: =LayoutAlignItems.Stretch
+            LayoutDirection: =LayoutDirection.Vertical
+            LayoutGap: =16
+            PaddingBottom: =16
+            PaddingLeft: =16
+            PaddingRight: =16
+            PaddingTop: =16
+            Width: =Min(App.Width,App.DesignWidth)
+            X: =(Parent.Width-Self.Width)/2
+          Children:
+            - ctrMilestonesHeader:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  Fill: =RGBA(255, 255, 255, 1)
+                  FillPortions: =0
+                  Height: =75
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =Parent.Width
+                Children:
+                  - cmpMilestonesHeader:
+                      Control: CanvasComponent
+                      ComponentName: cmpHeader
+                      Properties:
+                        Fill: =RGBA(71, 158, 245, 1)
+                        Height: =75
+                        MenuScreen: =scrAdminMenu
+                        ScreenTitle: =galStudentLlist.Selected.'First Name'&" "&galStudentLlist.Selected.'Last Name'
+                        Width: =Parent.Width
+            - ctrMilestonesNav:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  Fill: =RGBA(255, 255, 255, 1)
+                  FillPortions: =0
+                  Height: =75
+                  LayoutAlignItems: =LayoutAlignItems.Center
+                  LayoutDirection: =LayoutDirection.Horizontal
+                  LayoutGap: =10
+                  LayoutJustifyContent: =LayoutJustifyContent.Center
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =Parent.Width
+                Children:
+                  - btnMilestonesBack:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
+                        OnSelect: =Navigate(scrStudentList)
+                        Text: ="Back to List"
+                        Visible: =CurrentUser.Role in ["Admin","Advisor"]
+                        Width: =140
+                  - btnMilestonesOverview:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
+                        OnSelect: =Navigate(scrStudentOverview)
+                        Text: ="Overview"
+                        Width: =140
+                  - btnMilestonesMilestones:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Primary
+                        DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
+                        OnSelect: =Navigate(scrStudentMilestones)
+                        Text: ="Milestones"
+                        Width: =140
+                  - btnMilestonesHistory:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
+                        OnSelect: =Navigate(scrStudentHistory)
+                        Text: ="Activity History"
+                        Visible: =CurrentUser.Role="Admin"
+                        Width: =140
+                  - btnMilestonesEvaluations:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
+                        FontWeight: =FontWeight.Normal
+                        OnSelect: =Navigate(scrStudentEvaluations)
+                        Text: ="Evaluations"
+                        Width: =140
+                  - btnMilestonesCourses:
+                      Control: Button@0.0.44
+                      Properties:
+                        Appearance: ='ButtonCanvas.Appearance'.Secondary
+                        DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
+                        OnSelect: =Navigate(scrStudentCourses)
+                        Text: ="Courses"
+                        Width: =140
+                  - btnLoadMilestones:
+                      Control: Classic/Button@2.2.0
+                      Properties:
+                        BorderColor: =RGBA(0, 0, 0, 0)
+                        BorderStyle: =BorderStyle.None
+                        Color: =RGBA(255, 255, 255, 1)
+                        DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                        DisabledColor: =RGBA(161, 159, 157, 1)
+                        DisabledFill: =RGBA(242, 242, 241, 0)
+                        Fill: =RGBA(0, 120, 212, 1)
+                        Font: =Font.'Segoe UI'
+                        HoverBorderColor: =RGBA(0, 0, 0, 0)
+                        HoverColor: =RGBA(255, 255, 255, 1)
+                        HoverFill: =RGBA(16, 110, 190, 1)
+                        OnSelect: |-
+                          =ClearCollect(colUpdateMilestones,Filter('PhD Milestones',NUID=""));
+                          ClearCollect(colDeleteMilestones,Filter('PhD Milestones',NUID=""));
+                        PressedBorderColor: =RGBA(0, 69, 120, 1)
+                        PressedColor: =RGBA(255, 255, 255, 1)
+                        PressedFill: =RGBA(16, 110, 190, 1)
+                        RadiusBottomLeft: =0
+                        RadiusBottomRight: =0
+                        RadiusTopLeft: =0
+                        RadiusTopRight: =0
+                        Visible: =false
+            - ctrMilestonesMain:
+                Control: GroupContainer@1.3.0
+                Variant: AutoLayout
+                Properties:
+                  AlignInContainer: =AlignInContainer.SetByContainer
+                  Fill: =RGBA(255, 255, 255, 1)
+                  LayoutDirection: =LayoutDirection.Vertical
+                  RadiusBottomLeft: =8
+                  RadiusBottomRight: =8
+                  RadiusTopLeft: =8
+                  RadiusTopRight: =8
+                  Width: =Parent.Width
+                Children:
+                  - ctrMilestonesColumns:
+                      Control: GroupContainer@1.3.0
+                      Variant: ManualLayout
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        Fill: =RGBA(180, 214, 250, 1)
+                        FillPortions: =0
+                        Height: =40
+                        Width: =Parent.Width
+                      Children:
+                        - labMilestonesMilestone:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              PaddingLeft: =15
+                              Text: ="Milestone"
+                              Width: =mMilestone.Width
+                              X: =mMilestone.X
+                        - labMilestonesStatus:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              PaddingLeft: =15
+                              Text: ="Status"
+                              Width: =mStatus.Width
+                              X: =mStatus.X
+                        - labMilestonesNote:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              PaddingLeft: =15
+                              Text: ="Note"
+                              Width: =mNote.Width
+                              X: =mNote.X
+                        - labMilestonesDate:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              PaddingLeft: =15
+                              Text: ="Date"
+                              Width: =mDate.Width
+                              X: =mDate.X
+                        - labMilestonesModified:
+                            Control: Label@2.5.1
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              BorderStyle: =BorderStyle.None
+                              BorderThickness: =2
+                              Color: =RGBA(50, 49, 48, 1)
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              FocusedBorderThickness: =4
+                              Font: =Font.'Segoe UI'
+                              FontWeight: =FontWeight.Bold
+                              Text: ="Modified By"
+                              Width: =mBy.Width-btnMilestonesSave.Width
+                              X: =mBy.X
+                        - btnMilestonesSave:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              Color: =RGBA(0, 120, 212, 1)
+                              DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                              DisabledColor: =RGBA(225, 223, 221, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderThickness: =4
+                              Height: =20
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =RGBA(16, 110, 190, 1)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Save
+                              OnSelect: |-
+                                =Patch('PhD Milestones',ShowColumns(colUpdateMilestones,NUID,Milestone,'Milestone Status',Notes, Date, MilestoneID));
+                                If(CountIf(colDeleteMilestones,true)>0,Remove('PhD Milestones',colDeleteMilestones));
+                                Notify("Edits successfully saved",NotificationType.Success,5000);
+                                UpdateContext({IsEditing:false});
+                                Select(btnLoadMilestones)
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =RGBA(16, 110, 190, 1)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Tooltip: ="Save Changes"
+                              Visible: =IsEditing And (CountIf(colUpdateMilestones, true)+CountIf(colDeleteMilestones,true)>0)
+                              Width: =30
+                              X: =1304
+                              Y: =10
+                        - btnMilestonesAdd:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              Color: =RGBA(0, 120, 212, 1)
+                              DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                              DisabledColor: =RGBA(225, 223, 221, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderThickness: =4
+                              Height: =20
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =RGBA(16, 110, 190, 1)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Add
+                              OnSelect: |-
+                                =Collect('PhD Milestones',{NUID:galStudentLlist.Selected.NUID,Date:Today()});
+                                Select(btnLoadMilestones);
+                                UpdateContext({IsEditing:true});
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =RGBA(16, 110, 190, 1)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Tooltip: ="Add Milestone"
+                              Visible: =CountIf(colUpdateMilestones, true)+CountIf(colDeleteMilestones,true)=0 And CurrentUser.Role="Admin"
+                              Width: =30
+                              X: =1304
+                              Y: =btnMilestonesEdit.Y
+                        - btnMilestonesEdit:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              Color: =RGBA(0, 120, 212, 1)
+                              DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                              DisabledColor: =RGBA(225, 223, 221, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderThickness: =4
+                              Height: =20
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =RGBA(16, 110, 190, 1)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Edit
+                              OnSelect: =UpdateContext({IsEditing:true})
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =RGBA(16, 110, 190, 1)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Tooltip: ="Edit Milestones"
+                              Visible: =CurrentUser.Role="Admin" And !IsEditing
+                              Width: =30
+                              X: =Parent.Width-btnMilestonesEdit.Width-btnMilestonesSave.Width-10
+                              Y: =10
+                        - btnMilestonesCancel:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              Color: =RGBA(0, 120, 212, 1)
+                              DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                              DisabledColor: =RGBA(225, 223, 221, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderThickness: =4
+                              Height: =20
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =RGBA(16, 110, 190, 1)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Cancel
+                              OnSelect: |-
+                                =Select(btnLoadMilestones);
+                                UpdateContext({IsEditing:false})
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =RGBA(16, 110, 190, 1)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Tooltip: ="Discard Changes"
+                              Visible: =CurrentUser.Role="Admin" And IsEditing
+                              Width: =30
+                              X: =btnMilestonesEdit.X
+                              Y: =btnMilestonesEdit.Y
+                  - galMilestones:
+                      Control: Gallery@2.15.0
+                      Variant: Vertical
+                      Properties:
+                        AlignInContainer: =AlignInContainer.SetByContainer
+                        BorderColor: =RGBA(245, 245, 245, 1)
+                        Height: =Parent.Height
+                        Items: =Sort(Filter('PhD Milestones',NUID=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID)),Date,SortOrder.Descending)
+                        LoadingSpinnerColor: =Color.DarkGray
+                        TemplateSize: =40
+                        Width: =Parent.Width
+                      Children:
+                        - mMilestone:
+                            Control: Classic/DropDown@2.3.1
+                            Properties:
+                              BorderColor: =If(mMilestone.SelectedText.Value="Select Milestone…",Color.Red,RGBA(245, 245, 245, 1))
+                              ChevronBackground: =RGBA(245, 245, 245, 1)
+                              ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                              ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                              ChevronFill: =RGBA(50, 49, 48, 1)
+                              ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                              ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =ThisItem.Milestone
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                              Fill: =If(IsEditing,RGBA(245, 245, 245, 1),Color.White)
+                              Font: =Font.'Segoe UI'
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(245, 245, 245, 1)
+                              Items: =Choices('PhD Milestones'.Milestone)
+                              OnChange: |-
+                                =If(
+                                    IsBlank(
+                                        LookUp(
+                                            colUpdateMilestones,
+                                            MilestoneID = ThisItem.MilestoneID
+                                        )
+                                    ),
+                                    Collect(
+                                        colUpdateMilestones,
+                                        ThisItem
+                                    )
+                                );
+                                UpdateIf(
+                                    colUpdateMilestones,
+                                    MilestoneID = ThisItem.MilestoneID,
+                                    {Milestone: mMilestone.Selected.Value}
+                                )
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =5
+                              PaddingLeft: =12
+                              PaddingRight: =5
+                              PaddingTop: =5
+                              PressedBorderColor: =RGBA(16, 110, 190, 1)
+                              PressedColor: =RGBA(255, 255, 255, 1)
+                              PressedFill: =RGBA(0, 120, 212, 1)
+                              SelectionColor: =RGBA(50, 49, 48, 1)
+                              SelectionFill: =RGBA(0, 120, 212, 1)
+                              Width: =205
+                              X: =5
+                        - mStatus:
+                            Control: Classic/DropDown@2.3.1
+                            Properties:
+                              BorderColor: =If(mStatus.SelectedText.Value="Select Status…",Color.Red,RGBA(245, 245, 245, 1))
+                              ChevronBackground: =RGBA(245, 245, 245, 1)
+                              ChevronDisabledBackground: =RGBA(242, 242, 241, 0)
+                              ChevronDisabledFill: =RGBA(161, 159, 157, 1)
+                              ChevronFill: =RGBA(50, 49, 48, 1)
+                              ChevronHoverBackground: =RGBA(245, 245, 245, 1)
+                              ChevronHoverFill: =RGBA(50, 49, 48, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =ThisItem.'Milestone Status'
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                              Fill: =If(IsEditing,RGBA(245, 245, 245, 1),Color.White)
+                              Font: =Font.'Segoe UI'
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(245, 245, 245, 1)
+                              Items: =Choices('Milestone Status (PhD Milestones)')
+                              OnChange: |-
+                                =If(
+                                    IsBlank(
+                                        LookUp(
+                                            colUpdateMilestones,
+                                            MilestoneID = ThisItem.MilestoneID
+                                        )
+                                    ),
+                                    Collect(
+                                        colUpdateMilestones,
+                                        ThisItem
+                                    )
+                                );
+                                UpdateIf(
+                                    colUpdateMilestones,
+                                    MilestoneID = ThisItem.MilestoneID,
+                                    {'Milestone Status': mStatus.Selected.Value}
+                                )
+                              OnSelect: =Select(Parent)
+                              PaddingBottom: =5
+                              PaddingLeft: =12
+                              PaddingRight: =5
+                              PaddingTop: =5
+                              PressedBorderColor: =RGBA(16, 110, 190, 1)
+                              PressedColor: =RGBA(255, 255, 255, 1)
+                              PressedFill: =RGBA(0, 120, 212, 1)
+                              SelectionColor: =RGBA(50, 49, 48, 1)
+                              SelectionFill: =RGBA(0, 120, 212, 1)
+                              Width: =130
+                              X: =mMilestone.X+mMilestone.Width+5
+                        - mNote:
+                            Control: Classic/TextInput@2.3.2
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              Default: =ThisItem.Notes
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                              Font: =Font.'Segoe UI'
+                              HoverBorderColor: =RGBA(16, 110, 190, 1)
+                              HoverColor: =RGBA(50, 49, 48, 1)
+                              HoverFill: =RGBA(255, 255, 255, 1)
+                              OnChange: |-
+                                =If(
+                                    IsBlank(
+                                        LookUp(
+                                            colUpdateMilestones,
+                                            MilestoneID = ThisItem.MilestoneID
+                                        )
+                                    ),
+                                    Collect(
+                                        colUpdateMilestones,
+                                        ThisItem
+                                    )
+                                );
+                                UpdateIf(
+                                    colUpdateMilestones,
+                                    MilestoneID = ThisItem.MilestoneID,
+                                    {Notes: mNote.Text}
+                                )
+                              OnSelect: =Select(Parent)
+                              PressedBorderColor: =RGBA(0, 120, 212, 1)
+                              PressedColor: =RGBA(50, 49, 48, 1)
+                              PressedFill: =RGBA(255, 255, 255, 1)
+                              RadiusBottomLeft: =0
+                              RadiusBottomRight: =0
+                              RadiusTopLeft: =0
+                              RadiusTopRight: =0
+                              Width: =587
+                              X: =mStatus.X+mStatus.Width+5
+                        - mBy:
+                            Control: Text@0.0.50
+                            Properties:
+                              Align: ='TextCanvas.Align'.Start
+                              FontColor: =RGBA(0, 0, 0, 1)
+                              Height: =40
+                              Size: =16
+                              Text: =ThisItem.'Modified By'.'First Name'&" "&ThisItem.'Modified By'.'Last Name'
+                              VerticalAlign: =VerticalAlign.Middle
+                              Width: =164
+                              X: =mDate.X+mDate.Width+5
+                        - mDel:
+                            Control: Classic/Icon@2.5.0
+                            Properties:
+                              BorderColor: =RGBA(0, 0, 0, 0)
+                              Color: =RGBA(0, 120, 212, 1)
+                              DisabledBorderColor: =RGBA(245, 245, 245, 1)
+                              DisabledColor: =RGBA(225, 223, 221, 1)
+                              DisabledFill: =RGBA(0, 0, 0, 0)
+                              FocusedBorderThickness: =4
+                              Height: =20
+                              HoverBorderColor: =RGBA(0, 0, 0, 0)
+                              HoverColor: =RGBA(16, 110, 190, 1)
+                              HoverFill: =RGBA(0, 0, 0, 0)
+                              Icon: =Icon.Trash
+                              OnSelect: =Collect(colDeleteMilestones,ThisItem);
+                              PressedBorderColor: =RGBA(0, 0, 0, 0)
+                              PressedColor: =RGBA(16, 110, 190, 1)
+                              PressedFill: =RGBA(0, 0, 0, 0)
+                              Visible: =IsEditing
+                              Width: =32
+                              X: =mBy.X+mBy.Width+10
+                              Y: =10
+                        - mDate:
+                            Control: Classic/DatePicker@2.6.0
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              Color: =RGBA(50, 49, 48, 1)
+                              DefaultDate: =ThisItem.Date
+                              DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                              DisabledColor: =RGBA(161, 159, 157, 1)
+                              DisabledFill: =RGBA(242, 242, 241, 0)
+                              DisplayMode: =If(IsEditing,DisplayMode.Edit,DisplayMode.View)
+                              Fill: =If(IsEditing,RGBA(245, 245, 245, 1),Color.White)
+                              Font: =Font.'Segoe UI'
+                              IconBackground: =RGBA(0, 120, 212, 1)
+                              IconFill: =RGBA(255, 255, 255, 1)
+                              InputTextPlaceholder: =
+                              OnChange: |-
+                                =If(
+                                    IsBlank(
+                                        LookUp(
+                                            colUpdateMilestones,
+                                            MilestoneID = ThisItem.MilestoneID
+                                        )
+                                    ),
+                                    Collect(
+                                        colUpdateMilestones,
+                                        ThisItem
+                                    )
+                                );
+                                UpdateIf(
+                                    colUpdateMilestones,
+                                    MilestoneID = ThisItem.MilestoneID,
+                                    {Date: mDate.SelectedDate}
+                                )
+                              OnSelect: =Select(Parent)
+                              PaddingTop: =5
+                              Size: =13
+                              Width: =132
+                              X: =mNote.X+mNote.Width+5
