@@ -102,7 +102,7 @@ Screens:
                         FontSize: =56
                         Height: =90
                         OnSelect: =Navigate(scrStudentList)
-                        Text: =If(CurrentUser.Role="Admin","Students2","My Students")
+                        Text: =If(CurrentUser.Role="Admin","Students","My Students")
                         Visible: =CurrentUser.Role in ["Admin","Advisor"]
                         Width: =Parent.Width-Parent.PaddingLeft-Parent.PaddingRight
                         X: =5
