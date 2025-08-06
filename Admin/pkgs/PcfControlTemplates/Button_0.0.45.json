@@ -1674,7 +1674,7 @@
       "IsControlSpecific": false,
       "LoadingOrder": 10,
       "ModifiedPath": "",
-      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.44\",\"IsFirstParty\":true}}",
+      "Path": "{\"Id\":\"PowerAppsControlInfo\",\"Data\":{\"TemplateVersion\":1,\"Version\":\"0.0.45\",\"IsFirstParty\":true}}",
       "Type": 3
     },
     {
@@ -2039,5 +2039,5 @@
     "autoDisabledViewState": "true",
     "supportSetFocus": "true"
   },
-  "Version": "0.0.44"
+  "Version": "0.0.45"
 }

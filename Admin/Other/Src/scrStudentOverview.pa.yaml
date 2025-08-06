@@ -1,9 +1,8 @@
 # ************************************************************************************************
-# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
-# Content may be incomplete and subject to change.
-# This file is read-only and should only be used to review changes made within Power Apps Studio.
-# This file isn't used when loading the app. External editing, merging and conflict resolution are
-# not supported.
+# Warning: YAML source code for Canvas Apps should only be used to review changes made within Power Apps Studio and for minor edits (Preview).
+# Use the maker portal to create and edit your Power Apps.
+# 
+# The schema file for Canvas Apps is available at https://go.microsoft.com/fwlink/?linkid=2304907
 # 
 # For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
 # ************************************************************************************************
@@ -88,7 +87,7 @@ Screens:
                   Width: =Parent.Width
                 Children:
                   - btnOverviewBack:
-                      Control: Button@0.0.44
+                      Control: Button@0.0.45
                       Properties:
                         Appearance: ='ButtonCanvas.Appearance'.Secondary
                         DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
@@ -97,7 +96,7 @@ Screens:
                         Visible: =CurrentUser.Role in ["Admin","Advisor"]
                         Width: =140
                   - btnOverviewOverview:
-                      Control: Button@0.0.44
+                      Control: Button@0.0.45
                       Properties:
                         Appearance: ='ButtonCanvas.Appearance'.Primary
                         DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
@@ -105,7 +104,7 @@ Screens:
                         Text: ="Overview"
                         Width: =140
                   - btnOverviewMilestones:
-                      Control: Button@0.0.44
+                      Control: Button@0.0.45
                       Properties:
                         Appearance: ='ButtonCanvas.Appearance'.Secondary
                         DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
@@ -113,7 +112,7 @@ Screens:
                         Text: ="Milestones"
                         Width: =140
                   - btnOverviewHistory:
-                      Control: Button@0.0.44
+                      Control: Button@0.0.45
                       Properties:
                         Appearance: ='ButtonCanvas.Appearance'.Secondary
                         DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
@@ -122,7 +121,7 @@ Screens:
                         Visible: =CurrentUser.Role="Admin"
                         Width: =140
                   - btnOverviewEvaluations:
-                      Control: Button@0.0.44
+                      Control: Button@0.0.45
                       Properties:
                         Appearance: ='ButtonCanvas.Appearance'.Secondary
                         DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
@@ -130,7 +129,7 @@ Screens:
                         Text: ="Evaluations"
                         Width: =140
                   - btnOverviewCourses:
-                      Control: Button@0.0.44
+                      Control: Button@0.0.45
                       Properties:
                         Appearance: ='ButtonCanvas.Appearance'.Secondary
                         DisplayMode: =If(IsEditing,DisplayMode.Disabled,DisplayMode.Edit)
@@ -244,6 +243,7 @@ Screens:
                               Y: =10
                   - ReadOnlyStudentInfo:
                       Control: FormViewer@2.3.4
+                      Layout: Horizontal
                       Properties:
                         BorderColor: =RGBA(245, 245, 245, 1)
                         BorderStyle: =BorderStyle.None
@@ -252,9 +252,10 @@ Screens:
                         Height: =210
                         Item: =LookUp('PhD Students',NUID=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID))
                         LayoutMinWidth: =ReadOnlyStudentInfo.Width
+                        NumberOfColumns: =2
                       Children:
                         - First Name_DataCard1:
-                            Control: TypedDataCard@1.0.6
+                            Control: TypedDataCard@1.0.7
                             Variant: ClassicTextualView
                             IsLocked: true
                             Properties:
@@ -264,10 +265,12 @@ Screens:
                               DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_first_name)
                               Required: =false
                               Width: =667
+                              X: =0
                               Y: =0
                             Children:
                               - DataCardKey3:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldName
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -288,6 +291,7 @@ Screens:
                                     Y: =10 + (DataCardValue1.Height / 2) - (Self.Height / 2)
                               - DataCardValue1:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldValue
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -308,7 +312,7 @@ Screens:
                                     X: =DataCardKey3.X + DataCardKey3.Width
                                     Y: =10
                         - Last Name_DataCard1:
-                            Control: TypedDataCard@1.0.6
+                            Control: TypedDataCard@1.0.7
                             Variant: ClassicTextualView
                             IsLocked: true
                             Properties:
@@ -323,6 +327,7 @@ Screens:
                             Children:
                               - DataCardKey4:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldName
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -343,6 +348,7 @@ Screens:
                                     Y: =10 + (DataCardValue2.Height / 2) - (Self.Height / 2)
                               - DataCardValue2:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldValue
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -363,7 +369,7 @@ Screens:
                                     X: =DataCardKey4.X + DataCardKey4.Width
                                     Y: =10
                         - NUID_DataCard1:
-                            Control: TypedDataCard@1.0.6
+                            Control: TypedDataCard@1.0.7
                             Variant: ClassicTextualView
                             IsLocked: true
                             Properties:
@@ -373,10 +379,12 @@ Screens:
                               DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_nuid)
                               Required: =false
                               Width: =667
+                              X: =0
                               Y: =1
                             Children:
                               - DataCardKey5:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldName
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -397,6 +405,7 @@ Screens:
                                     Y: =10 + (DataCardValue3.Height / 2) - (Self.Height / 2)
                               - DataCardValue3:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldValue
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -417,7 +426,7 @@ Screens:
                                     X: =DataCardKey5.X + DataCardKey5.Width
                                     Y: =10
                         - ADMIT_TERM_DataCard1:
-                            Control: TypedDataCard@1.0.6
+                            Control: TypedDataCard@1.0.7
                             Variant: ClassicTextualView
                             IsLocked: true
                             Properties:
@@ -432,6 +441,7 @@ Screens:
                             Children:
                               - DataCardKey7:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldName
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -452,6 +462,7 @@ Screens:
                                     Y: =10 + (DataCardValue5.Height / 2) - (Self.Height / 2)
                               - DataCardValue5:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldValue
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -472,7 +483,7 @@ Screens:
                                     X: =DataCardKey7.X + DataCardKey7.Width
                                     Y: =10
                         - Expected Grad Date_DataCard1:
-                            Control: TypedDataCard@1.0.6
+                            Control: TypedDataCard@1.0.7
                             Variant: ClassicTextualView
                             IsLocked: true
                             Properties:
@@ -482,10 +493,12 @@ Screens:
                               DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_expected_graduation_date)
                               Required: =false
                               Width: =667
+                              X: =0
                               Y: =2
                             Children:
                               - DataCardKey8:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldName
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -506,6 +519,7 @@ Screens:
                                     Y: =10 + (DataCardValue6.Height / 2) - (Self.Height / 2)
                               - DataCardValue6:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldValue
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -525,118 +539,8 @@ Screens:
                                     Width: =(Parent.Width - 60) * 0.6
                                     X: =DataCardKey8.X + DataCardKey8.Width
                                     Y: =10
-                        - Credit Earned_DataCard1:
-                            Control: TypedDataCard@1.0.6
-                            Variant: ClassicTextualView
-                            IsLocked: true
-                            Properties:
-                              BorderColor: =RGBA(245, 245, 245, 1)
-                              DataField: ="cr829_credit_earned"
-                              Default: =ThisItem.'Credit Earned'
-                              DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_credit_earned)
-                              Required: =false
-                              Width: =667
-                              X: =1
-                              Y: =3
-                            Children:
-                              - DataCardKey10:
-                                  Control: Label@2.5.1
-                                  Properties:
-                                    AutoHeight: =true
-                                    BorderColor: =RGBA(0, 0, 0, 0)
-                                    BorderStyle: =BorderStyle.None
-                                    BorderThickness: =2
-                                    Color: =RGBA(50, 49, 48, 1)
-                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                    DisabledColor: =RGBA(161, 159, 157, 1)
-                                    FocusedBorderThickness: =4
-                                    Font: =Font.'Segoe UI'
-                                    FontWeight: =FontWeight.Semibold
-                                    Height: =34
-                                    PaddingLeft: =0
-                                    Text: =Parent.DisplayName
-                                    Width: =(Parent.Width - 60) * 0.4
-                                    Wrap: =false
-                                    X: =30
-                                    Y: =10 + (DataCardValue8.Height / 2) - (Self.Height / 2)
-                              - DataCardValue8:
-                                  Control: Label@2.5.1
-                                  Properties:
-                                    AutoHeight: =true
-                                    BorderColor: =RGBA(0, 0, 0, 0)
-                                    BorderStyle: =BorderStyle.None
-                                    BorderThickness: =2
-                                    Color: =RGBA(50, 49, 48, 1)
-                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                    DisabledColor: =RGBA(161, 159, 157, 1)
-                                    DisplayMode: =Parent.DisplayMode
-                                    FocusedBorderThickness: =4
-                                    Font: =Font.'Segoe UI'
-                                    Height: =27
-                                    PaddingLeft: =0
-                                    PaddingRight: =0
-                                    PaddingTop: =0
-                                    Text: =Parent.Default
-                                    Width: =(Parent.Width - 60) * 0.6
-                                    X: =DataCardKey10.X + DataCardKey10.Width
-                                    Y: =10
-                        - Student Status_DataCard1:
-                            Control: TypedDataCard@1.0.6
-                            Variant: ClassicTextualView
-                            IsLocked: true
-                            Properties:
-                              BorderColor: =RGBA(245, 245, 245, 1)
-                              DataField: ="cr829_student_status_desc"
-                              Default: =ThisItem.'Student Status'
-                              DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_student_status_desc)
-                              Required: =false
-                              Width: =667
-                              X: =1
-                              Y: =4
-                            Children:
-                              - DataCardKey12:
-                                  Control: Label@2.5.1
-                                  Properties:
-                                    AutoHeight: =true
-                                    BorderColor: =RGBA(0, 0, 0, 0)
-                                    BorderStyle: =BorderStyle.None
-                                    BorderThickness: =2
-                                    Color: =RGBA(50, 49, 48, 1)
-                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                    DisabledColor: =RGBA(161, 159, 157, 1)
-                                    FocusedBorderThickness: =4
-                                    Font: =Font.'Segoe UI'
-                                    FontWeight: =FontWeight.Semibold
-                                    Height: =34
-                                    PaddingLeft: =0
-                                    Text: =Parent.DisplayName
-                                    Width: =(Parent.Width - 60) * 0.4
-                                    Wrap: =false
-                                    X: =30
-                                    Y: =10 + (DataCardValue10.Height / 2) - (Self.Height / 2)
-                              - DataCardValue10:
-                                  Control: Label@2.5.1
-                                  Properties:
-                                    AutoHeight: =true
-                                    BorderColor: =RGBA(0, 0, 0, 0)
-                                    BorderStyle: =BorderStyle.None
-                                    BorderThickness: =2
-                                    Color: =RGBA(50, 49, 48, 1)
-                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                    DisabledColor: =RGBA(161, 159, 157, 1)
-                                    DisplayMode: =Parent.DisplayMode
-                                    FocusedBorderThickness: =4
-                                    Font: =Font.'Segoe UI'
-                                    Height: =27
-                                    PaddingLeft: =0
-                                    PaddingRight: =0
-                                    PaddingTop: =0
-                                    Text: =Parent.Default
-                                    Width: =(Parent.Width - 60) * 0.6
-                                    X: =DataCardKey12.X + DataCardKey12.Width
-                                    Y: =10
                         - Student Email_DataCard1:
-                            Control: TypedDataCard@1.0.6
+                            Control: TypedDataCard@1.0.7
                             Variant: ClassicTextualView
                             IsLocked: true
                             Properties:
@@ -651,6 +555,7 @@ Screens:
                             Children:
                               - DataCardKey6:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldName
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -671,6 +576,7 @@ Screens:
                                     Y: =10 + (DataCardValue4.Height / 2) - (Self.Height / 2)
                               - DataCardValue4:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldValue
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -691,7 +597,7 @@ Screens:
                                     X: =DataCardKey6.X + DataCardKey6.Width
                                     Y: =10
                         - GPA_DataCard1:
-                            Control: TypedDataCard@1.0.6
+                            Control: TypedDataCard@1.0.7
                             Variant: ClassicTextualView
                             IsLocked: true
                             Properties:
@@ -701,10 +607,12 @@ Screens:
                               DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_gpa)
                               Required: =false
                               Width: =667
+                              X: =0
                               Y: =3
                             Children:
                               - DataCardKey9:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldName
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -725,6 +633,7 @@ Screens:
                                     Y: =10 + (DataCardValue7.Height / 2) - (Self.Height / 2)
                               - DataCardValue7:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldValue
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -744,8 +653,65 @@ Screens:
                                     Width: =(Parent.Width - 60) * 0.6
                                     X: =DataCardKey9.X + DataCardKey9.Width
                                     Y: =10
+                        - Credit Earned_DataCard1:
+                            Control: TypedDataCard@1.0.7
+                            Variant: ClassicTextualView
+                            IsLocked: true
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              DataField: ="cr829_credit_earned"
+                              Default: =ThisItem.'Credit Earned'
+                              DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_credit_earned)
+                              Required: =false
+                              Width: =667
+                              X: =1
+                              Y: =3
+                            Children:
+                              - DataCardKey10:
+                                  Control: Label@2.5.1
+                                  MetadataKey: FieldName
+                                  Properties:
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =34
+                                    PaddingLeft: =0
+                                    Text: =Parent.DisplayName
+                                    Width: =(Parent.Width - 60) * 0.4
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10 + (DataCardValue8.Height / 2) - (Self.Height / 2)
+                              - DataCardValue8:
+                                  Control: Label@2.5.1
+                                  MetadataKey: FieldValue
+                                  Properties:
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    Height: =27
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Default
+                                    Width: =(Parent.Width - 60) * 0.6
+                                    X: =DataCardKey10.X + DataCardKey10.Width
+                                    Y: =10
                         - Track_DataCard1:
-                            Control: TypedDataCard@1.0.6
+                            Control: TypedDataCard@1.0.7
                             Variant: ClassicTextualView
                             IsLocked: true
                             Properties:
@@ -755,10 +721,12 @@ Screens:
                               DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_track)
                               Required: =false
                               Width: =667
+                              X: =0
                               Y: =4
                             Children:
                               - DataCardKey11:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldName
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -779,6 +747,7 @@ Screens:
                                     Y: =10 + (DataCardValue9.Height / 2) - (Self.Height / 2)
                               - DataCardValue9:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldValue
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -798,8 +767,65 @@ Screens:
                                     Width: =(Parent.Width - 60) * 0.6
                                     X: =DataCardKey11.X + DataCardKey11.Width
                                     Y: =10
+                        - Student Status_DataCard1:
+                            Control: TypedDataCard@1.0.7
+                            Variant: ClassicTextualView
+                            IsLocked: true
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              DataField: ="cr829_student_status_desc"
+                              Default: =ThisItem.'Student Status'
+                              DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_student_status_desc)
+                              Required: =false
+                              Width: =667
+                              X: =1
+                              Y: =4
+                            Children:
+                              - DataCardKey12:
+                                  Control: Label@2.5.1
+                                  MetadataKey: FieldName
+                                  Properties:
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =34
+                                    PaddingLeft: =0
+                                    Text: =Parent.DisplayName
+                                    Width: =(Parent.Width - 60) * 0.4
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10 + (DataCardValue10.Height / 2) - (Self.Height / 2)
+                              - DataCardValue10:
+                                  Control: Label@2.5.1
+                                  MetadataKey: FieldValue
+                                  Properties:
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    DisplayMode: =Parent.DisplayMode
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    Height: =27
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Default
+                                    Width: =(Parent.Width - 60) * 0.6
+                                    X: =DataCardKey12.X + DataCardKey12.Width
+                                    Y: =10
                   - EditStudentInfo:
-                      Control: Form@2.4.2
+                      Control: Form@2.4.4
                       Variant: Classic
                       Layout: Horizontal
                       Properties:
@@ -812,9 +838,142 @@ Screens:
                         Item: =LookUp('PhD Students',NUID=If(CurrentUser.Role in ["Admin","Advisor"],galStudentLlist.Selected.NUID,CurrentUser.ID))
                         LayoutMinHeight: =150
                         LayoutMinWidth: =EditStudentInfo.Width
+                        NumberOfColumns: =2
                       Children:
+                        - Status (cr829_status)_DataCard4:
+                            Control: TypedDataCard@1.0.7
+                            Variant: ClassicTextualEdit
+                            IsLocked: true
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              DataField: ="cr829_status"
+                              Default: =ThisItem.cr829_status
+                              DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_status)
+                              MaxLength: =DataSourceInfo([@'PhD Students'], DataSourceInfo.MaxLength, cr829_status)
+                              Required: =false
+                              Update: =frmStatus.Text
+                              Width: =667
+                              X: =0
+                              Y: =0
+                            Children:
+                              - DataCardKey50:
+                                  Control: Label@2.5.1
+                                  MetadataKey: FieldName
+                                  Properties:
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =34
+                                    PaddingLeft: =0
+                                    Text: =Parent.DisplayName
+                                    Width: =(Parent.Width - 60) * 0.4
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10 + (frmStatus.Height / 2) - (Self.Height / 2)
+                              - frmStatus:
+                                  Control: Classic/TextInput@2.3.2
+                                  MetadataKey: FieldValue
+                                  Properties:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    Default: =Parent.Default
+                                    DelayOutput: =true
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    DisabledFill: =RGBA(242, 242, 241, 0)
+                                    DisplayMode: =Parent.DisplayMode
+                                    Font: =Font.'Segoe UI'
+                                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                                    HoverColor: =RGBA(50, 49, 48, 1)
+                                    HoverFill: =RGBA(255, 255, 255, 1)
+                                    MaxLength: =Parent.MaxLength
+                                    OnChange: |-
+                                      =If(
+                                          frmStatus.Text = ThisItem.'Status (cr829_status)',
+                                          Remove(
+                                              colStudentUpdates,
+                                              Filter(
+                                                  colStudentUpdates,
+                                                  Change = "Status"
+                                              )
+                                          ),
+                                          Collect(
+                                              colStudentUpdates,
+                                              {
+                                                  NUID: ThisItem.NUID,
+                                                  Change: "Status",
+                                                  From: If(IsBlank(ThisItem.'Status (cr829_status)'),"",ThisItem.'Status (cr829_status)'),
+                                                  To: frmStatus.Text
+                                              }
+                                          )
+                                      )
+                                    PaddingLeft: =5
+                                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                                    PressedColor: =RGBA(50, 49, 48, 1)
+                                    PressedFill: =RGBA(255, 255, 255, 1)
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =(Parent.Width - 60) * 0.6
+                                    X: =DataCardKey50.X + DataCardKey50.Width
+                                    Y: =10
+                              - ErrorMessage21:
+                                  Control: Label@2.5.1
+                                  MetadataKey: ErrorMessage
+                                  Properties:
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(168, 0, 0, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(168, 0, 0, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =frmStatus.Y + frmStatus.Height
+                              - StarVisible21:
+                                  Control: Label@2.5.1
+                                  MetadataKey: FieldRequired
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =DataCardKey50.Height
+                                    PaddingLeft: =0
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey50.Y
                         - Advisor_DataCard1:
-                            Control: TypedDataCard@1.0.6
+                            Control: TypedDataCard@1.0.7
                             Variant: ClassicComboBoxEdit
                             IsLocked: true
                             Properties:
@@ -830,6 +989,7 @@ Screens:
                             Children:
                               - DataCardKey1:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldName
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -850,6 +1010,7 @@ Screens:
                                     Y: =10 + (frmAdvisor.Height / 2) - (Self.Height / 2)
                               - frmAdvisor:
                                   Control: Classic/ComboBox@2.4.0
+                                  MetadataKey: FieldValue
                                   Properties:
                                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                                     ChevronBackground: =RGBA(245, 245, 245, 1)
@@ -905,6 +1066,7 @@ Screens:
                                     Y: =10
                               - ErrorMessage1:
                                   Control: Label@2.5.1
+                                  MetadataKey: ErrorMessage
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -929,6 +1091,7 @@ Screens:
                                     Y: =frmAdvisor.Y + frmAdvisor.Height
                               - StarVisible1:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldRequired
                                   Properties:
                                     Align: =Align.Center
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -947,8 +1110,140 @@ Screens:
                                     Width: =30
                                     Wrap: =false
                                     Y: =DataCardKey1.Y
+                        - Individual Path_DataCard5:
+                            Control: TypedDataCard@1.0.7
+                            Variant: ClassicTextualEdit
+                            IsLocked: true
+                            Properties:
+                              BorderColor: =RGBA(245, 245, 245, 1)
+                              DataField: ="cr829_individualpath"
+                              Default: =ThisItem.cr829_individualpath
+                              DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_individualpath)
+                              MaxLength: =DataSourceInfo([@'PhD Students'], DataSourceInfo.MaxLength, cr829_individualpath)
+                              Required: =false
+                              Update: =frmPath.Text
+                              Width: =667
+                              X: =0
+                              Y: =1
+                            Children:
+                              - DataCardKey53:
+                                  Control: Label@2.5.1
+                                  MetadataKey: FieldName
+                                  Properties:
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =34
+                                    PaddingLeft: =0
+                                    Text: =Parent.DisplayName
+                                    Width: =(Parent.Width - 60) * 0.4
+                                    Wrap: =false
+                                    X: =30
+                                    Y: =10 + (frmPath.Height / 2) - (Self.Height / 2)
+                              - frmPath:
+                                  Control: Classic/TextInput@2.3.2
+                                  MetadataKey: FieldValue
+                                  Properties:
+                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    Default: =Parent.Default
+                                    DelayOutput: =true
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    DisabledFill: =RGBA(242, 242, 241, 0)
+                                    DisplayMode: =Parent.DisplayMode
+                                    Font: =Font.'Segoe UI'
+                                    HoverBorderColor: =RGBA(16, 110, 190, 1)
+                                    HoverColor: =RGBA(50, 49, 48, 1)
+                                    HoverFill: =RGBA(255, 255, 255, 1)
+                                    MaxLength: =Parent.MaxLength
+                                    OnChange: |-
+                                      =If(
+                                          frmPath.Text = LookUp('PhD Students',NUID=ThisItem.NUID).'Individual Path',
+                                          Remove(
+                                              colStudentUpdates,
+                                              Filter(
+                                                  colStudentUpdates,
+                                                  Change = "Path"
+                                              )
+                                          ),
+                                          Collect(
+                                              colStudentUpdates,
+                                              {
+                                                  NUID: ThisItem.NUID,
+                                                  Change: "Path",
+                                                  From: If(IsBlank(ThisItem.'Individual Path'),"",ThisItem.'Individual Path'),
+                                                  To: frmPath.Text
+                                              }
+                                          )
+                                      )
+                                    PaddingLeft: =5
+                                    PressedBorderColor: =RGBA(0, 120, 212, 1)
+                                    PressedColor: =RGBA(50, 49, 48, 1)
+                                    PressedFill: =RGBA(255, 255, 255, 1)
+                                    RadiusBottomLeft: =0
+                                    RadiusBottomRight: =0
+                                    RadiusTopLeft: =0
+                                    RadiusTopRight: =0
+                                    Tooltip: =Parent.DisplayName
+                                    Width: =(Parent.Width - 60) * 0.6
+                                    X: =DataCardKey53.X + DataCardKey53.Width
+                                    Y: =10
+                              - ErrorMessage24:
+                                  Control: Label@2.5.1
+                                  MetadataKey: ErrorMessage
+                                  Properties:
+                                    AutoHeight: =true
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(168, 0, 0, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(168, 0, 0, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =10
+                                    Live: =Live.Assertive
+                                    PaddingBottom: =0
+                                    PaddingLeft: =0
+                                    PaddingRight: =0
+                                    PaddingTop: =0
+                                    Text: =Parent.Error
+                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
+                                    Width: =Parent.Width - 60
+                                    X: =30
+                                    Y: =frmPath.Y + frmPath.Height
+                              - StarVisible24:
+                                  Control: Label@2.5.1
+                                  MetadataKey: FieldRequired
+                                  Properties:
+                                    Align: =Align.Center
+                                    BorderColor: =RGBA(0, 0, 0, 0)
+                                    BorderStyle: =BorderStyle.None
+                                    BorderThickness: =2
+                                    Color: =RGBA(50, 49, 48, 1)
+                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
+                                    DisabledColor: =RGBA(161, 159, 157, 1)
+                                    FocusedBorderThickness: =4
+                                    Font: =Font.'Segoe UI'
+                                    FontWeight: =FontWeight.Semibold
+                                    Height: =DataCardKey53.Height
+                                    PaddingLeft: =0
+                                    Text: ="*"
+                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                                    Width: =30
+                                    Wrap: =false
+                                    Y: =DataCardKey53.Y
                         - Co-Advisor_DataCard1:
-                            Control: TypedDataCard@1.0.6
+                            Control: TypedDataCard@1.0.7
                             Variant: ClassicComboBoxEdit
                             IsLocked: true
                             Properties:
@@ -964,6 +1259,7 @@ Screens:
                             Children:
                               - DataCardKey2:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldName
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -984,6 +1280,7 @@ Screens:
                                     Y: =10 + (frmCoAdvisor.Height / 2) - (Self.Height / 2)
                               - frmCoAdvisor:
                                   Control: Classic/ComboBox@2.4.0
+                                  MetadataKey: FieldValue
                                   Properties:
                                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                                     ChevronBackground: =RGBA(245, 245, 245, 1)
@@ -1039,6 +1336,7 @@ Screens:
                                     Y: =10
                               - ErrorMessage2:
                                   Control: Label@2.5.1
+                                  MetadataKey: ErrorMessage
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -1063,6 +1361,7 @@ Screens:
                                     Y: =frmCoAdvisor.Y + frmCoAdvisor.Height
                               - StarVisible2:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldRequired
                                   Properties:
                                     Align: =Align.Center
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -1081,262 +1380,8 @@ Screens:
                                     Width: =30
                                     Wrap: =false
                                     Y: =DataCardKey2.Y
-                        - Status (cr829_status)_DataCard4:
-                            Control: TypedDataCard@1.0.6
-                            Variant: ClassicTextualEdit
-                            IsLocked: true
-                            Properties:
-                              BorderColor: =RGBA(245, 245, 245, 1)
-                              DataField: ="cr829_status"
-                              Default: =ThisItem.cr829_status
-                              DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_status)
-                              MaxLength: =DataSourceInfo([@'PhD Students'], DataSourceInfo.MaxLength, cr829_status)
-                              Required: =false
-                              Update: =frmStatus.Text
-                              Width: =667
-                              Y: =0
-                            Children:
-                              - DataCardKey50:
-                                  Control: Label@2.5.1
-                                  Properties:
-                                    AutoHeight: =true
-                                    BorderColor: =RGBA(0, 0, 0, 0)
-                                    BorderStyle: =BorderStyle.None
-                                    BorderThickness: =2
-                                    Color: =RGBA(50, 49, 48, 1)
-                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                    DisabledColor: =RGBA(161, 159, 157, 1)
-                                    FocusedBorderThickness: =4
-                                    Font: =Font.'Segoe UI'
-                                    FontWeight: =FontWeight.Semibold
-                                    Height: =34
-                                    PaddingLeft: =0
-                                    Text: =Parent.DisplayName
-                                    Width: =(Parent.Width - 60) * 0.4
-                                    Wrap: =false
-                                    X: =30
-                                    Y: =10 + (frmStatus.Height / 2) - (Self.Height / 2)
-                              - frmStatus:
-                                  Control: Classic/TextInput@2.3.2
-                                  Properties:
-                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                    Color: =RGBA(50, 49, 48, 1)
-                                    Default: =Parent.Default
-                                    DelayOutput: =true
-                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                    DisabledColor: =RGBA(161, 159, 157, 1)
-                                    DisabledFill: =RGBA(242, 242, 241, 0)
-                                    DisplayMode: =Parent.DisplayMode
-                                    Font: =Font.'Segoe UI'
-                                    HoverBorderColor: =RGBA(16, 110, 190, 1)
-                                    HoverColor: =RGBA(50, 49, 48, 1)
-                                    HoverFill: =RGBA(255, 255, 255, 1)
-                                    MaxLength: =Parent.MaxLength
-                                    OnChange: |-
-                                      =If(
-                                          frmStatus.Text = ThisItem.'Status (cr829_status)',
-                                          Remove(
-                                              colStudentUpdates,
-                                              Filter(
-                                                  colStudentUpdates,
-                                                  Change = "Status"
-                                              )
-                                          ),
-                                          Collect(
-                                              colStudentUpdates,
-                                              {
-                                                  NUID: ThisItem.NUID,
-                                                  Change: "Status",
-                                                  From: If(IsBlank(ThisItem.'Status (cr829_status)'),"",ThisItem.'Status (cr829_status)'),
-                                                  To: frmStatus.Text
-                                              }
-                                          )
-                                      )
-                                    PaddingLeft: =5
-                                    PressedBorderColor: =RGBA(0, 120, 212, 1)
-                                    PressedColor: =RGBA(50, 49, 48, 1)
-                                    PressedFill: =RGBA(255, 255, 255, 1)
-                                    RadiusBottomLeft: =0
-                                    RadiusBottomRight: =0
-                                    RadiusTopLeft: =0
-                                    RadiusTopRight: =0
-                                    Tooltip: =Parent.DisplayName
-                                    Width: =(Parent.Width - 60) * 0.6
-                                    X: =DataCardKey50.X + DataCardKey50.Width
-                                    Y: =10
-                              - ErrorMessage21:
-                                  Control: Label@2.5.1
-                                  Properties:
-                                    AutoHeight: =true
-                                    BorderColor: =RGBA(0, 0, 0, 0)
-                                    BorderStyle: =BorderStyle.None
-                                    BorderThickness: =2
-                                    Color: =RGBA(168, 0, 0, 1)
-                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                    DisabledColor: =RGBA(168, 0, 0, 1)
-                                    FocusedBorderThickness: =4
-                                    Font: =Font.'Segoe UI'
-                                    FontWeight: =FontWeight.Semibold
-                                    Height: =10
-                                    Live: =Live.Assertive
-                                    PaddingBottom: =0
-                                    PaddingLeft: =0
-                                    PaddingRight: =0
-                                    PaddingTop: =0
-                                    Text: =Parent.Error
-                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                    Width: =Parent.Width - 60
-                                    X: =30
-                                    Y: =frmStatus.Y + frmStatus.Height
-                              - StarVisible21:
-                                  Control: Label@2.5.1
-                                  Properties:
-                                    Align: =Align.Center
-                                    BorderColor: =RGBA(0, 0, 0, 0)
-                                    BorderStyle: =BorderStyle.None
-                                    BorderThickness: =2
-                                    Color: =RGBA(50, 49, 48, 1)
-                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                    DisabledColor: =RGBA(161, 159, 157, 1)
-                                    FocusedBorderThickness: =4
-                                    Font: =Font.'Segoe UI'
-                                    FontWeight: =FontWeight.Semibold
-                                    Height: =DataCardKey50.Height
-                                    PaddingLeft: =0
-                                    Text: ="*"
-                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                    Width: =30
-                                    Wrap: =false
-                                    Y: =DataCardKey50.Y
-                        - Individual Path_DataCard5:
-                            Control: TypedDataCard@1.0.6
-                            Variant: ClassicTextualEdit
-                            IsLocked: true
-                            Properties:
-                              BorderColor: =RGBA(245, 245, 245, 1)
-                              DataField: ="cr829_individualpath"
-                              Default: =ThisItem.cr829_individualpath
-                              DisplayName: =DataSourceInfo([@'PhD Students'],DataSourceInfo.DisplayName,cr829_individualpath)
-                              MaxLength: =DataSourceInfo([@'PhD Students'], DataSourceInfo.MaxLength, cr829_individualpath)
-                              Required: =false
-                              Update: =frmPath.Text
-                              Width: =667
-                              Y: =1
-                            Children:
-                              - DataCardKey53:
-                                  Control: Label@2.5.1
-                                  Properties:
-                                    AutoHeight: =true
-                                    BorderColor: =RGBA(0, 0, 0, 0)
-                                    BorderStyle: =BorderStyle.None
-                                    BorderThickness: =2
-                                    Color: =RGBA(50, 49, 48, 1)
-                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                    DisabledColor: =RGBA(161, 159, 157, 1)
-                                    FocusedBorderThickness: =4
-                                    Font: =Font.'Segoe UI'
-                                    FontWeight: =FontWeight.Semibold
-                                    Height: =34
-                                    PaddingLeft: =0
-                                    Text: =Parent.DisplayName
-                                    Width: =(Parent.Width - 60) * 0.4
-                                    Wrap: =false
-                                    X: =30
-                                    Y: =10 + (frmPath.Height / 2) - (Self.Height / 2)
-                              - frmPath:
-                                  Control: Classic/TextInput@2.3.2
-                                  Properties:
-                                    BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
-                                    Color: =RGBA(50, 49, 48, 1)
-                                    Default: =Parent.Default
-                                    DelayOutput: =true
-                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                    DisabledColor: =RGBA(161, 159, 157, 1)
-                                    DisabledFill: =RGBA(242, 242, 241, 0)
-                                    DisplayMode: =Parent.DisplayMode
-                                    Font: =Font.'Segoe UI'
-                                    HoverBorderColor: =RGBA(16, 110, 190, 1)
-                                    HoverColor: =RGBA(50, 49, 48, 1)
-                                    HoverFill: =RGBA(255, 255, 255, 1)
-                                    MaxLength: =Parent.MaxLength
-                                    OnChange: |-
-                                      =If(
-                                          frmPath.Text = LookUp('PhD Students',NUID=ThisItem.NUID).'Individual Path',
-                                          Remove(
-                                              colStudentUpdates,
-                                              Filter(
-                                                  colStudentUpdates,
-                                                  Change = "Path"
-                                              )
-                                          ),
-                                          Collect(
-                                              colStudentUpdates,
-                                              {
-                                                  NUID: ThisItem.NUID,
-                                                  Change: "Path",
-                                                  From: If(IsBlank(ThisItem.'Individual Path'),"",ThisItem.'Individual Path'),
-                                                  To: frmPath.Text
-                                              }
-                                          )
-                                      )
-                                    PaddingLeft: =5
-                                    PressedBorderColor: =RGBA(0, 120, 212, 1)
-                                    PressedColor: =RGBA(50, 49, 48, 1)
-                                    PressedFill: =RGBA(255, 255, 255, 1)
-                                    RadiusBottomLeft: =0
-                                    RadiusBottomRight: =0
-                                    RadiusTopLeft: =0
-                                    RadiusTopRight: =0
-                                    Tooltip: =Parent.DisplayName
-                                    Width: =(Parent.Width - 60) * 0.6
-                                    X: =DataCardKey53.X + DataCardKey53.Width
-                                    Y: =10
-                              - ErrorMessage24:
-                                  Control: Label@2.5.1
-                                  Properties:
-                                    AutoHeight: =true
-                                    BorderColor: =RGBA(0, 0, 0, 0)
-                                    BorderStyle: =BorderStyle.None
-                                    BorderThickness: =2
-                                    Color: =RGBA(168, 0, 0, 1)
-                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                    DisabledColor: =RGBA(168, 0, 0, 1)
-                                    FocusedBorderThickness: =4
-                                    Font: =Font.'Segoe UI'
-                                    FontWeight: =FontWeight.Semibold
-                                    Height: =10
-                                    Live: =Live.Assertive
-                                    PaddingBottom: =0
-                                    PaddingLeft: =0
-                                    PaddingRight: =0
-                                    PaddingTop: =0
-                                    Text: =Parent.Error
-                                    Visible: =Parent.DisplayMode=DisplayMode.Edit
-                                    Width: =Parent.Width - 60
-                                    X: =30
-                                    Y: =frmPath.Y + frmPath.Height
-                              - StarVisible24:
-                                  Control: Label@2.5.1
-                                  Properties:
-                                    Align: =Align.Center
-                                    BorderColor: =RGBA(0, 0, 0, 0)
-                                    BorderStyle: =BorderStyle.None
-                                    BorderThickness: =2
-                                    Color: =RGBA(50, 49, 48, 1)
-                                    DisabledBorderColor: =RGBA(0, 0, 0, 0)
-                                    DisabledColor: =RGBA(161, 159, 157, 1)
-                                    FocusedBorderThickness: =4
-                                    Font: =Font.'Segoe UI'
-                                    FontWeight: =FontWeight.Semibold
-                                    Height: =DataCardKey53.Height
-                                    PaddingLeft: =0
-                                    Text: ="*"
-                                    Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
-                                    Width: =30
-                                    Wrap: =false
-                                    Y: =DataCardKey53.Y
                         - Dissertation Committee_DataCard5:
-                            Control: TypedDataCard@1.0.6
+                            Control: TypedDataCard@1.0.7
                             Variant: ClassicTextualEdit
                             IsLocked: true
                             Properties:
@@ -1348,10 +1393,12 @@ Screens:
                               Required: =false
                               Update: =frmCommittee.Text
                               Width: =667
+                              X: =0
                               Y: =2
                             Children:
                               - DataCardKey54:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldName
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -1372,6 +1419,7 @@ Screens:
                                     Y: =10 + (frmCommittee.Height / 2) - (Self.Height / 2)
                               - frmCommittee:
                                   Control: Classic/TextInput@2.3.2
+                                  MetadataKey: FieldValue
                                   Properties:
                                     BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
                                     Color: =RGBA(50, 49, 48, 1)
@@ -1420,6 +1468,7 @@ Screens:
                                     Y: =10
                               - ErrorMessage25:
                                   Control: Label@2.5.1
+                                  MetadataKey: ErrorMessage
                                   Properties:
                                     AutoHeight: =true
                                     BorderColor: =RGBA(0, 0, 0, 0)
@@ -1444,6 +1493,7 @@ Screens:
                                     Y: =frmCommittee.Y + frmCommittee.Height
                               - StarVisible25:
                                   Control: Label@2.5.1
+                                  MetadataKey: FieldRequired
                                   Properties:
                                     Align: =Align.Center
                                     BorderColor: =RGBA(0, 0, 0, 0)

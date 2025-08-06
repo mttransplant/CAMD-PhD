@@ -6,7 +6,22 @@
 # 
 # For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
 # ************************************************************************************************
-App:
-  Properties:
-    StartScreen: =scrAdminMenu
-    Theme: =PowerAppsTheme
+EditorState:
+  ScreensOrder:
+    - scrAdminMenu
+    - scrStudentList
+    - scrStudentOverview
+    - scrStudentMilestones
+    - scrStudentHistory
+    - scrStudentEvaluations
+    - scrStudentCourses
+    - scrAdvisors
+    - scrPositions
+    - scrAssessmentQs
+    - scrPositionsDetail
+    - scrFunding
+    - scrStudentHome_Delete?
+    - scrRequestAssessments
+    - scrRequestedAssessments
+  ComponentDefinitionsOrder:
+    - cmpHeader
