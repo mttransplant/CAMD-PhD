@@ -12,7 +12,7 @@ Screens:
       Fill: =RGBA(255, 255, 255, 1)
       LoadingSpinnerColor: =RGBA(0, 120, 212, 1)
       OnVisible: |-
-        =//ClearCollect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Admins','Admin Name',Name,'Admin Email',Email,'Admin NUID',ID),Name,Email,ID),Role,"Admin"));
+        =ClearCollect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Admins','Admin Name',Name,'Admin Email',Email,'Admin NUID',ID),Name,Email,ID),Role,"Admin"));
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Advisors','Advisor Name',Name,'Advisor Email',Email,'Advisor NUID',ID),Name,Email,ID),Role,"Advisor"));
         Collect(colUserList,AddColumns(ShowColumns(RenameColumns('PhD Students','Full Name',Name,'Student Email',Email,NUID,ID),Name,Email,ID),Role,"Student"));
 

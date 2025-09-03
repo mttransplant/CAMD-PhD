@@ -61,13 +61,6 @@
       }
     },
     {
-      "Kind": "default.cds_cr829_phd_admins_forms",
-      "Namespace": "PhD Admins (Forms)",
-      "Values": {
-        "Information": "54bc3db3-7b8b-470d-8481-f9c03b68a75c"
-      }
-    },
-    {
       "Kind": "default.cds_cr829_phdassessmentquestions_forms",
       "Namespace": "PhD Assessment Questions (Forms)",
       "Values": {
@@ -86,6 +79,13 @@
       "Namespace": "PhD Terms (Forms)",
       "Values": {
         "Information": "9c7f5758-be05-44e9-a9ed-792912e23d9c"
+      }
+    },
+    {
+      "Kind": "default.cds_cr829_phd_admins_forms",
+      "Namespace": "PhD Admins (Forms)",
+      "Values": {
+        "Information": "54bc3db3-7b8b-470d-8481-f9c03b68a75c"
       }
     },
     {
